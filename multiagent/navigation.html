@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.5. Navigation &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
+        <link rel="up" title="5. Multi-Agent" href="index.html"/>
+        <link rel="next" title="5.6. Orientation" href="orientation.html"/>
+        <link rel="prev" title="5.4. Integrator" href="integrator.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Multi-Agent</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adjusting.html">5.1. Adjusting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">5.2. Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluctuation.html">5.3. Fluctuation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator.html">5.4. Integrator</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.5. Navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#distance-map-and-static-potential">5.5.1. Distance map and static potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamic-potential">5.5.2. Dynamic potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#numerical-solving">5.5.3. Numerical solving</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="orientation.html">5.6. Orientation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exit_selection.html">5.7. Exit Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subgroup.html">5.8. Subgroups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neighborhood.html">5.9. Neighborhoods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">5.10. Game Theoretical Models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">6. Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">7. Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">8. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">10. Appendix</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">5. Multi-Agent</a> &raquo;</li>
+      
+    <li>5.5. Navigation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/multiagent/navigation.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="navigation">
+<h1>5.5. Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><span class="math">\(\Omega\)</span> Domain</li>
+<li><span class="math">\(\mathcal{A}\)</span> Area occupied by agent</li>
+<li><span class="math">\(\mathcal{O}\)</span> Area occupied by obstacle</li>
+<li><span class="math">\(\mathcal{E}\)</span> Area occupied by exit</li>
+<li><span class="math">\(\Omega \setminus (\mathcal{O} \cup \mathcal{A})\)</span> Unoccupied area</li>
+</ul>
+<div class="section" id="distance-map-and-static-potential">
+<h2>5.5.1. Distance map and static potential<a class="headerlink" href="#distance-map-and-static-potential" title="Permalink to this headline">¶</a></h2>
+<p>Navigation aka path planning is related to <em>continuos shortest path problem</em>, which can se solved by solving <a class="reference external" href="&lt;https://en.wikipedia.org/wiki/Eikonal_equation&gt;">Eikonal equation</a>,</p>
+<div class="math">
+\[\left \| \nabla S(\mathbf{x}) \right \| = \frac{1}{f(\mathbf{x})}, \quad \mathbf{x} \in \Omega\]</div>
+<p>where <span class="math">\(S(\mathbf{x})\)</span> is distance map, which denotes the shortest time to travel from <span class="math">\(\mathbf{x}\)</span> to destination, which is given by boundary conditions. Function <span class="math">\(f(\mathbf{x})\)</span> is the speed at <span class="math">\(\mathbf{x}\)</span> defined</p>
+<div class="math">
+\[f : \bar{\Omega} \mapsto (0, +\infty)\]</div>
+<p>Boundary conditions of the distance map define the value at the the destination</p>
+<div class="math">
+\[S(\mathbf{x}) = 0, \quad \mathbf{x} \in \mathcal{E}\]</div>
+<p>and inside obstacles</p>
+<div class="math">
+\[S(\mathbf{x}) \to \infty, \quad \mathbf{x} \in \mathcal{O}\]</div>
+<p>We get static potential by defining speed in walkable areas <span class="math">\(\Omega \setminus \mathcal{O}\)</span> and inside obstacles <span class="math">\(\mathcal{O}\)</span></p>
+<div class="math">
+\[\begin{split}f(\mathbf{x}) &amp;= 1, \quad \mathbf{x} \in \Omega \setminus \mathcal{O} \\
+f(\mathbf{x}) &amp;\to 0, \quad \mathbf{x} \in \mathcal{O}\end{split}\]</div>
+<p>Target direction</p>
+<div class="math">
+\[\hat{\mathbf{e}}_{S} = -\frac{\nabla S(\mathbf{x})}{\| \nabla S(\mathbf{x}) \|}\]</div>
+</div>
+<div class="section" id="dynamic-potential">
+<h2>5.5.2. Dynamic potential<a class="headerlink" href="#dynamic-potential" title="Permalink to this headline">¶</a></h2>
+<p>Dynamics potential takes into account the positions of the agents in the field. Equation</p>
+<div class="math">
+\[\left \| \nabla T(\mathbf{x}) \right \| = \frac{1}{f(\mathbf{x})}, \quad \mathbf{x} \in \Omega\]</div>
+<p>and boundary conditions</p>
+<div class="math">
+\[\begin{split}f(\mathbf{x}) &amp;= 1, \quad \mathbf{x} \in \Omega \setminus (\mathcal{O} \cup \mathcal{A}) \\
+f(\mathbf{x}) &amp;\leq 1, \quad \mathbf{x} \in \mathcal{A} \\
+f(\mathbf{x}) &amp;\to 0, \quad \mathbf{x} \in \mathcal{O}\end{split}\]</div>
+<div class="math">
+\[\frac{1}{f(\mathbf{x})} = 1 + \max&nbsp;\left( 0, c_{0} \left( 1 + c_{1} \frac{\mathbf{v} \cdot \nabla S(\mathbf{x})}{v_{0} \| \nabla S(\mathbf{x}) \|}&nbsp;\right) \right)\]</div>
+<ul class="simple">
+<li><span class="math">\(c_{0}\)</span> general impact strength</li>
+<li><span class="math">\(c_{1}\)</span> impact of the moving direction of an agent</li>
+</ul>
+<p>Target direction</p>
+<div class="math">
+\[\hat{\mathbf{e}}_{T} = -\frac{\nabla T(\mathbf{x})}{\| \nabla T(\mathbf{x}) \|}\]</div>
+</div>
+<div class="section" id="numerical-solving">
+<h2>5.5.3. Numerical solving<a class="headerlink" href="#numerical-solving" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="first docutils">
+<dt>Fast Marching Method.</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://github.com/scikit-fmm/scikit-fmm">scikit-fmm</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Fast Iterative Method</p>
+</li>
+</ul>
+<hr class="docutils" />
+<table class="docutils citation" frame="void" id="quickpath2011" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[quickpath2011]</td><td>Kretz, T., Große, A., Hengst, S., Kautzsch, L., Pohlmann, A., &amp; Vortisch, P. (2011). Quickest Paths in Simulations of Pedestrians. Advances in Complex Systems, 14(5), 733–759. <a class="reference external" href="http://doi.org/10.1142/S0219525911003281">http://doi.org/10.1142/S0219525911003281</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="dense2016" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[dense2016]</td><td>Stüvel, S. A. (2016). Dense Crowds of Virtual Humans.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="orientation.html" class="btn btn-neutral float-right" title="5.6. Orientation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="integrator.html" class="btn btn-neutral" title="5.4. Integrator" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Sep 23, 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

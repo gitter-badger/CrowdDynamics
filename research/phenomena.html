@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7.1. Phenomena &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
+        <link rel="up" title="7. Research" href="index.html"/>
+        <link rel="next" title="7.2. Simulations" href="simulations.html"/>
+        <link rel="prev" title="7. Research" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">5. Multi-Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">6. Continuum Flow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">7. Research</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.1. Phenomena</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#egress-congestion">7.1.1. Egress Congestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#faster-is-slower">7.1.2. Faster is slower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arching">7.1.3. Arching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zipper-effect">7.1.4. Zipper effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#herding">7.1.5. Herding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lane-formation">7.1.6. Lane formation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#freezing-by-heat">7.1.7. Freezing by heat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turbulence">7.1.8. Turbulence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-and-go-waves">7.1.9. Stop-and-Go waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#braess-s-paradox">7.1.10. Braess&#8217;s paradox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="simulations.html">7.2. Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">8. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">10. Appendix</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">7. Research</a> &raquo;</li>
+      
+    <li>7.1. Phenomena</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/research/phenomena.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="phenomena">
+<h1>7.1. Phenomena<a class="headerlink" href="#phenomena" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="egress-congestion">
+<h2>7.1.1. Egress Congestion<a class="headerlink" href="#egress-congestion" title="Permalink to this headline">¶</a></h2>
+<p>When crowd of high density attempt to pass through a <a class="reference external" href="https://en.wikipedia.org/wiki/Bottleneck">bottleneck</a> exceeding the capacity of the bottleneck and causing a jamming in front of the bottleneck.</p>
+</div>
+<div class="section" id="faster-is-slower">
+<h2>7.1.2. Faster is slower<a class="headerlink" href="#faster-is-slower" title="Permalink to this headline">¶</a></h2>
+<p>Phenomena where flow rate through a bottleneck is reduced by agents trying to push harder through. Caused by increased contact forces between rushing agents.</p>
+</div>
+<div class="section" id="arching">
+<h2>7.1.3. Arching<a class="headerlink" href="#arching" title="Permalink to this headline">¶</a></h2>
+<p>Formation of arch like structure between agents in front of a bottleneck.</p>
+</div>
+<div class="section" id="zipper-effect">
+<h2>7.1.4. Zipper effect<a class="headerlink" href="#zipper-effect" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="herding">
+<h2>7.1.5. Herding<a class="headerlink" href="#herding" title="Permalink to this headline">¶</a></h2>
+<p>Herding or mass behaviour is phenomena where agents follow the average movement of their nearest neighbors. In nature similar effect occur for example in large crowds of birds flying where individual bird inside a crowd follows eight of its closest neighbors.</p>
+</div>
+<div class="section" id="lane-formation">
+<h2>7.1.6. Lane formation<a class="headerlink" href="#lane-formation" title="Permalink to this headline">¶</a></h2>
+<p>Pedestrians moving into opposite directions organize into lanes.</p>
+</div>
+<div class="section" id="freezing-by-heat">
+<h2>7.1.7. Freezing by heat<a class="headerlink" href="#freezing-by-heat" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="turbulence">
+<h2>7.1.8. Turbulence<a class="headerlink" href="#turbulence" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="stop-and-go-waves">
+<h2>7.1.9. Stop-and-Go waves<a class="headerlink" href="#stop-and-go-waves" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="braess-s-paradox">
+<h2>7.1.10. Braess&#8217;s paradox<a class="headerlink" href="#braess-s-paradox" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="simulations.html" class="btn btn-neutral float-right" title="7.2. Simulations" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="7. Research" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Sep 23, 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

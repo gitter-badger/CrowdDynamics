@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.9. Neighborhoods &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
+        <link rel="up" title="5. Multi-Agent" href="index.html"/>
+        <link rel="next" title="5.10. Game Theoretical Models" href="game.html"/>
+        <link rel="prev" title="5.8. Subgroups" href="subgroup.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Multi-Agent</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adjusting.html">5.1. Adjusting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">5.2. Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluctuation.html">5.3. Fluctuation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator.html">5.4. Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html">5.5. Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orientation.html">5.6. Orientation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exit_selection.html">5.7. Exit Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subgroup.html">5.8. Subgroups</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.9. Neighborhoods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#computing-neighborhood">5.9.1. Computing neighborhood</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updating-neighborhood">5.9.2. Updating neighborhood</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#circular-neighborhood">5.9.3. Circular neighborhood</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">5.10. Game Theoretical Models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">6. Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">7. Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">8. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">10. Appendix</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">5. Multi-Agent</a> &raquo;</li>
+      
+    <li>5.9. Neighborhoods</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/multiagent/neighborhood.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="neighborhoods">
+<h1>5.9. Neighborhoods<a class="headerlink" href="#neighborhoods" title="Permalink to this headline">¶</a></h1>
+<p>Neighborhood of agent <span class="math">\(i\)</span> is denoted <span class="math">\(N_i^{neigh} \subset N \setminus \{i\}\)</span> is a subset of agents whose distance from agent <span class="math">\(i\)</span> is smaller than <span class="math">\(d \geq 0\)</span></p>
+<div class="math">
+\[N_i^{neigh} = \{j \mid&nbsp;j \in N, j \neq i, &nbsp;\quad \operatorname{dist}(i, j) \leq d&nbsp; \}\]</div>
+<p>Distance function can be defined in different ways depending on the use. For example, distance from the center of masses</p>
+<div class="math">
+\[\begin{split}\operatorname{dist}(i, j) &amp;= \| x_i - x_j \| \\
+                          &amp;= \| \tilde{x} \|\end{split}\]</div>
+<p>or skin-to-skin distance of agents</p>
+<div class="math">
+\[\operatorname{dist}(i, j) = h_{ij}.\]</div>
+<p>We can also limit the size of the neighborhood <span class="math">\(|N_{neigh}|\)</span> to contain certain number of the closest agents.</p>
+<p>Maximum limit of the neighbourhood size is a packing problem. We use following equation to estimate the limit</p>
+<div class="math">
+\[| N_{neigh} | \leq \rho \frac{A_{neigh}}{A_{agent}}\]</div>
+<p>where <span class="math">\(\rho\)</span> is packing density coefficient denoting of the maximum percentage of area that can be filled by the agents.</p>
+<p>Neighborhood can used for speeding up iterating over agents for updating <em>social forces</em>, for <em>egress congestion</em> algorithms or <em>herding</em> algorithms.</p>
+<p>Number of iterations over all agents with naive algorithm has computational complexity of</p>
+<div class="math">
+\[\frac{(|N| - 1)^2}{2} \in \mathcal{O}(|N|^2)\]</div>
+<p>Using neighborhood we have</p>
+<div class="math">
+\[|N| | N_{neigh} | \in \mathcal{O}(|N|)\]</div>
+<p>When <span class="math">\(| N | &gt;&nbsp;| N_{neigh} |\)</span> we can obtain speed up. We have to keep in mind that naive updation of the neighborhood is still <span class="math">\(\mathcal{O}(|N|^2)\)</span>. Updation of the neighbourhood can be splitted to be partially updated every interval to avoid large jumps in computational time for smoother visualization for example.</p>
+<div class="section" id="computing-neighborhood">
+<h2>5.9.1. Computing neighborhood<a class="headerlink" href="#computing-neighborhood" title="Permalink to this headline">¶</a></h2>
+<p>Algorithm for computing neighborhood.</p>
+<ul class="simple">
+<li>Define shape of the neighborhood</li>
+<li>Define distance algorithm</li>
+<li>Define distance <span class="math">\(d\)</span></li>
+<li>Define size limit</li>
+</ul>
+</div>
+<div class="section" id="updating-neighborhood">
+<h2>5.9.2. Updating neighborhood<a class="headerlink" href="#updating-neighborhood" title="Permalink to this headline">¶</a></h2>
+<p>Neighborhood needs to be updated at some time interval <span class="math">\(t \geq \Delta t\)</span> that is larger than the integration timestep. Higher value reduces computational cost but increases error.</p>
+<p>Maximum agent velocity <span class="math">\(v_{max}\)</span></p>
+<ul class="simple">
+<li>Maximum error of social force <span class="math">\(\varepsilon\)</span></li>
+<li>Higher speeds require larger neighborhoods (at least in the direction of the velocity).</li>
+</ul>
+</div>
+<div class="section" id="circular-neighborhood">
+<h2>5.9.3. Circular neighborhood<a class="headerlink" href="#circular-neighborhood" title="Permalink to this headline">¶</a></h2>
+<p>For circular agents in circular neighborhood</p>
+<div class="math">
+\[|N_{neigh}| \leq \rho \left(\frac{R}{r}\right)^2\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(R\)</span> is the radius of the neighborhood</li>
+<li><span class="math">\(r\)</span> is the mean radius of the agents</li>
+<li>Estimates for <span class="math">\(\rho \in [0.7, 0.8]\)</span> can be obtained from <a class="reference external" href="https://en.wikipedia.org/wiki/Circle_packing_in_a_circle">circle packing in a circle</a> problem.</li>
+</ul>
+<p>Social force error without scaling parameter <span class="math">\(k\)</span> is the distance of the magnitude from zero</p>
+<div class="math">
+\[\begin{split}\varepsilon &amp;= \|&nbsp;\mathbf{f}^{soc} / k \| - 0 \\
+            &amp;= \left(\frac{1}{a \tau^{2}}\right) \left(\frac{2}{\tau} + \frac{1}{\tau_{0}}\right) \exp\left (-\frac{\tau}{\tau_{0}}\right ) \left\| \left(\tilde{\mathbf{v}} -\frac{a \tilde{\mathbf{x}} + b \tilde{\mathbf{v}}}{d} \right) \right\| \\\end{split}\]</div>
+<p>Maximum error <span class="math">\(\max(\varepsilon)\)</span> is found when two agents are in head to head collision, mathematically</p>
+<div class="math">
+\[\varphi = \angle(\tilde{\mathbf{x}}, \tilde{\mathbf{v}}) = \pi\]</div>
+<p>Head on collision minimizes time-to-collision</p>
+<div class="math">
+\[\tau = \tau_{min} = \frac{\| \tilde{\mathbf{x}} \| - \tilde{r}}{\| \tilde{\mathbf{v}} \|}\]</div>
+<p>Vector part of the eqation</p>
+<div class="math">
+\[\max\left(\left\| \left(\tilde{\mathbf{v}} -\frac{a \tilde{\mathbf{x}} + b \tilde{\mathbf{v}}}{d} \right) \right\| \right)  = \| \tilde{\mathbf{v}} \|\]</div>
+<p>Error</p>
+<div class="math">
+\[\varepsilon = \frac{1}{\| \tilde{\mathbf{v}} \|} \left(\frac{1}{\tau_{min}^{2}}\right) \left(\frac{2}{\tau_{min}} + \frac{1}{\tau_{0}}\right) \exp\left (-\frac{\tau_{min}}{\tau_{0}}\right )\]</div>
+<p>By subsituting</p>
+<div class="math">
+\[\begin{split}\| \tilde{\mathbf{x}} \| &amp;= R - 2 t v_{max} \\
+\| \tilde{\mathbf{v}} \| &amp;= 2 v_{max} \\
+\tilde{r} &amp;= 2 r\end{split}\]</div>
+<div class="math">
+\[\tau_{min} = \frac{R/2 - r}{v_{max}} - t\]</div>
+<div class="math">
+\[\begin{split}r &amp;\in [0.21, 0.27] \\
+v_{max} &amp;\leq 1.5 \\
+t &amp;\geq \Delta t\end{split}\]</div>
+<div class="math">
+\[\varepsilon(R, v_{max}, t) = \frac{1}{2 v_{max}} \left(\frac{1}{\tau_{min}^{2}}\right) \left(\frac{2}{\tau_{min}} + \frac{1}{\tau_{0}}\right) \exp\left (-\frac{\tau_{min}}{\tau_{0}}\right )\]</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="game.html" class="btn btn-neutral float-right" title="5.10. Game Theoretical Models" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="subgroup.html" class="btn btn-neutral" title="5.8. Subgroups" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Sep 23, 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.3. Fluctuation &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
+        <link rel="up" title="5. Multi-Agent" href="index.html"/>
+        <link rel="next" title="5.4. Integrator" href="integrator.html"/>
+        <link rel="prev" title="5.2. Interactions" href="interactions.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Multi-Agent</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adjusting.html">5.1. Adjusting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">5.2. Interactions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.3. Fluctuation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#force">5.3.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#torque">5.3.2. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="integrator.html">5.4. Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html">5.5. Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orientation.html">5.6. Orientation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exit_selection.html">5.7. Exit Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subgroup.html">5.8. Subgroups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neighborhood.html">5.9. Neighborhoods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">5.10. Game Theoretical Models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">6. Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">7. Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">8. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">10. Appendix</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">5. Multi-Agent</a> &raquo;</li>
+      
+    <li>5.3. Fluctuation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/multiagent/fluctuation.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fluctuation">
+<h1>5.3. Fluctuation<a class="headerlink" href="#fluctuation" title="Permalink to this headline">¶</a></h1>
+<p>Fluctuation force and torque are stochastic in nature and analogous to heat in particle systems. For modeling fluctuation we use <span class="math">\(\mathcal{U}(a, b)\)</span> for <a class="reference external" href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)">uniform distribution</a> and <span class="math">\(\mathcal{N}(\mu, \sigma^{2})\)</span> for truncated <a class="reference external" href="https://en.wikipedia.org/wiki/Normal_distribution">normal distribution</a>.</p>
+<div class="section" id="force">
+<h2>5.3.1. Force<a class="headerlink" href="#force" title="Permalink to this headline">¶</a></h2>
+<p>Fluctuation force</p>
+<div class="math">
+\[\boldsymbol{\xi} = \xi \cdot \mathbf{\hat{e}}(\mu), \quad \xi \sim \mathcal{N}(\mu, \sigma^{2}), \quad \varphi \sim \mathcal{U}(-\pi, \pi)\]</div>
+<p>where <span class="math">\(\mathbf{\hat{e}}(\mu)\)</span> is unit vector to direction of <span class="math">\(\mu\)</span>.</p>
+</div>
+<div class="section" id="torque">
+<h2>5.3.2. Torque<a class="headerlink" href="#torque" title="Permalink to this headline">¶</a></h2>
+<p>Fluctuation torque</p>
+<div class="math">
+\[\eta \sim \mathcal{N}(\mu, \sigma^{2})\]</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="integrator.html" class="btn btn-neutral float-right" title="5.4. Integrator" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="interactions.html" class="btn btn-neutral" title="5.2. Interactions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Sep 23, 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

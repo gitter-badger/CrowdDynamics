@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Multi-Agent &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
+        <link rel="next" title="5.1. Adjusting" href="adjusting.html"/>
+        <link rel="prev" title="4. Cellular Automata" href="../cellular/index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="adjusting.html">5.1. Adjusting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">5.2. Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluctuation.html">5.3. Fluctuation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator.html">5.4. Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html">5.5. Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orientation.html">5.6. Orientation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exit_selection.html">5.7. Exit Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subgroup.html">5.8. Subgroups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neighborhood.html">5.9. Neighborhoods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">5.10. Game Theoretical Models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">6. Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">7. Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">8. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">10. Appendix</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>5. Multi-Agent</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/multiagent/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="multi-agent">
+<h1>5. Multi-Agent<a class="headerlink" href="#multi-agent" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Microscopic</li>
+<li>Continuous space</li>
+<li>Social force model</li>
+</ul>
+<p>Multi-agent simulation (MAS) of crowd dynamics on continuous 2-dimensional space. Motion is created by <em>social force model</em> which approached modelling pedestrian dynamics using classical mechanics. Agents are modeled as rigid bodies. Helbing describes social forces</p>
+<blockquote>
+<div><em>These forces are not directly exerted by the pedestrians’ personal environment, but they are a measure for the internal motivations of the individuals to perform certain actions (movements).</em></div></blockquote>
+<p>Law&#8217;s of motion are given as coupled <a class="reference external" href="https://en.wikipedia.org/wiki/Langevin_equation">Langevin equations</a> where translational motion and rotational motion</p>
+<div class="math">
+\[\begin{split}\begin{cases}
+m \frac{d^{2}}{d t^{2}} \mathbf{x}(t) = \mathbf{f}(t) + \boldsymbol{\xi}(t) \\
+I \frac{d^{2}}{d t^{2}} \varphi(t) = M(t) + \eta(t)
+\end{cases}\end{split}\]</div>
+<p>Total force exerted on the agent</p>
+<div class="math">
+\[\mathbf{f}_{i}(t) = \mathbf{f}_{i}^{adj} + \sum_{j\neq i}^{} \left(\mathbf{f}_{ij}^{soc} + \mathbf{f}_{ij}^{c}\right) + \sum_{w}^{} \left(\mathbf{f}_{iw}^{soc} + \mathbf{f}_{iw}^{c}\right),\]</div>
+<p>where</p>
+<ul class="simple">
+<li>Adjusting force <span class="math">\(\mathbf{f}_{i}^{adj}\)</span></li>
+<li>Social force <span class="math">\(\mathbf{f}_{ij}^{soc}\)</span> and <span class="math">\(\mathbf{f}_{iw}^{soc}\)</span></li>
+<li>Contact force <span class="math">\(\mathbf{f}_{ij}^{c}\)</span> and <span class="math">\(\mathbf{f}_{iw}^{c}\)</span></li>
+</ul>
+<p>Total torque on the agent</p>
+<div class="math">
+\[M_{i}(t) = M_{i}^{adj} + \sum_{j\neq i}^{} \left(M_{ij}^{soc} + M_{ij}^{c}\right) + \sum_{w}^{} \left(M_{iw}^{soc} + M_{iw}^{c}\right),\]</div>
+<p>where</p>
+<ul class="simple">
+<li>Adjusting torque <span class="math">\(M_{i}^{adj}\)</span></li>
+<li>Social torque <span class="math">\(M_{ij}^{soc}\)</span> and <span class="math">\(M_{iw}^{soc}\)</span></li>
+<li>Contact torque <span class="math">\(M_{ij}^{c}\)</span> and <span class="math">\(M_{iw}^{c}\)</span></li>
+</ul>
+<hr class="docutils" />
+<p>Contents</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="adjusting.html">5.1. Adjusting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="adjusting.html#force">5.1.1. Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adjusting.html#torque">5.1.2. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interactions.html">5.2. Interactions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html#social-force">5.2.1. Social Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html#physical-contact">5.2.2. Physical Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html#torque">5.2.3. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fluctuation.html">5.3. Fluctuation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fluctuation.html#force">5.3.1. Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluctuation.html#torque">5.3.2. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="integrator.html">5.4. Integrator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">5.5. Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#distance-map-and-static-potential">5.5.1. Distance map and static potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#dynamic-potential">5.5.2. Dynamic potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#numerical-solving">5.5.3. Numerical solving</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="orientation.html">5.6. Orientation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exit_selection.html">5.7. Exit Selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subgroup.html">5.8. Subgroups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="subgroup.html#attractor-point">5.8.1. Attractor point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subgroup.html#intra-subgroup-adjusting-force">5.8.2. Intra-subgroup adjusting force</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="neighborhood.html">5.9. Neighborhoods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="neighborhood.html#computing-neighborhood">5.9.1. Computing neighborhood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neighborhood.html#updating-neighborhood">5.9.2. Updating neighborhood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neighborhood.html#circular-neighborhood">5.9.3. Circular neighborhood</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="game.html">5.10. Game Theoretical Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="game.html#spatial-game-for-egress-congestion">5.10.1. Spatial Game for Egress Congestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#payoff-matrix">5.10.2. Payoff Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#strategy-selection">5.10.3. Strategy Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#strategy-updating">5.10.4. Strategy Updating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#agents-closer-to-exit">5.10.5. Agents Closer to Exit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#effect-on-agents">5.10.6. Effect on agents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="adjusting.html" class="btn btn-neutral float-right" title="5.1. Adjusting" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../cellular/index.html" class="btn btn-neutral" title="4. Cellular Automata" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Sep 23, 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

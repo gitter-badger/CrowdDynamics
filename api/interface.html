@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.1. User Interface &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
+        <link rel="up" title="8. API" href="index.html"/>
+        <link rel="next" title="9. Glossary" href="../glossary.html"/>
+        <link rel="prev" title="8. API" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">5. Multi-Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">6. Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">7. Research</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">8. API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.1. User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#graphics">8.1.1. Graphics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#communication">8.1.2. Communication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#input-output">8.1.3. Input/Output</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">10. Appendix</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">8. API</a> &raquo;</li>
+      
+    <li>8.1. User Interface</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/interface.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="user-interface">
+<h1>8.1. User Interface<a class="headerlink" href="#user-interface" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/gui1.png" src="../_images/gui1.png" />
+<div class="section" id="graphics">
+<h2>8.1.1. Graphics<a class="headerlink" href="#graphics" title="Permalink to this headline">¶</a></h2>
+<p>Graphical user interface and simulation graphics for crowd dynamics. Main window is created</p>
+<ul class="simple">
+<li>PyQt4 <a class="reference internal" href="#pyqt4" id="id1">[pyqt4]</a></li>
+<li>Layout for the main window is created by using Qt designer</li>
+<li>Graphics are implemented using pyqtgraph <a class="reference internal" href="#pyqtgraph" id="id2">[pyqtgraph]</a>.</li>
+</ul>
+<p>Design of the gui is greatly inspired and aided by the design of <a class="reference internal" href="#rtgraph" id="id3">[rtgraph]</a>.</p>
+</div>
+<div class="section" id="communication">
+<h2>8.1.2. Communication<a class="headerlink" href="#communication" title="Permalink to this headline">¶</a></h2>
+<p>Communication with simulation data.</p>
+</div>
+<div class="section" id="input-output">
+<h2>8.1.3. Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h2>
+<p>Simulation data is stored to hdf5 file.</p>
+<hr class="docutils" />
+<table class="docutils citation" frame="void" id="pyqt4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[pyqt4]</a></td><td>Hess, D., &amp; Summerfield, M. (2013). PyQt Whitepaper.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="pyqtgraph" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[pyqtgraph]</a></td><td>Campagnola, L. (2014). PyQtGraph - Scientific Graphics
+and GUI Library for Python. Posledn{’i} Aktualizace. article.
+Retrieved from <a class="reference external" href="http://www.pyqtgraph.org/">http://www.pyqtgraph.org/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="rtgraph" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[rtgraph]</a></td><td>Sepúlveda, S., Reyes, P., &amp; Weinstein, A. (2015).
+Visualizing physiological signals in real-time.
+PROC. OF THE 14th PYTHON IN SCIENCE CONF.
+Retrieved from <a class="reference external" href="https://github.com/ssepulveda/RTGraph">https://github.com/ssepulveda/RTGraph</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../glossary.html" class="btn btn-neutral float-right" title="9. Glossary" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="8. API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Sep 23, 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
