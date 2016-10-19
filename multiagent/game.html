@@ -8,10 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4.10. Game Theoretical Models &mdash; Crowd Dynamics 1 documentation</title>
+  <title>4.10. Games &mdash; Crowd Dynamics 1 documentation</title>
   
 
   
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
 
   
@@ -30,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
         <link rel="up" title="4. Multi-Agent" href="index.html"/>
         <link rel="next" title="5. Continuum Flow" href="../continuum/index.html"/>
@@ -55,15 +60,11 @@
           
 
           
+            
+            <img src="../_static/logo.svg" class="logo" />
+          
           </a>
 
-          
-            
-            
-              <div class="version">
-                0.1
-              </div>
-            
           
 
           
@@ -83,33 +84,131 @@
             
             
                 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">2. Foundations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#installing-dependensies">1.1. Installing dependensies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started.html#virtualenv">1.1.1. Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started.html#anaconda">1.1.2. Anaconda</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#examples">1.2. Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">2. Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">2.1. Mathematical Foundations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">2.1.1. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">2.1.2. Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">2.1.2.1. Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">2.1.2.2. Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">2.1.2.3. Exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">2.1.2.4. Narrow bottleneck</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">2.1.3. Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">2.1.3.1. Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">2.1.3.2. Circular model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">2.1.3.3. Elliptical model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">2.1.3.4. Three circle model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">2.1.4. Initial configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">2.2. Quantities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">2.2.1. Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">2.2.2. Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">2.2.2.1. Rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">2.2.2.2. Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">2.2.3. Pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">2.2.4. Fundamental Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">3. Cellular Automata</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Multi-Agent</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="adjusting.html">4.1. Adjusting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactions.html">4.2. Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fluctuation.html">4.3. Fluctuation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adjusting.html">4.1. Adjusting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="adjusting.html#force">4.1.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adjusting.html#torque">4.1.2. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">4.2. Interactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="interactions.html#social-force">4.2.1. Social Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactions.html#physical-contact">4.2.2. Physical Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactions.html#torque">4.2.3. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fluctuation.html">4.3. Fluctuation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fluctuation.html#force">4.3.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fluctuation.html#torque">4.3.2. Torque</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="integrator.html">4.4. Integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navigation.html">4.5. Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html">4.5. Navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html#distance-map-and-static-potential">4.5.1. Distance map and static potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html#dynamic-potential">4.5.2. Dynamic potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html#numerical-solving">4.5.3. Numerical solving</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="orientation.html">4.6. Orientation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exit_selection.html">4.7. Exit Selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="subgroup.html">4.8. Subgroups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="neighborhood.html">4.9. Neighborhoods</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">4.10. Game Theoretical Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="subgroup.html">4.8. Subgroups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subgroup.html#attractor-point">4.8.1. Attractor point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subgroup.html#intra-subgroup-adjusting-force">4.8.2. Intra-subgroup adjusting force</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="neighborhood.html">4.9. Neighborhoods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="neighborhood.html#computing-neighborhood">4.9.1. Computing neighborhood</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neighborhood.html#updating-neighborhood">4.9.2. Updating neighborhood</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neighborhood.html#circular-neighborhood">4.9.3. Circular neighborhood</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.10. Games</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#spatial-game-for-egress-congestion">4.10.1. Spatial Game for Egress Congestion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#payoff-matrix">4.10.2. Payoff Matrix</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#strategy-selection">4.10.3. Strategy Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#strategy-updating">4.10.4. Strategy Updating</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#agents-closer-to-exit">4.10.5. Agents Closer to Exit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#effect-on-agents">4.10.6. Effect on agents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#strategy-selection">4.10.2. Strategy Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#strategy-updating">4.10.3. Strategy Updating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#agents-closer-to-exit">4.10.4. Agents Closer to Exit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#effect-on-agents">4.10.5. Effect on agents</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">5. Continuum Flow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../research/index.html">6. Research</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">7. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">6. Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">6.1. Phenomena</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">6.1.1. Egress Congestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#faster-is-slower">6.1.2. Faster is slower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#arching">6.1.3. Arching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#zipper-effect">6.1.4. Zipper effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#herding">6.1.5. Herding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#lane-formation">6.1.6. Lane formation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#freezing-by-heat">6.1.7. Freezing by heat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#turbulence">6.1.8. Turbulence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#stop-and-go-waves">6.1.9. Stop-and-Go waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#braess-s-paradox">6.1.10. Braess&#8217;s paradox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../research/simulations.html">6.2. Simulations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#outdoor">6.2.1. Outdoor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#hallway">6.2.2. Hallway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#crossing">6.2.3. Crossing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#evacuation">6.2.4. Evacuation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#turning">6.2.5. Turning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../research/applications.html">6.3. Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">7. API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/interface.html">7.1. User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/interface.html#graphics">7.1.1. Graphics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/interface.html#communication">7.1.2. Communication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/interface.html#input-output">7.1.3. Input/Output</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">8. Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix.html">9. Appendix</a></li>
 </ul>
@@ -144,7 +243,7 @@
       
           <li><a href="index.html">4. Multi-Agent</a> &raquo;</li>
       
-    <li>4.10. Game Theoretical Models</li>
+    <li>4.10. Games</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -158,10 +257,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="game-theoretical-models">
-<h1>4.10. Game Theoretical Models<a class="headerlink" href="#game-theoretical-models" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="spatial-game-for-egress-congestion">
-<h2>4.10.1. Spatial Game for Egress Congestion<a class="headerlink" href="#spatial-game-for-egress-congestion" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="games">
+<h1>4.10. Games<a class="headerlink" href="#games" title="Permalink to this headline">¶</a></h1>
 <p>Spatial <a class="reference external" href="https://en.wikipedia.org/wiki/Normal-form_game">game</a> for egress congestion between players <span class="math">\(P \subset A\)</span></p>
 <div class="math">
 \[(S, f)\]</div>
@@ -173,47 +270,15 @@
 <p>Individual strategy is denoted</p>
 <div class="math">
 \[s_{i} \in S, \quad i \in P\]</div>
-</div>
-<div class="section" id="payoff-matrix">
-<h2>4.10.2. Payoff Matrix<a class="headerlink" href="#payoff-matrix" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="16%" />
-<col width="62%" />
-<col width="22%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>&nbsp;</td>
-<td>Impatient</td>
-<td>Patient</td>
-</tr>
-<tr class="row-even"><td>Impatient</td>
-<td><span class="math">\(T_{aset}/T_{ij}, T_{aset}/T_{ij}\)</span></td>
-<td><span class="math">\(-1, 1\)</span></td>
-</tr>
-<tr class="row-odd"><td>Patient</td>
-<td><span class="math">\(1, -1\)</span></td>
-<td><span class="math">\(0, 0\)</span></td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="spatial-game-for-egress-congestion">
+<h2>4.10.1. Spatial Game for Egress Congestion<a class="headerlink" href="#spatial-game-for-egress-congestion" title="Permalink to this headline">¶</a></h2>
 <p>Set of strategies</p>
 <div class="math">
 \[\begin{split}S &amp;= \{ \text{Impatient}, \text{Patient} \} \\
   &amp;= \{&nbsp;0, 1 \}\end{split}\]</div>
-<p>Payoff function</p>
+<p>Payoff matrix / function</p>
 <div class="math">
-\[\begin{split}f(s_i, s_j) =
-\begin{cases}
-\begin{cases}
-T_{aset}/T_{ij} \\
-1
-\end{cases} \\
-\begin{cases}
--1 \\
-0
-\end{cases}
-\end{cases}\end{split}\]</div>
+\[\begin{split}f(s_i, s_j) = \left[\begin{matrix}\left ( \frac{T_{aset}}{T_{ij}}, \quad \frac{T_{aset}}{T_{ij}}\right ) &amp; \left ( -1, \quad 1\right )\\\left ( 1, \quad -1\right ) &amp; \left ( 0, \quad 0\right )\end{matrix}\right]\end{split}\]</div>
 <p>Available Safe Egress Time</p>
 <div class="math">
 \[T_{aset}(t) = T_{0} - t,\]</div>
@@ -235,7 +300,7 @@ T_{aset}/T_{ij} \\
 \[T_{ij} = \frac{(T_i + T_j)}{2}.\]</div>
 </div>
 <div class="section" id="strategy-selection">
-<h2>4.10.3. Strategy Selection<a class="headerlink" href="#strategy-selection" title="Permalink to this headline">¶</a></h2>
+<h2>4.10.2. Strategy Selection<a class="headerlink" href="#strategy-selection" title="Permalink to this headline">¶</a></h2>
 <p>New strategy is selected using best response dynamics</p>
 <div class="math">
 \[s_{i} = \underset{s \in S}{\arg \min} \sum_{j \in N_{i}^{neigh}} f(s, s_{j})\]</div>
@@ -246,11 +311,11 @@ T_{aset}/T_{ij} \\
 </ul>
 </div>
 <div class="section" id="strategy-updating">
-<h2>4.10.4. Strategy Updating<a class="headerlink" href="#strategy-updating" title="Permalink to this headline">¶</a></h2>
+<h2>4.10.3. Strategy Updating<a class="headerlink" href="#strategy-updating" title="Permalink to this headline">¶</a></h2>
 <p>Updating strategies by <a class="reference external" href="http://preshing.com/20111007/how-to-generate-random-timings-for-a-poisson-process/">Poisson process</a></p>
 </div>
 <div class="section" id="agents-closer-to-exit">
-<h2>4.10.5. Agents Closer to Exit<a class="headerlink" href="#agents-closer-to-exit" title="Permalink to this headline">¶</a></h2>
+<h2>4.10.4. Agents Closer to Exit<a class="headerlink" href="#agents-closer-to-exit" title="Permalink to this headline">¶</a></h2>
 <p>Function mapping players to number of agents that are closer to the exit is denoted</p>
 <div class="math">
 \[\lambda :&nbsp;P \mapsto [0, | P | - 1].\]</div>
@@ -283,7 +348,7 @@ T_{aset}/T_{ij} \\
 \[\boldsymbol{\lambda} = \operatorname{arg\,sort} (\boldsymbol{\lambda}^{-1})\]</div>
 </div>
 <div class="section" id="effect-on-agents">
-<h2>4.10.6. Effect on agents<a class="headerlink" href="#effect-on-agents" title="Permalink to this headline">¶</a></h2>
+<h2>4.10.5. Effect on agents<a class="headerlink" href="#effect-on-agents" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><span class="math">\(k\)</span></li>
 <li><span class="math">\(\tau_{adj}\)</span></li>
@@ -325,7 +390,7 @@ T_{aset}/T_{ij} \\
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Sep 25, 2016.
+      Last updated on Oct 19, 2016.
 
     </p>
   </div>
