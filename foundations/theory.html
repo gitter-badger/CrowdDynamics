@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.1. Mathematical Foundations &mdash; Crowd Dynamics 1 documentation</title>
+  <title>3.1. Mathematical Foundations &mdash; Crowd Dynamics 1 documentation</title>
   
 
   
@@ -36,9 +36,9 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
-        <link rel="up" title="2. Foundations" href="index.html"/>
-        <link rel="next" title="2.2. Quantities" href="quantities.html"/>
-        <link rel="prev" title="2. Foundations" href="index.html"/> 
+        <link rel="up" title="3. Foundations" href="index.html"/>
+        <link rel="next" title="3.2. Quantities" href="quantities.html"/>
+        <link rel="prev" title="3. Foundations" href="index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -84,175 +84,157 @@
             
             
                 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">1. Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#installing-dependensies">1.1. Installing dependensies</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../getting_started.html#virtualenv">1.1.1. Virtualenv</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../getting_started.html#anaconda">1.1.2. Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">1. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#developers">1.1. Developers</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#examples">1.2. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">2. Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Foundations</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. Mathematical Foundations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#time">3.1.1. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometry">3.1.2. Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#domain">3.1.2.1. Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#obstacle">3.1.2.2. Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exit">3.1.2.3. Exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#narrow-bottleneck">3.1.2.4. Narrow bottleneck</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Foundations</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. Mathematical Foundations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#time">2.1.1. Time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#geometry">2.1.2. Geometry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#domain">2.1.2.1. Domain</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#obstacle">2.1.2.2. Obstacle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#exit">2.1.2.3. Exit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#narrow-bottleneck">2.1.2.4. Narrow bottleneck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#agent">3.1.3. Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#model">3.1.3.1. Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#circular-model">3.1.3.2. Circular model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#elliptical-model">3.1.3.3. Elliptical model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#three-circle-model">3.1.3.4. Three circle model</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#agent">2.1.3. Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#model">2.1.3.1. Model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#circular-model">2.1.3.2. Circular model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#elliptical-model">2.1.3.3. Elliptical model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#three-circle-model">2.1.3.4. Three circle model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initial-configuration">3.1.4. Initial configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#initial-configuration">2.1.4. Initial configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quantities.html">3.2. Quantities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quantities.html#density">3.2.1. Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quantities.html#flow">3.2.2. Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="quantities.html#rate">3.2.2.1. Rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quantities.html#types">3.2.2.2. Types</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="quantities.html">2.2. Quantities</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="quantities.html#density">2.2.1. Density</a></li>
-<li class="toctree-l3"><a class="reference internal" href="quantities.html#flow">2.2.2. Flow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="quantities.html#rate">2.2.2.1. Rate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="quantities.html#types">2.2.2.2. Types</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="quantities.html#pressure">2.2.3. Pressure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="quantities.html#fundamental-diagram">2.2.4. Fundamental Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quantities.html#pressure">3.2.3. Pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quantities.html#fundamental-diagram">3.2.4. Fundamental Diagram</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">3. Cellular Automata</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">4. Multi-Agent</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/algorithms.html">4.1. Algorithms</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#n-body-simulations">4.1.1. N-Body Simulations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#brute-force">4.1.2. Brute Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#spatial-partitioning-algorithms">4.1.3. Spatial Partitioning Algorithms</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#block-list">4.1.3.1. Block List</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#convex-hull">4.1.3.2. Convex Hull</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">5. Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/algorithms.html">5.1. Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#n-body-simulations">5.1.1. N-Body Simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#brute-force">5.1.2. Brute Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#spatial-partitioning-algorithms">5.1.3. Spatial Partitioning Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#block-list">5.1.3.1. Block List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#convex-hull">5.1.3.2. Convex Hull</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#parallelisation">4.1.4. Parallelisation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#refences">4.1.5. Refences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#parallelisation">5.1.4. Parallelisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#refences">5.1.5. Refences</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">4.2. Social Force Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/adjusting.html">4.3. Adjusting</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#force">4.3.1. Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#torque">4.3.2. Torque</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#subgroups">4.3.3. Subgroups</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#attractor-point">4.3.3.1. Attractor point</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#intra-subgroup-adjusting-force">4.3.3.2. Intra-subgroup adjusting force</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/interactions.html">4.4. Interactions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#social-force">4.4.1. Social Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#physical-contact">4.4.2. Physical Contact</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#torque">4.4.3. Torque</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/fluctuation.html">4.5. Fluctuation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#force">4.5.1. Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#torque">4.5.2. Torque</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/integrator.html">4.6. Integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/navigation.html">4.7. Navigation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#distance-map-and-static-potential">4.7.1. Distance map and static potential</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#dynamic-potential">4.7.2. Dynamic potential</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#implementation">4.7.3. Implementation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#references">4.7.4. References</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/orientation.html">4.8. Orientation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/exit_selection.html">4.9. Exit Selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/game.html">4.10. Games</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#spatial-game-for-egress-congestion">4.10.1. Spatial Game for Egress Congestion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#strategy-selection">4.10.2. Strategy Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#strategy-updating">4.10.3. Strategy Updating</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#agents-closer-to-exit">4.10.4. Agents Closer to Exit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#effect-on-agents">4.10.5. Effect on agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">5.2. Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/adjusting.html">5.3. Adjusting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#force">5.3.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#torque">5.3.2. Torque</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#subgroups">5.3.3. Subgroups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#attractor-point">5.3.3.1. Attractor point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#intra-subgroup-adjusting-force">5.3.3.2. Intra-subgroup adjusting force</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">5. Continuum Flow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../research/index.html">6. Research</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">6.1. Phenomena</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">6.1.1. Egress Congestion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#faster-is-slower">6.1.2. Faster is slower</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#arching">6.1.3. Arching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#zipper-effect">6.1.4. Zipper effect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#herding">6.1.5. Herding</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#lane-formation">6.1.6. Lane formation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#freezing-by-heat">6.1.7. Freezing by heat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#turbulence">6.1.8. Turbulence</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#stop-and-go-waves">6.1.9. Stop-and-Go waves</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#braess-s-paradox">6.1.10. Braess&#8217;s paradox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/interactions.html">5.4. Interactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#social-force">5.4.1. Social Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#physical-contact">5.4.2. Physical Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#torque">5.4.3. Torque</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../research/simulations.html">6.2. Simulations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#outdoor">6.2.1. Outdoor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#hallway">6.2.2. Hallway</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#crossing">6.2.3. Crossing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#evacuation">6.2.4. Evacuation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#turning">6.2.5. Turning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/fluctuation.html">5.5. Fluctuation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#force">5.5.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#torque">5.5.2. Torque</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../research/applications.html">6.3. Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/integrator.html">5.6. Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/navigation.html">5.7. Navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#distance-map-and-static-potential">5.7.1. Distance map and static potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#dynamic-potential">5.7.2. Dynamic potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#implementation">5.7.3. Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#references">5.7.4. References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">7. API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../api/application.html">7.1. Application</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../api/application.html#architecture">7.1.1. Architecture</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/application.html#configuration-files">7.1.2. Configuration Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/application.html#command-line-arguments">7.1.3. Command Line Arguments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/application.html#logger">7.1.4. Logger</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/application.html#tests">7.1.5. Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/application.html#profiling">7.1.6. Profiling</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../api/core.html">7.2. Core</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.motion">7.2.1. Motion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.distance">7.2.2. Distance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.interactions">7.2.3. Interactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.block_list">7.2.4. Block List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.integrator">7.2.5. Integrator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.navigation">7.2.6. Navigation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#orientation">7.2.7. Orientation</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../api/io.html">7.3. IO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/simulation.html">7.4. Simulation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../api/simulation.html#agent">7.4.1. Agent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/simulation.html#multi-agent">7.4.2. Multi-Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../api/simulation.html#configuration">7.4.2.1. Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api/simulation.html#id1">7.4.2.2. Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/orientation.html">5.8. Orientation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/exit_selection.html">5.9. Exit Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/game.html">5.10. Games</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#spatial-game-for-egress-congestion">5.10.1. Spatial Game for Egress Congestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#strategy-selection">5.10.2. Strategy Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#strategy-updating">5.10.3. Strategy Updating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#agents-closer-to-exit">5.10.4. Agents Closer to Exit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#effect-on-agents">5.10.5. Effect on agents</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../api/interface.html">7.5. Graphical User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">6. Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">7. Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">7.1. Phenomena</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">7.1.1. Egress Congestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#faster-is-slower">7.1.2. Faster is slower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#arching">7.1.3. Arching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#zipper-effect">7.1.4. Zipper effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#herding">7.1.5. Herding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#lane-formation">7.1.6. Lane formation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#freezing-by-heat">7.1.7. Freezing by heat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#turbulence">7.1.8. Turbulence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#stop-and-go-waves">7.1.9. Stop-and-Go waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#braess-s-paradox">7.1.10. Braess&#8217;s paradox</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../developers.html">8. Developers Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../developers.html#ide">8.1. IDE</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../developers.html#pycharm">8.1.1. Pycharm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../developers.html#atom">8.1.2. Atom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research/simulations.html">7.2. Simulations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#outdoor">7.2.1. Outdoor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#hallway">7.2.2. Hallway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#crossing">7.2.3. Crossing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#evacuation">7.2.4. Evacuation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/simulations.html#turning">7.2.5. Turning</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../developers.html#style-guide">8.2. Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research/applications.html">7.3. Applications</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix.html">10. Appendix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">11. Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">8. API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/application.html">8.1. Application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/application.html#architecture">8.1.1. Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/application.html#configuration-files">8.1.2. Configuration Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/application.html#command-line-arguments">8.1.3. Command Line Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/application.html#tests">8.1.4. Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/application.html#profiling">8.1.5. Profiling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/core.html">8.2. Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.motion">8.2.1. Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.distance">8.2.2. Distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.interactions">8.2.3. Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.block_list">8.2.4. Block List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.integrator">8.2.5. Integrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.navigation">8.2.6. Navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/io.html">8.3. IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/simulation.html">8.4. Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/simulation.html#agent">8.4.1. Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/simulation.html#multi-agent">8.4.2. Multi-Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/simulation.html#configuration">8.4.2.1. Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/simulation.html#id1">8.4.2.2. Simulation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/interface.html">8.5. Graphical User Interface</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -283,9 +265,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">2. Foundations</a> &raquo;</li>
+          <li><a href="index.html">3. Foundations</a> &raquo;</li>
       
-    <li>2.1. Mathematical Foundations</li>
+    <li>3.1. Mathematical Foundations</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -300,14 +282,14 @@
            <div itemprop="articleBody">
             
   <div class="section" id="mathematical-foundations">
-<h1>2.1. Mathematical Foundations<a class="headerlink" href="#mathematical-foundations" title="Permalink to this headline">¶</a></h1>
+<h1>3.1. Mathematical Foundations<a class="headerlink" href="#mathematical-foundations" title="Permalink to this headline">¶</a></h1>
 <p>Mathematically crowd dynamics or crowd simulation is defined as a function</p>
 <div class="math">
 \[f: A \times \mathbb{R}^+ \mapsto A\]</div>
 <p>that maps current state of agent <span class="math">\(A\)</span> and time <span class="math">\(t \in \mathbb{R}^{+}\)</span> to new state <span class="math">\(A\)</span>. Common states to be manipulated are agents <em>spatial</em> and <em>rotational</em> motion. States are model dependent and more can be defined as needed, keeping in mind the principle of <a class="reference external" href="https://en.wikipedia.org/wiki/Occam%27s_razor">Occam&#8217;s razor</a>.</p>
 <hr class="docutils" />
 <div class="section" id="time">
-<h2>2.1.1. Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.1. Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
 <p>Time is denoted</p>
 <div class="math">
 \[t \in \mathbb{R}^{+}.\]</div>
@@ -320,7 +302,7 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="geometry">
-<h2>2.1.2. Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.2. Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h2>
 <p>Spatical geometry of the crowd simulation is defined in two dimensional space <span class="math">\(\mathbb{R}^{2}\)</span>. Geometrical constructs that are used in this simulation are <em>point</em>, <em>curve</em> and <em>surface</em>. For numerical and practical purposes simulations use simple geometric object such as polygons, linestrings and circles.</p>
 <p>Point is defined</p>
 <div class="math">
@@ -331,26 +313,26 @@
 <p>Linerings have their end point connected as well. Polygon is a set of the area that is covered by linering. <a class="reference external" href="http://toblerity.org/shapely/manual.html">Shapely</a>.</p>
 <p>For theoretical purposes <a class="reference external" href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#General_definition">Bézier curves</a> may also be considered but may be too complex for simulations.</p>
 <div class="section" id="domain">
-<h3>2.1.2.1. Domain<a class="headerlink" href="#domain" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.2.1. Domain<a class="headerlink" href="#domain" title="Permalink to this headline">¶</a></h3>
 <p>Domain is surface that contains all objects in the simulation such as agents and obstacles. Defined</p>
 <div class="math">
 \[\Omega \subset \mathbb{R}^{2}.\]</div>
 <p>Agents that move outside the domain will turn inactive.</p>
 </div>
 <div class="section" id="obstacle">
-<h3>2.1.2.2. Obstacle<a class="headerlink" href="#obstacle" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.2.2. Obstacle<a class="headerlink" href="#obstacle" title="Permalink to this headline">¶</a></h3>
 <p>Obstacle is a static curve that is unpassable (agent cannot go through). Defined</p>
 <div class="math">
 \[\mathcal{O} \subset \Omega.\]</div>
 </div>
 <div class="section" id="exit">
-<h3>2.1.2.3. Exit<a class="headerlink" href="#exit" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.2.3. Exit<a class="headerlink" href="#exit" title="Permalink to this headline">¶</a></h3>
 <p>Exit is a static curve that is passable. Defined</p>
 <div class="math">
 \[\mathcal{E} \subset \Omega.\]</div>
 </div>
 <div class="section" id="narrow-bottleneck">
-<h3>2.1.2.4. Narrow bottleneck<a class="headerlink" href="#narrow-bottleneck" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.2.4. Narrow bottleneck<a class="headerlink" href="#narrow-bottleneck" title="Permalink to this headline">¶</a></h3>
 <p>A special case of exit is a narrow bottleneck. Defined as line from point <span class="math">\(\mathbf{p}_0\)</span> to <span class="math">\(\mathbf{p}_1\)</span>. Width of the door</p>
 <div class="math">
 \[d_{door} = \| \mathbf{p}_0 - \mathbf{p}_1 \|\]</div>
@@ -371,7 +353,7 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="agent">
-<h2>2.1.3. Agent<a class="headerlink" href="#agent" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.3. Agent<a class="headerlink" href="#agent" title="Permalink to this headline">¶</a></h2>
 <p>Set of agents that are subject to motion usually referred just agents is denoted</p>
 <div class="math">
 \[\begin{split}A &amp;= \{ a_0, a_1, \ldots \} \\
@@ -380,7 +362,7 @@ N &amp;= | A |\end{split}\]</div>
 <div class="math">
 \[\mathcal{A} = \bigcup_{i \in A} \mathcal{A}_{i} \subset \Omega.\]</div>
 <div class="section" id="model">
-<h3>2.1.3.1. Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.3.1. Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
 <p>Three different models for she shape of the agent from above are displayed in the figure.</p>
 <img alt="../_images/agent_model.png" src="../_images/agent_model.png" />
 <p>All agents have mass <span class="math">\(m &gt; 0\)</span>, center of the mass <span class="math">\(\mathbf{x} \in \Omega\)</span> and moment of inertia <span class="math">\(I &gt; 0\)</span>. Orientable agents have body angle of <span class="math">\(\varphi \in [-\pi, \pi]\)</span>. Normal and tangential unit vectors for agent</p>
@@ -390,21 +372,21 @@ N &amp;= | A |\end{split}\]</div>
 <p>Velocity of the agent&#8217;s center of mass <span class="math">\(\mathbf{v}\)</span> and rotational velocity <span class="math">\(\omega\)</span> around center of mass.</p>
 </div>
 <div class="section" id="circular-model">
-<h3>2.1.3.2. Circular model<a class="headerlink" href="#circular-model" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.3.2. Circular model<a class="headerlink" href="#circular-model" title="Permalink to this headline">¶</a></h3>
 <p>Simplest of the models is circular model without orientation. Circle is defined with radius <span class="math">\(r &gt; 0\)</span> from the center of mass.</p>
 </div>
 <div class="section" id="elliptical-model">
-<h3>2.1.3.3. Elliptical model<a class="headerlink" href="#elliptical-model" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.3.3. Elliptical model<a class="headerlink" href="#elliptical-model" title="Permalink to this headline">¶</a></h3>
 <p>Ellipse is defined two axes <span class="math">\(r\)</span> and <span class="math">\(r_t\)</span>. Elliptical model is mentioned but not used because complexity of its equation. Preferred model is three circle model which is more realistic and the fact that approximations required to compute elliptical model are based on circular arcs would make it similar to compute. <a class="reference internal" href="#fourarc2001" id="id3">[fourarc2001]</a></p>
 </div>
 <div class="section" id="three-circle-model">
-<h3>2.1.3.4. Three circle model<a class="headerlink" href="#three-circle-model" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.3.4. Three circle model<a class="headerlink" href="#three-circle-model" title="Permalink to this headline">¶</a></h3>
 <p>Three circle model models agent with three circles which represent torso and two shoulders. Torso has radius of <span class="math">\(r_t\)</span> and is centered at center of mass <span class="math">\(\mathbf{x}\)</span> and shoulder have both radius of  <span class="math">\(r_s\)</span> and are centered at <span class="math">\(\mathbf{x} \pm r_{ts} \mathbf{\hat{e}_t}\)</span>. <a class="reference internal" href="#langston2007" id="id4">[langston2007]</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="initial-configuration">
-<h2>2.1.4. Initial configuration<a class="headerlink" href="#initial-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.4. Initial configuration<a class="headerlink" href="#initial-configuration" title="Permalink to this headline">¶</a></h2>
 <p>Initial placement of agents inside a polygonal surface, a spawn denoted by <span class="math">\(\mathcal{S} \subset \Omega\)</span>, uses random uniform sampling.</p>
 <ol class="arabic simple">
 <li>Triangulation</li>
@@ -452,10 +434,10 @@ N &amp;= | A |\end{split}\]</div>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="quantities.html" class="btn btn-neutral float-right" title="2.2. Quantities" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="quantities.html" class="btn btn-neutral float-right" title="3.2. Quantities" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="2. Foundations" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="3. Foundations" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

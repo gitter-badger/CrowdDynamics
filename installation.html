@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Python Module Index &mdash; Crowd Dynamics 1 documentation</title>
+  <title>1. Installation &mdash; Crowd Dynamics 1 documentation</title>
   
 
   
@@ -36,9 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Crowd Dynamics 1 documentation" href="index.html"/>
- 
-
-
+        <link rel="next" title="2. Usage" href="usage.html"/>
+        <link rel="prev" title="Crowd Dynamics" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -83,9 +82,9 @@
           
             
             
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">1. Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#developers">1.1. Developers</a></li>
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#developers">1.1. Developers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">2. Usage</a></li>
@@ -257,7 +256,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -265,9 +264,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li></li>
+    <li>1. Installation</li>
       <li class="wy-breadcrumbs-aside">
         
+          
+            <a href="_sources/installation.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -277,74 +278,64 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-   <h1>Python Module Index</h1>
-
-   <div class="modindex-jumpbox">
-   <a href="#cap-c"><strong>c</strong></a>
-   </div>
-
-   <table class="indextable modindextable" cellspacing="0" cellpadding="2">
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-c"><td></td><td>
-       <strong>c</strong></td><td></td></tr>
-     <tr>
-       <td><img src="_static/minus.png" class="toggler"
-              id="toggle-1" style="display: none" alt="-" /></td>
-       <td>
-       <code class="xref">crowddynamics</code></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/core.html#module-crowddynamics.core.block_list"><code class="xref">crowddynamics.core.block_list</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/core.html#module-crowddynamics.core.distance"><code class="xref">crowddynamics.core.distance</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/core.html#module-crowddynamics.core.integrator"><code class="xref">crowddynamics.core.integrator</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/core.html#module-crowddynamics.core.interactions"><code class="xref">crowddynamics.core.interactions</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/core.html#module-crowddynamics.core.motion"><code class="xref">crowddynamics.core.motion</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/core.html#module-crowddynamics.core.navigation"><code class="xref">crowddynamics.core.navigation</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/interface.html#module-crowddynamics.gui.graphics"><code class="xref">crowddynamics.gui.graphics</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/interface.html#module-crowddynamics.gui.main"><code class="xref">crowddynamics.gui.main</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="api/io.html#module-crowddynamics.io.hdfstore"><code class="xref">crowddynamics.io.hdfstore</code></a></td><td>
-       <em></em></td></tr>
-   </table>
+  <div class="section" id="installation">
+<h1>1. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="developers">
+<h2>1.1. Developers<a class="headerlink" href="#developers" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Run all of the commands in the project root directory <code class="docutils literal"><span class="pre">&lt;path&gt;/crowddynamics</span></code> after you have downloaded the source code.</p>
+</div>
+<ol class="arabic simple">
+<li>Download the source code with <code class="docutils literal"><span class="pre">git</span></code></li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>git clone https://github.com/jaantollander/CrowdDynamics.git
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Download the <a class="reference external" href="https://www.continuum.io/downloads">Anaconda</a> package manager or <a class="reference external" href="http://conda.pydata.org/miniconda.html">Miniconda</a> which is the same as Anaconda except it does not install 150 scientific packages with the installation.</li>
+</ol>
+<blockquote>
+<div><p>After the installation use <code class="docutils literal"><span class="pre">conda</span></code> to install a new environment and the dependensies to run <code class="docutils literal"><span class="pre">crowddynamics</span></code></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>conda env create python3.4 -n crowd34 -f environment.yml
+<span class="nb">source</span> activate crowd34
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>Then install <code class="docutils literal"><span class="pre">crowddynamics</span></code> itself in <code class="docutils literal"><span class="pre">editable</span></code> mode using following <code class="docutils literal"><span class="pre">pip</span></code> command</li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>pip install --editable .
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>Now you can run <code class="docutils literal"><span class="pre">crowddynamics</span></code> from the commandline. Check out the available commands using</li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>crowddynamics --help
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
 
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="usage.html" class="btn btn-neutral float-right" title="2. Usage" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Crowd Dynamics" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

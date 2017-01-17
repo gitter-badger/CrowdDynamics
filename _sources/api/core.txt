@@ -41,10 +41,3 @@ Navigation
 
 .. automodule:: crowddynamics.core.navigation
    :members:
-
-
-Orientation
------------
-
-.. automodule:: crowddynamics.core.orientation
-   :members:
