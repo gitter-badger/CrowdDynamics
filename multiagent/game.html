@@ -38,7 +38,7 @@
     <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
         <link rel="up" title="4. Multi-Agent" href="index.html"/>
         <link rel="next" title="5. Continuum Flow" href="../continuum/index.html"/>
-        <link rel="prev" title="4.9. Neighborhoods" href="neighborhood.html"/> 
+        <link rel="prev" title="4.9. Exit Selection" href="exit_selection.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -128,42 +128,50 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">3. Cellular Automata</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Multi-Agent</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="adjusting.html">4.1. Adjusting</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="adjusting.html#force">4.1.1. Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="adjusting.html#torque">4.1.2. Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html">4.1. Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html#n-body-simulations">4.1.1. N-Body Simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html#brute-force">4.1.2. Brute Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html#spatial-partitioning-algorithms">4.1.3. Spatial Partitioning Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="algorithms.html#block-list">4.1.3.1. Block List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="algorithms.html#convex-hull">4.1.3.2. Convex Hull</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="interactions.html">4.2. Interactions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="interactions.html#social-force">4.2.1. Social Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="interactions.html#physical-contact">4.2.2. Physical Contact</a></li>
-<li class="toctree-l3"><a class="reference internal" href="interactions.html#torque">4.2.3. Torque</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html#parallelisation">4.1.4. Parallelisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html#refences">4.1.5. Refences</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fluctuation.html">4.3. Fluctuation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fluctuation.html#force">4.3.1. Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fluctuation.html#torque">4.3.2. Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="social_force_model.html">4.2. Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adjusting.html">4.3. Adjusting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="adjusting.html#force">4.3.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adjusting.html#torque">4.3.2. Torque</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adjusting.html#subgroups">4.3.3. Subgroups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="adjusting.html#attractor-point">4.3.3.1. Attractor point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="adjusting.html#intra-subgroup-adjusting-force">4.3.3.2. Intra-subgroup adjusting force</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="integrator.html">4.4. Integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navigation.html">4.5. Navigation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="navigation.html#distance-map-and-static-potential">4.5.1. Distance map and static potential</a></li>
-<li class="toctree-l3"><a class="reference internal" href="navigation.html#dynamic-potential">4.5.2. Dynamic potential</a></li>
-<li class="toctree-l3"><a class="reference internal" href="navigation.html#numerical-solving">4.5.3. Numerical solving</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="orientation.html">4.6. Orientation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exit_selection.html">4.7. Exit Selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="subgroup.html">4.8. Subgroups</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="subgroup.html#attractor-point">4.8.1. Attractor point</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subgroup.html#intra-subgroup-adjusting-force">4.8.2. Intra-subgroup adjusting force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">4.4. Interactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="interactions.html#social-force">4.4.1. Social Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactions.html#physical-contact">4.4.2. Physical Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactions.html#torque">4.4.3. Torque</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="neighborhood.html">4.9. Neighborhoods</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="neighborhood.html#computing-neighborhood">4.9.1. Computing neighborhood</a></li>
-<li class="toctree-l3"><a class="reference internal" href="neighborhood.html#updating-neighborhood">4.9.2. Updating neighborhood</a></li>
-<li class="toctree-l3"><a class="reference internal" href="neighborhood.html#circular-neighborhood">4.9.3. Circular neighborhood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluctuation.html">4.5. Fluctuation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fluctuation.html#force">4.5.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fluctuation.html#torque">4.5.2. Torque</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="integrator.html">4.6. Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html">4.7. Navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html#distance-map-and-static-potential">4.7.1. Distance map and static potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html#dynamic-potential">4.7.2. Dynamic potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html#implementation">4.7.3. Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html#references">4.7.4. References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="orientation.html">4.8. Orientation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exit_selection.html">4.9. Exit Selection</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">4.10. Games</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#spatial-game-for-egress-congestion">4.10.1. Spatial Game for Egress Congestion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#strategy-selection">4.10.2. Strategy Selection</a></li>
@@ -201,16 +209,50 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index.html">7. API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../api/interface.html">7.1. User Interface</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../api/interface.html#graphics">7.1.1. Graphics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/interface.html#communication">7.1.2. Communication</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/interface.html#input-output">7.1.3. Input/Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/application.html">7.1. Application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/application.html#architecture">7.1.1. Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/application.html#configuration-files">7.1.2. Configuration Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/application.html#command-line-arguments">7.1.3. Command Line Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/application.html#logger">7.1.4. Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/application.html#tests">7.1.5. Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/application.html#profiling">7.1.6. Profiling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/core.html">7.2. Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.motion">7.2.1. Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.distance">7.2.2. Distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.interactions">7.2.3. Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.block_list">7.2.4. Block List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.integrator">7.2.5. Integrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.navigation">7.2.6. Navigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#orientation">7.2.7. Orientation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/io.html">7.3. IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/simulation.html">7.4. Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/simulation.html#agent">7.4.1. Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/simulation.html#multi-agent">7.4.2. Multi-Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/simulation.html#configuration">7.4.2.1. Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/simulation.html#id1">7.4.2.2. Simulation</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">8. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix.html">9. Appendix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/interface.html">7.5. Graphical User Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developers.html">8. Developers Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developers.html#ide">8.1. IDE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developers.html#pycharm">8.1.1. Pycharm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developers.html#atom">8.1.2. Atom</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developers.html#style-guide">8.2. Style Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">10. Appendix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">11. Bibliography</a></li>
 </ul>
 
             
@@ -380,7 +422,7 @@
         <a href="../continuum/index.html" class="btn btn-neutral float-right" title="5. Continuum Flow" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="neighborhood.html" class="btn btn-neutral" title="4.9. Neighborhoods" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="exit_selection.html" class="btn btn-neutral" title="4.9. Exit Selection" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -390,7 +432,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Oct 19, 2016.
+      Last updated on Jan 17, 2017.
 
     </p>
   </div>
