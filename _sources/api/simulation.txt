@@ -18,6 +18,6 @@ Body types
 Multi-Agent
 -----------
 
-.. automodule:: crowddynamics.multiagent.simulation
+.. automodule:: crowddynamics.multiagent
    :members:
    :special-members:

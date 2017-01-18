@@ -211,15 +211,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">8. API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="core.html">8.1. Core</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.motion">8.1.1. Motion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.distance">8.1.2. Distance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.interactions">8.1.3. Interactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.block_list">8.1.4. Block List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.integrator">8.1.5. Integrator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.navigation">8.1.6. Navigation</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">8.1. Core</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">8.2. IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simulation.html">8.3. Simulation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="simulation.html#agent">8.3.1. Agent</a></li>
@@ -228,7 +220,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="gui.html">8.4. Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="game.html">8.5. Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="game.html#module-crowddynamics.plugins.game">8.5.1. Game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#game">8.5.1. Game</a></li>
 </ul>
 </li>
 </ul>
@@ -279,17 +271,66 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-crowddynamics.io.hdfstore">
-<span id="io"></span><h1>8.2. IO<a class="headerlink" href="#module-crowddynamics.io.hdfstore" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-crowddynamics.io">
+<span id="io"></span><h1>8.2. IO<a class="headerlink" href="#module-crowddynamics.io" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="crowddynamics.io.hdfstore.HDFStore">
-<em class="property">class </em><code class="descclassname">crowddynamics.io.hdfstore.</code><code class="descname">HDFStore</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.HDFStore" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.ListBuffer">
+<em class="property">class </em><code class="descclassname">crowddynamics.io.</code><code class="descname">ListBuffer</code><span class="sig-paren">(</span><em>start=0</em>, <em>end=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.ListBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>List that tracks start and end indices of added items.</p>
+<dl class="method">
+<dt id="crowddynamics.io.ListBuffer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>start=0</em>, <em>end=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.ListBuffer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>start</strong> (<em>int</em>) &#8211; </li>
+<li><strong>end</strong> (<em>int</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.io.ListBuffer.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#crowddynamics.io.ListBuffer.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.io.ListBuffer.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>p_object</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.ListBuffer.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>p_object</strong> (<em>object</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.io.ListBuffer.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.ListBuffer.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.io.HDFStore">
+<em class="property">class </em><code class="descclassname">crowddynamics.io.</code><code class="descname">HDFStore</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for saving object&#8217;s array or scalar data in hdf5 file. Data can be
 saved once or made bufferable so that new data points can be added and
 dumped into the hdf5 file.</p>
 <dl class="method">
-<dt id="crowddynamics.io.hdfstore.HDFStore.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.HDFStore.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.HDFStore.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -301,14 +342,14 @@ dumped into the hdf5 file.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.io.hdfstore.HDFStore.__weakref__">
-<code class="descname">__weakref__</code><a class="headerlink" href="#crowddynamics.io.hdfstore.HDFStore.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.HDFStore.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#crowddynamics.io.HDFStore.__weakref__" title="Permalink to this definition">¶</a></dt>
 <dd><p>list of weak references to the object (if defined)</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.io.hdfstore.HDFStore.add_buffers">
-<code class="descname">add_buffers</code><span class="sig-paren">(</span><em>struct</em>, <em>attributes</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.add_buffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.HDFStore.add_buffers" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.HDFStore.add_buffers">
+<code class="descname">add_buffers</code><span class="sig-paren">(</span><em>struct</em>, <em>attributes</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.add_buffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.add_buffers" title="Permalink to this definition">¶</a></dt>
 <dd><p>struct
 buffers:</p>
 <blockquote>
@@ -330,8 +371,8 @@ attr.name: buffer2
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.io.hdfstore.HDFStore.add_dataset">
-<code class="descname">add_dataset</code><span class="sig-paren">(</span><em>struct</em>, <em>attributes</em>, <em>overwrite=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.add_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.HDFStore.add_dataset" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.HDFStore.add_dataset">
+<code class="descname">add_dataset</code><span class="sig-paren">(</span><em>struct</em>, <em>attributes</em>, <em>overwrite=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.add_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.add_dataset" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -348,8 +389,8 @@ attr.name: buffer2
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.io.hdfstore.HDFStore.append_buffer_to_dataset">
-<code class="descname">append_buffer_to_dataset</code><span class="sig-paren">(</span><em>dset</em>, <em>buffer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.append_buffer_to_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.HDFStore.append_buffer_to_dataset" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.HDFStore.append_buffer_to_dataset">
+<code class="descname">append_buffer_to_dataset</code><span class="sig-paren">(</span><em>dset</em>, <em>buffer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.append_buffer_to_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.append_buffer_to_dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Append values to resizable h5py dataset.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -357,7 +398,7 @@ attr.name: buffer2
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>dset</strong> (<em>h5py.Dataset</em>) &#8211; </li>
-<li><strong>buffer</strong> (<a class="reference internal" href="#crowddynamics.io.hdfstore.ListBuffer" title="crowddynamics.io.hdfstore.ListBuffer"><em>ListBuffer</em></a>) &#8211; </li>
+<li><strong>buffer</strong> (<a class="reference internal" href="#crowddynamics.io.ListBuffer" title="crowddynamics.io.ListBuffer"><em>ListBuffer</em></a>) &#8211; </li>
 </ul>
 </td>
 </tr>
@@ -366,14 +407,14 @@ attr.name: buffer2
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.io.hdfstore.HDFStore.configure_file">
-<code class="descname">configure_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.configure_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.HDFStore.configure_file" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.HDFStore.configure_file">
+<code class="descname">configure_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.configure_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.configure_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure and creates new HDF5 File.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.io.hdfstore.HDFStore.create_dataset">
-<code class="descname">create_dataset</code><span class="sig-paren">(</span><em>group</em>, <em>name</em>, <em>values</em>, <em>resizable=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.create_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.HDFStore.create_dataset" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.HDFStore.create_dataset">
+<code class="descname">create_dataset</code><span class="sig-paren">(</span><em>group</em>, <em>name</em>, <em>values</em>, <em>resizable=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.create_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.create_dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create dataset</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -392,64 +433,15 @@ attr.name: buffer2
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.io.hdfstore.HDFStore.dump_buffers">
-<code class="descname">dump_buffers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.dump_buffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.HDFStore.dump_buffers" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.HDFStore.dump_buffers">
+<code class="descname">dump_buffers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.dump_buffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.dump_buffers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dump buffers</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.io.hdfstore.HDFStore.update_buffers">
-<code class="descname">update_buffers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.update_buffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.HDFStore.update_buffers" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.HDFStore.update_buffers">
+<code class="descname">update_buffers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.update_buffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.update_buffers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update buffers</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="crowddynamics.io.hdfstore.ListBuffer">
-<em class="property">class </em><code class="descclassname">crowddynamics.io.hdfstore.</code><code class="descname">ListBuffer</code><span class="sig-paren">(</span><em>start=0</em>, <em>end=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.ListBuffer" title="Permalink to this definition">¶</a></dt>
-<dd><p>List that tracks start and end indices of added items.</p>
-<dl class="method">
-<dt id="crowddynamics.io.hdfstore.ListBuffer.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>start=0</em>, <em>end=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.ListBuffer.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>start</strong> (<em>int</em>) &#8211; </li>
-<li><strong>end</strong> (<em>int</em>) &#8211; </li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="crowddynamics.io.hdfstore.ListBuffer.__weakref__">
-<code class="descname">__weakref__</code><a class="headerlink" href="#crowddynamics.io.hdfstore.ListBuffer.__weakref__" title="Permalink to this definition">¶</a></dt>
-<dd><p>list of weak references to the object (if defined)</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="crowddynamics.io.hdfstore.ListBuffer.append">
-<code class="descname">append</code><span class="sig-paren">(</span><em>p_object</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.ListBuffer.append" title="Permalink to this definition">¶</a></dt>
-<dd><p>Append</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>p_object</strong> (<em>object</em>) &#8211; </td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="crowddynamics.io.hdfstore.ListBuffer.clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.hdfstore.ListBuffer.clear" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clear</p>
 </dd></dl>
 
 </dd></dl>
@@ -476,7 +468,7 @@ attr.name: buffer2
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 18, 2017.
+      Last updated on Jan 19, 2017.
 
     </p>
   </div>

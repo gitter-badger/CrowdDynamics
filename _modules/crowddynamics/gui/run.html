@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>crowddynamics.core.integrator &mdash; Crowd Dynamics 1 documentation</title>
+  <title>crowddynamics.gui.run &mdash; Crowd Dynamics 1 documentation</title>
   
 
   
@@ -255,7 +255,7 @@
       
           <li><a href="../../index.html">Module code</a> &raquo;</li>
       
-    <li>crowddynamics.core.integrator</li>
+    <li>crowddynamics.gui.run</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -267,60 +267,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for crowddynamics.core.integrator</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numba</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+  <h1>Source code for crowddynamics.gui.run</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 
-<span class="kn">from</span> <span class="nn">crowddynamics.core.vector2D</span> <span class="k">import</span> <span class="n">length_nx2</span><span class="p">,</span> <span class="n">wrap_to_pi</span>
+<span class="kn">from</span> <span class="nn">PyQt4</span> <span class="k">import</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtCore</span>
+
+<span class="kn">from</span> <span class="nn">crowddynamics.gui.main</span> <span class="k">import</span> <span class="n">MainWindow</span>
 
 
-<span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="integrate"><a class="viewcode-back" href="../../../api/core.html#crowddynamics.core.integrate">[docs]</a><span class="k">def</span> <span class="nf">integrate</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">dt_min</span><span class="p">,</span> <span class="n">dt_max</span><span class="p">):</span>
-    <span class="sd">r&quot;&quot;&quot;</span>
-<span class="sd">    Integration using adaptive timestep for integrating differential</span>
-<span class="sd">    system.</span>
+<div class="viewcode-block" id="run_gui"><a class="viewcode-back" href="../../../api/gui.html#crowddynamics.gui.run_gui">[docs]</a><span class="k">def</span> <span class="nf">run_gui</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Launches the graphical user interface for visualizing simulation.&quot;&quot;&quot;</span>
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;crowddynamics.gui.mainwindow&quot;</span><span class="p">)</span>
 
-<span class="sd">    Args:</span>
-<span class="sd">        agent (Agent):</span>
-<span class="sd">        dt_min (float): Minimum timestep for adaptive integration</span>
-<span class="sd">        dt_max (float): Maximum timestep for adaptive integration</span>
+    <span class="c1"># Qt - Graphical User Interface</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Starting GUI&quot;</span><span class="p">)</span>
 
-<span class="sd">    Returns:</span>
-<span class="sd">        float: Timestep that was used for integration</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Velocity Verlet?</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">indices</span><span class="p">()</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">force</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">agent</span><span class="o">.</span><span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># Acceleration</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">win</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
+    <span class="n">win</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-    <span class="c1"># Time step selection</span>
-    <span class="n">v_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">length_nx2</span><span class="p">(</span><span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">))</span>
-    <span class="n">dx_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">agent</span><span class="o">.</span><span class="n">target_velocity</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_max</span>
-    <span class="n">dx_max</span> <span class="o">*=</span> <span class="mf">1.1</span>
-
-    <span class="k">if</span> <span class="n">v_max</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="c1"># Static system</span>
-        <span class="n">dt</span> <span class="o">=</span> <span class="n">dt_max</span>
+    <span class="c1"># Start Qt event loop unless running in interactive mode or using pyside.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">interactive</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">QtCore</span><span class="p">,</span> <span class="s1">&#39;PYQT_VERSION&#39;</span><span class="p">):</span>
+        <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">dt</span> <span class="o">=</span> <span class="n">dx_max</span> <span class="o">/</span> <span class="n">v_max</span>
-        <span class="k">if</span> <span class="n">dt</span> <span class="o">&gt;</span> <span class="n">dt_max</span><span class="p">:</span>
-            <span class="n">dt</span> <span class="o">=</span> <span class="n">dt_max</span>
-        <span class="k">elif</span> <span class="n">dt</span> <span class="o">&lt;</span> <span class="n">dt_min</span><span class="p">:</span>
-            <span class="n">dt</span> <span class="o">=</span> <span class="n">dt_min</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Interactive mode and pyside are not supported.&quot;</span><span class="p">)</span>
 
-    <span class="c1"># Updating agents</span>
-    <span class="n">agent</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">**</span> <span class="mi">2</span>
-    <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">dt</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Finishing GUI</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
 
-    <span class="k">if</span> <span class="n">agent</span><span class="o">.</span><span class="n">orientable</span><span class="p">:</span>
-        <span class="n">angular_acceleration</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">torque</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">agent</span><span class="o">.</span><span class="n">inertia_rot</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">agent</span><span class="o">.</span><span class="n">angular_velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">+</span> \
-                          <span class="n">angular_acceleration</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">**</span> <span class="mi">2</span>
-        <span class="n">agent</span><span class="o">.</span><span class="n">angular_velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">angular_acceleration</span> <span class="o">*</span> <span class="n">dt</span>
-        <span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">wrap_to_pi</span><span class="p">(</span><span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span>
-
-        <span class="n">agent</span><span class="o">.</span><span class="n">update_shoulder_positions</span><span class="p">()</span>
-
-    <span class="k">return</span> <span class="n">dt</span></div>
+    <span class="n">win</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span></div>
 </pre></div>
 
            </div>

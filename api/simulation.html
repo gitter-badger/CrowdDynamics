@@ -211,15 +211,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">8. API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="core.html">8.1. Core</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.motion">8.1.1. Motion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.distance">8.1.2. Distance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.interactions">8.1.3. Interactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.block_list">8.1.4. Block List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.integrator">8.1.5. Integrator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.navigation">8.1.6. Navigation</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">8.1. Core</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io.html">8.2. IO</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">8.3. Simulation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#agent">8.3.1. Agent</a></li>
@@ -228,7 +220,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="gui.html">8.4. Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="game.html">8.5. Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="game.html#module-crowddynamics.plugins.game">8.5.1. Game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#game">8.5.1. Game</a></li>
 </ul>
 </li>
 </ul>
@@ -698,13 +690,218 @@
 </div>
 <div class="section" id="multi-agent">
 <h2>8.3.2. Multi-Agent<a class="headerlink" href="#multi-agent" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-crowddynamics.multiagent.simulation"></span><dl class="class">
-<dt id="crowddynamics.multiagent.simulation.MultiAgentSimulation">
-<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.simulation.</code><code class="descname">MultiAgentSimulation</code><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.simulation.MultiAgentSimulation" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="module-crowddynamics.multiagent"></span><dl class="class">
+<dt id="crowddynamics.multiagent.Agent">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.</code><code class="descname">Agent</code><span class="sig-paren">(</span><em>size</em>, <em>mass</em>, <em>radius</em>, <em>ratio_rt</em>, <em>ratio_rs</em>, <em>ratio_ts</em>, <em>inertia_rot</em>, <em>target_velocity</em>, <em>target_angular_velocity</em><span class="sig-paren">)</span><a class="headerlink" href="#crowddynamics.multiagent.Agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure for agent parameters and variables.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.Navigation">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.</code><code class="descname">Navigation</code><span class="sig-paren">(</span><em>simulation</em>, <em>algorithm='static'</em>, <em>step=0.01</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/algorithms.html#Navigation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Navigation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles navigation in multi-agent simulation.</p>
+<dl class="method">
+<dt id="crowddynamics.multiagent.Navigation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>simulation</em>, <em>algorithm='static'</em>, <em>step=0.01</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/algorithms.html#Navigation.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Navigation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>simulation</strong> &#8211; </li>
+<li><strong>algorithm</strong> &#8211; </li>
+<li><strong>step</strong> (<em>float</em>) &#8211; Step size for the grid.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.multiagent.Navigation.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/algorithms.html#Navigation.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Navigation.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes target directions of active agents.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.Orientation">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.</code><code class="descname">Orientation</code><span class="sig-paren">(</span><em>simulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/algorithms.html#Orientation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target orientation</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.ExitSelection">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.</code><code class="descname">ExitSelection</code><span class="sig-paren">(</span><em>simulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/algorithms.html#ExitSelection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.ExitSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exit selection policy.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.QueueDict">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.</code><code class="descname">QueueDict</code><span class="sig-paren">(</span><em>producer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#QueueDict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.QueueDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queue dict</p>
+<dl class="method">
+<dt id="crowddynamics.multiagent.QueueDict.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>producer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#QueueDict.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.QueueDict.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>producer</strong> &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.multiagent.QueueDict.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#crowddynamics.multiagent.QueueDict.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.Configuration">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.</code><code class="descname">Configuration</code><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#Configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set initial configuration for multi-agent simulation.</p>
+<dl class="method">
+<dt id="crowddynamics.multiagent.Configuration.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#Configuration.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Configuration.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.multiagent.Configuration.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#crowddynamics.multiagent.Configuration.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.multiagent.Configuration.set_agents">
+<code class="descname">set_agents</code><span class="sig-paren">(</span><em>size=None</em>, <em>surface=None</em>, <em>position='random'</em>, <em>velocity=None</em>, <em>orientation=None</em>, <em>target_direction='auto'</em>, <em>target_angle='auto'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#Configuration.set_agents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Configuration.set_agents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set spatial and rotational parameters.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>kwargs</strong></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><em>size</em></td>
+<td><p class="first">Integer: Number of agent to be placed.</p>
+<p class="last">None: Places all agents</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>surface</em></td>
+<td><p class="first">surface: Custom value</p>
+<p class="last">None: Domain</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>position</em></td>
+<td><p class="first">ndarray: Custom values</p>
+<p class="last">&#8220;random&#8221;: Uses Monte Carlo method to place agent
+without overlapping with obstacles or other agents.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>target_direction</em></td>
+<td><p class="first">ndarray: Custom value</p>
+<p>&#8220;random&#8221;: Uniformly distributed random value</p>
+<p class="last">&#8220;auto&#8221;:
+None: Default value</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>velocity</em></td>
+<td><p class="first">ndarray: Custom value</p>
+<p>&#8220;random: Uniformly distributed random value,</p>
+<p class="last">&#8220;auto&#8221;:
+None: Default value</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>target_angle</em></td>
+<td><p class="first">ndarray: Custom value</p>
+<p>&#8220;random&#8221;: Uniformly distributed random value,</p>
+<p class="last">&#8220;auto&#8221;:
+None: Default value</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>orientation</em></td>
+<td><p class="first">float: Custom value</p>
+<p>&#8220;random&#8221;: Uniformly distributed random value,</p>
+<p class="last">&#8220;auto&#8221;:
+None: Default value</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.multiagent.Configuration.set_field">
+<code class="descname">set_field</code><span class="sig-paren">(</span><em>domain=None</em>, <em>obstacles=None</em>, <em>exits=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#Configuration.set_field"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Configuration.set_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shapely BaseGeometry types</p>
+<ul class="simple">
+<li>Point</li>
+<li>LineString</li>
+<li>LinearRing</li>
+<li>Polygon</li>
+<li>MultiPoint</li>
+<li>MultiLineString</li>
+<li>MultiPolygon</li>
+<li>GeometryCollection</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Kwargs</strong></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><em>domain</em></td>
+<td>Polygon which contains all the other objects.</td>
+</tr>
+<tr class="row-odd"><td><em>goals</em></td>
+<td>&#8211;</td>
+</tr>
+<tr class="row-even"><td><em>obstacles</em></td>
+<td>Collection of polygons and LineStrings.</td>
+</tr>
+<tr class="row-odd"><td><em>exits</em></td>
+<td>Collection of polygons and LineStrings.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="crowddynamics.multiagent.Configuration.truncnorm">
+<em class="property">static </em><code class="descname">truncnorm</code><span class="sig-paren">(</span><em>loc</em>, <em>abs_scale</em>, <em>size</em>, <em>std=3.0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#Configuration.truncnorm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Configuration.truncnorm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scaled symmetrical truncated normal distribution.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.MultiAgentSimulation">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.</code><code class="descname">MultiAgentSimulation</code><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class that calls numerical algorithms of the multi-agent simulation.</p>
 <dl class="method">
-<dt id="crowddynamics.multiagent.simulation.MultiAgentSimulation.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.simulation.MultiAgentSimulation.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>MultiAgentSimulation</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -717,8 +914,8 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.multiagent.simulation.MultiAgentSimulation.configure_queuing">
-<code class="descname">configure_queuing</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.configure_queuing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.simulation.MultiAgentSimulation.configure_queuing" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.configure_queuing">
+<code class="descname">configure_queuing</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.configure_queuing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.configure_queuing" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -732,28 +929,28 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.multiagent.simulation.MultiAgentSimulation.initial_update">
-<code class="descname">initial_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crowddynamics.multiagent.simulation.MultiAgentSimulation.initial_update" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.initial_update">
+<code class="descname">initial_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.initial_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.multiagent.simulation.MultiAgentSimulation.run">
-<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.simulation.MultiAgentSimulation.run" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runs simulation process until is called. This calls the update method
 repeatedly. Finally at stop it puts poison pill (None) into the queue to
 denote last generated value.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.multiagent.simulation.MultiAgentSimulation.stop">
-<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.simulation.MultiAgentSimulation.stop" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets event to true in order to stop the simulation process.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.multiagent.simulation.MultiAgentSimulation.update">
-<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.simulation.MultiAgentSimulation.update" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update</p>
 </dd></dl>
 
@@ -782,7 +979,7 @@ denote last generated value.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 18, 2017.
+      Last updated on Jan 19, 2017.
 
     </p>
   </div>
