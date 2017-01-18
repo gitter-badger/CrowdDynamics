@@ -85,10 +85,16 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">1. Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#developers">1.1. Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#simple">1.1. Simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#developers">1.2. Developers</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../usage.html">2. Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">2. Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#basic-architecture">2.1. Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#command-line-interface">2.2. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">2.3. Configuration</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">3.1. Mathematical Foundations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">3.1.1. Time</a></li>
@@ -205,34 +211,26 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index.html">8. API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../api/application.html">8.1. Application</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../api/application.html#architecture">8.1.1. Architecture</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/application.html#configuration-files">8.1.2. Configuration Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/application.html#command-line-arguments">8.1.3. Command Line Arguments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/application.html#tests">8.1.4. Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/application.html#profiling">8.1.5. Profiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/core.html">8.1. Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.motion">8.1.1. Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.distance">8.1.2. Distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.interactions">8.1.3. Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.block_list">8.1.4. Block List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.integrator">8.1.5. Integrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.navigation">8.1.6. Navigation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../api/core.html">8.2. Core</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.motion">8.2.1. Motion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.distance">8.2.2. Distance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.interactions">8.2.3. Interactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.block_list">8.2.4. Block List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.integrator">8.2.5. Integrator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/core.html#module-crowddynamics.core.navigation">8.2.6. Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/io.html">8.2. IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/simulation.html">8.3. Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/simulation.html#agent">8.3.1. Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/simulation.html#multi-agent">8.3.2. Multi-Agent</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../api/io.html">8.3. IO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/simulation.html">8.4. Simulation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../api/simulation.html#agent">8.4.1. Agent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api/simulation.html#multi-agent">8.4.2. Multi-Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../api/simulation.html#configuration">8.4.2.1. Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api/simulation.html#id1">8.4.2.2. Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/gui.html">8.4. Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/game.html">8.5. Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/game.html#module-crowddynamics.plugins.game">8.5.1. Game</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../api/interface.html">8.5. Graphical User Interface</a></li>
 </ul>
 </li>
 </ul>
@@ -312,7 +310,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 17, 2017.
+      Last updated on Jan 18, 2017.
 
     </p>
   </div>

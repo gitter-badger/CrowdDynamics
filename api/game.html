@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8.5. Graphical User Interface &mdash; Crowd Dynamics 1 documentation</title>
+  <title>8.5. Plugins &mdash; Crowd Dynamics 1 documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
         <link rel="up" title="8. API" href="index.html"/>
-        <link rel="prev" title="8.4. Simulation" href="simulation.html"/> 
+        <link rel="prev" title="8.4. Graphical User Interface" href="gui.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -84,10 +84,16 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">1. Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#developers">1.1. Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#simple">1.1. Simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#developers">1.2. Developers</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../usage.html">2. Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">2. Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#basic-architecture">2.1. Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#command-line-interface">2.2. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">2.3. Configuration</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">3.1. Mathematical Foundations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">3.1.1. Time</a></li>
@@ -204,34 +210,26 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">8. API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="application.html">8.1. Application</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="application.html#architecture">8.1.1. Architecture</a></li>
-<li class="toctree-l3"><a class="reference internal" href="application.html#configuration-files">8.1.2. Configuration Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="application.html#command-line-arguments">8.1.3. Command Line Arguments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="application.html#tests">8.1.4. Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="application.html#profiling">8.1.5. Profiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">8.1. Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.motion">8.1.1. Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.distance">8.1.2. Distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.interactions">8.1.3. Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.block_list">8.1.4. Block List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.integrator">8.1.5. Integrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.navigation">8.1.6. Navigation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="core.html">8.2. Core</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.motion">8.2.1. Motion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.distance">8.2.2. Distance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.interactions">8.2.3. Interactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.block_list">8.2.4. Block List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.integrator">8.2.5. Integrator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.navigation">8.2.6. Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">8.2. IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html">8.3. Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html#agent">8.3.1. Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html#multi-agent">8.3.2. Multi-Agent</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="io.html">8.3. IO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulation.html">8.4. Simulation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="simulation.html#agent">8.4.1. Agent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="simulation.html#multi-agent">8.4.2. Multi-Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="simulation.html#configuration">8.4.2.1. Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="simulation.html#id1">8.4.2.2. Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html">8.4. Graphical User Interface</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.5. Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.plugins.game">8.5.1. Game</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">8.5. Graphical User Interface</a></li>
 </ul>
 </li>
 </ul>
@@ -266,11 +264,11 @@
       
           <li><a href="index.html">8. API</a> &raquo;</li>
       
-    <li>8.5. Graphical User Interface</li>
+    <li>8.5. Plugins</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/api/interface.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/game.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -280,116 +278,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="graphical-user-interface">
-<h1>8.5. Graphical User Interface<a class="headerlink" href="#graphical-user-interface" title="Permalink to this headline">¶</a></h1>
-<p>Graphical user interface and simulation graphics for crowd dynamics. Main window is created</p>
-<ul class="simple">
-<li>PyQt4 <a class="reference internal" href="#pyqt4" id="id1">[pyqt4]</a></li>
-<li>Layout for the main window is created by using Qt designer</li>
-<li>Graphics are implemented using pyqtgraph <a class="reference internal" href="#pyqtgraph" id="id2">[pyqtgraph]</a>.</li>
-</ul>
-<p>Design of the gui is greatly inspired and aided by the design of <a class="reference internal" href="#rtgraph" id="id3">[rtgraph]</a>.</p>
-<span class="target" id="module-crowddynamics.gui.main"></span><dl class="class">
-<dt id="crowddynamics.gui.main.MainWindow">
-<em class="property">class </em><code class="descclassname">crowddynamics.gui.main.</code><code class="descname">MainWindow</code><a class="reference internal" href="../_modules/crowddynamics/gui/main.html#MainWindow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.gui.main.MainWindow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Main window for the grahical user interface. Layout is created by using
-qtdesigner and the files can be found in the <em>designer</em> folder. Makefile
-to generate python code from the designer files can be used with command:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">gui</span>
-</pre></div>
+  <div class="section" id="plugins">
+<h1>8.5. Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-crowddynamics.plugins.game">
+<span id="game"></span><h2>8.5.1. Game<a class="headerlink" href="#module-crowddynamics.plugins.game" title="Permalink to this headline">¶</a></h2>
 </div>
-<p>Main window consists of</p>
-<ul class="simple">
-<li>Menubar (top)</li>
-<li>Sidebar (left)</li>
-<li>Graphics layout widget (middle)</li>
-<li>Control bar (bottom)</li>
-</ul>
-<dl class="method">
-<dt id="crowddynamics.gui.main.MainWindow.configure_plot">
-<code class="descname">configure_plot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/gui/main.html#MainWindow.configure_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.gui.main.MainWindow.configure_plot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Graphics widget for plotting simulation data.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="crowddynamics.gui.main.MainWindow.configure_signals">
-<code class="descname">configure_signals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/gui/main.html#MainWindow.configure_signals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.gui.main.MainWindow.configure_signals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the functionality and values for the widgets.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="crowddynamics.gui.main.MainWindow.start">
-<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/gui/main.html#MainWindow.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.gui.main.MainWindow.start" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start simulation process and updating plot.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="crowddynamics.gui.main.MainWindow.stop">
-<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/gui/main.html#MainWindow.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.gui.main.MainWindow.stop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stops simulation process and updating the plot</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="crowddynamics.gui.main.MainWindow.update_plots">
-<code class="descname">update_plots</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/gui/main.html#MainWindow.update_plots"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.gui.main.MainWindow.update_plots" title="Permalink to this definition">¶</a></dt>
-<dd><p>Updates the data in the plot(s).</p>
-</dd></dl>
-
-</dd></dl>
-
-<span class="target" id="module-crowddynamics.gui.graphics"></span><dl class="class">
-<dt id="crowddynamics.gui.graphics.MultiAgentPlot">
-<em class="property">class </em><code class="descclassname">crowddynamics.gui.graphics.</code><code class="descname">MultiAgentPlot</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/gui/graphics.html#MultiAgentPlot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.gui.graphics.MultiAgentPlot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Multiagentplot</p>
-<dl class="method">
-<dt id="crowddynamics.gui.graphics.MultiAgentPlot.configure">
-<code class="descname">configure</code><span class="sig-paren">(</span><em>process: crowddynamics.multiagent.simulation.MultiAgentSimulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/gui/graphics.html#MultiAgentPlot.configure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.gui.graphics.MultiAgentPlot.configure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configure static plot items and initial configuration of dynamic
-plot items (agents).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>process</strong> &#8211; Simulation process</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="crowddynamics.gui.graphics.MultiAgentPlot.update_data">
-<code class="descname">update_data</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/gui/graphics.html#MultiAgentPlot.update_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.gui.graphics.MultiAgentPlot.update_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update dynamic items.</p>
-</dd></dl>
-
-</dd></dl>
-
-<hr class="docutils" />
-<table class="docutils citation" frame="void" id="pyqt4" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[pyqt4]</a></td><td>Hess, D., &amp; Summerfield, M. (2013). PyQt Whitepaper.</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="pyqtgraph" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[pyqtgraph]</a></td><td>Campagnola, L. (2014). PyQtGraph - Scientific Graphics
-and GUI Library for Python. Posledn{’i} Aktualizace. article.
-Retrieved from <a class="reference external" href="http://www.pyqtgraph.org/">http://www.pyqtgraph.org/</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="rtgraph" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[rtgraph]</a></td><td>Sepúlveda, S., Reyes, P., &amp; Weinstein, A. (2015).
-Visualizing physiological signals in real-time.
-PROC. OF THE 14th PYTHON IN SCIENCE CONF.
-Retrieved from <a class="reference external" href="https://github.com/ssepulveda/RTGraph">https://github.com/ssepulveda/RTGraph</a></td></tr>
-</tbody>
-</table>
 </div>
 
 
@@ -400,7 +293,7 @@ Retrieved from <a class="reference external" href="https://github.com/ssepulveda
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="simulation.html" class="btn btn-neutral" title="8.4. Simulation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="gui.html" class="btn btn-neutral" title="8.4. Graphical User Interface" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -410,7 +303,7 @@ Retrieved from <a class="reference external" href="https://github.com/ssepulveda
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 17, 2017.
+      Last updated on Jan 18, 2017.
 
     </p>
   </div>

@@ -3,3 +3,4 @@ IO
 
 .. automodule:: crowddynamics.io.hdfstore
    :members:
+   :special-members:

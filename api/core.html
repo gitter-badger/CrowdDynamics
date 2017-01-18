@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8.2. Core &mdash; Crowd Dynamics 1 documentation</title>
+  <title>8.1. Core &mdash; Crowd Dynamics 1 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
         <link rel="up" title="8. API" href="index.html"/>
-        <link rel="next" title="8.3. IO" href="io.html"/>
-        <link rel="prev" title="8.1. Application" href="application.html"/> 
+        <link rel="next" title="8.2. IO" href="io.html"/>
+        <link rel="prev" title="8. API" href="index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,10 +85,16 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">1. Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#developers">1.1. Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#simple">1.1. Simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#developers">1.2. Developers</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../usage.html">2. Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">2. Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#basic-architecture">2.1. Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#command-line-interface">2.2. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">2.3. Configuration</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">3.1. Mathematical Foundations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">3.1.1. Time</a></li>
@@ -205,34 +211,26 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">8. API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="application.html">8.1. Application</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="application.html#architecture">8.1.1. Architecture</a></li>
-<li class="toctree-l3"><a class="reference internal" href="application.html#configuration-files">8.1.2. Configuration Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="application.html#command-line-arguments">8.1.3. Command Line Arguments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="application.html#tests">8.1.4. Tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="application.html#profiling">8.1.5. Profiling</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.1. Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.motion">8.1.1. Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.distance">8.1.2. Distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.interactions">8.1.3. Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.block_list">8.1.4. Block List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.integrator">8.1.5. Integrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.navigation">8.1.6. Navigation</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">8.2. Core</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.motion">8.2.1. Motion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.distance">8.2.2. Distance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.interactions">8.2.3. Interactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.block_list">8.2.4. Block List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.integrator">8.2.5. Integrator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.navigation">8.2.6. Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">8.2. IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html">8.3. Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html#agent">8.3.1. Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html#multi-agent">8.3.2. Multi-Agent</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="io.html">8.3. IO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulation.html">8.4. Simulation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="simulation.html#agent">8.4.1. Agent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="simulation.html#multi-agent">8.4.2. Multi-Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="simulation.html#configuration">8.4.2.1. Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="simulation.html#id1">8.4.2.2. Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html">8.4. Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">8.5. Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#module-crowddynamics.plugins.game">8.5.1. Game</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="interface.html">8.5. Graphical User Interface</a></li>
 </ul>
 </li>
 </ul>
@@ -267,7 +265,7 @@
       
           <li><a href="index.html">8. API</a> &raquo;</li>
       
-    <li>8.2. Core</li>
+    <li>8.1. Core</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -282,9 +280,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="core">
-<h1>8.2. Core<a class="headerlink" href="#core" title="Permalink to this headline">¶</a></h1>
+<h1>8.1. Core<a class="headerlink" href="#core" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="module-crowddynamics.core.motion">
-<span id="motion"></span><h2>8.2.1. Motion<a class="headerlink" href="#module-crowddynamics.core.motion" title="Permalink to this headline">¶</a></h2>
+<span id="motion"></span><h2>8.1.1. Motion<a class="headerlink" href="#module-crowddynamics.core.motion" title="Permalink to this headline">¶</a></h2>
 <dl class="attribute">
 <dt id="crowddynamics.core.motion.force_adjust">
 <code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_adjust</code><a class="reference internal" href="../_modules/crowddynamics/core/motion.html#force_adjust"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_adjust" title="Permalink to this definition">¶</a></dt>
@@ -481,7 +479,7 @@ spaces, requiring more sophisticated algorithms.</li>
 
 </div>
 <div class="section" id="module-crowddynamics.core.distance">
-<span id="distance"></span><h2>8.2.2. Distance<a class="headerlink" href="#module-crowddynamics.core.distance" title="Permalink to this headline">¶</a></h2>
+<span id="distance"></span><h2>8.1.2. Distance<a class="headerlink" href="#module-crowddynamics.core.distance" title="Permalink to this headline">¶</a></h2>
 <p>Distance functions for potentials</p>
 <dl class="attribute">
 <dt id="crowddynamics.core.distance.distance_circle_circle">
@@ -584,7 +582,7 @@ spaces, requiring more sophisticated algorithms.</li>
 
 </div>
 <div class="section" id="module-crowddynamics.core.interactions">
-<span id="interactions"></span><h2>8.2.3. Interactions<a class="headerlink" href="#module-crowddynamics.core.interactions" title="Permalink to this headline">¶</a></h2>
+<span id="interactions"></span><h2>8.1.3. Interactions<a class="headerlink" href="#module-crowddynamics.core.interactions" title="Permalink to this headline">¶</a></h2>
 <dl class="attribute">
 <dt id="crowddynamics.core.interactions.agent_agent_block_list">
 <code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">agent_agent_block_list</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions.html#agent_agent_block_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.agent_agent_block_list" title="Permalink to this definition">¶</a></dt>
@@ -744,7 +742,7 @@ disjoint</p>
 
 </div>
 <div class="section" id="module-crowddynamics.core.block_list">
-<span id="block-list"></span><h2>8.2.4. Block List<a class="headerlink" href="#module-crowddynamics.core.block_list" title="Permalink to this headline">¶</a></h2>
+<span id="block-list"></span><h2>8.1.4. Block List<a class="headerlink" href="#module-crowddynamics.core.block_list" title="Permalink to this headline">¶</a></h2>
 <dl class="attribute">
 <dt id="crowddynamics.core.block_list.block_list">
 <code class="descclassname">crowddynamics.core.block_list.</code><code class="descname">block_list</code><a class="reference internal" href="../_modules/crowddynamics/core/block_list.html#block_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.block_list.block_list" title="Permalink to this definition">¶</a></dt>
@@ -771,7 +769,7 @@ disjoint</p>
 
 </div>
 <div class="section" id="module-crowddynamics.core.integrator">
-<span id="integrator"></span><h2>8.2.5. Integrator<a class="headerlink" href="#module-crowddynamics.core.integrator" title="Permalink to this headline">¶</a></h2>
+<span id="integrator"></span><h2>8.1.5. Integrator<a class="headerlink" href="#module-crowddynamics.core.integrator" title="Permalink to this headline">¶</a></h2>
 <dl class="attribute">
 <dt id="crowddynamics.core.integrator.integrate">
 <code class="descclassname">crowddynamics.core.integrator.</code><code class="descname">integrate</code><a class="reference internal" href="../_modules/crowddynamics/core/integrator.html#integrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.integrator.integrate" title="Permalink to this definition">¶</a></dt>
@@ -800,7 +798,7 @@ system.</p>
 
 </div>
 <div class="section" id="module-crowddynamics.core.navigation">
-<span id="navigation"></span><h2>8.2.6. Navigation<a class="headerlink" href="#module-crowddynamics.core.navigation" title="Permalink to this headline">¶</a></h2>
+<span id="navigation"></span><h2>8.1.6. Navigation<a class="headerlink" href="#module-crowddynamics.core.navigation" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="crowddynamics.core.navigation.direction_map">
 <code class="descclassname">crowddynamics.core.navigation.</code><code class="descname">direction_map</code><span class="sig-paren">(</span><em>dmap</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/navigation.html#direction_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.navigation.direction_map" title="Permalink to this definition">¶</a></dt>
@@ -920,10 +918,10 @@ value (float): Value between (0, 1). Value denoting the strength of</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="io.html" class="btn btn-neutral float-right" title="8.3. IO" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="io.html" class="btn btn-neutral float-right" title="8.2. IO" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="application.html" class="btn btn-neutral" title="8.1. Application" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="8. API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -933,7 +931,7 @@ value (float): Value between (0, 1). Value denoting the strength of</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 17, 2017.
+      Last updated on Jan 18, 2017.
 
     </p>
   </div>
