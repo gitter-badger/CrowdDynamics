@@ -1,0 +1,617 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>crowddynamics.core.steering.navigation &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../../../../index.html"/>
+        <link rel="up" title="Module code" href="../../../index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../../../../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">1. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation.html#conda">1.1. Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation.html#from-source">1.2. From Source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">2. Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage.html#basic-architecture">2.1. Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage.html#command-line-interface">2.2. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage.html#configuration">2.3. Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multiagent/index.html">3. Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/social_force_model.html">3.1. Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/algorithms.html">3.2. Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/algorithms.html#n-body-simulations">3.2.1. N-Body Simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/algorithms.html#brute-force">3.2.2. Brute Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/algorithms.html#spatial-partitioning-algorithms">3.2.3. Spatial Partitioning Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../multiagent/algorithms.html#block-list">3.2.3.1. Block List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../multiagent/algorithms.html#convex-hull">3.2.3.2. Convex Hull</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/algorithms.html#parallelisation">3.2.4. Parallelisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/algorithms.html#refences">3.2.5. Refences</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/adjusting.html">3.3. Adjusting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/adjusting.html#force">3.3.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/adjusting.html#torque">3.3.2. Torque</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/adjusting.html#subgroups">3.3.3. Subgroups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../multiagent/adjusting.html#attractor-point">3.3.3.1. Attractor point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../multiagent/adjusting.html#intra-subgroup-adjusting-force">3.3.3.2. Intra-subgroup adjusting force</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/interactions.html">3.4. Interactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/interactions.html#social-force">3.4.1. Social Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/interactions.html#physical-contact">3.4.2. Physical Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/interactions.html#torque">3.4.3. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/fluctuation.html">3.5. Fluctuation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/fluctuation.html#force">3.5.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/fluctuation.html#torque">3.5.2. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/integrator.html">3.6. Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/navigation.html">3.7. Navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/navigation.html#distance-map-and-static-potential">3.7.1. Distance map and static potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/navigation.html#dynamic-potential">3.7.2. Dynamic potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/navigation.html#implementation">3.7.3. Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/navigation.html#references">3.7.4. References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cellular/index.html">4. Cellular Automata</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../continuum/index.html">5. Continuum Flow</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api/index.html">6. API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/core.html">6.1. Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/core.html#module-crowddynamics.core.vector2D">6.1.1. Vector2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/core.html#module-crowddynamics.core.motion">6.1.2. Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/core.html#module-crowddynamics.core.interactions">6.1.3. Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/core.html#module-crowddynamics.core.steering">6.1.4. Steering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/core.html#module-crowddynamics.core.integrator">6.1.5. Integrator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/io.html">6.2. IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/sampling.html">6.3. Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/simulation.html">6.4. Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/simulation.html#agent">6.4.1. Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/simulation.html#module-crowddynamics.multiagent">6.4.2. Multi-Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/cli.html">6.5. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/gui.html">6.6. Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/game.html">6.7. Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/game.html#module-crowddynamics.plugins.game">6.7.1. Game</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../research/index.html">7. Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../research/phenomena.html">7.1. Phenomena</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#egress-congestion">7.1.1. Egress Congestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#faster-is-slower">7.1.2. Faster is slower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#arching">7.1.3. Arching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#zipper-effect">7.1.4. Zipper effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#herding">7.1.5. Herding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#lane-formation">7.1.6. Lane formation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#freezing-by-heat">7.1.7. Freezing by heat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#turbulence">7.1.8. Turbulence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#stop-and-go-waves">7.1.9. Stop-and-Go waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#braess-s-paradox">7.1.10. Braess&#8217;s paradox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../research/simulations.html">7.2. Simulations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/simulations.html#outdoor">7.2.1. Outdoor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/simulations.html#hallway">7.2.2. Hallway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/simulations.html#crossing">7.2.3. Crossing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/simulations.html#evacuation">7.2.4. Evacuation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/simulations.html#turning">7.2.5. Turning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../research/applications.html">7.3. Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../foundations/index.html">8. Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../foundations/theory.html">8.1. Mathematical Foundations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/theory.html#time">8.1.1. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/theory.html#geometry">8.1.2. Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#domain">8.1.2.1. Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#obstacle">8.1.2.2. Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#exit">8.1.2.3. Exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#narrow-bottleneck">8.1.2.4. Narrow bottleneck</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/theory.html#agent">8.1.3. Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#model">8.1.3.1. Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#circular-model">8.1.3.2. Circular model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#elliptical-model">8.1.3.3. Elliptical model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#three-circle-model">8.1.3.4. Three circle model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/theory.html#initial-configuration">8.1.4. Initial configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../foundations/quantities.html">8.2. Quantities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/quantities.html#density">8.2.1. Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/quantities.html#flow">8.2.2. Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/quantities.html#rate">8.2.2.1. Rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/quantities.html#types">8.2.2.2. Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/quantities.html#pressure">8.2.3. Pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/quantities.html#fundamental-diagram">8.2.4. Fundamental Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+      
+    <li>crowddynamics.core.steering.navigation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for crowddynamics.core.steering.navigation</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Iterable</span>
+
+<span class="kn">import</span> <span class="nn">numba</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">skfmm</span>
+<span class="kn">import</span> <span class="nn">skimage.draw</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="k">import</span> <span class="n">LineString</span><span class="p">,</span> <span class="n">Polygon</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry.base</span> <span class="k">import</span> <span class="n">BaseGeometry</span>
+
+<span class="kn">from</span> <span class="nn">crowddynamics.geometry</span> <span class="k">import</span> <span class="n">shapes_to_point_pairs</span>
+
+
+<span class="k">def</span> <span class="nf">_to_indices</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    To indices</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        points (numpy.ndarray): Points on a continuous grid</span>
+<span class="sd">        step (float): Step size of the grid</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Array of integers. Indices of a point in discrete grid.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">points</span> <span class="o">/</span> <span class="n">step</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_set_values</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Set values on discrete grid using ``scikit-image``.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        shape (BaseGeometry): Shapely shape</span>
+<span class="sd">        grid (numpy.ndarray): Grid to set values</span>
+<span class="sd">        value (grid.dtype): Value to set to the grid points</span>
+<span class="sd">        step (float): Step size of the grid</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None. Values are set to grid.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">Polygon</span><span class="p">):</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">shape</span><span class="o">.</span><span class="n">exterior</span><span class="p">)</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="n">_to_indices</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">j</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">polygon</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">LineString</span><span class="p">):</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="n">shapes_to_point_pairs</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="n">_to_indices</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">args</span> <span class="ow">in</span> <span class="n">points</span><span class="p">:</span>
+            <span class="n">j</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
+            <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">shape_</span> <span class="ow">in</span> <span class="n">shape</span><span class="p">:</span>
+            <span class="n">_set_values</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">shape_</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">shape</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># If shape is None do nothing.</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Type of shape is not valid.&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="distance_map"><a class="viewcode-back" href="../../../../api/core.html#crowddynamics.core.steering.distance_map">[docs]</a><span class="k">def</span> <span class="nf">distance_map</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Distance map :math:`S(\mathbf{x})` is obtained by solving *Eikonal equation*</span>
+<span class="sd">    using fast marching *Fast Marching Method (FMM)* (``scikit-fmm``).</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \left \| \nabla S(\mathbf{x}) \right \| = \frac{1}{f(\mathbf{x})}, \quad \mathbf{x} \in \Omega</span>
+
+<span class="sd">    where</span>
+
+<span class="sd">    - Function :math:`f : \bar{\Omega} \mapsto (0, +\infty)` is the speed of</span>
+<span class="sd">      travel at :math:`\mathbf{x}`</span>
+
+<span class="sd">    Boundary conditions for the distance map</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \begin{cases}</span>
+<span class="sd">       S(\mathbf{x}) = 0, &amp; \mathbf{x} \in \mathcal{E} \\</span>
+<span class="sd">       S(\mathbf{x}) \to \infty, &amp; \mathbf{x} \in \mathcal{O}</span>
+<span class="sd">       \end{cases}</span>
+
+<span class="sd">    Initial values for speed</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \begin{cases}</span>
+<span class="sd">       f(\mathbf{x}) &amp;= 1, &amp; \mathbf{x} \in \Omega \setminus \mathcal{O} \\</span>
+<span class="sd">       f(\mathbf{x}) &amp;\to 0, &amp; \mathbf{x} \in \mathcal{O}</span>
+<span class="sd">       \end{cases}</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        step (float):</span>
+<span class="sd">            Step size for the meshgrid.</span>
+
+<span class="sd">        domain (Polygon):</span>
+<span class="sd">            Domain :math:`\Omega` containing obstacles and targets.</span>
+
+<span class="sd">        obstacles (LineString, optional):</span>
+<span class="sd">            Impassable regions :math:`\mathcal{O}` in the domain.</span>
+
+<span class="sd">        targets (LineString, optional):</span>
+<span class="sd">            Target regions :math:`\mathcal{E}` in the domain.</span>
+
+<span class="sd">    Return:</span>
+<span class="sd">        (numpy.meshgrid, numpy.ndarray, numpy.ma.MaskedArray):</span>
+<span class="sd">            (mgrid, dmap, phi)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Numerical values for objects in the domain</span>
+    <span class="n">empty_region</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+    <span class="n">target_region</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="n">obstacle_region</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># Form the meshgrid</span>
+    <span class="n">minx</span><span class="p">,</span> <span class="n">miny</span><span class="p">,</span> <span class="n">maxx</span><span class="p">,</span> <span class="n">maxy</span> <span class="o">=</span> <span class="n">domain</span><span class="o">.</span><span class="n">bounds</span>  <span class="c1"># Bounding box</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">minx</span><span class="p">,</span> <span class="n">maxx</span> <span class="o">+</span> <span class="n">step</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">)</span>  <span class="c1"># x-axis</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">miny</span><span class="p">,</span> <span class="n">maxy</span> <span class="o">+</span> <span class="n">step</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">)</span>  <span class="c1"># y-axis</span>
+    <span class="n">mgrid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># (X, Y)</span>
+
+    <span class="c1"># Contour used for solving distance map</span>
+    <span class="c1"># Mask for masked values that represent obstacles for the solver</span>
+    <span class="n">contour</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">mgrid</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">empty_region</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">mgrid</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="kc">False</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">bool_</span><span class="p">)</span>
+
+    <span class="n">_set_values</span><span class="p">(</span><span class="n">contour</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">target_region</span><span class="p">)</span>
+    <span class="n">_set_values</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">,</span> <span class="n">obstacle_region</span><span class="p">)</span>
+
+    <span class="n">phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">MaskedArray</span><span class="p">(</span><span class="n">contour</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
+
+    <span class="c1"># Solve distance map using Fast-Marching Method (FMM)</span>
+    <span class="n">dmap</span> <span class="o">=</span> <span class="n">skfmm</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">phi</span><span class="p">,</span> <span class="n">dx</span><span class="o">=</span><span class="n">step</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">mgrid</span><span class="p">,</span> <span class="n">dmap</span><span class="p">,</span> <span class="n">phi</span></div>
+
+
+<div class="viewcode-block" id="travel_time_map"><a class="viewcode-back" href="../../../../api/core.html#crowddynamics.core.steering.travel_time_map">[docs]</a><span class="k">def</span> <span class="nf">travel_time_map</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">,</span> <span class="n">agents</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Dynamics potential takes into account the positions of the agents in the field. Equation</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \left \| \nabla T(\mathbf{x}) \right \| = \frac{1}{f(\mathbf{x})}, \quad \mathbf{x} \in \Omega</span>
+
+<span class="sd">    and boundary conditions</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       f(\mathbf{x}) &amp;= 1, \quad \mathbf{x} \in \Omega \setminus (\mathcal{O} \cup \mathcal{A}) \\</span>
+<span class="sd">       f(\mathbf{x}) &amp;\leq 1, \quad \mathbf{x} \in \mathcal{A} \\</span>
+<span class="sd">       f(\mathbf{x}) &amp;\to 0, \quad \mathbf{x} \in \mathcal{O}</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \frac{1}{f(\mathbf{x})} = 1 + \max \left( 0, c_{0} \left( 1 + c_{1} \frac{\mathbf{v} \cdot \nabla S(\mathbf{x})}{v_{0} \| \nabla S(\mathbf{x}) \|} \right) \right)</span>
+
+<span class="sd">    - :math:`c_{0} &gt; 0` general impact strength</span>
+<span class="sd">    - :math:`c_{1} &gt; 0` impact of the moving direction of an agent</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        step (float):</span>
+<span class="sd">            Step size for the meshgrid.</span>
+
+<span class="sd">        domain (Polygon):</span>
+<span class="sd">            Domain :math:`\Omega` containing obstacles and targets.</span>
+
+<span class="sd">        obstacles (LineString, optional):</span>
+<span class="sd">            Impassable regions :math:`\mathcal{O}` in the domain.</span>
+
+<span class="sd">        targets (LineString, optional):</span>
+<span class="sd">            Target regions :math:`\mathcal{E}` in the domain.</span>
+
+<span class="sd">        agents:</span>
+<span class="sd">            Regions occupied by agents :math:`\mathcal{A}`</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (numpy.meshgrid, numpy.ndarray, numpy.ma.MaskedArray):</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="ne">NotImplementedError</span></div>
+
+
+<div class="viewcode-block" id="direction_map"><a class="viewcode-back" href="../../../../api/core.html#crowddynamics.core.steering.direction_map">[docs]</a><span class="k">def</span> <span class="nf">direction_map</span><span class="p">(</span><span class="n">dmap</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Normalized gradient of distance map.</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \hat{\mathbf{e}}_{S} = -\frac{\nabla S(\mathbf{x})}{\| \nabla S(\mathbf{x}) \|}</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dmap (numpy.ndarray):</span>
+<span class="sd">            Distance map.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        numpy.ndarray:</span>
+<span class="sd">            Direction map. Array of shape: ``dmap.shape + (2,)``</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">dmap</span><span class="p">)</span>
+    <span class="n">dir_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">shape</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="p">,))</span>
+
+    <span class="c1"># Flip order from (row, col) to (x, y)</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    <span class="c1"># TODO: handle l == 0</span>
+    <span class="n">dir_map</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span> <span class="o">/</span> <span class="n">l</span>
+    <span class="n">dir_map</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span> <span class="o">/</span> <span class="n">l</span>
+    <span class="k">return</span> <span class="n">dir_map</span></div>
+
+
+<span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="viewcode-block" id="merge_dir_maps"><a class="viewcode-back" href="../../../../api/core.html#crowddynamics.core.steering.merge_dir_maps">[docs]</a><span class="k">def</span> <span class="nf">merge_dir_maps</span><span class="p">(</span><span class="n">dmap</span><span class="p">,</span> <span class="n">dir_map1</span><span class="p">,</span> <span class="n">dir_map2</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Function that merges two direction maps together. Let distance map from</span>
+<span class="sd">    obstacles be :math:`\Phi(\mathbf{x})` and :math:`\lambda(\Phi(\mathbf{x}))`</span>
+<span class="sd">    be any decreasing function of distance from obstacles such that</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \lambda(\Phi) &amp;=</span>
+<span class="sd">       \begin{cases}</span>
+<span class="sd">       1 &amp; \Phi = 0 \\</span>
+<span class="sd">       0 &amp; \Phi &gt; M &gt; 0</span>
+<span class="sd">       \end{cases}</span>
+
+<span class="sd">    Then merged direction map :math:`\hat{\mathbf{e}}_{merged}` is</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       k &amp;= \lambda(\Phi(\mathbf{x})) \\</span>
+<span class="sd">       \hat{\mathbf{e}}_{merged} &amp;= k \hat{\mathbf{e}}_{obs} + (1 - k) \hat{\mathbf{e}}_{exits}</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dmap:</span>
+<span class="sd">        dir_map1:</span>
+<span class="sd">        dir_map2:</span>
+<span class="sd">        radius (float):</span>
+<span class="sd">            Radius</span>
+<span class="sd">        value (float):</span>
+<span class="sd">            Value between (0, 1). Value denoting the strength of dir_map1 at</span>
+<span class="sd">            distance of radius.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        numpy.ndarray:</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">dmap</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">merged</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">dir_map2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">dmap</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span>
+
+            <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mf">1.1</span> <span class="o">*</span> <span class="n">radius</span><span class="p">:</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="n">value</span> <span class="o">**</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">radius</span><span class="p">)</span>  <span class="c1"># Decreasing function</span>
+                <span class="n">merged</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span> <span class="n">k</span> <span class="o">*</span> <span class="n">dir_map1</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">k</span><span class="p">)</span> <span class="o">*</span> <span class="n">dir_map2</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">merged</span></div>
+
+
+<div class="viewcode-block" id="static_potential"><a class="viewcode-back" href="../../../../api/core.html#crowddynamics.core.steering.static_potential">[docs]</a><span class="k">def</span> <span class="nf">static_potential</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">exits</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Static potential</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        step (float):</span>
+<span class="sd">        domain (Polygon):</span>
+<span class="sd">        exits (LineString, optional):</span>
+<span class="sd">        obstacles (LineString, optional):</span>
+<span class="sd">        value (float):</span>
+<span class="sd">        radius (float):</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        numpy.ndarray:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">dmap_exits</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">distance_map</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">exits</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">)</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">dmap_obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">distance_map</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="n">dir_map_exits</span> <span class="o">=</span> <span class="n">direction_map</span><span class="p">(</span><span class="n">dmap_exits</span><span class="p">)</span>
+    <span class="n">dir_map_obs</span> <span class="o">=</span> <span class="n">direction_map</span><span class="p">(</span><span class="n">dmap_obs</span><span class="p">)</span>
+
+    <span class="n">dir_map</span> <span class="o">=</span> <span class="n">merge_dir_maps</span><span class="p">(</span><span class="n">dmap_obs</span><span class="p">,</span> <span class="n">dir_map_obs</span><span class="p">,</span> <span class="n">dir_map_exits</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">dir_map</span></div>
+
+
+<div class="viewcode-block" id="dynamic_potential"><a class="viewcode-back" href="../../../../api/core.html#crowddynamics.core.steering.dynamic_potential">[docs]</a><span class="k">def</span> <span class="nf">dynamic_potential</span><span class="p">():</span>
+    <span class="sd">r&quot;&quot;&quot;Dynamic potential&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="ne">NotImplementedError</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Jan 22, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

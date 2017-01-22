@@ -1,0 +1,633 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>crowddynamics.multiagent.configuration &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../../../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">1. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#conda">1.1. Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#from-source">1.2. From Source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">2. Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage.html#basic-architecture">2.1. Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage.html#command-line-interface">2.2. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage.html#configuration">2.3. Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multiagent/index.html">3. Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/social_force_model.html">3.1. Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/algorithms.html">3.2. Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/algorithms.html#n-body-simulations">3.2.1. N-Body Simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/algorithms.html#brute-force">3.2.2. Brute Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/algorithms.html#spatial-partitioning-algorithms">3.2.3. Spatial Partitioning Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../multiagent/algorithms.html#block-list">3.2.3.1. Block List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../multiagent/algorithms.html#convex-hull">3.2.3.2. Convex Hull</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/algorithms.html#parallelisation">3.2.4. Parallelisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/algorithms.html#refences">3.2.5. Refences</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/adjusting.html">3.3. Adjusting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/adjusting.html#force">3.3.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/adjusting.html#torque">3.3.2. Torque</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/adjusting.html#subgroups">3.3.3. Subgroups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../multiagent/adjusting.html#attractor-point">3.3.3.1. Attractor point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../multiagent/adjusting.html#intra-subgroup-adjusting-force">3.3.3.2. Intra-subgroup adjusting force</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/interactions.html">3.4. Interactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/interactions.html#social-force">3.4.1. Social Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/interactions.html#physical-contact">3.4.2. Physical Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/interactions.html#torque">3.4.3. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/fluctuation.html">3.5. Fluctuation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/fluctuation.html#force">3.5.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/fluctuation.html#torque">3.5.2. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/integrator.html">3.6. Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/navigation.html">3.7. Navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/navigation.html#distance-map-and-static-potential">3.7.1. Distance map and static potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/navigation.html#dynamic-potential">3.7.2. Dynamic potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/navigation.html#implementation">3.7.3. Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/navigation.html#references">3.7.4. References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cellular/index.html">4. Cellular Automata</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../continuum/index.html">5. Continuum Flow</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">6. API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/core.html">6.1. Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/core.html#module-crowddynamics.core.vector2D">6.1.1. Vector2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/core.html#module-crowddynamics.core.motion">6.1.2. Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/core.html#module-crowddynamics.core.interactions">6.1.3. Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/core.html#module-crowddynamics.core.steering">6.1.4. Steering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/core.html#module-crowddynamics.core.integrator">6.1.5. Integrator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/io.html">6.2. IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/sampling.html">6.3. Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/simulation.html">6.4. Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/simulation.html#agent">6.4.1. Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/simulation.html#module-crowddynamics.multiagent">6.4.2. Multi-Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/cli.html">6.5. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/gui.html">6.6. Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/game.html">6.7. Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/game.html#module-crowddynamics.plugins.game">6.7.1. Game</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../research/index.html">7. Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../research/phenomena.html">7.1. Phenomena</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#egress-congestion">7.1.1. Egress Congestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#faster-is-slower">7.1.2. Faster is slower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#arching">7.1.3. Arching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#zipper-effect">7.1.4. Zipper effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#herding">7.1.5. Herding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#lane-formation">7.1.6. Lane formation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#freezing-by-heat">7.1.7. Freezing by heat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#turbulence">7.1.8. Turbulence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#stop-and-go-waves">7.1.9. Stop-and-Go waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#braess-s-paradox">7.1.10. Braess&#8217;s paradox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../research/simulations.html">7.2. Simulations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/simulations.html#outdoor">7.2.1. Outdoor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/simulations.html#hallway">7.2.2. Hallway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/simulations.html#crossing">7.2.3. Crossing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/simulations.html#evacuation">7.2.4. Evacuation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../research/simulations.html#turning">7.2.5. Turning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../research/applications.html">7.3. Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../foundations/index.html">8. Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../foundations/theory.html">8.1. Mathematical Foundations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/theory.html#time">8.1.1. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/theory.html#geometry">8.1.2. Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#domain">8.1.2.1. Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#obstacle">8.1.2.2. Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#exit">8.1.2.3. Exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#narrow-bottleneck">8.1.2.4. Narrow bottleneck</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/theory.html#agent">8.1.3. Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#model">8.1.3.1. Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#circular-model">8.1.3.2. Circular model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#elliptical-model">8.1.3.3. Elliptical model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#three-circle-model">8.1.3.4. Three circle model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/theory.html#initial-configuration">8.1.4. Initial configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../foundations/quantities.html">8.2. Quantities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/quantities.html#density">8.2.1. Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/quantities.html#flow">8.2.2. Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../foundations/quantities.html#rate">8.2.2.1. Rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../foundations/quantities.html#types">8.2.2.2. Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/quantities.html#pressure">8.2.3. Pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/quantities.html#fundamental-diagram">8.2.4. Fundamental Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      
+    <li>crowddynamics.multiagent.configuration</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for crowddynamics.multiagent.configuration</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">numbers</span> <span class="k">import</span> <span class="n">Number</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib.path</span> <span class="k">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">truncnorm</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="k">import</span> <span class="n">Polygon</span><span class="p">,</span> <span class="n">LineString</span><span class="p">,</span> <span class="n">Point</span>
+<span class="kn">from</span> <span class="nn">shapely.ops</span> <span class="k">import</span> <span class="n">cascaded_union</span>
+
+<span class="kn">from</span> <span class="nn">crowddynamics.core.interactions</span> <span class="k">import</span> <span class="n">overlapping_circle_circle</span><span class="p">,</span> \
+    <span class="n">overlapping_three_circle</span>
+<span class="kn">from</span> <span class="nn">crowddynamics.core.vector2D</span> <span class="k">import</span> <span class="n">angle</span><span class="p">,</span> <span class="n">length</span>
+<span class="kn">from</span> <span class="nn">crowddynamics.functions</span> <span class="k">import</span> <span class="n">load_config</span>
+<span class="kn">from</span> <span class="nn">crowddynamics.geometry</span> <span class="k">import</span> <span class="n">check_shapes</span>
+<span class="kn">from</span> <span class="nn">crowddynamics.multiagent</span> <span class="k">import</span> <span class="n">Agent</span>
+<span class="kn">from</span> <span class="nn">crowddynamics.sampling</span> <span class="k">import</span> <span class="n">PolygonSample</span>
+
+
+<div class="viewcode-block" id="Configuration"><a class="viewcode-back" href="../../../api/simulation.html#crowddynamics.multiagent.Configuration">[docs]</a><span class="k">class</span> <span class="nc">Configuration</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Set initial configuration for multi-agent simulation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Configuration.__init__"><a class="viewcode-back" href="../../../api/simulation.html#crowddynamics.multiagent.Configuration.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Configuration&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+        <span class="c1"># Field</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">domain</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exits</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Numpy + Numba. More computationally efficient forms</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">omega</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Angle and direction update algorithms</span>
+        <span class="c1"># TODO: Add root node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_graph</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Current index of agent to be placed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_index</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># Surfaces that is occupied by obstacles, exits, or other agents</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_occupied</span> <span class="o">=</span> <span class="n">cascaded_union</span><span class="p">(())</span>  <span class="c1"># Empty initially</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Configuration.truncnorm"><a class="viewcode-back" href="../../../api/simulation.html#crowddynamics.multiagent.Configuration.truncnorm">[docs]</a>    <span class="k">def</span> <span class="nf">truncnorm</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">abs_scale</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mf">3.0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Scaled symmetrical truncated normal distribution.&quot;&quot;&quot;</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="n">abs_scale</span> <span class="o">/</span> <span class="n">std</span>
+        <span class="k">return</span> <span class="n">truncnorm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="o">-</span><span class="n">std</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">random_vector</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">),</span> <span class="n">mag</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+        <span class="n">orientation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">orient</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">orient</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mag</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">orientation</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">orientation</span><span class="p">)),</span>
+                              <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Configuration.set_field"><a class="viewcode-back" href="../../../api/simulation.html#crowddynamics.multiagent.Configuration.set_field">[docs]</a>    <span class="k">def</span> <span class="nf">set_field</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">obstacles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exits</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Shapely BaseGeometry types</span>
+
+<span class="sd">        - Point</span>
+<span class="sd">        - LineString</span>
+<span class="sd">        - LinearRing</span>
+<span class="sd">        - Polygon</span>
+<span class="sd">        - MultiPoint</span>
+<span class="sd">        - MultiLineString</span>
+<span class="sd">        - MultiPolygon</span>
+<span class="sd">        - GeometryCollection</span>
+
+<span class="sd">        =========== ===========================================================</span>
+<span class="sd">        **Kwargs**</span>
+
+<span class="sd">        *domain*    Polygon which contains all the other objects.</span>
+
+<span class="sd">        *goals*     --</span>
+
+<span class="sd">        *obstacles* Collection of polygons and LineStrings.</span>
+
+<span class="sd">        *exits*     Collection of polygons and LineStrings.</span>
+
+<span class="sd">        =========== ===========================================================</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+        <span class="c1"># TODO: Conditions: is_valid, is_simple, ...</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span> <span class="o">=</span> <span class="n">check_shapes</span><span class="p">(</span><span class="n">obstacles</span><span class="p">,</span> <span class="p">(</span><span class="n">Polygon</span><span class="p">,</span> <span class="n">LineString</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exits</span> <span class="o">=</span> <span class="n">check_shapes</span><span class="p">(</span><span class="n">exits</span><span class="p">,</span> <span class="p">(</span><span class="n">Polygon</span><span class="p">,</span> <span class="n">LineString</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">Polygon</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">domain</span> <span class="o">=</span> <span class="n">domain</span>
+        <span class="k">elif</span> <span class="n">domain</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Construct polygon that bounds other objects</span>
+            <span class="k">raise</span> <span class="bp">NotImplemented</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+        <span class="c1"># TODO: Move to own task node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">omega</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">exterior</span><span class="p">))</span></div>
+
+    <span class="k">def</span> <span class="nf">set_body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">body</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;In: </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">body</span><span class="p">))</span>
+
+        <span class="c1"># noinspection PyUnusedLocal</span>
+        <span class="n">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+
+        <span class="c1"># Load tabular values</span>
+        <span class="n">bodies</span> <span class="o">=</span> <span class="n">load_config</span><span class="p">(</span><span class="s2">&quot;body.csv&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">body</span> <span class="o">=</span> <span class="n">bodies</span><span class="p">[</span><span class="n">body</span><span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+                <span class="s2">&quot;Body </span><span class="se">\&quot;</span><span class="si">{}</span><span class="se">\&quot;</span><span class="s2"> is not in bodies </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">bodies</span><span class="p">))</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">load_config</span><span class="p">(</span><span class="s2">&quot;agent.csv&quot;</span><span class="p">)[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span>
+
+        <span class="c1"># Arguments for Agent</span>
+        <span class="c1"># TODO: Scaling inertia_rot</span>
+        <span class="n">mass</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">truncnorm</span><span class="p">(</span><span class="n">body</span><span class="p">[</span><span class="s2">&quot;mass&quot;</span><span class="p">],</span> <span class="n">body</span><span class="p">[</span><span class="s2">&quot;mass_scale&quot;</span><span class="p">],</span> <span class="n">size</span><span class="p">)</span>
+        <span class="n">radius</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">truncnorm</span><span class="p">(</span><span class="n">body</span><span class="p">[</span><span class="s2">&quot;radius&quot;</span><span class="p">],</span> <span class="n">body</span><span class="p">[</span><span class="s2">&quot;radius_scale&quot;</span><span class="p">],</span> <span class="n">size</span><span class="p">)</span>
+        <span class="n">ratio_rt</span> <span class="o">=</span> <span class="n">body</span><span class="p">[</span><span class="s2">&quot;ratio_rt&quot;</span><span class="p">]</span>
+        <span class="n">ratio_rs</span> <span class="o">=</span> <span class="n">body</span><span class="p">[</span><span class="s2">&quot;ratio_rs&quot;</span><span class="p">]</span>
+        <span class="n">ratio_ts</span> <span class="o">=</span> <span class="n">body</span><span class="p">[</span><span class="s2">&quot;ratio_ts&quot;</span><span class="p">]</span>
+        <span class="n">target_velocity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">truncnorm</span><span class="p">(</span><span class="n">body</span><span class="p">[</span><span class="s1">&#39;velocity&#39;</span><span class="p">],</span>
+                                         <span class="n">body</span><span class="p">[</span><span class="s1">&#39;velocity_scale&#39;</span><span class="p">],</span> <span class="n">size</span><span class="p">)</span>
+        <span class="n">inertia_rot</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="s2">&quot;inertia_rot&quot;</span><span class="p">])</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">target_angular_velocity</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span>
+            <span class="n">values</span><span class="p">[</span><span class="s2">&quot;target_angular_velocity&quot;</span><span class="p">])</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+        <span class="c1"># Agent class</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">ratio_rt</span><span class="p">,</span> <span class="n">ratio_rs</span><span class="p">,</span> <span class="n">ratio_ts</span><span class="p">,</span>
+                           <span class="n">inertia_rot</span><span class="p">,</span> <span class="n">target_velocity</span><span class="p">,</span>
+                           <span class="n">target_angular_velocity</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">set_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">model</span> <span class="o">==</span> <span class="s2">&quot;circular&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">set_circular</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">model</span> <span class="o">==</span> <span class="s2">&quot;three_circle&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">set_three_circle</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">set_motion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">target_direction</span><span class="p">,</span> <span class="n">target_angle</span><span class="p">,</span> <span class="n">velocity</span><span class="p">,</span>
+                   <span class="n">orientation</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">target_direction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">target_direction</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">target_direction</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">target_direction</span>
+        <span class="k">elif</span> <span class="n">target_direction</span> <span class="o">==</span> <span class="s2">&quot;random&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">target_direction</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_vector</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">velocity</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">velocity</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">velocity</span>
+        <span class="k">elif</span> <span class="n">velocity</span> <span class="o">==</span> <span class="s2">&quot;random&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_vector</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">velocity</span> <span class="o">==</span> <span class="s2">&quot;auto&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">target_direction</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">target_velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">target_angle</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">target_angle</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">target_angle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">target_angle</span>
+        <span class="k">elif</span> <span class="n">target_angle</span> <span class="o">==</span> <span class="s2">&quot;random&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">target_angle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_vector</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">velocity</span> <span class="o">==</span> <span class="s2">&quot;auto&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">target_angle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">angle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">target_direction</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">orientation</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">orientation</span><span class="p">,</span> <span class="n">Number</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">orientation</span>
+        <span class="k">elif</span> <span class="n">orientation</span> <span class="o">==</span> <span class="s2">&quot;random&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">velocity</span> <span class="o">==</span> <span class="s2">&quot;auto&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">angle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<div class="viewcode-block" id="Configuration.set_agents"><a class="viewcode-back" href="../../../api/simulation.html#crowddynamics.multiagent.Configuration.set_agents">[docs]</a>    <span class="k">def</span> <span class="nf">set_agents</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">surface</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;random&quot;</span><span class="p">,</span>
+                   <span class="n">velocity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_direction</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+                   <span class="n">target_angle</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set spatial and rotational parameters.</span>
+
+<span class="sd">        ================== ==========================</span>
+<span class="sd">        **kwargs**</span>
+
+<span class="sd">        *size*             Integer: Number of agent to be placed. \n</span>
+<span class="sd">                           None: Places all agents</span>
+
+<span class="sd">        *surface*          surface: Custom value \n</span>
+<span class="sd">                           None: Domain</span>
+
+<span class="sd">        *position*         ndarray: Custom values \n</span>
+<span class="sd">                           &quot;random&quot;: Uses Monte Carlo method to place agent</span>
+<span class="sd">                           without overlapping with obstacles or other agents.</span>
+
+<span class="sd">        *target_direction* ndarray: Custom value \n</span>
+<span class="sd">                           &quot;random&quot;: Uniformly distributed random value \n</span>
+<span class="sd">                           &quot;auto&quot;:</span>
+<span class="sd">                           None: Default value</span>
+
+<span class="sd">        *velocity*         ndarray: Custom value  \n</span>
+<span class="sd">                           &quot;random: Uniformly distributed random value, \n</span>
+<span class="sd">                           &quot;auto&quot;:</span>
+<span class="sd">                           None: Default value</span>
+
+<span class="sd">        *target_angle*     ndarray: Custom value  \n</span>
+<span class="sd">                           &quot;random&quot;: Uniformly distributed random value, \n</span>
+<span class="sd">                           &quot;auto&quot;:</span>
+<span class="sd">                           None: Default value</span>
+
+<span class="sd">        *orientation*      float: Custom value  \n</span>
+<span class="sd">                           &quot;random&quot;: Uniformly distributed random value, \n</span>
+<span class="sd">                           &quot;auto&quot;:</span>
+<span class="sd">                           None: Default value</span>
+<span class="sd">        ================== ==========================</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">surface</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">surface</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">domain</span>
+
+        <span class="n">iterations</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Number of iterations</span>
+        <span class="n">area_filled</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Total area filled by agents</span>
+        <span class="n">random_sample</span> <span class="o">=</span> <span class="n">PolygonSample</span><span class="p">(</span><span class="n">surface</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_occupied</span> <span class="o">=</span> <span class="n">cascaded_union</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obstacles</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">exits</span><span class="p">)</span>
+
+        <span class="n">start_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index</span>
+        <span class="n">limit</span> <span class="o">=</span> <span class="n">start_index</span> <span class="o">+</span> <span class="n">size</span>
+        <span class="n">iter_limit</span> <span class="o">=</span> <span class="n">size</span> <span class="o">*</span> <span class="mi">5</span>
+
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index</span> <span class="o">&lt;</span> <span class="n">limit</span> <span class="ow">and</span> <span class="n">iterations</span> <span class="o">&lt;</span> <span class="n">iter_limit</span><span class="p">:</span>
+            <span class="c1"># Random point inside spawn surface. Center of mass for an agent.</span>
+            <span class="k">if</span> <span class="n">position</span> <span class="o">==</span> <span class="s2">&quot;random&quot;</span><span class="p">:</span>
+                <span class="n">point</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">random_sample</span><span class="o">.</span><span class="n">draw</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+                <span class="n">point</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">position</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">])</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_motion</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">,</span> <span class="n">target_direction</span><span class="p">,</span> <span class="n">target_angle</span><span class="p">,</span>
+                            <span class="n">velocity</span><span class="p">,</span> <span class="n">orientation</span><span class="p">)</span>
+
+            <span class="c1"># Geometry of the agent</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">three_circle</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">update_shoulder_position</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">)</span>
+
+                <span class="n">point_ls</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">position_ls</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">])</span>
+                <span class="n">point_rs</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">position_rs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">])</span>
+                <span class="n">agent</span> <span class="o">=</span> <span class="n">cascaded_union</span><span class="p">((</span>
+                    <span class="n">point</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">r_t</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]),</span>
+                    <span class="n">point_ls</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">r_s</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]),</span>
+                    <span class="n">point_rs</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">r_s</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]),</span>
+                <span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">agent</span> <span class="o">=</span> <span class="n">point</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">radius</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">])</span>
+
+            <span class="c1"># Check if agent intersects with other agents or obstacles</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">three_circle</span><span class="p">:</span>
+                <span class="n">overlapping</span> <span class="o">=</span> <span class="n">overlapping_three_circle</span><span class="p">(</span>
+                    <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">position_ls</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">position_rs</span><span class="p">),</span>
+                    <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">r_t</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">r_s</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">r_s</span><span class="p">),</span>
+                    <span class="n">start_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">overlapping</span> <span class="o">=</span> <span class="n">overlapping_circle_circle</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">radius</span><span class="p">,</span>
+                    <span class="n">start_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index</span>
+                <span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">overlapping</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">agent</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_occupied</span><span class="p">):</span>
+                <span class="n">density</span> <span class="o">=</span> <span class="n">area_filled</span> <span class="o">/</span> <span class="n">surface</span><span class="o">.</span><span class="n">area</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                    <span class="s2">&quot;Agent </span><span class="si">{}</span><span class="s2"> | Density </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">,</span> <span class="n">density</span><span class="p">))</span>
+                <span class="n">area_filled</span> <span class="o">+=</span> <span class="n">agent</span><span class="o">.</span><span class="n">area</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">active</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_index</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Reset</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">position_ls</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">position_rs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">target_angle</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">target_direction</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">front</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_index</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="n">iterations</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Density: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">area_filled</span> <span class="o">/</span> <span class="n">surface</span><span class="o">.</span><span class="n">area</span><span class="p">))</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Jan 22, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

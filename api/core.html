@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8.1. Core &mdash; Crowd Dynamics 1 documentation</title>
+  <title>6.1. Core &mdash; Crowd Dynamics 1 documentation</title>
   
 
   
@@ -36,9 +36,9 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
-        <link rel="up" title="8. API" href="index.html"/>
-        <link rel="next" title="8.2. IO" href="io.html"/>
-        <link rel="prev" title="8. API" href="index.html"/> 
+        <link rel="up" title="6. API" href="index.html"/>
+        <link rel="next" title="6.2. IO" href="io.html"/>
+        <link rel="prev" title="6. API" href="index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,8 +85,8 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">1. Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#simple">1.1. Simple</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#developers">1.2. Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#conda">1.1. Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#from-source">1.2. From Source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">2. Usage</a><ul>
@@ -95,96 +95,81 @@
 <li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">2.3. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">3.1. Mathematical Foundations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">3.1.1. Time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">3.1.2. Geometry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">3.1.2.1. Domain</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">3.1.2.2. Obstacle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">3.1.2.3. Exit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">3.1.2.4. Narrow bottleneck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">3. Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">3.1. Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/algorithms.html">3.2. Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#n-body-simulations">3.2.1. N-Body Simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#brute-force">3.2.2. Brute Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#spatial-partitioning-algorithms">3.2.3. Spatial Partitioning Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#block-list">3.2.3.1. Block List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#convex-hull">3.2.3.2. Convex Hull</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">3.1.3. Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">3.1.3.1. Model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">3.1.3.2. Circular model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">3.1.3.3. Elliptical model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">3.1.3.4. Three circle model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#parallelisation">3.2.4. Parallelisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#refences">3.2.5. Refences</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">3.1.4. Initial configuration</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">3.2. Quantities</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">3.2.1. Density</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">3.2.2. Flow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">3.2.2.1. Rate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">3.2.2.2. Types</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">3.2.3. Pressure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">3.2.4. Fundamental Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/adjusting.html">3.3. Adjusting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#force">3.3.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#torque">3.3.2. Torque</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#subgroups">3.3.3. Subgroups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#attractor-point">3.3.3.1. Attractor point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#intra-subgroup-adjusting-force">3.3.3.2. Intra-subgroup adjusting force</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">5. Multi-Agent</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/algorithms.html">5.1. Algorithms</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#n-body-simulations">5.1.1. N-Body Simulations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#brute-force">5.1.2. Brute Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#spatial-partitioning-algorithms">5.1.3. Spatial Partitioning Algorithms</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#block-list">5.1.3.1. Block List</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#convex-hull">5.1.3.2. Convex Hull</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/interactions.html">3.4. Interactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#social-force">3.4.1. Social Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#physical-contact">3.4.2. Physical Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#torque">3.4.3. Torque</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#parallelisation">5.1.4. Parallelisation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#refences">5.1.5. Refences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/fluctuation.html">3.5. Fluctuation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#force">3.5.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#torque">3.5.2. Torque</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">5.2. Social Force Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/adjusting.html">5.3. Adjusting</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#force">5.3.1. Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#torque">5.3.2. Torque</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#subgroups">5.3.3. Subgroups</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#attractor-point">5.3.3.1. Attractor point</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#intra-subgroup-adjusting-force">5.3.3.2. Intra-subgroup adjusting force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/integrator.html">3.6. Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/navigation.html">3.7. Navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#distance-map-and-static-potential">3.7.1. Distance map and static potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#dynamic-potential">3.7.2. Dynamic potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#implementation">3.7.3. Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#references">3.7.4. References</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/interactions.html">5.4. Interactions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#social-force">5.4.1. Social Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#physical-contact">5.4.2. Physical Contact</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#torque">5.4.3. Torque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/fluctuation.html">5.5. Fluctuation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#force">5.5.1. Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#torque">5.5.2. Torque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">5. Continuum Flow</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/integrator.html">5.6. Integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/navigation.html">5.7. Navigation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#distance-map-and-static-potential">5.7.1. Distance map and static potential</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#dynamic-potential">5.7.2. Dynamic potential</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#implementation">5.7.3. Implementation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#references">5.7.4. References</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.1. Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.vector2D">6.1.1. Vector2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.motion">6.1.2. Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.interactions">6.1.3. Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.steering">6.1.4. Steering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.core.integrator">6.1.5. Integrator</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/orientation.html">5.8. Orientation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/exit_selection.html">5.9. Exit Selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/game.html">5.10. Games</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#spatial-game-for-egress-congestion">5.10.1. Spatial Game for Egress Congestion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#strategy-selection">5.10.2. Strategy Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#strategy-updating">5.10.3. Strategy Updating</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#agents-closer-to-exit">5.10.4. Agents Closer to Exit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#effect-on-agents">5.10.5. Effect on agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">6.2. IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampling.html">6.3. Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html">6.4. Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html#agent">6.4.1. Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html#module-crowddynamics.multiagent">6.4.2. Multi-Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">6.5. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html">6.6. Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">6.7. Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#module-crowddynamics.plugins.game">6.7.1. Game</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">6. Continuum Flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../research/index.html">7. Research</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">7.1. Phenomena</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">7.1.1. Egress Congestion</a></li>
@@ -210,17 +195,35 @@
 <li class="toctree-l2"><a class="reference internal" href="../research/applications.html">7.3. Applications</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">8. API</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">8.1. Core</a></li>
-<li class="toctree-l2"><a class="reference internal" href="io.html">8.2. IO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulation.html">8.3. Simulation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="simulation.html#agent">8.3.1. Agent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="simulation.html#multi-agent">8.3.2. Multi-Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">8. Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">8.1. Mathematical Foundations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">8.1.1. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">8.1.2. Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">8.1.2.1. Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">8.1.2.2. Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">8.1.2.3. Exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">8.1.2.4. Narrow bottleneck</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gui.html">8.4. Graphical User Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="game.html">8.5. Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="game.html#game">8.5.1. Game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">8.1.3. Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">8.1.3.1. Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">8.1.3.2. Circular model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">8.1.3.3. Elliptical model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">8.1.3.4. Three circle model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">8.1.4. Initial configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">8.2. Quantities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">8.2.1. Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">8.2.2. Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">8.2.2.1. Rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">8.2.2.2. Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">8.2.3. Pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">8.2.4. Fundamental Diagram</a></li>
 </ul>
 </li>
 </ul>
@@ -255,13 +258,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">8. API</a> &raquo;</li>
+          <li><a href="index.html">6. API</a> &raquo;</li>
       
-    <li>8.1. Core</li>
+    <li>6.1. Core</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/api/core.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/core.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -271,11 +274,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-crowddynamics.core">
-<span id="core"></span><h1>8.1. Core<a class="headerlink" href="#module-crowddynamics.core" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="core">
+<h1>6.1. Core<a class="headerlink" href="#core" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-crowddynamics.core.vector2D">
+<span id="vector2d"></span><h2>6.1.1. Vector2D<a class="headerlink" href="#module-crowddynamics.core.vector2D" title="Permalink to this headline">¶</a></h2>
 <dl class="attribute">
-<dt id="crowddynamics.core.rotate90">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">rotate90</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D.html#rotate90"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.rotate90" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.vector2D.rotate90">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">rotate90</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#rotate90"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.rotate90" title="Permalink to this definition">¶</a></dt>
 <dd><p>90 degree counterclockwise rotation for 2D vector.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -292,8 +297,8 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.rotate270">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">rotate270</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D.html#rotate270"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.rotate270" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.vector2D.rotate270">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">rotate270</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#rotate270"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.rotate270" title="Permalink to this definition">¶</a></dt>
 <dd><p>90 degree clockwise rotation for 2D vector.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -310,8 +315,8 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.angle">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">angle</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D.html#angle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.angle" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.vector2D.angle">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">angle</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#angle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.angle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Angle of 2d vector in radians.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -328,8 +333,8 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.angle_nx2">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">angle_nx2</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D.html#angle_nx2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.angle_nx2" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.vector2D.angle_nx2">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">angle_nx2</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#angle_nx2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.angle_nx2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Angle of 2d vectors in radians.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -346,31 +351,44 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.length">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">length</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D.html#length"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.length" title="Permalink to this definition">¶</a></dt>
-<dd><p><a href="#id1"><span class="problematic" id="id2">**</span></a>Args* &#8211;     vec2d (numpy.ndarray)* &#8211; 2D vector</p>
+<dt id="crowddynamics.core.vector2D.length">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">length</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#length"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Length</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Length of the vector in [0, infty)</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; 2D vector</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Length of the vector in [0, infty)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.length_nx2">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">length_nx2</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D.html#length_nx2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.length_nx2" title="Permalink to this definition">¶</a></dt>
-<dd><p><a href="#id3"><span class="problematic" id="id4">**</span></a>Args* &#8211;     vec2d (numpy.ndarray)* &#8211; :returns:
-:rtype: numpy.ndarray</p>
+<dt id="crowddynamics.core.vector2D.length_nx2">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">length_nx2</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#length_nx2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.length_nx2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Length</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.dot2d">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">dot2d</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D.html#dot2d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.dot2d" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.vector2D.dot2d">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">dot2d</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#dot2d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.dot2d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dot product for 2D vectors.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -393,8 +411,8 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.cross2d">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">cross2d</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D.html#cross2d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.cross2d" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.vector2D.cross2d">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">cross2d</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#cross2d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.cross2d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cross product for 2D vectors. Right corner from 3D cross product.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -417,38 +435,71 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.normalize">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">normalize</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D.html#normalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.normalize" title="Permalink to this definition">¶</a></dt>
-<dd><p><a href="#id5"><span class="problematic" id="id6">**</span></a>Args* &#8211;     vec2d (numpy.ndarray)* &#8211; :returns:
-:rtype: numpy.ndarray</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="crowddynamics.core.normalize_nx2">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">normalize_nx2</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D.html#normalize_nx2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.normalize_nx2" title="Permalink to this definition">¶</a></dt>
-<dd><p><a href="#id7"><span class="problematic" id="id8">**</span></a>Args* &#8211;     vec2d (numpy.ndarray)* &#8211; :returns:
-:rtype: numpy.ndarray</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="crowddynamics.core.truncate">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">truncate</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D.html#truncate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.truncate" title="Permalink to this definition">¶</a></dt>
-<dd><p><a href="#id9"><span class="problematic" id="id10">**</span></a>Args* &#8211;     vec2d (numpy.ndarray)* &#8211;     limit (float):</p>
+<dt id="crowddynamics.core.vector2D.normalize">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">normalize</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#normalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.normalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">None</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.normalize_nx2">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">normalize_nx2</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#normalize_nx2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.normalize_nx2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.truncate">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">truncate</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#truncate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.truncate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Truncate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>limit</strong> (<em>float</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-crowddynamics.core.motion">
+<span id="motion"></span><h2>6.1.2. Motion<a class="headerlink" href="#module-crowddynamics.core.motion" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="crowddynamics.core.force_fluctuation">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">force_fluctuation</code><span class="sig-paren">(</span><em>mass</em>, <em>scale</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/motion.html#force_fluctuation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.force_fluctuation" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.motion.force_fluctuation">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_fluctuation</code><span class="sig-paren">(</span><em>mass</em>, <em>scale</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/motion/force.html#force_fluctuation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_fluctuation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Truncated normal distribution with standard deviation of 3.</p>
 <div class="math">
 \[\boldsymbol{\xi} = \xi \cdot \mathbf{\hat{e}}(\varphi)\]</div>
@@ -476,35 +527,9 @@
 </table>
 </dd></dl>
 
-<dl class="function">
-<dt id="crowddynamics.core.torque_fluctuation">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">torque_fluctuation</code><span class="sig-paren">(</span><em>inertia_rot</em>, <em>scale</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/motion.html#torque_fluctuation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.torque_fluctuation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Random torque.</p>
-<div class="math">
-\[\eta \sim \mathcal{N}(\mu, \sigma^{2})\]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>inertia_rot</strong> (<em>float</em>) &#8211; Rotational intertial</li>
-<li><strong>scale</strong> (<em>float</em>) &#8211; Standard deviation of truncated normal distribution</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Fluctuation torque</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 <dl class="attribute">
-<dt id="crowddynamics.core.force_adjust">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">force_adjust</code><a class="reference internal" href="../_modules/crowddynamics/core/motion.html#force_adjust"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.force_adjust" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.motion.force_adjust">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_adjust</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/force.html#force_adjust"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_adjust" title="Permalink to this definition">¶</a></dt>
 <dd><p><em>Adjusting</em> aka <em>driving</em> force accounts of agent&#8217;s desire to reach a
 certain destination. In high crowd densities term <em>manoeuvring</em> is used.
 Force affecting the agent takes form</p>
@@ -539,8 +564,97 @@ navigation section.</li>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.torque_adjust">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">torque_adjust</code><a class="reference internal" href="../_modules/crowddynamics/core/motion.html#torque_adjust"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.torque_adjust" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.motion.force_social_helbing">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_social_helbing</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/force.html#force_social_helbing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_social_helbing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helbing&#8217;s model&#8217;s original social force. Independent of the velocity or
+direction of the agent.</p>
+<div class="math">
+\[A \exp(-h / B) \mathbf{\hat{n}}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>h</strong> (<em>float</em>) &#8211; Skin-to-skin distance between agents</li>
+<li><strong>n</strong> (<em>numpy.ndarray</em>) &#8211; Normal unit vector</li>
+<li><strong>a</strong> (<em>float</em>) &#8211; Constant <span class="math">\(A = 2 \cdot 10^{3} \,\mathrm{N}\)</span></li>
+<li><strong>b</strong> (<em>float</em>) &#8211; Constant <span class="math">\(B = 0.08 \,\mathrm{m}\)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Social force</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.force_contact">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_contact</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/force.html#force_contact"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Physical contact force with damping. Helbing&#8217;s original model did not
+include damping, which was added by Langston.</p>
+<div class="math">
+\[\mathbf{f}^{c} = - h \cdot \left(\mu \cdot \hat{\mathbf{n}} -
+\kappa \cdot (\mathbf{v} \cdot \hat{\mathbf{t}}) \hat{\mathbf{t}}\right) +
+c_{n} \cdot (\mathbf{v} \cdot \hat{\mathbf{n}}) \hat{\mathbf{n}}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>h</strong> (<em>float</em>) &#8211; Skin-to-skin distance between agents</li>
+<li><strong>n</strong> (<em>numpy.ndarray</em>) &#8211; Normal vector</li>
+<li><strong>v</strong> (<em>numpy.ndarray</em>) &#8211; Velocity vector</li>
+<li><strong>t</strong> (<em>numpy.ndarray</em>) &#8211; Tangent vector</li>
+<li><strong>mu</strong> (<em>float</em>) &#8211; Constant <span class="math">\(1.2 \cdot 10^{5}\,\mathrm{kg\,s^{-2}}\)</span></li>
+<li><strong>kappa</strong> (<em>float</em>) &#8211; Constant <span class="math">\(4.0 \cdot 10^{4}\,\mathrm{kg\,m^{-1}s^{-1}}\)</span></li>
+<li><strong>damping</strong> (<em>float</em>) &#8211; Constant <span class="math">\(500 \,\mathrm{N}\)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Contact force</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowddynamics.core.motion.torque_fluctuation">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">torque_fluctuation</code><span class="sig-paren">(</span><em>inertia_rot</em>, <em>scale</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/motion/torque.html#torque_fluctuation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.torque_fluctuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Random torque.</p>
+<div class="math">
+\[\eta \sim \mathcal{N}(\mu, \sigma^{2})\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>inertia_rot</strong> (<em>float</em>) &#8211; Rotational intertial</li>
+<li><strong>scale</strong> (<em>float</em>) &#8211; Standard deviation of truncated normal distribution</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Fluctuation torque</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.torque_adjust">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">torque_adjust</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/torque.html#torque_adjust"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.torque_adjust" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adjusting torque account for agent&#8217;s desire to rotate it orientation.</p>
 <div class="math">
 \[M_{adj} = \frac{I_{rot}}{\tau_{rot}} \left( \omega_{0} \left (
@@ -578,170 +692,8 @@ spaces, requiring more sophisticated algorithms.</li>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.force_social_helbing">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">force_social_helbing</code><a class="reference internal" href="../_modules/crowddynamics/core/motion.html#force_social_helbing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.force_social_helbing" title="Permalink to this definition">¶</a></dt>
-<dd><p>Helbing&#8217;s model&#8217;s original social force. Independent of the velocity or
-direction of the agent.</p>
-<div class="math">
-\[A \exp(-h / B) \mathbf{\hat{n}}\]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>h</strong> (<em>float</em>) &#8211; Skin-to-skin distance between agents</li>
-<li><strong>n</strong> (<em>numpy.ndarray</em>) &#8211; Normal unit vector</li>
-<li><strong>a</strong> (<em>float</em>) &#8211; Constant <span class="math">\(A = 2 \cdot 10^{3} \,\mathrm{N}\)</span></li>
-<li><strong>b</strong> (<em>float</em>) &#8211; Constant <span class="math">\(B = 0.08 \,\mathrm{m}\)</span></li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Social force</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="crowddynamics.core.force_contact">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">force_contact</code><a class="reference internal" href="../_modules/crowddynamics/core/motion.html#force_contact"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.force_contact" title="Permalink to this definition">¶</a></dt>
-<dd><p>Physical contact force with damping. Helbing&#8217;s original model did not
-include damping, which was added by Langston.</p>
-<div class="math">
-\[\mathbf{f}^{c} = - h \cdot \left(\mu \cdot \hat{\mathbf{n}} -
-\kappa \cdot (\mathbf{v} \cdot \hat{\mathbf{t}}) \hat{\mathbf{t}}\right) +
-c_{n} \cdot (\mathbf{v} \cdot \hat{\mathbf{n}}) \hat{\mathbf{n}}\]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>h</strong> (<em>float</em>) &#8211; Skin-to-skin distance between agents</li>
-<li><strong>n</strong> (<em>numpy.ndarray</em>) &#8211; Normal vector</li>
-<li><strong>v</strong> (<em>numpy.ndarray</em>) &#8211; Velocity vector</li>
-<li><strong>t</strong> (<em>numpy.ndarray</em>) &#8211; Tangent vector</li>
-<li><strong>mu</strong> (<em>float</em>) &#8211; Constant <span class="math">\(1.2 \cdot 10^{5}\,\mathrm{kg\,s^{-2}}\)</span></li>
-<li><strong>kappa</strong> (<em>float</em>) &#8211; Constant <span class="math">\(4.0 \cdot 10^{4}\,\mathrm{kg\,m^{-1}s^{-1}}\)</span></li>
-<li><strong>damping</strong> (<em>float</em>) &#8211; Constant <span class="math">\(500 \,\mathrm{N}\)</span></li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Contact force</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="crowddynamics.core.distance_circle_circle">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">distance_circle_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/distance.html#distance_circle_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.distance_circle_circle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Skin-to-Skin distance with normal</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x0</strong> (<em>numpy.ndarray</em>) &#8211; </li>
-<li><strong>r0</strong> (<em>float</em>) &#8211; </li>
-<li><strong>x1</strong> (<em>numpy.ndarray</em>) &#8211; </li>
-<li><strong>r1</strong> (<em>float</em>) &#8211; </li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(skin-to-skin distance, normal vector)</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(float, numpy.ndarray)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="crowddynamics.core.distance_three_circle">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">distance_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/distance.html#distance_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.distance_three_circle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Skin-to-Skin distance between two three-circle models.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x0</strong> (<em>(numpy.ndarray, numpy.ndarray, numpy.ndarray)</em>) &#8211; </li>
-<li><strong>r0</strong> (<em>(float, float, float)</em>) &#8211; </li>
-<li><strong>x1</strong> (<em>(numpy.ndarray, numpy.ndarray, numpy.ndarray)</em>) &#8211; </li>
-<li><strong>r1</strong> (<em>(float, float, float)</em>) &#8211; </li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(float, numpy.ndarray, numpy.ndarray, numpy.ndarray)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="crowddynamics.core.distance_circle_line">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">distance_circle_line</code><a class="reference internal" href="../_modules/crowddynamics/core/distance.html#distance_circle_line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.distance_circle_line" title="Permalink to this definition">¶</a></dt>
-<dd><p>Skin-to-Skin distance between circle and line</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x</strong> (<em>numpy.ndarray</em>) &#8211; </li>
-<li><strong>r</strong> (<em>float</em>) &#8211; </li>
-<li><strong>p</strong> (<em>numpy.ndarray</em>) &#8211; </li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(skin-to-skin distance, normal vector)</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(float, numpy.ndarray)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="crowddynamics.core.distance_three_circle_line">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">distance_three_circle_line</code><a class="reference internal" href="../_modules/crowddynamics/core/distance.html#distance_three_circle_line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.distance_three_circle_line" title="Permalink to this definition">¶</a></dt>
-<dd><p>Skin-to-Skin distance between three circle model and line</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x</strong> (<em>(numpy.ndarray, numpy.ndarray, numpy.ndarray)</em>) &#8211; </li>
-<li><strong>r</strong> (<em>(float, float, float)</em>) &#8211; </li>
-<li><strong>p</strong> (<em>numpy.ndarray</em>) &#8211; </li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(float, numpy.ndarray, numpy.ndarray)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="crowddynamics.core.magnitude">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">magnitude</code><a class="reference internal" href="../_modules/crowddynamics/core/power_law.html#magnitude"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.magnitude" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.motion.magnitude">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">magnitude</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/power_law.html#magnitude"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.magnitude" title="Permalink to this definition">¶</a></dt>
 <dd><p>Magnitude of social force.</p>
 <div class="math">
 \[\left(\frac{1}{\tau^{2}}\right) \left(\frac{2}{\tau} + \frac{1}{\tau_{0}}\right) \exp\left (-\frac{\tau}{\tau_{0}}\right )\]</div>
@@ -766,8 +718,8 @@ c_{n} \cdot (\mathbf{v} \cdot \hat{\mathbf{n}}) \hat{\mathbf{n}}\]</div>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.gradient_circle_circle">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">gradient_circle_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/power_law.html#gradient_circle_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.gradient_circle_circle" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.motion.gradient_circle_circle">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">gradient_circle_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/power_law.html#gradient_circle_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.gradient_circle_circle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gradient of <span class="math">\(\tau\)</span> between two circles.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -795,8 +747,8 @@ c_{n} \cdot (\mathbf{v} \cdot \hat{\mathbf{n}}) \hat{\mathbf{n}}\]</div>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.gradient_three_circle">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">gradient_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/power_law.html#gradient_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.gradient_three_circle" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.motion.gradient_three_circle">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">gradient_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/power_law.html#gradient_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.gradient_three_circle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gradient of <span class="math">\(\tau\)</span> between two three-circle representations.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -823,15 +775,27 @@ c_{n} \cdot (\mathbf{v} \cdot \hat{\mathbf{n}}) \hat{\mathbf{n}}\]</div>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.gradient_circle_line">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">gradient_circle_line</code><a class="reference internal" href="../_modules/crowddynamics/core/power_law.html#gradient_circle_line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.gradient_circle_line" title="Permalink to this definition">¶</a></dt>
-<dd><p><a href="#id11"><span class="problematic" id="id12">**</span></a>Args* &#8211;     v* &#8211;     n:</p>
+<dt id="crowddynamics.core.motion.gradient_circle_line">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">gradient_circle_line</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/power_law.html#gradient_circle_line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.gradient_circle_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Circle line</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>v</strong> &#8211; </li>
+<li><strong>n</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <p>Returns:</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.force_social_circular">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">force_social_circular</code><a class="reference internal" href="../_modules/crowddynamics/core/power_law.html#force_social_circular"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.force_social_circular" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.motion.force_social_circular">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_social_circular</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/power_law.html#force_social_circular"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_social_circular" title="Permalink to this definition">¶</a></dt>
 <dd><p>Social force based on human anticipatory behaviour.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -846,17 +810,261 @@ c_{n} \cdot (\mathbf{v} \cdot \hat{\mathbf{n}}) \hat{\mathbf{n}}\]</div>
 </tr>
 </tbody>
 </table>
+<p>Returns:</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.force_social_three_circle">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">force_social_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/power_law.html#force_social_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.force_social_three_circle" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.motion.force_social_three_circle">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_social_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/power_law.html#force_social_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_social_three_circle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimium time-to-collision for two circles of relative displacements.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>agent</strong> &#8211; </li>
+<li><strong>i</strong> &#8211; </li>
+<li><strong>j</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.agent_agent_brute">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">agent_agent_brute</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions.html#agent_agent_brute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.agent_agent_brute" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.motion.force_social_linear_wall">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_social_linear_wall</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/power_law.html#force_social_linear_wall"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_social_linear_wall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force social linear wall</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>i</strong> &#8211; </li>
+<li><strong>w</strong> &#8211; </li>
+<li><strong>agent</strong> &#8211; </li>
+<li><strong>wall</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-crowddynamics.core.interactions">
+<span id="interactions"></span><h2>6.1.3. Interactions<a class="headerlink" href="#module-crowddynamics.core.interactions" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="crowddynamics.core.interactions.distance_circle_circle">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">distance_circle_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/distance.html#distance_circle_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.distance_circle_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skin-to-Skin distance <span class="math">\(h\)</span>  with normal <span class="math">\(\mathbf{\hat{n}}\)</span>
+between two circles.</p>
+<div class="math">
+\[\begin{split}h &amp;= \|\mathbf{x}_0 - \mathbf{x}_1\| - (r_0 + r_1) \\
+\mathbf{\hat{n}} &amp;= \frac{\mathbf{x}_0 - \mathbf{x}_1}{\|\mathbf{x}_0 - \mathbf{x}_1\|}\end{split}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x0</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>r0</strong> (<em>float</em>) &#8211; </li>
+<li><strong>x1</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>r1</strong> (<em>float</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(skin-to-skin distance, normal vector)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(float, numpy.ndarray)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.interactions.distance_three_circle">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">distance_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/distance.html#distance_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.distance_three_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skin-to-Skin distance <span class="math">\(h\)</span> with normal <span class="math">\(\mathbf{\hat{n}}\)</span> and
+rotational moments <span class="math">\(\mathbf{r}_{\mathrm{moment}_i}\)</span> between two three-circle
+models with.</p>
+<div class="math">
+\[\begin{split}X_i &amp;= \{\mathbf{x}_{torso}, \mathbf{x}_{left shoulder}, \mathbf{x}_{right shoulder}&nbsp;\} \\
+R_i &amp;= \{r_{torso}, r_{shoulder}, r_{shoulder}&nbsp;\}\end{split}\]</div>
+<div class="math">
+\[h = \min_{(\mathbf{x}_0, r_0) \in (X_0, R_0)} \min_{(\mathbf{x}_1, r_1) \in (X_1, R_1)} \left( \|\mathbf{x}_0 - \mathbf{x}_1\| - (r_0 + r_1) \right)\]</div>
+<p>With minimized values of <span class="math">\(\mathbf{x}_0\)</span>, <span class="math">\(\mathbf{x}_1\)</span>,
+<span class="math">\(r_0\)</span> and <span class="math">\(r_1\)</span> compute</p>
+<div class="math">
+\[\begin{split}\mathbf{\hat{n}} &amp;= \frac{\mathbf{x}_0 - \mathbf{x}_1}{\|\mathbf{x}_0 - \mathbf{x}_1\|} \\
+\mathbf{r}_{\mathrm{moment}_0} &amp;= \mathbf{x}_0 + r_0 \mathbf{\hat{n}} - \mathbf{x}_{\mathrm{torso}} \\
+\mathbf{r}_{\mathrm{moment}_1} &amp;= \mathbf{x}_1 - r_1 \mathbf{\hat{n}} - \mathbf{x}_{\mathrm{torso}}\end{split}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x0</strong> (<em></em><em>(</em><em>numpy.ndarray</em><em>, </em><em>numpy.ndarray</em><em>, </em><em>numpy.ndarray</em><em>)</em><em></em>) &#8211; </li>
+<li><strong>r0</strong> (<em></em><em>(</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>)</em><em></em>) &#8211; </li>
+<li><strong>x1</strong> (<em></em><em>(</em><em>numpy.ndarray</em><em>, </em><em>numpy.ndarray</em><em>, </em><em>numpy.ndarray</em><em>)</em><em></em>) &#8211; </li>
+<li><strong>r1</strong> (<em></em><em>(</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>)</em><em></em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(float, numpy.ndarray, numpy.ndarray, numpy.ndarray)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.interactions.distance_circle_line">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">distance_circle_line</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/distance.html#distance_circle_line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.distance_circle_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skin-to-Skin distance between circle and line</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>r</strong> (<em>float</em>) &#8211; </li>
+<li><strong>p</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(skin-to-skin distance, normal vector)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(float, numpy.ndarray)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.interactions.distance_three_circle_line">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">distance_three_circle_line</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/distance.html#distance_three_circle_line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.distance_three_circle_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skin-to-Skin distance between three circle model and line</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em></em><em>(</em><em>numpy.ndarray</em><em>, </em><em>numpy.ndarray</em><em>, </em><em>numpy.ndarray</em><em>)</em><em></em>) &#8211; </li>
+<li><strong>r</strong> (<em></em><em>(</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>)</em><em></em>) &#8211; </li>
+<li><strong>p</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(float, numpy.ndarray, numpy.ndarray)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.interactions.overlapping_circle_circle">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">overlapping_circle_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/distance.html#overlapping_circle_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.overlapping_circle_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if two circles are overlapping.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> &#8211; </li>
+<li><strong>r</strong> &#8211; </li>
+<li><strong>start_index</strong> &#8211; </li>
+<li><strong>i</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.interactions.overlapping_three_circle">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">overlapping_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/distance.html#overlapping_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.overlapping_three_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if two three-circle models are overlapping.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>collections.namedtuple</em>) &#8211; Attributes:
+- position=numpy.ndarray
+- position_ls=numpy.ndarray
+- position_rs=numpy.ndarray</li>
+<li><strong>r</strong> (<em>collections.namedtuple</em>) &#8211; Attributes:
+- r_t
+- r_s</li>
+<li><strong>start_index</strong> &#8211; </li>
+<li><strong>i</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.interactions.block_list">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">block_list</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/partitioning.html#block_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.block_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Block list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>points</strong> (<em>numpy.ndarray</em>) &#8211; Array of points</li>
+<li><strong>cell_width</strong> (<em>float</em>) &#8211; Width/height of the rectangular mesh.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(index_list, count, offset, x_min, x_max)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.core.interactions.BlockList">
+<em class="property">class </em><code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">BlockList</code><span class="sig-paren">(</span><em>points</em>, <em>cell_width</em><span class="sig-paren">)</span><a class="headerlink" href="#crowddynamics.core.interactions.BlockList" title="Permalink to this definition">¶</a></dt>
+<dd><p>BlockList algorithm partitions space into squares and sorts points into
+the square they belong. This allows fast neighbourhood search because we
+only have to search current and neighbouring rectangles for points.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.interactions.agent_agent_brute">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">agent_agent_brute</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/interactions.html#agent_agent_brute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.agent_agent_brute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interaction forces between set of agents.</p>
 <p>Computational complexity (number of iterations)</p>
 <div class="math">
@@ -883,8 +1091,8 @@ brute force over all agents.</li>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.agent_agent_brute_disjoint">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">agent_agent_brute_disjoint</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions.html#agent_agent_brute_disjoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.agent_agent_brute_disjoint" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.interactions.agent_agent_brute_disjoint">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">agent_agent_brute_disjoint</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/interactions.html#agent_agent_brute_disjoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.agent_agent_brute_disjoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interaction forces between two disjoint sets of agents. Assumes sets
 <code class="docutils literal"><span class="pre">indices</span></code> (<span class="math">\(S_{0}\)</span>) and <code class="docutils literal"><span class="pre">indices2</span></code> (<span class="math">\(S_{1}\)</span>) should be
 disjoint</p>
@@ -912,8 +1120,8 @@ disjoint</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.agent_agent_block_list">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">agent_agent_block_list</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions.html#agent_agent_block_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.agent_agent_block_list" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.interactions.agent_agent_block_list">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">agent_agent_block_list</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/interactions.html#agent_agent_block_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.agent_agent_block_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iteration over all agents using block list algorithm.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -930,8 +1138,26 @@ disjoint</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.agent_agent_interaction_circle">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">agent_agent_interaction_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions.html#agent_agent_interaction_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.agent_agent_interaction_circle" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.interactions.agent_wall">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">agent_wall</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/interactions.html#agent_wall"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.agent_wall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Agent wall</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>agent</strong> &#8211; </li>
+<li><strong>wall</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.interactions.agent_agent_interaction_circle">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">agent_agent_interaction_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/interactions.html#agent_agent_interaction_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.agent_agent_interaction_circle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interaction between two circular agents.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -946,12 +1172,11 @@ disjoint</p>
 </tr>
 </tbody>
 </table>
-<p>Returns:</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.agent_agent_interaction_three_circle">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">agent_agent_interaction_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions.html#agent_agent_interaction_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.agent_agent_interaction_three_circle" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.interactions.agent_agent_interaction_three_circle">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">agent_agent_interaction_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/interactions.html#agent_agent_interaction_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.agent_agent_interaction_three_circle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interaction between two three circle agents.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -970,8 +1195,8 @@ disjoint</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.agent_obstacle_interaction_circle">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">agent_obstacle_interaction_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions.html#agent_obstacle_interaction_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.agent_obstacle_interaction_circle" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.interactions.agent_obstacle_interaction_circle">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">agent_obstacle_interaction_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/interactions.html#agent_obstacle_interaction_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.agent_obstacle_interaction_circle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interaction between circular agent and line obstacle.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -987,12 +1212,11 @@ disjoint</p>
 </tr>
 </tbody>
 </table>
-<p>Returns:</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.core.agent_obstacle_interaction_three_circle">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">agent_obstacle_interaction_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions.html#agent_obstacle_interaction_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.agent_obstacle_interaction_three_circle" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.interactions.agent_obstacle_interaction_three_circle">
+<code class="descclassname">crowddynamics.core.interactions.</code><code class="descname">agent_obstacle_interaction_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/interactions/interactions.html#agent_obstacle_interaction_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.interactions.agent_obstacle_interaction_three_circle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interaction between three circle agent and line obstacle.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1008,80 +1232,44 @@ disjoint</p>
 </tr>
 </tbody>
 </table>
-<p>Returns:</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="crowddynamics.core.block_list">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">block_list</code><a class="reference internal" href="../_modules/crowddynamics/core/block_list.html#block_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.block_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Block list</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>points</strong> (<em>numpy.ndarray</em>) &#8211; Array of points</li>
-<li><strong>cell_width</strong> (<em>float</em>) &#8211; Width/height of the rectangular mesh.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(index_list, count, offset, x_min, x_max)</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="class">
-<dt id="crowddynamics.core.BlockList">
-<em class="property">class </em><code class="descclassname">crowddynamics.core.</code><code class="descname">BlockList</code><span class="sig-paren">(</span><em>points</em>, <em>cell_width</em><span class="sig-paren">)</span><a class="headerlink" href="#crowddynamics.core.BlockList" title="Permalink to this definition">¶</a></dt>
-<dd><p>BlockList algorithm partitions space into squares and sorts points into
-the square they belong. This allows fast neighbourhood search because we
-only have to search current and neighbouring rectangles for points.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="crowddynamics.core.integrate">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">integrate</code><a class="reference internal" href="../_modules/crowddynamics/core/integrator.html#integrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.integrate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Integration using adaptive timestep for integrating differential
-system.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>agent</strong> (<a class="reference internal" href="simulation.html#crowddynamics.multiagent.Agent" title="crowddynamics.multiagent.Agent"><em>Agent</em></a>) &#8211; </li>
-<li><strong>dt_min</strong> (<em>float</em>) &#8211; Minimum timestep for adaptive integration</li>
-<li><strong>dt_max</strong> (<em>float</em>) &#8211; Maximum timestep for adaptive integration</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Timestep that was used for integration</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
+</div>
+<div class="section" id="module-crowddynamics.core.steering">
+<span id="steering"></span><h2>6.1.4. Steering<a class="headerlink" href="#module-crowddynamics.core.steering" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="crowddynamics.core.distance_map">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">distance_map</code><span class="sig-paren">(</span><em>step: float, domain: shapely.geometry.polygon.Polygon, targets: typing.Union[shapely.geometry.linestring.LineString, NoneType], obstacles: typing.Union[shapely.geometry.linestring.LineString, NoneType]</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/navigation.html#distance_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.distance_map" title="Permalink to this definition">¶</a></dt>
-<dd><p>Solve distance map using Fast Marching Method (FMM) from <code class="docutils literal"><span class="pre">scikit-fmm</span></code>.</p>
+<dt id="crowddynamics.core.steering.distance_map">
+<code class="descclassname">crowddynamics.core.steering.</code><code class="descname">distance_map</code><span class="sig-paren">(</span><em>step</em>, <em>domain</em>, <em>targets</em>, <em>obstacles</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/steering/navigation.html#distance_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.steering.distance_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Distance map <span class="math">\(S(\mathbf{x})\)</span> is obtained by solving <em>Eikonal equation</em>
+using fast marching <em>Fast Marching Method (FMM)</em> (<code class="docutils literal"><span class="pre">scikit-fmm</span></code>).</p>
+<div class="math">
+\[\left \| \nabla S(\mathbf{x}) \right \| = \frac{1}{f(\mathbf{x})}, \quad \mathbf{x} \in \Omega\]</div>
+<p>where</p>
+<ul class="simple">
+<li>Function <span class="math">\(f : \bar{\Omega} \mapsto (0, +\infty)\)</span> is the speed of
+travel at <span class="math">\(\mathbf{x}\)</span></li>
+</ul>
+<p>Boundary conditions for the distance map</p>
+<div class="math">
+\[\begin{split}\begin{cases}
+S(\mathbf{x}) = 0, &amp; \mathbf{x} \in \mathcal{E} \\
+S(\mathbf{x}) \to \infty, &amp; \mathbf{x} \in \mathcal{O}
+\end{cases}\end{split}\]</div>
+<p>Initial values for speed</p>
+<div class="math">
+\[\begin{split}\begin{cases}
+f(\mathbf{x}) &amp;= 1, &amp; \mathbf{x} \in \Omega \setminus \mathcal{O} \\
+f(\mathbf{x}) &amp;\to 0, &amp; \mathbf{x} \in \mathcal{O}
+\end{cases}\end{split}\]</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>domain</strong> (<em>Polygon</em>) &#8211; Domain containing obstacles and targets</li>
-<li><strong>obstacles</strong> (<em>LineString, optional</em>) &#8211; Impassable regions in the domain</li>
-<li><strong>targets</strong> (<em>LineString, optional</em>) &#8211; Target regions in the domain</li>
 <li><strong>step</strong> (<em>float</em>) &#8211; Step size for the meshgrid.</li>
+<li><strong>domain</strong> (<em>Polygon</em>) &#8211; Domain <span class="math">\(\Omega\)</span> containing obstacles and targets.</li>
+<li><strong>obstacles</strong> (<em>LineString</em><em>, </em><em>optional</em>) &#8211; Impassable regions <span class="math">\(\mathcal{O}\)</span> in the domain.</li>
+<li><strong>targets</strong> (<em>LineString</em><em>, </em><em>optional</em>) &#8211; Target regions <span class="math">\(\mathcal{E}\)</span> in the domain.</li>
 </ul>
 </td>
 </tr>
@@ -1096,9 +1284,51 @@ system.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="crowddynamics.core.direction_map">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">direction_map</code><span class="sig-paren">(</span><em>dmap</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/navigation.html#direction_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.direction_map" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.core.steering.travel_time_map">
+<code class="descclassname">crowddynamics.core.steering.</code><code class="descname">travel_time_map</code><span class="sig-paren">(</span><em>step</em>, <em>domain</em>, <em>targets</em>, <em>obstacles</em>, <em>agents</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/steering/navigation.html#travel_time_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.steering.travel_time_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dynamics potential takes into account the positions of the agents in the field. Equation</p>
+<div class="math">
+\[\left \| \nabla T(\mathbf{x}) \right \| = \frac{1}{f(\mathbf{x})}, \quad \mathbf{x} \in \Omega\]</div>
+<p>and boundary conditions</p>
+<div class="math">
+\[\begin{split}f(\mathbf{x}) &amp;= 1, \quad \mathbf{x} \in \Omega \setminus (\mathcal{O} \cup \mathcal{A}) \\
+f(\mathbf{x}) &amp;\leq 1, \quad \mathbf{x} \in \mathcal{A} \\
+f(\mathbf{x}) &amp;\to 0, \quad \mathbf{x} \in \mathcal{O}\end{split}\]</div>
+<div class="math">
+\[\frac{1}{f(\mathbf{x})} = 1 + \max&nbsp;\left( 0, c_{0} \left( 1 + c_{1} \frac{\mathbf{v} \cdot \nabla S(\mathbf{x})}{v_{0} \| \nabla S(\mathbf{x}) \|}&nbsp;\right) \right)\]</div>
+<ul class="simple">
+<li><span class="math">\(c_{0} &gt; 0\)</span> general impact strength</li>
+<li><span class="math">\(c_{1} &gt; 0\)</span> impact of the moving direction of an agent</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>step</strong> (<em>float</em>) &#8211; Step size for the meshgrid.</li>
+<li><strong>domain</strong> (<em>Polygon</em>) &#8211; Domain <span class="math">\(\Omega\)</span> containing obstacles and targets.</li>
+<li><strong>obstacles</strong> (<em>LineString</em><em>, </em><em>optional</em>) &#8211; Impassable regions <span class="math">\(\mathcal{O}\)</span> in the domain.</li>
+<li><strong>targets</strong> (<em>LineString</em><em>, </em><em>optional</em>) &#8211; Target regions <span class="math">\(\mathcal{E}\)</span> in the domain.</li>
+<li><strong>agents</strong> &#8211; Regions occupied by agents <span class="math">\(\mathcal{A}\)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(numpy.meshgrid, numpy.ndarray, numpy.ma.MaskedArray)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowddynamics.core.steering.direction_map">
+<code class="descclassname">crowddynamics.core.steering.</code><code class="descname">direction_map</code><span class="sig-paren">(</span><em>dmap</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/steering/navigation.html#direction_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.steering.direction_map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Normalized gradient of distance map.</p>
+<div class="math">
+\[\hat{\mathbf{e}}_{S} = -\frac{\nabla S(\mathbf{x})}{\| \nabla S(\mathbf{x}) \|}\]</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1113,71 +1343,144 @@ system.</p>
 </table>
 </dd></dl>
 
-<dl class="function">
-<dt id="crowddynamics.core.plot_distance_map">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">plot_distance_map</code><span class="sig-paren">(</span><em>mgrid</em>, <em>dmap</em>, <em>phi</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/navigation.html#plot_distance_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.plot_distance_map" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plot distance map</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>mgrid</strong> (<em>numpy.meshgrid</em>) &#8211; </li>
-<li><strong>dmap</strong> (<em>numpy.ndarray</em>) &#8211; </li>
-<li><strong>phi</strong> (<em>numpy.ma.MaskedArray</em>) &#8211; </li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 <dl class="attribute">
-<dt id="crowddynamics.core.merge_dir_maps">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">merge_dir_maps</code><a class="reference internal" href="../_modules/crowddynamics/core/navigation.html#merge_dir_maps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.merge_dir_maps" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="docutils">
-<dt><a href="#id13"><span class="problematic" id="id14">**</span></a>Args* &#8211;     dmap* &#8211;     dir_map1:</dt>
-<dd><p class="first">dir_map2:
-radius (float): Radius
-value (float): Value between (0, 1). Value denoting the strength of</p>
-<blockquote class="last">
-<div>dir_map1 at distance of radius.</div></blockquote>
-</dd>
-</dl>
+<dt id="crowddynamics.core.steering.merge_dir_maps">
+<code class="descclassname">crowddynamics.core.steering.</code><code class="descname">merge_dir_maps</code><a class="reference internal" href="../_modules/crowddynamics/core/steering/navigation.html#merge_dir_maps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.steering.merge_dir_maps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that merges two direction maps together. Let distance map from
+obstacles be <span class="math">\(\Phi(\mathbf{x})\)</span> and <span class="math">\(\lambda(\Phi(\mathbf{x}))\)</span>
+be any decreasing function of distance from obstacles such that</p>
+<div class="math">
+\[\begin{split}\lambda(\Phi) &amp;=
+\begin{cases}
+1 &amp; \Phi = 0 \\
+0 &amp; \Phi &gt; M &gt; 0
+\end{cases}\end{split}\]</div>
+<p>Then merged direction map <span class="math">\(\hat{\mathbf{e}}_{merged}\)</span> is</p>
+<div class="math">
+\[\begin{split}k &amp;= \lambda(\Phi(\mathbf{x})) \\
+\hat{\mathbf{e}}_{merged} &amp;= k \hat{\mathbf{e}}_{obs} + (1 - k) \hat{\mathbf{e}}_{exits}\end{split}\]</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dmap</strong> &#8211; </li>
+<li><strong>dir_map1</strong> &#8211; </li>
+<li><strong>dir_map2</strong> &#8211; </li>
+<li><strong>radius</strong> (<em>float</em>) &#8211; Radius</li>
+<li><strong>value</strong> (<em>float</em>) &#8211; Value between (0, 1). Value denoting the strength of dir_map1 at
+distance of radius.</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
 <dl class="function">
-<dt id="crowddynamics.core.static_potential">
-<code class="descclassname">crowddynamics.core.</code><code class="descname">static_potential</code><span class="sig-paren">(</span><em>step: float, domain: shapely.geometry.polygon.Polygon, exits: typing.Union[shapely.geometry.linestring.LineString, NoneType], obstacles: typing.Union[shapely.geometry.linestring.LineString, NoneType], radius: float, value: float</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/navigation.html#static_potential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.static_potential" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dt id="crowddynamics.core.steering.static_potential">
+<code class="descclassname">crowddynamics.core.steering.</code><code class="descname">static_potential</code><span class="sig-paren">(</span><em>step</em>, <em>domain</em>, <em>exits</em>, <em>obstacles</em>, <em>radius</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/steering/navigation.html#static_potential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.steering.static_potential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Static potential</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>step</strong> &#8211; </li>
-<li><strong>domain</strong> &#8211; </li>
-<li><strong>exits</strong> &#8211; </li>
-<li><strong>obstacles</strong> &#8211; </li>
-<li><strong>value</strong> &#8211; </li>
-<li><strong>radius</strong> &#8211; </li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>step</strong> (<em>float</em>) &#8211; </li>
+<li><strong>domain</strong> (<em>Polygon</em>) &#8211; </li>
+<li><strong>exits</strong> (<em>LineString</em><em>, </em><em>optional</em>) &#8211; </li>
+<li><strong>obstacles</strong> (<em>LineString</em><em>, </em><em>optional</em>) &#8211; </li>
+<li><strong>value</strong> (<em>float</em>) &#8211; </li>
+<li><strong>radius</strong> (<em>float</em>) &#8211; </li>
 </ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
 </td>
 </tr>
 </tbody>
 </table>
-<p>Returns:</p>
 </dd></dl>
 
+<dl class="function">
+<dt id="crowddynamics.core.steering.dynamic_potential">
+<code class="descclassname">crowddynamics.core.steering.</code><code class="descname">dynamic_potential</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/steering/navigation.html#dynamic_potential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.steering.dynamic_potential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dynamic potential</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-crowddynamics.core.integrator">
+<span id="integrator"></span><h2>6.1.5. Integrator<a class="headerlink" href="#module-crowddynamics.core.integrator" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="crowddynamics.core.integrator.integrate">
+<code class="descclassname">crowddynamics.core.integrator.</code><code class="descname">integrate</code><a class="reference internal" href="../_modules/crowddynamics/core/integrator/integrator.html#integrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.integrator.integrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Differential system is integrated using numerical integration scheme using
+discrete adaptive time step.</p>
+<p>Timestep <span class="math">\(\Delta t\)</span> is selected from interval
+<span class="math">\([\Delta t_{min}, \Delta t_{max}]\)</span> by bounding the maximum step size
+<span class="math">\(\Delta x\)</span> an agent can take per iteration cycle, obtained from</p>
+<div class="math">
+\[\begin{split}\Delta x = c \Delta t_{max} \max_{i\in A} v_i^0 \\\end{split}\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(c &gt; 0\)</span> is scaling coefficient</li>
+<li><span class="math">\(v_i^0\)</span> is agent&#8217;s target velocity</li>
+<li><span class="math">\(\max_{i\in A} v_i^0\)</span> is the maximum of all target velocities</li>
+</ul>
+<p>Timestep is then obtained from</p>
+<div class="math">
+\[\begin{split}\Delta t_{mid} &amp;= \frac{\Delta x}{\max_{i \in A} v_i} \\
+\Delta t &amp;=
+\begin{cases}
+\Delta t_{min} &amp; \Delta t_{mid} &lt; \Delta t_{min} \\
+\Delta t_{mid} &amp;  \\
+\Delta t_{max} &amp; \Delta t_{mid} &gt; \Delta t_{max} \\
+\end{cases}\end{split}\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(v_i\)</span> is agent&#8217;s current velocity</li>
+</ul>
+<p>Acceleration on an agent</p>
+<div class="math">
+\[\begin{split}a_{k} &amp;= \mathbf{f}_{k} / m \\
+\mathbf{x}_{k+1} &amp;= \mathbf{x}_{k} + \mathbf{v}_{k} \Delta t + \frac{1}{2} a_{k} \Delta t^{2} \\
+\mathbf{v}_{k+1} &amp;= \mathbf{v}_{k} + a_{k} \Delta t \\\end{split}\]</div>
+<p>Angular acceleration</p>
+<div class="math">
+\[\begin{split}\alpha_{k} &amp;= M_{k} / I \\
+\varphi_{k+1} &amp;= \varphi_{k} + \omega_{k} \Delta t + \frac{1}{2} \alpha_{k} \Delta t^{2} \\
+\omega_{k+1} &amp;= \omega_{k} + \alpha_{k} \Delta t \\\end{split}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>agent</strong> (<a class="reference internal" href="simulation.html#crowddynamics.multiagent.Agent" title="crowddynamics.multiagent.Agent"><em>Agent</em></a>) &#8211; </li>
+<li><strong>dt_min</strong> (<em>float</em>) &#8211; Minimum timestep <span class="math">\(\Delta x_{min}\)</span> for adaptive integration.</li>
+<li><strong>dt_max</strong> (<em>float</em>) &#8211; Maximum timestep <span class="math">\(\Delta x_{max}\)</span> for adaptive integration.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Timestep <span class="math">\(\Delta t\)</span> that was used for integration.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 </div>
 
 
@@ -1187,10 +1490,10 @@ value (float): Value between (0, 1). Value denoting the strength of</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="io.html" class="btn btn-neutral float-right" title="8.2. IO" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="io.html" class="btn btn-neutral float-right" title="6.2. IO" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="8. API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="6. API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1200,7 +1503,7 @@ value (float): Value between (0, 1). Value denoting the strength of</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 19, 2017.
+      Last updated on Jan 22, 2017.
 
     </p>
   </div>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8.5. Plugins &mdash; Crowd Dynamics 1 documentation</title>
+  <title>6.7. Plugins &mdash; Crowd Dynamics 1 documentation</title>
   
 
   
@@ -36,8 +36,9 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
-        <link rel="up" title="8. API" href="index.html"/>
-        <link rel="prev" title="8.4. Graphical User Interface" href="gui.html"/> 
+        <link rel="up" title="6. API" href="index.html"/>
+        <link rel="next" title="7. Research" href="../research/index.html"/>
+        <link rel="prev" title="6.6. Graphical User Interface" href="gui.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -84,8 +85,8 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">1. Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#simple">1.1. Simple</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#developers">1.2. Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#conda">1.1. Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#from-source">1.2. From Source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">2. Usage</a><ul>
@@ -94,96 +95,81 @@
 <li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">2.3. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">3.1. Mathematical Foundations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">3.1.1. Time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">3.1.2. Geometry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">3.1.2.1. Domain</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">3.1.2.2. Obstacle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">3.1.2.3. Exit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">3.1.2.4. Narrow bottleneck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">3. Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">3.1. Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/algorithms.html">3.2. Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#n-body-simulations">3.2.1. N-Body Simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#brute-force">3.2.2. Brute Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#spatial-partitioning-algorithms">3.2.3. Spatial Partitioning Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#block-list">3.2.3.1. Block List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#convex-hull">3.2.3.2. Convex Hull</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">3.1.3. Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">3.1.3.1. Model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">3.1.3.2. Circular model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">3.1.3.3. Elliptical model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">3.1.3.4. Three circle model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#parallelisation">3.2.4. Parallelisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#refences">3.2.5. Refences</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">3.1.4. Initial configuration</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">3.2. Quantities</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">3.2.1. Density</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">3.2.2. Flow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">3.2.2.1. Rate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">3.2.2.2. Types</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">3.2.3. Pressure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">3.2.4. Fundamental Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/adjusting.html">3.3. Adjusting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#force">3.3.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#torque">3.3.2. Torque</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#subgroups">3.3.3. Subgroups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#attractor-point">3.3.3.1. Attractor point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#intra-subgroup-adjusting-force">3.3.3.2. Intra-subgroup adjusting force</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">5. Multi-Agent</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/algorithms.html">5.1. Algorithms</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#n-body-simulations">5.1.1. N-Body Simulations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#brute-force">5.1.2. Brute Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#spatial-partitioning-algorithms">5.1.3. Spatial Partitioning Algorithms</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#block-list">5.1.3.1. Block List</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#convex-hull">5.1.3.2. Convex Hull</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/interactions.html">3.4. Interactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#social-force">3.4.1. Social Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#physical-contact">3.4.2. Physical Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#torque">3.4.3. Torque</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#parallelisation">5.1.4. Parallelisation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#refences">5.1.5. Refences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/fluctuation.html">3.5. Fluctuation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#force">3.5.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#torque">3.5.2. Torque</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">5.2. Social Force Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/adjusting.html">5.3. Adjusting</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#force">5.3.1. Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#torque">5.3.2. Torque</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#subgroups">5.3.3. Subgroups</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#attractor-point">5.3.3.1. Attractor point</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#intra-subgroup-adjusting-force">5.3.3.2. Intra-subgroup adjusting force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/integrator.html">3.6. Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/navigation.html">3.7. Navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#distance-map-and-static-potential">3.7.1. Distance map and static potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#dynamic-potential">3.7.2. Dynamic potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#implementation">3.7.3. Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#references">3.7.4. References</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/interactions.html">5.4. Interactions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#social-force">5.4.1. Social Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#physical-contact">5.4.2. Physical Contact</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#torque">5.4.3. Torque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/fluctuation.html">5.5. Fluctuation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#force">5.5.1. Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#torque">5.5.2. Torque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">5. Continuum Flow</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/integrator.html">5.6. Integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/navigation.html">5.7. Navigation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#distance-map-and-static-potential">5.7.1. Distance map and static potential</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#dynamic-potential">5.7.2. Dynamic potential</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#implementation">5.7.3. Implementation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#references">5.7.4. References</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="core.html">6.1. Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.vector2D">6.1.1. Vector2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.motion">6.1.2. Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.interactions">6.1.3. Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.steering">6.1.4. Steering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.integrator">6.1.5. Integrator</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/orientation.html">5.8. Orientation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/exit_selection.html">5.9. Exit Selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/game.html">5.10. Games</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#spatial-game-for-egress-congestion">5.10.1. Spatial Game for Egress Congestion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#strategy-selection">5.10.2. Strategy Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#strategy-updating">5.10.3. Strategy Updating</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#agents-closer-to-exit">5.10.4. Agents Closer to Exit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#effect-on-agents">5.10.5. Effect on agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">6.2. IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampling.html">6.3. Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html">6.4. Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html#agent">6.4.1. Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html#module-crowddynamics.multiagent">6.4.2. Multi-Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">6.5. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html">6.6. Graphical User Interface</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.7. Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.plugins.game">6.7.1. Game</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">6. Continuum Flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../research/index.html">7. Research</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">7.1. Phenomena</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">7.1.1. Egress Congestion</a></li>
@@ -209,17 +195,35 @@
 <li class="toctree-l2"><a class="reference internal" href="../research/applications.html">7.3. Applications</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">8. API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="core.html">8.1. Core</a></li>
-<li class="toctree-l2"><a class="reference internal" href="io.html">8.2. IO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulation.html">8.3. Simulation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="simulation.html#agent">8.3.1. Agent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="simulation.html#multi-agent">8.3.2. Multi-Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">8. Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">8.1. Mathematical Foundations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">8.1.1. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">8.1.2. Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">8.1.2.1. Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">8.1.2.2. Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">8.1.2.3. Exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">8.1.2.4. Narrow bottleneck</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gui.html">8.4. Graphical User Interface</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">8.5. Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#game">8.5.1. Game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">8.1.3. Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">8.1.3.1. Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">8.1.3.2. Circular model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">8.1.3.3. Elliptical model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">8.1.3.4. Three circle model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">8.1.4. Initial configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">8.2. Quantities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">8.2.1. Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">8.2.2. Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">8.2.2.1. Rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">8.2.2.2. Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">8.2.3. Pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">8.2.4. Fundamental Diagram</a></li>
 </ul>
 </li>
 </ul>
@@ -254,13 +258,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">8. API</a> &raquo;</li>
+          <li><a href="index.html">6. API</a> &raquo;</li>
       
-    <li>8.5. Plugins</li>
+    <li>6.7. Plugins</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/api/game.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/game.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -271,9 +275,307 @@
            <div itemprop="articleBody">
             
   <div class="section" id="plugins">
-<h1>8.5. Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="game">
-<h2>8.5.1. Game<a class="headerlink" href="#game" title="Permalink to this headline">¶</a></h2>
+<h1>6.7. Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-crowddynamics.plugins.game">
+<span id="game"></span><h2>6.7.1. Game<a class="headerlink" href="#module-crowddynamics.plugins.game" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crowddynamics.plugins.game.EgressGame">
+<em class="property">class </em><code class="descclassname">crowddynamics.plugins.game.</code><code class="descname">EgressGame</code><span class="sig-paren">(</span><em>simulation</em>, <em>door</em>, <em>room</em>, <em>t_aset_0</em>, <em>interval=0.1</em>, <em>neighbor_radius=0.4</em>, <em>neighborhood_size=8</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#EgressGame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.EgressGame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Patient and impatient pedestrians in a spatial game <span class="math">\((S, f)\)</span> for
+egress congestion between players <span class="math">\(P \subset A\)</span> with set of strategies
+<span class="math">\(S\)</span> and payoff function <span class="math">\(f : S \times S \mapsto \mathbb{R}\)</span>.</p>
+<p>Set of strategies</p>
+<div class="math">
+\[\begin{split}S &amp;= \{ \text{Impatient}, \text{Patient} \} \\
+  &amp;= \{&nbsp;0, 1 \}\end{split}\]</div>
+<p>Payoff matrix / function</p>
+<div class="math">
+\[\begin{split}f(s_i, s_j) = \left[\begin{matrix}\left ( \frac{T_{aset}}{T_{ij}}, \quad \frac{T_{aset}}{T_{ij}}\right ) &amp; \left ( -1, \quad 1\right )\\\left ( 1, \quad -1\right ) &amp; \left ( 0, \quad 0\right )\end{matrix}\right]\end{split}\]</div>
+<p>Estimated evacuation time for an agent</p>
+<div class="math">
+\[T_i = \frac{\lambda_i}{\beta},\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(\beta\)</span> is the capacity of the exit door</li>
+<li><span class="math">\(\lambda_i\)</span> number of other agents closer to the exit.</li>
+</ul>
+<p>Average evacuation time</p>
+<div class="math">
+\[T_{ij} = \frac{(T_i + T_j)}{2}.\]</div>
+<p>Effect on agents</p>
+<ul class="simple">
+<li><span class="math">\(k\)</span></li>
+<li><span class="math">\(\tau_{adj}\)</span></li>
+<li><span class="math">\(\sigma_{force}\)</span></li>
+</ul>
+<p>References</p>
+<table class="docutils citation" frame="void" id="game2013" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[game2013]</td><td>Heli??vaara, S., Ehtamo, H., Helbing, D., &amp; Korhonen, T. (2013). Patient and impatient pedestrians in a spatial game for egress congestion. Physical Review E - Statistical, Nonlinear, and Soft Matter Physics. <a class="reference external" href="http://doi.org/10.1103/PhysRevE.87.012802">http://doi.org/10.1103/PhysRevE.87.012802</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="game2014" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[game2014]</td><td>Von Schantz, A., &amp; Ehtamo, H. (2014). Cellular automaton evacuation model coupled with a spatial game. In Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). <a class="reference external" href="http://doi.org/10.1007/978-3-319-09912-5_31">http://doi.org/10.1007/978-3-319-09912-5_31</a></td></tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crowddynamics.plugins.game.EgressGame.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>simulation</em>, <em>door</em>, <em>room</em>, <em>t_aset_0</em>, <em>interval=0.1</em>, <em>neighbor_radius=0.4</em>, <em>neighborhood_size=8</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#EgressGame.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.EgressGame.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>EgressGame</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>simulation</strong> &#8211; MultiAgent Simulation</li>
+<li><strong>door</strong> &#8211; </li>
+<li><strong>room</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>t_aset_0</strong> &#8211; Initial available safe egress time.</li>
+<li><strong>interval</strong> &#8211; Interval for updating strategies</li>
+<li><strong>neighbor_radius</strong> &#8211; </li>
+<li><strong>neighborhood_size</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.game.EgressGame.parameters">
+<code class="descname">parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#EgressGame.parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.EgressGame.parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameters that can be saved or plotted.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.game.EgressGame.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#EgressGame.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.EgressGame.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.game.EgressGame.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#EgressGame.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.EgressGame.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update strategies for all agents.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.plugins.game.best_response_strategy">
+<code class="descclassname">crowddynamics.plugins.game.</code><code class="descname">best_response_strategy</code><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#best_response_strategy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.best_response_strategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>New strategy is selected using best response dynamics which finds the
+strategy that minimizes loss using the payoff function</p>
+<div class="math">
+\[s_{i} = \underset{s \in S}{\arg \min} \sum_{j \in N_{i}^{neigh}} f(s, s_{j})\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(N_{i}^{neigh} \subset P \setminus \{P_{i}\}\)</span> set is eight closes
+agents excluding the agent itself at maximum skin-to-skin distance of
+<span class="math">\(0.40 \ \mathrm{m}\)</span> from agent <span class="math">\(i\)</span>.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>agent</strong> &#8211; </li>
+<li><strong>players</strong> &#8211; </li>
+<li><strong>door</strong> &#8211; </li>
+<li><strong>radius_max</strong> &#8211; </li>
+<li><strong>strategy</strong> &#8211; </li>
+<li><strong>strategies</strong> &#8211; </li>
+<li><strong>t_aset</strong> &#8211; </li>
+<li><strong>interval</strong> &#8211; </li>
+<li><strong>dt</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.plugins.game.poisson_clock">
+<code class="descclassname">crowddynamics.plugins.game.</code><code class="descname">poisson_clock</code><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#poisson_clock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.poisson_clock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Poisson process that simulates when agents will change their strategies.
+Time between updates are independent random variables defined</p>
+<div class="math">
+\[\tau_i \sim \operatorname{Exp}(\lambda)\]</div>
+<p>Where the <code class="docutils literal"><span class="pre">rate</span></code> parameter is</p>
+<div class="math">
+\[\operatorname{E}(\tau) = \frac{1}{\lambda} = interval\]</div>
+<p>Times when agent updates its strategy</p>
+<div class="math">
+\[\begin{split}\begin{split}\begin{cases}
+T_n = \tau_1 + \ldots + \tau_n, &amp; n \geq 1 \\
+T_0 = 0
+\end{cases}\end{split}\end{split}\]</div>
+<p>Sequence of update times</p>
+<div class="math">
+\[\{T_1, T_2, T_3, \ldots, T_n\}, \quad T_n &lt; \Delta t\]</div>
+<p>Number of arrivals by the <span class="math">\(s\)</span></p>
+<div class="math">
+\[\begin{split}N(s) &amp;= \max\{n : T_n \leq s\} \\
+N(s) &amp;\sim \operatorname{Poi}(\lambda)\end{split}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>interval</strong> (<em>float</em>) &#8211; Expected frequency of update.</li>
+<li><strong>dt</strong> (<em>float</em>) &#8211; Discrete timestep <span class="math">\(\Delta t\)</span> aka time window.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><em>float</em> &#8211;     Moments in the time window when the strategies should be updated.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.plugins.game.poisson_timings">
+<code class="descclassname">crowddynamics.plugins.game.</code><code class="descname">poisson_timings</code><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#poisson_timings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.poisson_timings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update times for all agent in the game using Poisson clock.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>players</strong> (<em>numpy.ndarray</em>) &#8211; Indices of the players.</li>
+<li><strong>interval</strong> (<em>float</em>) &#8211; </li>
+<li><strong>dt</strong> (<em>float</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">List of indices of agents sorted by their update times.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.plugins.game.payoff">
+<code class="descclassname">crowddynamics.plugins.game.</code><code class="descname">payoff</code><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#payoff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.payoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Payoff matrix of the game.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>s_i</strong> (<em>int</em>) &#8211; Our strategy</li>
+<li><strong>s_j</strong> (<em>int</em>) &#8211; Neighbor strategy</li>
+<li><strong>t_aset</strong> (<em>float</em>) &#8211; Available safe egress time.</li>
+<li><strong>t_evac_i</strong> (<em>float</em>) &#8211; Time to evacuate for agent i.</li>
+<li><strong>t_evac_j</strong> (<em>float</em>) &#8211; Time to evacuate for agent j.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.plugins.game.agent_closer_to_exit">
+<code class="descclassname">crowddynamics.plugins.game.</code><code class="descname">agent_closer_to_exit</code><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#agent_closer_to_exit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.agent_closer_to_exit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Agent closer to exit</p>
+<p>Function mapping players to number of agents that are closer to the exit is denoted</p>
+<div class="math">
+\[\lambda :&nbsp;P \mapsto [0, | P | - 1].\]</div>
+<p>Ordering is defined as the distances between the exit and an agent</p>
+<div class="math">
+\[d(\mathcal{E}_i, \mathbf{x}_{i})\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(\mathcal{E}_i\)</span> is the exit the agent is trying to reach</li>
+<li><span class="math">\(\mathbf{x}_{i}\)</span> is the center of the mass of an agent</li>
+</ul>
+<p>For narrow bottlenecks we can approximate the distance</p>
+<div class="math">
+\[d(\mathcal{E}_i, \mathbf{x}_{i}) \approx \| \mathbf{c} - \mathbf{x}_{i} \|\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(\|&nbsp;\cdot \|\)</span> is euclidean <a class="reference external" href="https://en.wikipedia.org/wiki/Metric_(mathematics)">metric</a></li>
+<li><span class="math">\(\mathbf{c}\)</span> is the center of the exit.</li>
+</ul>
+<p>Algorithm</p>
+<ol class="arabic">
+<li><p class="first">Sort by distances to map number of closer agents to player</p>
+<div class="math">
+\[\boldsymbol{\lambda}^{-1} = \underset{i \in P}{\operatorname{arg\,sort}} \left( d(\mathcal{E}_i, \mathbf{x}_{i}) \right)\]</div>
+</li>
+<li><p class="first">Sort by players to map player to number of closer agents</p>
+</li>
+</ol>
+<div class="math">
+\[\boldsymbol{\lambda} = \operatorname{arg\,sort} (\boldsymbol{\lambda}^{-1})\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>points</strong> (<em>numpy.ndarray</em>) &#8211; Array [[x1, y2], [x2, y2]]</li>
+<li><strong>position</strong> (<em>numpy.ndarray</em>) &#8211; Positions of the agents.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Array where indices denote agents and value how many agents are
+closer to the exit.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.plugins.game.exit_capacity">
+<code class="descclassname">crowddynamics.plugins.game.</code><code class="descname">exit_capacity</code><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#exit_capacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.exit_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimation of the capacity of narrow exit. Narrow exit is defined max
+<span class="math">\(3\,\mathrm{m}\)</span> wide.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>points</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>agent_radius</strong> (<em>float</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 </div>
 
@@ -284,8 +586,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../research/index.html" class="btn btn-neutral float-right" title="7. Research" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="gui.html" class="btn btn-neutral" title="8.4. Graphical User Interface" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="gui.html" class="btn btn-neutral" title="6.6. Graphical User Interface" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -295,7 +599,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 19, 2017.
+      Last updated on Jan 22, 2017.
 
     </p>
   </div>

@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>crowddynamics.core.motion.force &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../../../../index.html"/>
+        <link rel="up" title="Module code" href="../../../index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../../../../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">1. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation.html#conda">1.1. Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation.html#from-source">1.2. From Source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">2. Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage.html#basic-architecture">2.1. Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage.html#command-line-interface">2.2. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage.html#configuration">2.3. Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multiagent/index.html">3. Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/social_force_model.html">3.1. Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/algorithms.html">3.2. Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/algorithms.html#n-body-simulations">3.2.1. N-Body Simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/algorithms.html#brute-force">3.2.2. Brute Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/algorithms.html#spatial-partitioning-algorithms">3.2.3. Spatial Partitioning Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../multiagent/algorithms.html#block-list">3.2.3.1. Block List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../multiagent/algorithms.html#convex-hull">3.2.3.2. Convex Hull</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/algorithms.html#parallelisation">3.2.4. Parallelisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/algorithms.html#refences">3.2.5. Refences</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/adjusting.html">3.3. Adjusting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/adjusting.html#force">3.3.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/adjusting.html#torque">3.3.2. Torque</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/adjusting.html#subgroups">3.3.3. Subgroups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../multiagent/adjusting.html#attractor-point">3.3.3.1. Attractor point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../multiagent/adjusting.html#intra-subgroup-adjusting-force">3.3.3.2. Intra-subgroup adjusting force</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/interactions.html">3.4. Interactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/interactions.html#social-force">3.4.1. Social Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/interactions.html#physical-contact">3.4.2. Physical Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/interactions.html#torque">3.4.3. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/fluctuation.html">3.5. Fluctuation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/fluctuation.html#force">3.5.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/fluctuation.html#torque">3.5.2. Torque</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/integrator.html">3.6. Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/navigation.html">3.7. Navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/navigation.html#distance-map-and-static-potential">3.7.1. Distance map and static potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/navigation.html#dynamic-potential">3.7.2. Dynamic potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/navigation.html#implementation">3.7.3. Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/navigation.html#references">3.7.4. References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cellular/index.html">4. Cellular Automata</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../continuum/index.html">5. Continuum Flow</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api/index.html">6. API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/core.html">6.1. Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/core.html#module-crowddynamics.core.vector2D">6.1.1. Vector2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/core.html#module-crowddynamics.core.motion">6.1.2. Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/core.html#module-crowddynamics.core.interactions">6.1.3. Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/core.html#module-crowddynamics.core.steering">6.1.4. Steering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/core.html#module-crowddynamics.core.integrator">6.1.5. Integrator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/io.html">6.2. IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/sampling.html">6.3. Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/simulation.html">6.4. Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/simulation.html#agent">6.4.1. Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/simulation.html#module-crowddynamics.multiagent">6.4.2. Multi-Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/cli.html">6.5. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/gui.html">6.6. Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/game.html">6.7. Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../api/game.html#module-crowddynamics.plugins.game">6.7.1. Game</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../research/index.html">7. Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../research/phenomena.html">7.1. Phenomena</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#egress-congestion">7.1.1. Egress Congestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#faster-is-slower">7.1.2. Faster is slower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#arching">7.1.3. Arching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#zipper-effect">7.1.4. Zipper effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#herding">7.1.5. Herding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#lane-formation">7.1.6. Lane formation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#freezing-by-heat">7.1.7. Freezing by heat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#turbulence">7.1.8. Turbulence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#stop-and-go-waves">7.1.9. Stop-and-Go waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#braess-s-paradox">7.1.10. Braess&#8217;s paradox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../research/simulations.html">7.2. Simulations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/simulations.html#outdoor">7.2.1. Outdoor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/simulations.html#hallway">7.2.2. Hallway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/simulations.html#crossing">7.2.3. Crossing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/simulations.html#evacuation">7.2.4. Evacuation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/simulations.html#turning">7.2.5. Turning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../research/applications.html">7.3. Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../foundations/index.html">8. Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../foundations/theory.html">8.1. Mathematical Foundations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/theory.html#time">8.1.1. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/theory.html#geometry">8.1.2. Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#domain">8.1.2.1. Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#obstacle">8.1.2.2. Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#exit">8.1.2.3. Exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#narrow-bottleneck">8.1.2.4. Narrow bottleneck</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/theory.html#agent">8.1.3. Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#model">8.1.3.1. Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#circular-model">8.1.3.2. Circular model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#elliptical-model">8.1.3.3. Elliptical model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/theory.html#three-circle-model">8.1.3.4. Three circle model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/theory.html#initial-configuration">8.1.4. Initial configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../foundations/quantities.html">8.2. Quantities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/quantities.html#density">8.2.1. Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/quantities.html#flow">8.2.2. Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/quantities.html#rate">8.2.2.1. Rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../foundations/quantities.html#types">8.2.2.2. Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/quantities.html#pressure">8.2.3. Pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../foundations/quantities.html#fundamental-diagram">8.2.4. Fundamental Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+      
+    <li>crowddynamics.core.motion.force</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for crowddynamics.core.motion.force</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numba</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">numba</span> <span class="k">import</span> <span class="n">f8</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">truncnorm</span>
+
+<span class="kn">from</span> <span class="nn">crowddynamics.core.vector2D.vector2D</span> <span class="k">import</span> <span class="n">dot2d</span>
+
+
+<div class="viewcode-block" id="force_fluctuation"><a class="viewcode-back" href="../../../../api/core.html#crowddynamics.core.motion.force_fluctuation">[docs]</a><span class="k">def</span> <span class="nf">force_fluctuation</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Truncated normal distribution with standard deviation of 3.</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \boldsymbol{\xi} = \xi \cdot \mathbf{\hat{e}}(\varphi)</span>
+
+<span class="sd">    where</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \xi \sim \mathcal{N}(\mu, \sigma^{2}) \\</span>
+<span class="sd">       \varphi \sim \mathcal{U}(-\pi, \pi)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        mass (float):</span>
+<span class="sd">            Mass</span>
+
+<span class="sd">        scale (float):</span>
+<span class="sd">            Standard deviation of truncated normal distribution</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        numpy.ndarray: Fluctuation force</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mass</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">scale</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">magnitude</span> <span class="o">=</span> <span class="n">truncnorm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">force</span> <span class="o">=</span> <span class="n">magnitude</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">force</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">mass</span></div>
+
+
+<span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="viewcode-block" id="force_adjust"><a class="viewcode-back" href="../../../../api/core.html#crowddynamics.core.motion.force_adjust">[docs]</a><span class="k">def</span> <span class="nf">force_adjust</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">tau_adj</span><span class="p">,</span> <span class="n">v0</span><span class="p">,</span> <span class="n">e0</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    *Adjusting* aka *driving* force accounts of agent&#39;s desire to reach a</span>
+<span class="sd">    certain destination. In high crowd densities term *manoeuvring* is used.</span>
+<span class="sd">    Force affecting the agent takes form</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \mathbf{f}_{adj} = \frac{m}{\tau_{adj}} (v_{0} \mathbf{\hat{e}_{0}} - \mathbf{v}),</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        mass (float):</span>
+<span class="sd">            Mass</span>
+
+<span class="sd">        tau_adj (float):</span>
+<span class="sd">            Characteristic time :math:`\tau_{adj}` time for agent to adjust it</span>
+<span class="sd">            movement. Value :math:`0.5` is often used, but for example impatient</span>
+<span class="sd">            agent that tend to push other agent more this value can be reduced.</span>
+
+<span class="sd">        v0 (float):</span>
+<span class="sd">            Target velocity :math:`v_{0}` is usually *average walking speed* for</span>
+<span class="sd">            agent in its current situation.</span>
+
+<span class="sd">        e0 (numpy.ndarray):</span>
+<span class="sd">            Target direction :math:`\mathbf{\hat{e}_{0}}` is solved by</span>
+<span class="sd">            *navigation* or *path planning* algorithm. More details in the</span>
+<span class="sd">            navigation section.</span>
+
+<span class="sd">        v (numpy.ndarray):</span>
+<span class="sd">            Velocity</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        numpy.ndarray:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">mass</span> <span class="o">/</span> <span class="n">tau_adj</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">v0</span> <span class="o">*</span> <span class="n">e0</span> <span class="o">-</span> <span class="n">v</span><span class="p">)</span></div>
+
+
+<span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">f8</span><span class="p">[:](</span><span class="n">f8</span><span class="p">,</span> <span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">,</span> <span class="n">f8</span><span class="p">),</span> <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="viewcode-block" id="force_social_helbing"><a class="viewcode-back" href="../../../../api/core.html#crowddynamics.core.motion.force_social_helbing">[docs]</a><span class="k">def</span> <span class="nf">force_social_helbing</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Helbing&#39;s model&#39;s original social force. Independent of the velocity or</span>
+<span class="sd">    direction of the agent.</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       A \exp(-h / B) \mathbf{\hat{n}}</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        h (float):</span>
+<span class="sd">            Skin-to-skin distance between agents</span>
+
+<span class="sd">        n (numpy.ndarray):</span>
+<span class="sd">            Normal unit vector</span>
+
+<span class="sd">        a (float):</span>
+<span class="sd">            Constant :math:`A = 2 \cdot 10^{3} \,\mathrm{N}`</span>
+
+<span class="sd">        b (float):</span>
+<span class="sd">            Constant :math:`B = 0.08 \,\mathrm{m}`</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        numpy.ndarray: Social force</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span> <span class="n">h</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span></div>
+
+
+<span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">f8</span><span class="p">[:](</span><span class="n">f8</span><span class="p">,</span> <span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">,</span> <span class="n">f8</span><span class="p">,</span> <span class="n">f8</span><span class="p">),</span> <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+           <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="viewcode-block" id="force_contact"><a class="viewcode-back" href="../../../../api/core.html#crowddynamics.core.motion.force_contact">[docs]</a><span class="k">def</span> <span class="nf">force_contact</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">kappa</span><span class="p">,</span> <span class="n">damping</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Physical contact force with damping. Helbing&#39;s original model did not</span>
+<span class="sd">    include damping, which was added by Langston.</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \mathbf{f}^{c} = - h \cdot \left(\mu \cdot \hat{\mathbf{n}} -</span>
+<span class="sd">       \kappa \cdot (\mathbf{v} \cdot \hat{\mathbf{t}}) \hat{\mathbf{t}}\right) +</span>
+<span class="sd">       c_{n} \cdot (\mathbf{v} \cdot \hat{\mathbf{n}}) \hat{\mathbf{n}}</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        h (float):</span>
+<span class="sd">            Skin-to-skin distance between agents</span>
+
+<span class="sd">        n (numpy.ndarray):</span>
+<span class="sd">            Normal vector</span>
+
+<span class="sd">        v (numpy.ndarray):</span>
+<span class="sd">            Velocity vector</span>
+
+<span class="sd">        t (numpy.ndarray):</span>
+<span class="sd">            Tangent vector</span>
+
+<span class="sd">        mu (float):</span>
+<span class="sd">            Constant :math:`1.2 \cdot 10^{5}\,\mathrm{kg\,s^{-2}}`</span>
+
+<span class="sd">        kappa (float):</span>
+<span class="sd">            Constant :math:`4.0 \cdot 10^{4}\,\mathrm{kg\,m^{-1}s^{-1}}`</span>
+
+<span class="sd">        damping (float):</span>
+<span class="sd">            Constant :math:`500 \,\mathrm{N}`</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        numpy.ndarray: Contact force</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="o">-</span> <span class="n">h</span> <span class="o">*</span> <span class="p">(</span><span class="n">mu</span> <span class="o">*</span> <span class="n">n</span> <span class="o">-</span> <span class="n">kappa</span> <span class="o">*</span> <span class="n">dot2d</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">damping</span> <span class="o">*</span> <span class="n">dot2d</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Jan 22, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

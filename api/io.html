@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8.2. IO &mdash; Crowd Dynamics 1 documentation</title>
+  <title>6.2. IO &mdash; Crowd Dynamics 1 documentation</title>
   
 
   
@@ -36,9 +36,9 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
-        <link rel="up" title="8. API" href="index.html"/>
-        <link rel="next" title="8.3. Simulation" href="simulation.html"/>
-        <link rel="prev" title="8.1. Core" href="core.html"/> 
+        <link rel="up" title="6. API" href="index.html"/>
+        <link rel="next" title="6.3. Sampling" href="sampling.html"/>
+        <link rel="prev" title="6.1. Core" href="core.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,8 +85,8 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">1. Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#simple">1.1. Simple</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#developers">1.2. Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#conda">1.1. Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#from-source">1.2. From Source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">2. Usage</a><ul>
@@ -95,96 +95,81 @@
 <li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">2.3. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">3. Foundations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">3.1. Mathematical Foundations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">3.1.1. Time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">3.1.2. Geometry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">3.1.2.1. Domain</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">3.1.2.2. Obstacle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">3.1.2.3. Exit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">3.1.2.4. Narrow bottleneck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">3. Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">3.1. Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/algorithms.html">3.2. Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#n-body-simulations">3.2.1. N-Body Simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#brute-force">3.2.2. Brute Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#spatial-partitioning-algorithms">3.2.3. Spatial Partitioning Algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#block-list">3.2.3.1. Block List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#convex-hull">3.2.3.2. Convex Hull</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">3.1.3. Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">3.1.3.1. Model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">3.1.3.2. Circular model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">3.1.3.3. Elliptical model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">3.1.3.4. Three circle model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#parallelisation">3.2.4. Parallelisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#refences">3.2.5. Refences</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">3.1.4. Initial configuration</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">3.2. Quantities</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">3.2.1. Density</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">3.2.2. Flow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">3.2.2.1. Rate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">3.2.2.2. Types</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">3.2.3. Pressure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">3.2.4. Fundamental Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/adjusting.html">3.3. Adjusting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#force">3.3.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#torque">3.3.2. Torque</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#subgroups">3.3.3. Subgroups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#attractor-point">3.3.3.1. Attractor point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#intra-subgroup-adjusting-force">3.3.3.2. Intra-subgroup adjusting force</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">5. Multi-Agent</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/algorithms.html">5.1. Algorithms</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#n-body-simulations">5.1.1. N-Body Simulations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#brute-force">5.1.2. Brute Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#spatial-partitioning-algorithms">5.1.3. Spatial Partitioning Algorithms</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#block-list">5.1.3.1. Block List</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/algorithms.html#convex-hull">5.1.3.2. Convex Hull</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/interactions.html">3.4. Interactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#social-force">3.4.1. Social Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#physical-contact">3.4.2. Physical Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#torque">3.4.3. Torque</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#parallelisation">5.1.4. Parallelisation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/algorithms.html#refences">5.1.5. Refences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/fluctuation.html">3.5. Fluctuation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#force">3.5.1. Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#torque">3.5.2. Torque</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">5.2. Social Force Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/adjusting.html">5.3. Adjusting</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#force">5.3.1. Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#torque">5.3.2. Torque</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/adjusting.html#subgroups">5.3.3. Subgroups</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#attractor-point">5.3.3.1. Attractor point</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../multiagent/adjusting.html#intra-subgroup-adjusting-force">5.3.3.2. Intra-subgroup adjusting force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/integrator.html">3.6. Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/navigation.html">3.7. Navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#distance-map-and-static-potential">3.7.1. Distance map and static potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#dynamic-potential">3.7.2. Dynamic potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#implementation">3.7.3. Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#references">3.7.4. References</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/interactions.html">5.4. Interactions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#social-force">5.4.1. Social Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#physical-contact">5.4.2. Physical Contact</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/interactions.html#torque">5.4.3. Torque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">4. Cellular Automata</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/fluctuation.html">5.5. Fluctuation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#force">5.5.1. Force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/fluctuation.html#torque">5.5.2. Torque</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">5. Continuum Flow</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/integrator.html">5.6. Integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/navigation.html">5.7. Navigation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#distance-map-and-static-potential">5.7.1. Distance map and static potential</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#dynamic-potential">5.7.2. Dynamic potential</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#implementation">5.7.3. Implementation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/navigation.html#references">5.7.4. References</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="core.html">6.1. Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.vector2D">6.1.1. Vector2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.motion">6.1.2. Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.interactions">6.1.3. Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.steering">6.1.4. Steering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-crowddynamics.core.integrator">6.1.5. Integrator</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/orientation.html">5.8. Orientation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/exit_selection.html">5.9. Exit Selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/game.html">5.10. Games</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#spatial-game-for-egress-congestion">5.10.1. Spatial Game for Egress Congestion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#strategy-selection">5.10.2. Strategy Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#strategy-updating">5.10.3. Strategy Updating</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#agents-closer-to-exit">5.10.4. Agents Closer to Exit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/game.html#effect-on-agents">5.10.5. Effect on agents</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.2. IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampling.html">6.3. Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html">6.4. Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html#agent">6.4.1. Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html#module-crowddynamics.multiagent">6.4.2. Multi-Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">6.5. Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html">6.6. Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">6.7. Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#module-crowddynamics.plugins.game">6.7.1. Game</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">6. Continuum Flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../research/index.html">7. Research</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">7.1. Phenomena</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">7.1.1. Egress Congestion</a></li>
@@ -210,17 +195,35 @@
 <li class="toctree-l2"><a class="reference internal" href="../research/applications.html">7.3. Applications</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">8. API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="core.html">8.1. Core</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">8.2. IO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulation.html">8.3. Simulation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="simulation.html#agent">8.3.1. Agent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="simulation.html#multi-agent">8.3.2. Multi-Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">8. Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">8.1. Mathematical Foundations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">8.1.1. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">8.1.2. Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">8.1.2.1. Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">8.1.2.2. Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">8.1.2.3. Exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">8.1.2.4. Narrow bottleneck</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gui.html">8.4. Graphical User Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="game.html">8.5. Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="game.html#game">8.5.1. Game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">8.1.3. Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">8.1.3.1. Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">8.1.3.2. Circular model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">8.1.3.3. Elliptical model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">8.1.3.4. Three circle model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">8.1.4. Initial configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">8.2. Quantities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">8.2.1. Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">8.2.2. Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">8.2.2.1. Rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">8.2.2.2. Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">8.2.3. Pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">8.2.4. Fundamental Diagram</a></li>
 </ul>
 </li>
 </ul>
@@ -255,13 +258,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">8. API</a> &raquo;</li>
+          <li><a href="index.html">6. API</a> &raquo;</li>
       
-    <li>8.2. IO</li>
+    <li>6.2. IO</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/api/io.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/io.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -272,7 +275,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="module-crowddynamics.io">
-<span id="io"></span><h1>8.2. IO<a class="headerlink" href="#module-crowddynamics.io" title="Permalink to this headline">¶</a></h1>
+<span id="io"></span><h1>6.2. IO<a class="headerlink" href="#module-crowddynamics.io" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="crowddynamics.io.ListBuffer">
 <em class="property">class </em><code class="descclassname">crowddynamics.io.</code><code class="descname">ListBuffer</code><span class="sig-paren">(</span><em>start=0</em>, <em>end=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.ListBuffer" title="Permalink to this definition">¶</a></dt>
@@ -280,7 +283,8 @@
 <dl class="method">
 <dt id="crowddynamics.io.ListBuffer.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>start=0</em>, <em>end=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.ListBuffer.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Initialise list buffer by setting start and end indices.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -303,7 +307,8 @@
 <dl class="method">
 <dt id="crowddynamics.io.ListBuffer.append">
 <code class="descname">append</code><span class="sig-paren">(</span><em>p_object</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.ListBuffer.append" title="Permalink to this definition">¶</a></dt>
-<dd><p>Append</p>
+<dd><p>Appends the <code class="docutils literal"><span class="pre">p_object</span></code> to the end of the list and increments end index
+by one.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -317,7 +322,7 @@
 <dl class="method">
 <dt id="crowddynamics.io.ListBuffer.clear">
 <code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#ListBuffer.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.ListBuffer.clear" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clear</p>
+<dd><p>Clears the list buffer and sets start index equal to end.</p>
 </dd></dl>
 
 </dd></dl>
@@ -325,17 +330,18 @@
 <dl class="class">
 <dt id="crowddynamics.io.HDFStore">
 <em class="property">class </em><code class="descclassname">crowddynamics.io.</code><code class="descname">HDFStore</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class for saving object&#8217;s array or scalar data in hdf5 file. Data can be
+<dd><p>Class for saving object&#8217;s array or scalar data in <code class="docutils literal"><span class="pre">hdf5</span></code> file. Data can be
 saved once or made bufferable so that new data points can be added and
-dumped into the hdf5 file.</p>
+dumped into the <code class="docutils literal"><span class="pre">hdf5</span></code> file.</p>
 <dl class="method">
 <dt id="crowddynamics.io.HDFStore.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>HDFStore</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filepath</strong> (<em>str</em>) &#8211; </td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filepath</strong> (<em>str</em>) &#8211; Filepath to the <code class="docutils literal"><span class="pre">hdf5</span></code> file where data should be saved.</td>
 </tr>
 </tbody>
 </table>
@@ -348,49 +354,8 @@ dumped into the hdf5 file.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.io.HDFStore.add_buffers">
-<code class="descname">add_buffers</code><span class="sig-paren">(</span><em>struct</em>, <em>attributes</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.add_buffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.add_buffers" title="Permalink to this definition">¶</a></dt>
-<dd><p>struct
-buffers:</p>
-<blockquote>
-<div>attr.name: buffer1
-attr.name: buffer2
-...</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>struct</strong> &#8211; </li>
-<li><strong>attributes</strong> &#8211; </li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="crowddynamics.io.HDFStore.add_dataset">
-<code class="descname">add_dataset</code><span class="sig-paren">(</span><em>struct</em>, <em>attributes</em>, <em>overwrite=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.add_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.add_dataset" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>struct</strong> &#8211; </li>
-<li><strong>attributes</strong> &#8211; </li>
-<li><strong>overwrite</strong> (<em>Boolean</em>) &#8211; </li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="crowddynamics.io.HDFStore.append_buffer_to_dataset">
-<code class="descname">append_buffer_to_dataset</code><span class="sig-paren">(</span><em>dset</em>, <em>buffer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.append_buffer_to_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.append_buffer_to_dataset" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.HDFStore._append_buffer_to_dataset">
+<code class="descname">_append_buffer_to_dataset</code><span class="sig-paren">(</span><em>dset</em>, <em>buffer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore._append_buffer_to_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore._append_buffer_to_dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Append values to resizable h5py dataset.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -407,25 +372,59 @@ attr.name: buffer2
 </dd></dl>
 
 <dl class="method">
-<dt id="crowddynamics.io.HDFStore.configure_file">
-<code class="descname">configure_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.configure_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.configure_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configure and creates new HDF5 File.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="crowddynamics.io.HDFStore.create_dataset">
-<code class="descname">create_dataset</code><span class="sig-paren">(</span><em>group</em>, <em>name</em>, <em>values</em>, <em>resizable=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.create_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.create_dataset" title="Permalink to this definition">¶</a></dt>
+<dt id="crowddynamics.io.HDFStore._create_dataset">
+<code class="descname">_create_dataset</code><span class="sig-paren">(</span><em>group</em>, <em>name</em>, <em>values</em>, <em>resizable=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore._create_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore._create_dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create dataset</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>group</strong> (<em>h5py.Group</em>) &#8211; </li>
-<li><strong>name</strong> (<em>str</em>) &#8211; Name</li>
+<li><strong>group</strong> (<em>h5py.Group</em>) &#8211; Group in which the dataset is created to.</li>
+<li><strong>name</strong> (<em>str</em>) &#8211; Name of the dataset.</li>
 <li><strong>values</strong> (<em>numpy.ndarray</em>) &#8211; Values to be stored. Goes through np.array(value).</li>
-<li><strong>resizable</strong> (<em>Boolean</em>) &#8211; If true values can be added to the dataset.</li>
+<li><strong>resizable</strong> (<em>Boolean</em>) &#8211; If true new values can be added to the dataset.</li>
 </ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.io.HDFStore.add_buffers">
+<code class="descname">add_buffers</code><span class="sig-paren">(</span><em>struct</em>, <em>attributes</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.add_buffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.add_buffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new buffers to the hdfstore.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>struct</strong> (<em>object</em>) &#8211; </li>
+<li><strong>attributes</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>dict</em><em>]</em><em></em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.io.HDFStore.add_dataset">
+<code class="descname">add_dataset</code><span class="sig-paren">(</span><em>struct</em>, <em>attributes</em>, <em>overwrite=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.add_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.add_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new dataset</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>struct</strong> (<em>object</em>) &#8211; Python class that has attributes <code class="docutils literal"><span class="pre">attributes.keys()</span></code></li>
+<li><strong>attributes</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>dict</em><em>]</em><em></em>) &#8211; Dictionary of <code class="docutils literal"><span class="pre">attribute_name:</span> <span class="pre">settings</span></code></li>
+<li><strong>overwrite</strong> (<em>Boolean</em>) &#8211; If True allows to overwrite existing dataset.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><code class="xref py py-exc docutils literal"><span class="pre">AttributeError</span></code> &#8211; If struct doesn&#8217;t have attribute.</p>
 </td>
 </tr>
 </tbody>
@@ -435,13 +434,13 @@ attr.name: buffer2
 <dl class="method">
 <dt id="crowddynamics.io.HDFStore.dump_buffers">
 <code class="descname">dump_buffers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.dump_buffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.dump_buffers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Dump buffers</p>
+<dd><p>Dump values in the buffers into hdf5 file.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="crowddynamics.io.HDFStore.update_buffers">
 <code class="descname">update_buffers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/io/hdfstore.html#HDFStore.update_buffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.io.HDFStore.update_buffers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update buffers</p>
+<dd><p>Update new values to the buffers from the structs.</p>
 </dd></dl>
 
 </dd></dl>
@@ -455,10 +454,10 @@ attr.name: buffer2
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="simulation.html" class="btn btn-neutral float-right" title="8.3. Simulation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="sampling.html" class="btn btn-neutral float-right" title="6.3. Sampling" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="core.html" class="btn btn-neutral" title="8.1. Core" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="core.html" class="btn btn-neutral" title="6.1. Core" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -468,7 +467,7 @@ attr.name: buffer2
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 19, 2017.
+      Last updated on Jan 22, 2017.
 
     </p>
   </div>
