@@ -1,0 +1,910 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Motion &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
+        <link rel="up" title="API" href="index.html"/>
+        <link rel="next" title="Interactions" href="interactions.html"/>
+        <link rel="prev" title="Vector2D" href="vector2D.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">First Steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#conda">Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#from-source">From Source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#basic-architecture">Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#command-line-interface">Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">Social Force Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">Cellular Automata</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">Continuum Flow</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vector2D.html">Vector2D</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampling.html">Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html">Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#module-crowddynamics.plugins.game">Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tables.html#agent-properties">Agent Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables.html#body-types">Body Types</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">Phenomena</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">Egress Congestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#faster-is-slower">Faster is slower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#arching">Arching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#zipper-effect">Zipper effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#herding">Herding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#lane-formation">Lane formation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#freezing-by-heat">Freezing by heat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#turbulence">Turbulence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#stop-and-go-waves">Stop-and-Go waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#braess-s-paradox">Braess&#8217;s paradox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../research/applications.html">Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">Mathematical Foundations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">Exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">Narrow bottleneck</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">Circular model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">Elliptical model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">Three circle model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">Initial configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">Quantities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">Rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">Pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">Fundamental Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">API</a> &raquo;</li>
+      
+    <li>Motion</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/motion.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-crowddynamics.core.motion">
+<span id="motion"></span><h1>Motion<a class="headerlink" href="#module-crowddynamics.core.motion" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="crowddynamics.core.motion.force_fluctuation">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_fluctuation</code><span class="sig-paren">(</span><em>mass</em>, <em>scale</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/motion/fluctuation.html#force_fluctuation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_fluctuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Truncated normal distribution with standard deviation of 3.</p>
+<div class="math">
+\[\boldsymbol{\xi} = \xi \cdot \mathbf{\hat{e}}(\varphi)\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(\xi \sim \mathcal{N}(\mu, \sigma^{2})\)</span></li>
+<li><span class="math">\(\varphi \sim \mathcal{U}(-\pi, \pi)\)</span></li>
+<li><span class="math">\(\mathbf{\hat{e}}(\varphi)\)</span> is unit vector to direction of
+<span class="math">\(\varphi\)</span>.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mass</strong> (<em>float</em>) &#8211; Mass</li>
+<li><strong>scale</strong> (<em>float</em>) &#8211; Standard deviation of truncated normal distribution</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Fluctuation force</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.force_adjust">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_adjust</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/adjusting.html#force_adjust"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_adjust" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Adjusting</em> aka <em>driving</em> force accounts of agent&#8217;s desire to reach a
+certain destination. In high crowd densities term <em>manoeuvring</em> is used.
+Force affecting the agent takes form</p>
+<div class="math">
+\[\mathbf{f}_{adj} = \frac{m}{\tau_{adj}} (v_{0} \mathbf{\hat{e}_{0}} - \mathbf{v}),\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mass</strong> (<em>float</em>) &#8211; Mass</li>
+<li><strong>tau_adj</strong> (<em>float</em>) &#8211; Characteristic time <span class="math">\(\tau_{adj}\)</span> time for agent to adjust it
+movement. Value <span class="math">\(0.5\)</span> is often used, but for example impatient
+agent that tend to push other agent more this value can be reduced.</li>
+<li><strong>v0</strong> (<em>float</em>) &#8211; Target velocity <span class="math">\(v_{0}\)</span> is usually <em>average walking speed</em> for
+agent in its current situation.</li>
+<li><strong>e0</strong> (<em>numpy.ndarray</em>) &#8211; Target direction <span class="math">\(\mathbf{\hat{e}_{0}}\)</span> is solved by
+<em>navigation</em> or <em>path planning</em> algorithm. More details in the
+navigation section.</li>
+<li><strong>v</strong> (<em>numpy.ndarray</em>) &#8211; Velocity</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.force_social_helbing">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_social_helbing</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/collision_avoidance/helbing.html#force_social_helbing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_social_helbing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helbing&#8217;s model&#8217;s original social force. Independent of the velocity or
+direction of the agent.</p>
+<div class="math">
+\[A \exp(-\frac{h}{B}) \mathbf{\hat{n}}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>h</strong> (<em>float</em>) &#8211; Skin-to-skin distance between agents</li>
+<li><strong>n</strong> (<em>numpy.ndarray</em>) &#8211; Normal unit vector</li>
+<li><strong>a</strong> (<em>float</em>) &#8211; Constant <span class="math">\(A = 2 \cdot 10^{3} \,\mathrm{N}\)</span></li>
+<li><strong>b</strong> (<em>float</em>) &#8211; Constant <span class="math">\(B = 0.08 \,\mathrm{m}\)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Social force</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.force_contact">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_contact</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/contact.html#force_contact"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Physical contact force with damping. Helbing&#8217;s original model did not
+include damping, which was added by Langston.</p>
+<div class="math">
+\[\mathbf{f}^{c} = - h \cdot \left(\mu \cdot \hat{\mathbf{n}} -
+\kappa \cdot (\mathbf{v} \cdot \hat{\mathbf{t}}) \hat{\mathbf{t}}\right) +
+c_{n} \cdot (\mathbf{v} \cdot \hat{\mathbf{n}}) \hat{\mathbf{n}}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>h</strong> (<em>float</em>) &#8211; Skin-to-skin distance between agents</li>
+<li><strong>n</strong> (<em>numpy.ndarray</em>) &#8211; Normal vector</li>
+<li><strong>v</strong> (<em>numpy.ndarray</em>) &#8211; Velocity vector</li>
+<li><strong>t</strong> (<em>numpy.ndarray</em>) &#8211; Tangent vector</li>
+<li><strong>mu</strong> (<em>float</em>) &#8211; Constant <span class="math">\(1.2 \cdot 10^{5}\,\mathrm{kg\,s^{-2}}\)</span></li>
+<li><strong>kappa</strong> (<em>float</em>) &#8211; Constant <span class="math">\(4.0 \cdot 10^{4}\,\mathrm{kg\,m^{-1}s^{-1}}\)</span></li>
+<li><strong>damping</strong> (<em>float</em>) &#8211; Constant <span class="math">\(500 \,\mathrm{N}\)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Contact force</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowddynamics.core.motion.torque_fluctuation">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">torque_fluctuation</code><span class="sig-paren">(</span><em>inertia_rot</em>, <em>scale</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/motion/fluctuation.html#torque_fluctuation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.torque_fluctuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Random torque.</p>
+<div class="math">
+\[\eta \sim \mathcal{N}(\mu, \sigma^{2})\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>inertia_rot</strong> (<em>float</em>) &#8211; Rotational intertial</li>
+<li><strong>scale</strong> (<em>float</em>) &#8211; Standard deviation of truncated normal distribution</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Fluctuation torque</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.torque_adjust">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">torque_adjust</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/adjusting.html#torque_adjust"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.torque_adjust" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjusting torque account for agent&#8217;s desire to rotate it orientation.</p>
+<div class="math">
+\[M_{adj} = \frac{I_{rot}}{\tau_{rot}} \left( \omega_{0} \left (
+          \frac{\varphi - \varphi_{0}}{\pi} \right ) - \omega\right),\]</div>
+<p>Angular difference <span class="math">\(\varphi - \varphi_{0}\)</span> is wrapped between interval
+<span class="math">\([-\pi, \pi]\)</span> so that division by <span class="math">\(\pi\)</span> returns value between
+<span class="math">\([-1, 1]\)</span>. This gives direction and magnitude for the torque.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>inertia_rot</strong> (<em>float</em>) &#8211; Rotational inertia</li>
+<li><strong>tau_rot</strong> (<em>float</em>) &#8211; Characteristic time <span class="math">\(\tau_{rot}\)</span> time for agent to adjust it
+orientation.</li>
+<li><strong>phi_0</strong> (<em>float</em>) &#8211; Target orientation <span class="math">\(\varphi_{0}\)</span>. In low and medium crowd
+densities the angle of the target direction can be sufficient for
+target orientation. In high crowd densities agents may twist their
+body differently for example to try to squeeze through narrow
+spaces, requiring more sophisticated algorithms.</li>
+<li><strong>phi</strong> (<em>float</em>) &#8211; Current orientation <span class="math">\(\varphi\)</span></li>
+<li><strong>omega_0</strong> (<em>float</em>) &#8211; Maximum angular velocity <span class="math">\(\omega_{0}\)</span>.</li>
+<li><strong>omega</strong> (<em>float</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.potential">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">potential</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/collision_avoidance/power_law.html#potential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.potential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Psychological force based on human anticipatory behaviour. Interaction potential
+between two agents is defined</p>
+<div class="math">
+\[E(\tau) = m \frac{k}{\tau^{2}} \exp \left( -\frac{\tau}{\tau_{0}} \right)\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>k</strong> (<em>float</em>) &#8211; Scaling parameter for the magnitude. Reference value of
+<span class="math">\(k=1.5\)</span>.</li>
+<li><strong>tau</strong> (<em>float</em>) &#8211; Time-to-collision <span class="math">\(\tau &gt; 0\)</span> is obtained by linearly extrapolating
+current trajectories and finding where or if agents collide i.e
+skin-to-skin distance <span class="math">\(h\)</span> equals zero.</li>
+<li><strong>tau_0</strong> (<em>float</em>) &#8211; Interaction time horizon <span class="math">\(\tau_{0} &gt; 0\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Interaction potential</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.magnitude">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">magnitude</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/collision_avoidance/power_law.html#magnitude"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.magnitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force affecting agent can be derived by taking spatial gradient of the energy,
+where time-to-collision <span class="math">\(\tau\)</span> is function of the relative displacement
+of the mass centers <span class="math">\(\tilde{\mathbf{x}} = \mathbf{x}_i - \mathbf{x}_j\)</span></p>
+<div class="math">
+\[\begin{split}\mathbf{f}^{soc} &amp;= -\nabla_{\tilde{\mathbf{x}}} E(\tau) \\
+&amp;= - k \cdot m \left(\frac{1}{\tau^{2}}\right) \left(\frac{2}{\tau} + \frac{1}{\tau_{0}}\right) \exp\left (-\frac{\tau}{\tau_{0}}\right ) \nabla_{\tilde{\mathbf{x}}} \tau\end{split}\]</div>
+<p>If <span class="math">\(\tau &lt; 0\)</span> or <span class="math">\(\tau\)</span> is undefined trajectories are not
+colliding and social force is <span class="math">\(\mathbf{0}\)</span>.</p>
+<p>Magnitude of social force.</p>
+<div class="math">
+\[\left(\frac{1}{\tau^{2}}\right) \left(\frac{2}{\tau} + \frac{1}{\tau_{0}}\right) \exp\left (-\frac{\tau}{\tau_{0}}\right )\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tau</strong> (<em>float</em>) &#8211; Time-to-collision <span class="math">\(\tau &gt; 0\)</span> is obtained by linearly extrapolating
+current trajectories and finding where or if agents collide i.e
+skin-to-skin distance <span class="math">\(h\)</span> equals zero.</li>
+<li><strong>tau_0</strong> (<em>float</em>) &#8211; Interaction time horizon <span class="math">\(\tau_{0} &gt; 0\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Magnitude</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.gradient_circle_circle">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">gradient_circle_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/collision_avoidance/power_law.html#gradient_circle_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.gradient_circle_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gradient of <span class="math">\(\tau\)</span> between two circles.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x_rel</strong> (<em>numpy.ndarray</em>) &#8211; Relative position of the centers of mass.
+<span class="math">\(\tilde{x} = x_i - x_j\)</span></li>
+<li><strong>v_rel</strong> (<em>numpy.ndarray</em>) &#8211; Relative velocity between two agents.
+<span class="math">\(\tilde{v} = v_i - v_j\)</span></li>
+<li><strong>a</strong> (<em>float</em>) &#8211; </li>
+<li><strong>b</strong> (<em>float</em>) &#8211; </li>
+<li><strong>d</strong> (<em>float</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.gradient_three_circle">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">gradient_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/collision_avoidance/power_law.html#gradient_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.gradient_three_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gradient of <span class="math">\(\tau\)</span> between two three-circle representations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x_rel</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>v_rel</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>r_off</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>a</strong> (<em>float</em>) &#8211; </li>
+<li><strong>b</strong> (<em>float</em>) &#8211; </li>
+<li><strong>d</strong> (<em>float</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.gradient_circle_line">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">gradient_circle_line</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/collision_avoidance/power_law.html#gradient_circle_line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.gradient_circle_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gradient circle line</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>v</strong> &#8211; </li>
+<li><strong>n</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.time_to_collision_circle_circle">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">time_to_collision_circle_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/collision_avoidance/power_law.html#time_to_collision_circle_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.time_to_collision_circle_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time-to-collision of two circles. From <em>skin-to-skin</em> distance</p>
+<div class="math">
+\[h(\tau) = \| \tau \tilde{\mathbf{v}} + \mathbf{c} \| - \tilde{r}.\]</div>
+<p>Solve for root</p>
+<div class="math">
+\[\begin{split}h(\tau) &amp;= 0 \\
+\| \mathbf{c} + \tau \tilde{\mathbf{v}} \| &amp;= \tilde{r} \\
+\| \mathbf{c} + \tau \tilde{\mathbf{v}} \|^2 &amp;= \tilde{r}^2\end{split}\]</div>
+<p>Quadratic equation is obtained</p>
+<div class="math">
+\[\tau^2 (\tilde{\mathbf{v}} \cdot \tilde{\mathbf{v}}) + 2 \tau (\mathbf{c} \cdot \tilde{\mathbf{v}}) + \mathbf{c} \cdot \mathbf{c} - \tilde{r}^2 =0\]</div>
+<p>Solution with quadratic formula gives us</p>
+<div class="math">
+\[\begin{split}a &amp;= \tilde{\mathbf{v}} \cdot \tilde{\mathbf{v}} \\
+b &amp;= -\mathbf{c} \cdot \tilde{\mathbf{v}} \\
+c &amp;= \mathbf{c} \cdot \mathbf{c} - \tilde{r}^{2}\\
+d &amp;= \sqrt{b^{2} - a c} \\
+\tau &amp;= \frac{b - d}{a}.\end{split}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x_rel</strong> (<em>numpy.ndarray</em>) &#8211; Relative center of mass <span class="math">\(\mathbf{c}\)</span>.</li>
+<li><strong>v_rel</strong> (<em>numpy.ndarray</em>) &#8211; Relative velocity <span class="math">\(\mathbf{\tilde{v}}\)</span>.</li>
+<li><strong>r_tot</strong> (<em>float</em>) &#8211; Total radius of <span class="math">\(\tilde{r} = \mathrm{constant}\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(float, numpy.ndarray)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.time_to_collision_circle_line">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">time_to_collision_circle_line</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/collision_avoidance/power_law.html#time_to_collision_circle_line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.time_to_collision_circle_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time-to-collision of circle with line.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x_rel</strong> &#8211; </li>
+<li><strong>v_rel</strong> &#8211; </li>
+<li><strong>r_tot</strong> &#8211; </li>
+<li><strong>n</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.force_social_circular">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_social_circular</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/collision_avoidance/power_law.html#force_social_circular"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_social_circular" title="Permalink to this definition">¶</a></dt>
+<dd><p>Social force based on human anticipatory behaviour.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>agent</strong> &#8211; </li>
+<li><strong>i</strong> &#8211; </li>
+<li><strong>j</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.force_social_three_circle">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_social_three_circle</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/collision_avoidance/power_law.html#force_social_three_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_social_three_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimium time-to-collision for two circles of relative displacements.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>agent</strong> &#8211; </li>
+<li><strong>i</strong> &#8211; </li>
+<li><strong>j</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.motion.force_social_linear_wall">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">force_social_linear_wall</code><a class="reference internal" href="../_modules/crowddynamics/core/motion/collision_avoidance/power_law.html#force_social_linear_wall"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.force_social_linear_wall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force social linear wall</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>i</strong> &#8211; </li>
+<li><strong>w</strong> &#8211; </li>
+<li><strong>agent</strong> &#8211; </li>
+<li><strong>wall</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowddynamics.core.motion.attractor_point">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">attractor_point</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/motion/subgroups.html#attractor_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.attractor_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attractor point</p>
+<div class="math">
+\[\mathbf{x}_{att} = \mathbf{x}_{n} \pm d \hat{\mathbf{e}} (\theta)\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(\mathbf{x}_{n}\)</span> is the coordinates of relative neighbor</li>
+<li><span class="math">\(d\)</span> is desired distance between two consecutive members</li>
+<li><span class="math">\(\theta\)</span> is desired angular orientation of the subgroup</li>
+</ul>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowddynamics.core.motion.adjusting_force_intra_subgroup">
+<code class="descclassname">crowddynamics.core.motion.</code><code class="descname">adjusting_force_intra_subgroup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/motion/subgroups.html#adjusting_force_intra_subgroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.motion.adjusting_force_intra_subgroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Intra-subgroup adjusting force.</p>
+<p>Subgroup adjusting force adds additional term to adjusting force in social force model</p>
+<div class="math">
+\[\mathbf{f}^{adj} = \frac{m}{\tau^{adj}} (v_{0} \hat{\mathbf{e}}  + \underset{\text{new}}{\underbrace{k \mathbf{e}_{att}}} - \mathbf{v})\]</div>
+<ul class="simple">
+<li><span class="math">\(\mathbf{e}_{att} = \mathbf{x}_{att} - \mathbf{x}_{i}\)</span> relative displacement from the formation attractor point</li>
+<li><span class="math">\(k\)</span> subgroup velocity constant</li>
+</ul>
+<p>Returns:</p>
+</dd></dl>
+
+<hr class="docutils" />
+<p><strong>Time-to-collision</strong> two <strong>two circles</strong> with relative center of mass <span class="math">\(\mathbf{c}\)</span>, relative velocity <span class="math">\(\mathbf{\tilde{v}}\)</span> and total radius of <span class="math">\(\tilde{r} (= \mathrm{constant})\)</span> is obtained from <em>skin-to-skin</em> distance</p>
+<div class="math">
+\[h(\tau) = \| \tau \tilde{\mathbf{v}} + \mathbf{c} \| - \tilde{r}.\]</div>
+<p>Solve for root</p>
+<div class="math">
+\[\begin{split}h(\tau) &amp;= 0 \\
+\| \mathbf{c} + \tau \tilde{\mathbf{v}} \| &amp;= \tilde{r} \\
+\| \mathbf{c} + \tau \tilde{\mathbf{v}} \|^2 &amp;= \tilde{r}^2\end{split}\]</div>
+<p>Quadratic equation is obtained</p>
+<div class="math">
+\[\tau^2 (\tilde{\mathbf{v}} \cdot \tilde{\mathbf{v}}) + 2 \tau (\mathbf{c} \cdot \tilde{\mathbf{v}}) + \mathbf{c} \cdot \mathbf{c} - \tilde{r}^2 =0\]</div>
+<p>Solution with <a class="reference external" href="https://en.wikipedia.org/wiki/Quadratic_equation">quadratic formula</a> gives us</p>
+<div class="math">
+\[\begin{split}a &amp;= \tilde{\mathbf{v}} \cdot \tilde{\mathbf{v}} \\
+b &amp;= -\mathbf{c} \cdot \tilde{\mathbf{v}} \\
+c &amp;= \mathbf{c} \cdot \mathbf{c} - \tilde{r}^{2}\\
+d &amp;= \sqrt{b^{2} - a c} \\
+\tau &amp;= \frac{b - d}{a}.\end{split}\]</div>
+<hr class="docutils" />
+<p><strong>Circular model</strong></p>
+<div class="math">
+\[\begin{split}\tilde{r} &amp;= r_i + r_j \\
+\mathbf{c} &amp;= \tilde{\mathbf{x}}\end{split}\]</div>
+<div class="math">
+\[\nabla_{\tilde{\mathbf{x}}} \tau = \left(\frac{1}{a} \right) \left(\tilde{\mathbf{v}} -\frac{a \tilde{\mathbf{x}} + b \tilde{\mathbf{v}}}{d} \right)\]</div>
+<div class="math">
+\[\mathbf{f}^{soc} = - \left(\frac{k}{\tau^{2}}\right) \left(\frac{2}{\tau} + \frac{1}{\tau_{0}}\right) \exp\left (-\frac{\tau}{\tau_{0}}\right ) \left(\frac{1}{a} \right) \left(\tilde{\mathbf{v}} -\frac{a \tilde{\mathbf{x}} + b \tilde{\mathbf{v}}}{d} \right)\]</div>
+<hr class="docutils" />
+<p><strong>Elliptical model</strong></p>
+<div class="math">
+\[\begin{split}\mathbf{\hat{e}}_n &amp;= \operatorname{sin}\left(\varphi\right)\mathbf{\hat{e}_x} + \operatorname{cos}\left(\varphi\right)\mathbf{\hat{e}_y} \\
+r &amp;= \| r_t \cos(\phi) \mathbf{\hat{e}_x} + r \sin(\phi) \mathbf{\hat{e}_y}&nbsp;\|, \quad \phi = \angle(\tilde{\mathbf{x}} + \tau\tilde{\mathbf{v}}, \mathbf{\hat{e}_n}) \\
+\cos(\phi) &amp;= \frac{(\tilde{\mathbf{x}} + \tau\tilde{\mathbf{v}})}{\|&nbsp;\tilde{\mathbf{x}} + \tau\tilde{\mathbf{v}} \|} \cdot \mathbf{\hat{e}_{n}} \\
+\sin(\phi) &amp;= \left \| \frac{(\tilde{\mathbf{x}} + \tau\tilde{\mathbf{v}})}{\|&nbsp;\tilde{\mathbf{x}} + \tau\tilde{\mathbf{v}} \|} \times \mathbf{\hat{e}_{n}} \right \|\end{split}\]</div>
+<p>We get radius of form</p>
+<div class="math">
+\[r = \sqrt{c_0 + c_1 \tau + c_2 \tau^2}\]</div>
+<hr class="docutils" />
+<p><strong>Three circle model</strong></p>
+<div class="math">
+\[\begin{split}\mathbf{c} &amp;= (\mathbf{x}_{i} + \mathbf{r}_i) - (\mathbf{x}_{j} + \mathbf{r}_j) \\
+&amp;= (\mathbf{x}_{i} - \mathbf{x}_{j}) + (\mathbf{r}_i - \mathbf{r}_j) \\
+&amp;= \tilde{\mathbf{x}} + \mathbf{r}\end{split}\]</div>
+<p>Torso, Left shoulder, Right shoulder</p>
+<div class="math">
+\[\mathbf{r}_{i, j} \in \{ \mathbf{0}, -r_{ts} \mathbf{\hat{e}_{t}}{}_i, r_{ts} \mathbf{\hat{e}_{t}}{}_i \}\]</div>
+<p>Torso-torso, Torso-shoulder, Shoulder-shoulder</p>
+<div class="math">
+\[\tilde{r} = r_i + r_j, \quad r_{i,j} \in \{ r_t, r_s \}\]</div>
+<p>Time-to-collision</p>
+<div class="math">
+\[\begin{split}a &amp;= \tilde{\mathbf{v}} \cdot \tilde{\mathbf{v}} \\
+b &amp;= -(\tilde{\mathbf{x}} + \mathbf{r}) \cdot \tilde{\mathbf{v}} \\
+&amp;= -\tilde{\mathbf{x}} \cdot \tilde{\mathbf{v}} - \mathbf{r} \cdot \tilde{\mathbf{v}} \\
+c &amp;= (\tilde{\mathbf{x}} + \mathbf{r}) \cdot (\tilde{\mathbf{x}} + \mathbf{r}) - \tilde{r}^{2}\\
+&amp;= \| \mathbf{r}&nbsp;\| ^2 + 2 (\mathbf{r} \cdot \tilde{\mathbf{x}}) + \tilde{\mathbf{x}} \cdot \tilde{\mathbf{x}} - \tilde{r}^{2} \\
+d &amp;= \sqrt{b^{2} - a c} \\
+\tau &amp;= \frac{b - d}{a}\end{split}\]</div>
+<p>Gradient</p>
+<div class="math">
+\[\nabla_{\tilde{\mathbf{x}}} \tau = \left(\frac{1}{a} \right) \left(\tilde{\mathbf{v}} -\frac{a (\tilde{\mathbf{x}} + 2 \mathbf{r}) + b \tilde{\mathbf{v}}}{d} \right)\]</div>
+<p>Social force for three circle model</p>
+<div class="math">
+\[\mathbf{f}^{soc} = \left(\frac{k}{\tau^{2}}\right) \left(\frac{2}{\tau} + \frac{1}{\tau_{0}}\right) \exp\left (-\frac{\tau}{\tau_{0}}\right ) \left(\frac{1}{a} \right) \left(\tilde{\mathbf{v}} -\frac{a (\tilde{\mathbf{x}} + 2 \mathbf{r}) + b \tilde{\mathbf{v}}}{d} \right)\]</div>
+<hr class="docutils" />
+<p><strong>Time-to-collision</strong> for between <strong>circle and line</strong>.</p>
+<p>Moving circle with center of mass <span class="math">\(\mathbf{c}\)</span>, velocity <span class="math">\(\mathbf{v}\)</span> and total radius of <span class="math">\(r\)</span>. Static line defined from point <span class="math">\(\mathbf{p}_0\)</span> to <span class="math">\(\mathbf{p}_1\)</span>.</p>
+<div class="math">
+\[\begin{split}\tilde{\mathbf{x}}_w &amp;= \mathbf{c} - \mathbf{p}_w, \quad w \in \{ 0, 1 \} \\
+\mathbf{\hat{t}_w} &amp;= \frac{\mathbf{p}_1 - \mathbf{p}_0}{\|&nbsp;\mathbf{p}_1 - \mathbf{p}_0 \|} \\
+\mathbf{\hat{n}_w} &amp;\perp  \mathbf{\hat{t}_w}\end{split}\]</div>
+<p><em>Skin-to-skin</em> distance</p>
+<div class="math">
+\[h(\tau) = | (\mathbf{p} - (\tau \tilde{\mathbf{v}} + \mathbf{c})) \cdot \mathbf{\hat{n}_w} | - \tilde{r}\]</div>
+<p>From <span class="math">\(h(\tau) = 0\)</span></p>
+<div class="math">
+\[|&nbsp;-\tau (\mathbf{v} \cdot \mathbf{\hat{n}_w}) - \tilde{\mathbf{x}} \cdot \mathbf{\hat{n}_w} | = \tilde{r}\]</div>
+<p>If negative inside absolute value</p>
+<div class="math">
+\[\tau = -\frac{\tilde{\mathbf{x}} \cdot \mathbf{\hat{n}_w} + \tilde{r}}{\mathbf{v} \cdot \mathbf{\hat{n}_w}}, \quad \tau &gt; -\frac{\tilde{\mathbf{x}} \cdot \mathbf{\hat{n}_w}}{\mathbf{v} \cdot \mathbf{\hat{n}_w}}\]</div>
+<p>If positive inside absolute value</p>
+<div class="math">
+\[\tau = -\frac{\tilde{\mathbf{x}} \cdot \mathbf{\hat{n}_w} - \tilde{r}}{\mathbf{v} \cdot \mathbf{\hat{n}_w}}, \quad \tau \leq -\frac{\tilde{\mathbf{x}} \cdot \mathbf{\hat{n}_w}}{\mathbf{v} \cdot \mathbf{\hat{n}_w}}\]</div>
+<div class="math">
+\[\nabla_{\tilde{\mathbf{x}}} \tau = \frac{\mathbf{\hat{n}_w}}{\mathbf{v} \cdot \mathbf{\hat{n}_w}}\]</div>
+<hr class="docutils" />
+<div class="math">
+\[\begin{split}\mathbf{q}_w &amp;= \mathbf{p} - (\tau \mathbf{v} + \mathbf{x}), \quad \tau &gt; 0, \quad w \in \{  0, 1 \} \\
+d(\tau) &amp;=
+\begin{cases}
+\| \mathbf{q}_0 \|, &amp; \mathbf{q}_0 \cdot \mathbf{\hat{t}_w} &gt; 0 \\
+| \mathbf{q}_w \cdot \mathbf{\hat{n}_w} | &amp; \text{otherwise} \\
+\| \mathbf{q}_1 \| &amp; \mathbf{q}_1 \cdot \mathbf{\hat{t}_w} &lt; 0 \\
+\end{cases} \\
+| \mathbf{q}_w \cdot \mathbf{\hat{n}_w} | &amp;=
+\begin{cases}
+-\mathbf{q}_w \cdot \mathbf{\hat{n}_w} &amp; \mathbf{q}_w \cdot \mathbf{\hat{n}_w} &lt; 0 \\
+\mathbf{q}_w \cdot \mathbf{\hat{n}_w} &amp; \mathbf{q}_w \cdot \mathbf{\hat{n}_w} &gt; 0 \\
+\end{cases} \\
+h(\tau) &amp;= d(\tau) - r \\
+h(\tau) &amp;= 0\end{split}\]</div>
+<div class="math">
+\[\begin{split}\mathbf{q}_w \cdot \mathbf{\hat{t}_w} \\
+\mathbf{q}_w \cdot \mathbf{\hat{n}_w}\end{split}\]</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="interactions.html" class="btn btn-neutral float-right" title="Interactions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vector2D.html" class="btn btn-neutral" title="Vector2D" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Jan 23, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

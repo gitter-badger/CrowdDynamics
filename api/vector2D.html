@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Vector2D &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
+        <link rel="up" title="API" href="index.html"/>
+        <link rel="next" title="Motion" href="motion.html"/>
+        <link rel="prev" title="API" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">First Steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#conda">Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#from-source">From Source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#basic-architecture">Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#command-line-interface">Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">Social Force Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">Cellular Automata</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">Continuum Flow</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Vector2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampling.html">Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html">Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#module-crowddynamics.plugins.game">Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tables.html#agent-properties">Agent Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables.html#body-types">Body Types</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">Phenomena</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">Egress Congestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#faster-is-slower">Faster is slower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#arching">Arching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#zipper-effect">Zipper effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#herding">Herding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#lane-formation">Lane formation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#freezing-by-heat">Freezing by heat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#turbulence">Turbulence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#stop-and-go-waves">Stop-and-Go waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#braess-s-paradox">Braess&#8217;s paradox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../research/applications.html">Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">Mathematical Foundations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">Exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">Narrow bottleneck</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">Circular model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">Elliptical model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">Three circle model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">Initial configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">Quantities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">Rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">Pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">Fundamental Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">API</a> &raquo;</li>
+      
+    <li>Vector2D</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/vector2D.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-crowddynamics.core.vector2D">
+<span id="vector2d"></span><h1>Vector2D<a class="headerlink" href="#module-crowddynamics.core.vector2D" title="Permalink to this headline">¶</a></h1>
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.rotate90">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">rotate90</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#rotate90"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.rotate90" title="Permalink to this definition">¶</a></dt>
+<dd><p>90 degree counterclockwise rotation for 2D vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.rotate270">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">rotate270</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#rotate270"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.rotate270" title="Permalink to this definition">¶</a></dt>
+<dd><p>90 degree clockwise rotation for 2D vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.angle">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">angle</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#angle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angle of 2d vector in radians.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; 2D vector</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Angle in [-pi, pi]</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.angle_nx2">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">angle_nx2</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#angle_nx2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.angle_nx2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angle of 2d vectors in radians.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.length">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">length</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#length"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Length</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; 2D vector</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Length of the vector in [0, infty)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.length_nx2">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">length_nx2</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#length_nx2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.length_nx2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Length</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.dot2d">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">dot2d</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#dot2d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.dot2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dot product for 2D vectors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>v0</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>v1</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.cross2d">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">cross2d</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#cross2d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.cross2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cross product for 2D vectors. Right corner from 3D cross product.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>v0</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>v1</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.normalize">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">normalize</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#normalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.normalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.normalize_nx2">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">normalize_nx2</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#normalize_nx2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.normalize_nx2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.vector2D.truncate">
+<code class="descclassname">crowddynamics.core.vector2D.</code><code class="descname">truncate</code><a class="reference internal" href="../_modules/crowddynamics/core/vector2D/vector2D.html#truncate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.vector2D.truncate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Truncate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vec2d</strong> (<em>numpy.ndarray</em>) &#8211; </li>
+<li><strong>limit</strong> (<em>float</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="motion.html" class="btn btn-neutral float-right" title="Motion" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Jan 23, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

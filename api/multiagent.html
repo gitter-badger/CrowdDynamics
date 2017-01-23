@@ -1,0 +1,624 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Multi-Agent &mdash; Crowd Dynamics 1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
+        <link rel="up" title="API" href="index.html"/>
+        <link rel="next" title="Command-line Interface" href="cli.html"/>
+        <link rel="prev" title="Sampling" href="sampling.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">First Steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#conda">Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#from-source">From Source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#basic-architecture">Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#command-line-interface">Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">Social Force Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">Cellular Automata</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">Continuum Flow</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vector2D.html">Vector2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampling.html">Sampling</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html">Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#module-crowddynamics.plugins.game">Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tables.html#agent-properties">Agent Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tables.html#body-types">Body Types</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">Phenomena</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">Egress Congestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#faster-is-slower">Faster is slower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#arching">Arching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#zipper-effect">Zipper effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#herding">Herding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#lane-formation">Lane formation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#freezing-by-heat">Freezing by heat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#turbulence">Turbulence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#stop-and-go-waves">Stop-and-Go waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#braess-s-paradox">Braess&#8217;s paradox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../research/applications.html">Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">Mathematical Foundations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">Domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">Obstacle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">Exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">Narrow bottleneck</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">Agent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">Circular model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">Elliptical model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">Three circle model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">Initial configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">Quantities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">Flow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">Rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">Pressure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">Fundamental Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">API</a> &raquo;</li>
+      
+    <li>Multi-Agent</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/multiagent.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="multi-agent">
+<h1>Multi-Agent<a class="headerlink" href="#multi-agent" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-crowddynamics.multiagent">
+<span id="classes"></span><h2>Classes<a class="headerlink" href="#module-crowddynamics.multiagent" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crowddynamics.multiagent.Agent">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.</code><code class="descname">Agent</code><span class="sig-paren">(</span><em>size</em>, <em>mass</em>, <em>radius</em>, <em>ratio_rt</em>, <em>ratio_rs</em>, <em>ratio_ts</em>, <em>inertia_rot</em>, <em>target_velocity</em>, <em>target_angular_velocity</em><span class="sig-paren">)</span><a class="headerlink" href="#crowddynamics.multiagent.Agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure for agent parameters and variables.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.Configuration">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.</code><code class="descname">Configuration</code><a class="reference internal" href="../_modules/crowddynamics/multiagent/configuration.html#Configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set initial configuration for multi-agent simulation.</p>
+<dl class="method">
+<dt id="crowddynamics.multiagent.Configuration.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/configuration.html#Configuration.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Configuration.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.multiagent.Configuration.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#crowddynamics.multiagent.Configuration.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.multiagent.Configuration.set_agents">
+<code class="descname">set_agents</code><span class="sig-paren">(</span><em>size=None</em>, <em>surface=None</em>, <em>position='random'</em>, <em>velocity=None</em>, <em>orientation=None</em>, <em>target_direction='auto'</em>, <em>target_angle='auto'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/configuration.html#Configuration.set_agents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Configuration.set_agents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set spatial and rotational parameters.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>kwargs</strong></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><em>size</em></td>
+<td><p class="first">Integer: Number of agent to be placed.</p>
+<p class="last">None: Places all agents</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>surface</em></td>
+<td><p class="first">surface: Custom value</p>
+<p class="last">None: Domain</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>position</em></td>
+<td><p class="first">ndarray: Custom values</p>
+<p class="last">&#8220;random&#8221;: Uses Monte Carlo method to place agent
+without overlapping with obstacles or other agents.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>target_direction</em></td>
+<td><p class="first">ndarray: Custom value</p>
+<p>&#8220;random&#8221;: Uniformly distributed random value</p>
+<p class="last">&#8220;auto&#8221;:
+None: Default value</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>velocity</em></td>
+<td><p class="first">ndarray: Custom value</p>
+<p>&#8220;random: Uniformly distributed random value,</p>
+<p class="last">&#8220;auto&#8221;:
+None: Default value</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>target_angle</em></td>
+<td><p class="first">ndarray: Custom value</p>
+<p>&#8220;random&#8221;: Uniformly distributed random value,</p>
+<p class="last">&#8220;auto&#8221;:
+None: Default value</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>orientation</em></td>
+<td><p class="first">float: Custom value</p>
+<p>&#8220;random&#8221;: Uniformly distributed random value,</p>
+<p class="last">&#8220;auto&#8221;:
+None: Default value</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.multiagent.Configuration.set_field">
+<code class="descname">set_field</code><span class="sig-paren">(</span><em>domain=None</em>, <em>obstacles=None</em>, <em>exits=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/configuration.html#Configuration.set_field"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Configuration.set_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shapely BaseGeometry types</p>
+<ul class="simple">
+<li>Point</li>
+<li>LineString</li>
+<li>LinearRing</li>
+<li>Polygon</li>
+<li>MultiPoint</li>
+<li>MultiLineString</li>
+<li>MultiPolygon</li>
+<li>GeometryCollection</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Kwargs</strong></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><em>domain</em></td>
+<td>Polygon which contains all the other objects.</td>
+</tr>
+<tr class="row-odd"><td><em>goals</em></td>
+<td>&#8211;</td>
+</tr>
+<tr class="row-even"><td><em>obstacles</em></td>
+<td>Collection of polygons and LineStrings.</td>
+</tr>
+<tr class="row-odd"><td><em>exits</em></td>
+<td>Collection of polygons and LineStrings.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="crowddynamics.multiagent.Configuration.truncnorm">
+<em class="property">static </em><code class="descname">truncnorm</code><span class="sig-paren">(</span><em>loc</em>, <em>abs_scale</em>, <em>size</em>, <em>std=3.0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/configuration.html#Configuration.truncnorm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.Configuration.truncnorm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scaled symmetrical truncated normal distribution.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.MultiAgentSimulation">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.</code><code class="descname">MultiAgentSimulation</code><span class="sig-paren">(</span><em>queue=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that calls numerical algorithms of the multi-agent simulation.</p>
+<dl class="method">
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>queue=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>MultiAgentSimulation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queue</strong> (<em>multiprocessing.Queue</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.configure_queuing">
+<code class="descname">configure_queuing</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.configure_queuing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.configure_queuing" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> &#8211; Example [(&#8220;agent&#8221;, [&#8220;position&#8221;, &#8220;active&#8221;, &#8220;position_ls&#8221;, &#8220;position_rs&#8221;])]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.initial_update">
+<code class="descname">initial_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.initial_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs simulation process until is called. This calls the update method
+repeatedly. Finally at stop it puts poison pill (None) into the queue to
+denote last generated value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets event to true in order to stop the simulation process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.multiagent.MultiAgentSimulation.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#MultiAgentSimulation.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.MultiAgentSimulation.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.QueueDict">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.</code><code class="descname">QueueDict</code><span class="sig-paren">(</span><em>producer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#QueueDict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.QueueDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queue dict</p>
+<dl class="method">
+<dt id="crowddynamics.multiagent.QueueDict.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>producer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/simulation.html#QueueDict.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.QueueDict.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>producer</strong> &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.multiagent.QueueDict.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#crowddynamics.multiagent.QueueDict.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crowddynamics.multiagent.testing">
+<span id="simulations"></span><h2>Simulations<a class="headerlink" href="#module-crowddynamics.multiagent.testing" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crowddynamics.multiagent.testing.Outdoor">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.testing.</code><code class="descname">Outdoor</code><span class="sig-paren">(</span><em>queue</em>, <em>size</em>, <em>width</em>, <em>height</em>, <em>model</em>, <em>body</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/testing/simulations.html#Outdoor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.testing.Outdoor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simulation for testing collision avoidance generally.</p>
+<ul class="simple">
+<li>Multi-directional flow</li>
+<li>Periodic boundaries</li>
+</ul>
+<dl class="method">
+<dt id="crowddynamics.multiagent.testing.Outdoor.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>queue</em>, <em>size</em>, <em>width</em>, <em>height</em>, <em>model</em>, <em>body</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/testing/simulations.html#Outdoor.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.testing.Outdoor.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>queue</strong> &#8211; </li>
+<li><strong>size</strong> &#8211; </li>
+<li><strong>width</strong> &#8211; </li>
+<li><strong>height</strong> &#8211; </li>
+<li><strong>model</strong> &#8211; </li>
+<li><strong>body</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.testing.Hallway">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.testing.</code><code class="descname">Hallway</code><span class="sig-paren">(</span><em>queue</em>, <em>size</em>, <em>width</em>, <em>height</em>, <em>model</em>, <em>body</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/testing/simulations.html#Hallway"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.testing.Hallway" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li>Low / medium / high crowd density</li>
+<li>Overtaking</li>
+<li>Counterflow</li>
+</ul>
+<p>Variables</p>
+<ol class="arabic simple">
+<li>Bidirectional flow</li>
+<li>Unidirectional flow</li>
+</ol>
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.testing.Crossing">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.testing.</code><code class="descname">Crossing</code><span class="sig-paren">(</span><em>queue=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/testing/simulations.html#Crossing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.testing.Crossing" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li>Orthogonal flow</li>
+</ul>
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.testing.Rounding">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.testing.</code><code class="descname">Rounding</code><span class="sig-paren">(</span><em>queue</em>, <em>size</em>, <em>width</em>, <em>height</em>, <em>model</em>, <em>body</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/testing/simulations.html#Rounding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.testing.Rounding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simulation for testing navigation algorithm.</p>
+<ul class="simple">
+<li>Unidirectional flow</li>
+</ul>
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.testing.RoomEvacuation">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.testing.</code><code class="descname">RoomEvacuation</code><span class="sig-paren">(</span><em>queue</em>, <em>size</em>, <em>width</em>, <em>height</em>, <em>model</em>, <em>body</em>, <em>spawn_shape</em>, <em>door_width</em>, <em>exit_hall_width</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/testing/simulations.html#RoomEvacuation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.testing.RoomEvacuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Room Evacuation</p>
+<ul class="simple">
+<li>Unidirectional flow</li>
+<li>Door width</li>
+<li>Door capacity</li>
+<li>Herding</li>
+<li>Exit selection</li>
+</ul>
+<p>Variables</p>
+<ul class="simple">
+<li>Number of exits</li>
+<li>One exit</li>
+<li>Two exits</li>
+<li>Multiple exits</li>
+</ul>
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.testing.RoomEvacuationGame">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.testing.</code><code class="descname">RoomEvacuationGame</code><span class="sig-paren">(</span><em>queue</em>, <em>size</em>, <em>width</em>, <em>height</em>, <em>model</em>, <em>body</em>, <em>spawn_shape</em>, <em>door_width</em>, <em>exit_hall_width</em>, <em>t_aset_0</em>, <em>interval</em>, <em>neighbor_radius</em>, <em>neighborhood_size</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/testing/simulations.html#RoomEvacuationGame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.testing.RoomEvacuationGame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Room Evacuation Game</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cli.html" class="btn btn-neutral float-right" title="Command-line Interface" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sampling.html" class="btn btn-neutral" title="Sampling" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on Jan 23, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

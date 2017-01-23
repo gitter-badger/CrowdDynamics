@@ -16,7 +16,6 @@ Eventually also include cellular automata and continuum flow models.
 
 .. toctree::
    :caption: First Steps
-   :numbered:
    :maxdepth: 2
 
    installation
@@ -24,17 +23,16 @@ Eventually also include cellular automata and continuum flow models.
 
 .. toctree::
    :caption: Simulation Models
-   :numbered:
    :maxdepth: 2
 
    multiagent/index
    cellular/index
    continuum/index
    api/index
+   tables
 
 .. toctree::
    :caption: Theory
-   :numbered:
    :maxdepth: 2
 
    research/index
