@@ -101,6 +101,15 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">Cellular Automata</a><ul class="simple">
@@ -111,17 +120,8 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="vector2D.html">Vector2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motion.html">Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactions.html">Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="steering.html">Steering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integrator.html">Integrator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">Command-line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gui.html">Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="game.html">Plugins</a><ul>
@@ -257,6 +257,25 @@
 </table>
 </dd></dl>
 
+<dl class="function">
+<dt id="crowddynamics.testing.vector">
+<code class="descclassname">crowddynamics.testing.</code><code class="descname">vector</code><span class="sig-paren">(</span><em>dtype=&lt;class 'numpy.float64'&gt;</em>, <em>shape=2</em>, <em>elements=floats(allow_nan=False</em>, <em>allow_infinity=False)</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/testing/strategies.html#vector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.testing.vector" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dtype</strong> (<em>type</em>) &#8211; </li>
+<li><strong>shape</strong> (<em>int|Tuple</em><em>[</em><em>Int</em><em>]</em><em></em>) &#8211; </li>
+<li><strong>elements</strong> (<em>SearchStrategy</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:</p>
+</dd></dl>
+
 </div>
 
 
@@ -279,7 +298,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 23, 2017.
+      Last updated on Jan 24, 2017.
 
     </p>
   </div>

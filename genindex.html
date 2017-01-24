@@ -99,6 +99,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="multiagent/index.html">Multi-Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="multiagent/social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiagent/motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiagent/interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiagent/steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiagent/integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiagent/multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="cellular/index.html">Cellular Automata</a><ul class="simple">
@@ -109,17 +118,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/vector2D.html">Vector2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/motion.html">Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/interactions.html">Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/steering.html">Steering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/integrator.html">Integrator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="api/cli.html">Command-line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/gui.html">Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/game.html">Plugins</a><ul>
@@ -253,6 +253,7 @@
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
  
 </div>
 <h2 id="_">_</h2>
@@ -267,13 +268,13 @@
 </li>
         <li><a href="api/io.html#crowddynamics.io.ListBuffer.__init__">(crowddynamics.io.ListBuffer method)</a>
 </li>
-        <li><a href="api/multiagent.html#crowddynamics.multiagent.Configuration.__init__">(crowddynamics.multiagent.Configuration method)</a>
+        <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.Configuration.__init__">(crowddynamics.multiagent.Configuration method)</a>
 </li>
-        <li><a href="api/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.__init__">(crowddynamics.multiagent.MultiAgentSimulation method)</a>
+        <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.__init__">(crowddynamics.multiagent.MultiAgentSimulation method)</a>
 </li>
-        <li><a href="api/multiagent.html#crowddynamics.multiagent.QueueDict.__init__">(crowddynamics.multiagent.QueueDict method)</a>
+        <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.QueueDict.__init__">(crowddynamics.multiagent.QueueDict method)</a>
 </li>
-        <li><a href="api/multiagent.html#crowddynamics.multiagent.testing.Outdoor.__init__">(crowddynamics.multiagent.testing.Outdoor method)</a>
+        <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.testing.Outdoor.__init__">(crowddynamics.multiagent.testing.Outdoor method)</a>
 </li>
         <li><a href="api/game.html#crowddynamics.plugins.game.EgressGame.__init__">(crowddynamics.plugins.game.EgressGame method)</a>
 </li>
@@ -285,9 +286,9 @@
       <ul>
         <li><a href="api/io.html#crowddynamics.io.ListBuffer.__weakref__">(crowddynamics.io.ListBuffer attribute)</a>
 </li>
-        <li><a href="api/multiagent.html#crowddynamics.multiagent.Configuration.__weakref__">(crowddynamics.multiagent.Configuration attribute)</a>
+        <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.Configuration.__weakref__">(crowddynamics.multiagent.Configuration attribute)</a>
 </li>
-        <li><a href="api/multiagent.html#crowddynamics.multiagent.QueueDict.__weakref__">(crowddynamics.multiagent.QueueDict attribute)</a>
+        <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.QueueDict.__weakref__">(crowddynamics.multiagent.QueueDict attribute)</a>
 </li>
       </ul></li>
       <li><a href="api/io.html#crowddynamics.io.HDFStore._append_buffer_to_dataset">_append_buffer_to_dataset() (crowddynamics.io.HDFStore method)</a>
@@ -300,33 +301,35 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="multiagent/integrator.html#crowddynamics.core.integrator.adaptive_timestep">adaptive_timestep (in module crowddynamics.core.integrator)</a>
+</li>
       <li><a href="api/io.html#crowddynamics.io.HDFStore.add_buffers">add_buffers() (crowddynamics.io.HDFStore method)</a>
 </li>
       <li><a href="api/io.html#crowddynamics.io.HDFStore.add_dataset">add_dataset() (crowddynamics.io.HDFStore method)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.adjusting_force_intra_subgroup">adjusting_force_intra_subgroup() (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.adjusting_force_intra_subgroup">adjusting_force_intra_subgroup() (in module crowddynamics.core.motion)</a>
 </li>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.Agent">Agent (class in crowddynamics.multiagent)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.Agent">Agent (class in crowddynamics.multiagent)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.agent_agent_block_list">agent_agent_block_list (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.agent_agent_block_list">agent_agent_block_list (in module crowddynamics.core.interactions)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.agent_agent_brute">agent_agent_brute (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.agent_agent_brute">agent_agent_brute (in module crowddynamics.core.interactions)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.agent_agent_brute_disjoint">agent_agent_brute_disjoint (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.agent_agent_brute_disjoint">agent_agent_brute_disjoint (in module crowddynamics.core.interactions)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.agent_agent_interaction_circle">agent_agent_interaction_circle (in module crowddynamics.core.interactions)</a>
-</li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.agent_agent_interaction_three_circle">agent_agent_interaction_three_circle (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.agent_agent_interaction_circle">agent_agent_interaction_circle (in module crowddynamics.core.interactions)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.agent_agent_interaction_three_circle">agent_agent_interaction_three_circle (in module crowddynamics.core.interactions)</a>
+</li>
       <li><a href="api/game.html#crowddynamics.plugins.game.agent_closer_to_exit">agent_closer_to_exit (in module crowddynamics.plugins.game)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.agent_obstacle_interaction_circle">agent_obstacle_interaction_circle (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.agent_obstacle_interaction_circle">agent_obstacle_interaction_circle (in module crowddynamics.core.interactions)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.agent_obstacle_interaction_three_circle">agent_obstacle_interaction_three_circle (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.agent_obstacle_interaction_three_circle">agent_obstacle_interaction_three_circle (in module crowddynamics.core.interactions)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.agent_wall">agent_wall (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.agent_wall">agent_wall (in module crowddynamics.core.interactions)</a>
 </li>
       <li><a href="research/index.html#term-analysis"><strong>Analysis</strong></a>
 </li>
@@ -336,7 +339,7 @@
 </li>
       <li><a href="api/io.html#crowddynamics.io.ListBuffer.append">append() (crowddynamics.io.ListBuffer method)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.attractor_point">attractor_point() (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.attractor_point">attractor_point() (in module crowddynamics.core.motion)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -348,9 +351,9 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.block_list">block_list (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.block_list">block_list (in module crowddynamics.core.interactions)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.BlockList">BlockList (class in crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.BlockList">BlockList (class in crowddynamics.core.interactions)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -362,19 +365,19 @@
 </li>
       <li><a href="api/gui.html#crowddynamics.gui.MainWindow.clear_sidebar">clear_sidebar() (crowddynamics.gui.MainWindow method)</a>
 </li>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.Configuration">Configuration (class in crowddynamics.multiagent)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.Configuration">Configuration (class in crowddynamics.multiagent)</a>
 </li>
       <li><a href="api/gui.html#crowddynamics.gui.MultiAgentPlot.configure">configure() (crowddynamics.gui.MultiAgentPlot method)</a>
 </li>
       <li><a href="api/gui.html#crowddynamics.gui.MainWindow.configure_plot">configure_plot() (crowddynamics.gui.MainWindow method)</a>
 </li>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.configure_queuing">configure_queuing() (crowddynamics.multiagent.MultiAgentSimulation method)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.configure_queuing">configure_queuing() (crowddynamics.multiagent.MultiAgentSimulation method)</a>
 </li>
       <li><a href="api/gui.html#crowddynamics.gui.MainWindow.configure_signals">configure_signals() (crowddynamics.gui.MainWindow method)</a>
 </li>
       <li><a href="api/vector2D.html#crowddynamics.core.vector2D.cross2d">cross2d (in module crowddynamics.core.vector2D)</a>
 </li>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.testing.Crossing">Crossing (class in crowddynamics.multiagent.testing)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.testing.Crossing">Crossing (class in crowddynamics.multiagent.testing)</a>
 </li>
       <li><a href="research/index.html#term-crowd-dynamics"><strong>Crowd Dynamics</strong></a>
 </li>
@@ -384,13 +387,13 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/integrator.html#module-crowddynamics.core.integrator">crowddynamics.core.integrator (module)</a>
+      <li><a href="multiagent/integrator.html#module-crowddynamics.core.integrator">crowddynamics.core.integrator (module)</a>
 </li>
-      <li><a href="api/interactions.html#module-crowddynamics.core.interactions">crowddynamics.core.interactions (module)</a>
+      <li><a href="multiagent/interactions.html#module-crowddynamics.core.interactions">crowddynamics.core.interactions (module)</a>
 </li>
-      <li><a href="api/motion.html#module-crowddynamics.core.motion">crowddynamics.core.motion (module)</a>
+      <li><a href="multiagent/motion.html#module-crowddynamics.core.motion">crowddynamics.core.motion (module)</a>
 </li>
-      <li><a href="api/steering.html#module-crowddynamics.core.steering">crowddynamics.core.steering (module)</a>
+      <li><a href="multiagent/steering.html#module-crowddynamics.core.steering">crowddynamics.core.steering (module)</a>
 </li>
       <li><a href="api/vector2D.html#module-crowddynamics.core.vector2D">crowddynamics.core.vector2D (module)</a>
 </li>
@@ -398,9 +401,9 @@
 </li>
       <li><a href="api/io.html#module-crowddynamics.io">crowddynamics.io (module)</a>
 </li>
-      <li><a href="api/multiagent.html#module-crowddynamics.multiagent">crowddynamics.multiagent (module)</a>
+      <li><a href="multiagent/multiagent.html#module-crowddynamics.multiagent">crowddynamics.multiagent (module)</a>
 </li>
-      <li><a href="api/multiagent.html#module-crowddynamics.multiagent.testing">crowddynamics.multiagent.testing (module)</a>
+      <li><a href="multiagent/multiagent.html#module-crowddynamics.multiagent.testing">crowddynamics.multiagent.testing (module)</a>
 </li>
       <li><a href="api/game.html#module-crowddynamics.plugins.game">crowddynamics.plugins.game (module)</a>
 </li>
@@ -414,19 +417,19 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/steering.html#crowddynamics.core.steering.direction_map">direction_map() (in module crowddynamics.core.steering)</a>
+      <li><a href="multiagent/steering.html#crowddynamics.core.steering.direction_map">direction_map() (in module crowddynamics.core.steering)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.distance_circle_circle">distance_circle_circle (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.distance_circle_circle">distance_circle_circle (in module crowddynamics.core.interactions)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.distance_circle_line">distance_circle_line (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.distance_circle_line">distance_circle_line (in module crowddynamics.core.interactions)</a>
 </li>
-      <li><a href="api/steering.html#crowddynamics.core.steering.distance_map">distance_map() (in module crowddynamics.core.steering)</a>
+      <li><a href="multiagent/steering.html#crowddynamics.core.steering.distance_map">distance_map() (in module crowddynamics.core.steering)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.distance_three_circle">distance_three_circle (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.distance_three_circle">distance_three_circle (in module crowddynamics.core.interactions)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.distance_three_circle_line">distance_three_circle_line (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.distance_three_circle_line">distance_three_circle_line (in module crowddynamics.core.interactions)</a>
 </li>
       <li><a href="api/vector2D.html#crowddynamics.core.vector2D.dot2d">dot2d (in module crowddynamics.core.vector2D)</a>
 </li>
@@ -434,7 +437,7 @@
 </li>
       <li><a href="api/io.html#crowddynamics.io.HDFStore.dump_buffers">dump_buffers() (crowddynamics.io.HDFStore method)</a>
 </li>
-      <li><a href="api/steering.html#crowddynamics.core.steering.dynamic_potential">dynamic_potential() (in module crowddynamics.core.steering)</a>
+      <li><a href="multiagent/steering.html#crowddynamics.core.steering.dynamic_potential">dynamic_potential() (in module crowddynamics.core.steering)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -448,6 +451,8 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="multiagent/integrator.html#crowddynamics.core.integrator.euler_integration">euler_integration (in module crowddynamics.core.integrator)</a>
+</li>
       <li><a href="api/game.html#crowddynamics.plugins.game.exit_capacity">exit_capacity (in module crowddynamics.plugins.game)</a>
 </li>
       <li><a href="research/index.html#term-experimental"><strong>Experimental</strong></a>
@@ -458,21 +463,21 @@
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/motion.html#crowddynamics.core.motion.force_adjust">force_adjust (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.force_adjust">force_adjust (in module crowddynamics.core.motion)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.force_contact">force_contact (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.force_contact">force_contact (in module crowddynamics.core.motion)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.force_fluctuation">force_fluctuation() (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.force_fluctuation">force_fluctuation() (in module crowddynamics.core.motion)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/motion.html#crowddynamics.core.motion.force_social_circular">force_social_circular (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.force_social_circular">force_social_circular (in module crowddynamics.core.motion)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.force_social_helbing">force_social_helbing (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.force_social_helbing">force_social_helbing (in module crowddynamics.core.motion)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.force_social_linear_wall">force_social_linear_wall (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.force_social_linear_wall">force_social_linear_wall (in module crowddynamics.core.motion)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.force_social_three_circle">force_social_three_circle (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.force_social_three_circle">force_social_three_circle (in module crowddynamics.core.motion)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -482,13 +487,13 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/sampling.html#crowddynamics.sampling.PolygonSample.generator">generator() (crowddynamics.sampling.PolygonSample method)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.gradient_circle_circle">gradient_circle_circle (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.gradient_circle_circle">gradient_circle_circle (in module crowddynamics.core.motion)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/motion.html#crowddynamics.core.motion.gradient_circle_line">gradient_circle_line (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.gradient_circle_line">gradient_circle_line (in module crowddynamics.core.motion)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.gradient_three_circle">gradient_three_circle (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.gradient_three_circle">gradient_three_circle (in module crowddynamics.core.motion)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -496,7 +501,7 @@
 <h2 id="H">H</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.testing.Hallway">Hallway (class in crowddynamics.multiagent.testing)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.testing.Hallway">Hallway (class in crowddynamics.multiagent.testing)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -508,11 +513,7 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.initial_update">initial_update() (crowddynamics.multiagent.MultiAgentSimulation method)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/integrator.html#crowddynamics.core.integrator.integrate">integrate (in module crowddynamics.core.integrator)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.initial_update">initial_update() (crowddynamics.multiagent.MultiAgentSimulation method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -534,17 +535,17 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/motion.html#crowddynamics.core.motion.magnitude">magnitude (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.magnitude">magnitude (in module crowddynamics.core.motion)</a>
 </li>
       <li><a href="api/gui.html#crowddynamics.gui.MainWindow">MainWindow (class in crowddynamics.gui)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/steering.html#crowddynamics.core.steering.merge_dir_maps">merge_dir_maps (in module crowddynamics.core.steering)</a>
+      <li><a href="multiagent/steering.html#crowddynamics.core.steering.merge_dir_maps">merge_dir_maps (in module crowddynamics.core.steering)</a>
 </li>
       <li><a href="api/gui.html#crowddynamics.gui.MultiAgentPlot">MultiAgentPlot (class in crowddynamics.gui)</a>
 </li>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation">MultiAgentSimulation (class in crowddynamics.multiagent)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation">MultiAgentSimulation (class in crowddynamics.multiagent)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -564,13 +565,13 @@
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.testing.Outdoor">Outdoor (class in crowddynamics.multiagent.testing)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.testing.Outdoor">Outdoor (class in crowddynamics.multiagent.testing)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.overlapping_circle_circle">overlapping_circle_circle (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.overlapping_circle_circle">overlapping_circle_circle (in module crowddynamics.core.interactions)</a>
 </li>
-      <li><a href="api/interactions.html#crowddynamics.core.interactions.overlapping_three_circle">overlapping_three_circle (in module crowddynamics.core.interactions)</a>
+      <li><a href="multiagent/interactions.html#crowddynamics.core.interactions.overlapping_three_circle">overlapping_three_circle (in module crowddynamics.core.interactions)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -590,7 +591,7 @@
 </li>
       <li><a href="api/sampling.html#crowddynamics.sampling.PolygonSample">PolygonSample (class in crowddynamics.sampling)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.potential">potential (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.potential">potential (in module crowddynamics.core.motion)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -598,7 +599,7 @@
 <h2 id="Q">Q</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.QueueDict">QueueDict (class in crowddynamics.multiagent)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.QueueDict">QueueDict (class in crowddynamics.multiagent)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -614,19 +615,19 @@
 </li>
       <li><a href="api/gui.html#crowddynamics.gui.MainWindow.reset_buffers">reset_buffers() (crowddynamics.gui.MainWindow method)</a>
 </li>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.testing.RoomEvacuation">RoomEvacuation (class in crowddynamics.multiagent.testing)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.testing.RoomEvacuation">RoomEvacuation (class in crowddynamics.multiagent.testing)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.testing.RoomEvacuationGame">RoomEvacuationGame (class in crowddynamics.multiagent.testing)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.testing.RoomEvacuationGame">RoomEvacuationGame (class in crowddynamics.multiagent.testing)</a>
 </li>
       <li><a href="api/vector2D.html#crowddynamics.core.vector2D.rotate270">rotate270 (in module crowddynamics.core.vector2D)</a>
 </li>
       <li><a href="api/vector2D.html#crowddynamics.core.vector2D.rotate90">rotate90 (in module crowddynamics.core.vector2D)</a>
 </li>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.testing.Rounding">Rounding (class in crowddynamics.multiagent.testing)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.testing.Rounding">Rounding (class in crowddynamics.multiagent.testing)</a>
 </li>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.run">run() (crowddynamics.multiagent.MultiAgentSimulation method)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.run">run() (crowddynamics.multiagent.MultiAgentSimulation method)</a>
 </li>
       <li><a href="api/gui.html#crowddynamics.gui.run_gui">run_gui() (in module crowddynamics.gui)</a>
 </li>
@@ -636,9 +637,9 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.Configuration.set_agents">set_agents() (crowddynamics.multiagent.Configuration method)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.Configuration.set_agents">set_agents() (crowddynamics.multiagent.Configuration method)</a>
 </li>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.Configuration.set_field">set_field() (crowddynamics.multiagent.Configuration method)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.Configuration.set_field">set_field() (crowddynamics.multiagent.Configuration method)</a>
 </li>
       <li><a href="api/gui.html#crowddynamics.gui.MainWindow.set_sidebar">set_sidebar() (crowddynamics.gui.MainWindow method)</a>
 </li>
@@ -648,12 +649,12 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gui.html#crowddynamics.gui.MainWindow.start">start() (crowddynamics.gui.MainWindow method)</a>
 </li>
-      <li><a href="api/steering.html#crowddynamics.core.steering.static_potential">static_potential() (in module crowddynamics.core.steering)</a>
+      <li><a href="multiagent/steering.html#crowddynamics.core.steering.static_potential">static_potential() (in module crowddynamics.core.steering)</a>
 </li>
       <li><a href="api/gui.html#crowddynamics.gui.MainWindow.stop">stop() (crowddynamics.gui.MainWindow method)</a>
 
       <ul>
-        <li><a href="api/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.stop">(crowddynamics.multiagent.MultiAgentSimulation method)</a>
+        <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.stop">(crowddynamics.multiagent.MultiAgentSimulation method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -662,21 +663,21 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/motion.html#crowddynamics.core.motion.time_to_collision_circle_circle">time_to_collision_circle_circle (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.time_to_collision_circle_circle">time_to_collision_circle_circle (in module crowddynamics.core.motion)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.time_to_collision_circle_line">time_to_collision_circle_line (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.time_to_collision_circle_line">time_to_collision_circle_line (in module crowddynamics.core.motion)</a>
 </li>
-      <li><a href="api/motion.html#crowddynamics.core.motion.torque_adjust">torque_adjust (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.torque_adjust">torque_adjust (in module crowddynamics.core.motion)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/motion.html#crowddynamics.core.motion.torque_fluctuation">torque_fluctuation() (in module crowddynamics.core.motion)</a>
+      <li><a href="multiagent/motion.html#crowddynamics.core.motion.torque_fluctuation">torque_fluctuation() (in module crowddynamics.core.motion)</a>
 </li>
-      <li><a href="api/steering.html#crowddynamics.core.steering.travel_time_map">travel_time_map() (in module crowddynamics.core.steering)</a>
+      <li><a href="multiagent/steering.html#crowddynamics.core.steering.travel_time_map">travel_time_map() (in module crowddynamics.core.steering)</a>
 </li>
       <li><a href="api/vector2D.html#crowddynamics.core.vector2D.truncate">truncate (in module crowddynamics.core.vector2D)</a>
 </li>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.Configuration.truncnorm">truncnorm() (crowddynamics.multiagent.Configuration static method)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.Configuration.truncnorm">truncnorm() (crowddynamics.multiagent.Configuration static method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -684,7 +685,7 @@
 <h2 id="U">U</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.update">update() (crowddynamics.multiagent.MultiAgentSimulation method)</a>
+      <li><a href="multiagent/multiagent.html#crowddynamics.multiagent.MultiAgentSimulation.update">update() (crowddynamics.multiagent.MultiAgentSimulation method)</a>
 
       <ul>
         <li><a href="api/game.html#crowddynamics.plugins.game.EgressGame.update">(crowddynamics.plugins.game.EgressGame method)</a>
@@ -701,6 +702,18 @@
   </ul></td>
 </tr></table>
 
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/testing.html#crowddynamics.testing.vector">vector() (in module crowddynamics.testing)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="multiagent/integrator.html#crowddynamics.core.integrator.velocity_verlet">velocity_verlet (in module crowddynamics.core.integrator)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 
 
            </div>
@@ -713,7 +726,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 23, 2017.
+      Last updated on Jan 24, 2017.
 
     </p>
   </div>

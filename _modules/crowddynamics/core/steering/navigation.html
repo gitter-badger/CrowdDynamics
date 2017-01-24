@@ -99,6 +99,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../multiagent/index.html">Multi-Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../cellular/index.html">Cellular Automata</a><ul class="simple">
@@ -109,17 +118,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/index.html">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/vector2D.html">Vector2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/motion.html">Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/interactions.html">Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/steering.html">Steering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/integrator.html">Integrator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../api/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../api/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/cli.html">Command-line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/gui.html">Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/game.html">Plugins</a><ul>
@@ -308,7 +308,7 @@
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Type of shape is not valid.&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="distance_map"><a class="viewcode-back" href="../../../../api/steering.html#crowddynamics.core.steering.distance_map">[docs]</a><span class="k">def</span> <span class="nf">distance_map</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">):</span>
+<div class="viewcode-block" id="distance_map"><a class="viewcode-back" href="../../../../multiagent/steering.html#crowddynamics.core.steering.distance_map">[docs]</a><span class="k">def</span> <span class="nf">distance_map</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Distance map :math:`S(\mathbf{x})` is obtained by solving *Eikonal equation*</span>
 <span class="sd">    using fast marching *Fast Marching Method (FMM)* (``scikit-fmm``).</span>
@@ -383,7 +383,7 @@
     <span class="k">return</span> <span class="n">mgrid</span><span class="p">,</span> <span class="n">dmap</span><span class="p">,</span> <span class="n">phi</span></div>
 
 
-<div class="viewcode-block" id="travel_time_map"><a class="viewcode-back" href="../../../../api/steering.html#crowddynamics.core.steering.travel_time_map">[docs]</a><span class="k">def</span> <span class="nf">travel_time_map</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">,</span> <span class="n">agents</span><span class="p">):</span>
+<div class="viewcode-block" id="travel_time_map"><a class="viewcode-back" href="../../../../multiagent/steering.html#crowddynamics.core.steering.travel_time_map">[docs]</a><span class="k">def</span> <span class="nf">travel_time_map</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">,</span> <span class="n">agents</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Dynamics potential takes into account the positions of the agents in the</span>
 <span class="sd">    field. Equation</span>
@@ -426,7 +426,7 @@
     <span class="k">return</span> <span class="ne">NotImplementedError</span></div>
 
 
-<div class="viewcode-block" id="direction_map"><a class="viewcode-back" href="../../../../api/steering.html#crowddynamics.core.steering.direction_map">[docs]</a><span class="k">def</span> <span class="nf">direction_map</span><span class="p">(</span><span class="n">dmap</span><span class="p">):</span>
+<div class="viewcode-block" id="direction_map"><a class="viewcode-back" href="../../../../multiagent/steering.html#crowddynamics.core.steering.direction_map">[docs]</a><span class="k">def</span> <span class="nf">direction_map</span><span class="p">(</span><span class="n">dmap</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Normalized gradient of distance map.</span>
 
@@ -454,11 +454,12 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="merge_dir_maps"><a class="viewcode-back" href="../../../../api/steering.html#crowddynamics.core.steering.merge_dir_maps">[docs]</a><span class="k">def</span> <span class="nf">merge_dir_maps</span><span class="p">(</span><span class="n">dmap</span><span class="p">,</span> <span class="n">dir_map1</span><span class="p">,</span> <span class="n">dir_map2</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="merge_dir_maps"><a class="viewcode-back" href="../../../../multiagent/steering.html#crowddynamics.core.steering.merge_dir_maps">[docs]</a><span class="k">def</span> <span class="nf">merge_dir_maps</span><span class="p">(</span><span class="n">dmap</span><span class="p">,</span> <span class="n">dir_map1</span><span class="p">,</span> <span class="n">dir_map2</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Function that merges two direction maps together. Let distance map from</span>
 <span class="sd">    obstacles be :math:`\Phi(\mathbf{x})` and :math:`\lambda(\Phi(\mathbf{x}))`</span>
-<span class="sd">    be any decreasing function of distance from obstacles such that</span>
+<span class="sd">    be any decreasing function :math:`\lambda^{\prime}(\Phi(\mathbf{x})) &lt; 0` of</span>
+<span class="sd">    distance from obstacles such that</span>
 
 <span class="sd">    .. math::</span>
 <span class="sd">       \lambda(\Phi) &amp;=</span>
@@ -499,9 +500,10 @@
     <span class="k">return</span> <span class="n">merged</span></div>
 
 
-<div class="viewcode-block" id="static_potential"><a class="viewcode-back" href="../../../../api/steering.html#crowddynamics.core.steering.static_potential">[docs]</a><span class="k">def</span> <span class="nf">static_potential</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">exits</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="static_potential"><a class="viewcode-back" href="../../../../multiagent/steering.html#crowddynamics.core.steering.static_potential">[docs]</a><span class="k">def</span> <span class="nf">static_potential</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">exits</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
-<span class="sd">    Static potential</span>
+<span class="sd">    Static potential is navigation algorithm that does not take into account</span>
+<span class="sd">    the space that is occupied by dynamic agents (aka agents).</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        step (float):</span>
@@ -525,8 +527,11 @@
     <span class="k">return</span> <span class="n">dir_map</span></div>
 
 
-<div class="viewcode-block" id="dynamic_potential"><a class="viewcode-back" href="../../../../api/steering.html#crowddynamics.core.steering.dynamic_potential">[docs]</a><span class="k">def</span> <span class="nf">dynamic_potential</span><span class="p">():</span>
-    <span class="sd">r&quot;&quot;&quot;Dynamic potential&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="dynamic_potential"><a class="viewcode-back" href="../../../../multiagent/steering.html#crowddynamics.core.steering.dynamic_potential">[docs]</a><span class="k">def</span> <span class="nf">dynamic_potential</span><span class="p">():</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Dynamic potential is navigation algorithm that takes into account the space</span>
+<span class="sd">    that is occupied by dynamic agents (aka agents).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="ne">NotImplementedError</span></div>
 </pre></div>
 
@@ -540,7 +545,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 23, 2017.
+      Last updated on Jan 24, 2017.
 
     </p>
   </div>

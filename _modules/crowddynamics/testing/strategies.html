@@ -99,6 +99,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../multiagent/index.html">Multi-Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../multiagent/social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cellular/index.html">Cellular Automata</a><ul class="simple">
@@ -109,17 +118,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/vector2D.html">Vector2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/motion.html">Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/interactions.html">Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/steering.html">Steering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/integrator.html">Integrator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../api/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../api/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/cli.html">Command-line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/gui.html">Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/game.html">Plugins</a><ul>
@@ -242,8 +242,8 @@
 
 <span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="k">import</span> <span class="n">LineString</span>
 
-<span class="c1"># TODO: Namedtuple agent strategy</span>
-<span class="kn">from</span> <span class="nn">crowddynamics.core.vector2D</span> <span class="k">import</span> <span class="n">length</span>
+<span class="kn">from</span> <span class="nn">crowddynamics.multiagent</span> <span class="k">import</span> <span class="n">Agent</span>
+<span class="kn">from</span> <span class="nn">crowddynamics.core.vector2D</span> <span class="k">import</span> <span class="n">length</span><span class="p">,</span> <span class="n">wrap_to_pi</span>
 
 
 <div class="viewcode-block" id="real"><a class="viewcode-back" href="../../../api/testing.html#crowddynamics.testing.real">[docs]</a><span class="k">def</span> <span class="nf">real</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exclude_zero</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -261,13 +261,23 @@
     <span class="c1"># TODO: Maybe use assume instead?</span>
     <span class="k">if</span> <span class="n">exclude_zero</span> <span class="o">==</span> <span class="s1">&#39;exact&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">strategy</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">exclude_zero</span> <span class="o">==</span> <span class="s1">&#39;near&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">exclude_zero</span> <span class="o">==</span> <span class="s1">&#39;near&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">strategy</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">strategy</span></div>
 
 
-<span class="k">def</span> <span class="nf">vector</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">()):</span>
-    <span class="k">return</span> <span class="n">arrays</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">elements</span><span class="p">)</span>
+<div class="viewcode-block" id="vector"><a class="viewcode-back" href="../../../api/testing.html#crowddynamics.testing.vector">[docs]</a><span class="k">def</span> <span class="nf">vector</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">()):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dtype (type):</span>
+<span class="sd">        shape (int|Tuple[Int]):</span>
+<span class="sd">        elements (SearchStrategy):</span>
+
+<span class="sd">    Returns:</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">arrays</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">elements</span><span class="p">)</span></div>
 
 
 <span class="nd">@st</span><span class="o">.</span><span class="n">composite</span>
@@ -342,6 +352,43 @@
         <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 
     <span class="k">return</span> <span class="n">domain</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">obstacles</span>
+
+
+<span class="nd">@st</span><span class="o">.</span><span class="n">composite</span>
+<span class="k">def</span> <span class="nf">agent</span><span class="p">(</span><span class="n">draw</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Agent SearchStrategy</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        draw:</span>
+<span class="sd">        size (int):</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        SearchStrategy:</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span>
+        <span class="n">mass</span><span class="o">=</span><span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">))),</span>
+        <span class="n">radius</span><span class="o">=</span><span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))),</span>
+        <span class="n">ratio_rt</span><span class="o">=</span><span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))),</span>
+        <span class="n">ratio_rs</span><span class="o">=</span><span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))),</span>
+        <span class="n">ratio_ts</span><span class="o">=</span><span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))),</span>
+        <span class="n">inertia_rot</span><span class="o">=</span><span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">())),</span>
+        <span class="n">target_velocity</span><span class="o">=</span><span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">())),</span>
+        <span class="n">target_angular_velocity</span><span class="o">=</span><span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)))</span>
+    <span class="p">)</span>
+    <span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">agent</span><span class="o">.</span><span class="n">position</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
+    <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
+    <span class="n">agent</span><span class="o">.</span><span class="n">force</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
+
+    <span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)))</span>
+    <span class="n">agent</span><span class="o">.</span><span class="n">angular_velocity</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
+    <span class="n">agent</span><span class="o">.</span><span class="n">torque</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="n">real</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
+
+    <span class="n">agent</span><span class="o">.</span><span class="n">update_shoulder_positions</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">agent</span>
 </pre></div>
 
            </div>
@@ -354,7 +401,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 23, 2017.
+      Last updated on Jan 24, 2017.
 
     </p>
   </div>

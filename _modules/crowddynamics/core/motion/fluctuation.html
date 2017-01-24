@@ -99,6 +99,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../multiagent/index.html">Multi-Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../cellular/index.html">Cellular Automata</a><ul class="simple">
@@ -109,17 +118,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/index.html">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/vector2D.html">Vector2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/motion.html">Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/interactions.html">Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/steering.html">Steering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/integrator.html">Integrator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../api/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../api/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/cli.html">Command-line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/gui.html">Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/game.html">Plugins</a><ul>
@@ -242,7 +242,7 @@
 <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">truncnorm</span>
 
 
-<div class="viewcode-block" id="force_fluctuation"><a class="viewcode-back" href="../../../../api/motion.html#crowddynamics.core.motion.force_fluctuation">[docs]</a><span class="k">def</span> <span class="nf">force_fluctuation</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
+<div class="viewcode-block" id="force_fluctuation"><a class="viewcode-back" href="../../../../multiagent/motion.html#crowddynamics.core.motion.force_fluctuation">[docs]</a><span class="k">def</span> <span class="nf">force_fluctuation</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Truncated normal distribution with standard deviation of 3.</span>
 
@@ -279,7 +279,7 @@
     <span class="k">return</span> <span class="n">force</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">mass</span></div>
 
 
-<div class="viewcode-block" id="torque_fluctuation"><a class="viewcode-back" href="../../../../api/motion.html#crowddynamics.core.motion.torque_fluctuation">[docs]</a><span class="k">def</span> <span class="nf">torque_fluctuation</span><span class="p">(</span><span class="n">inertia_rot</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
+<div class="viewcode-block" id="torque_fluctuation"><a class="viewcode-back" href="../../../../multiagent/motion.html#crowddynamics.core.motion.torque_fluctuation">[docs]</a><span class="k">def</span> <span class="nf">torque_fluctuation</span><span class="p">(</span><span class="n">inertia_rot</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Random torque.</span>
 
@@ -317,7 +317,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 23, 2017.
+      Last updated on Jan 24, 2017.
 
     </p>
   </div>

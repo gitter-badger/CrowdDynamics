@@ -36,8 +36,8 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
-        <link rel="up" title="API" href="index.html"/>
-        <link rel="next" title="IO" href="io.html"/>
+        <link rel="up" title="Multi-Agent" href="index.html"/>
+        <link rel="next" title="Multi-Agent" href="multiagent.html"/>
         <link rel="prev" title="Steering" href="steering.html"/> 
 
   
@@ -99,8 +99,17 @@
 </ul>
 <p class="caption"><span class="caption-text">Simulation Models</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Multi-Agent</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="steering.html">Steering</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cellular/index.html">Cellular Automata</a><ul class="simple">
@@ -109,26 +118,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">Continuum Flow</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="vector2D.html">Vector2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motion.html">Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactions.html">Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="steering.html">Steering</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="io.html">IO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/vector2D.html">Vector2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/io.html">IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/sampling.html">Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/cli.html">Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/gui.html">Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/game.html">Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/game.html#module-crowddynamics.plugins.game">Game</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="cli.html">Command-line Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gui.html">Graphical User Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="game.html">Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="game.html#module-crowddynamics.plugins.game">Game</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/testing.html">Testing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a><ul>
@@ -219,13 +219,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">API</a> &raquo;</li>
+          <li><a href="index.html">Multi-Agent</a> &raquo;</li>
       
     <li>Integrator</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/api/integrator.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/multiagent/integrator.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -238,13 +238,11 @@
   <div class="section" id="module-crowddynamics.core.integrator">
 <span id="integrator"></span><h1>Integrator<a class="headerlink" href="#module-crowddynamics.core.integrator" title="Permalink to this headline">¶</a></h1>
 <dl class="attribute">
-<dt id="crowddynamics.core.integrator.integrate">
-<code class="descclassname">crowddynamics.core.integrator.</code><code class="descname">integrate</code><a class="reference internal" href="../_modules/crowddynamics/core/integrator/integrator.html#integrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.integrator.integrate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Differential system is integrated using numerical integration scheme using
-discrete adaptive time step.</p>
-<p>Timestep <span class="math">\(\Delta t\)</span> is selected from interval
-<span class="math">\([\Delta t_{min}, \Delta t_{max}]\)</span> by bounding the maximum step size
-<span class="math">\(\Delta x\)</span> an agent can take per iteration cycle, obtained from</p>
+<dt id="crowddynamics.core.integrator.adaptive_timestep">
+<code class="descclassname">crowddynamics.core.integrator.</code><code class="descname">adaptive_timestep</code><a class="reference internal" href="../_modules/crowddynamics/core/integrator/integrator.html#adaptive_timestep"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.integrator.adaptive_timestep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timestep is selected from interval <span class="math">\([\Delta t_{min}, \Delta t_{max}]\)</span>
+by bounding the maximum step size <span class="math">\(\Delta x\)</span> an agent can take per
+iteration cycle, obtained from</p>
 <div class="math">
 \[\begin{split}\Delta x = c \Delta t_{max} \max_{i\in A} v_i^0 \\\end{split}\]</div>
 <p>where</p>
@@ -266,6 +264,35 @@ discrete adaptive time step.</p>
 <ul class="simple">
 <li><span class="math">\(v_i\)</span> is agent&#8217;s current velocity</li>
 </ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dt_min</strong> &#8211; Minimum timestep <span class="math">\(\Delta x_{min}\)</span> for adaptive integration.</li>
+<li><strong>dt_max</strong> &#8211; Maximum timestep <span class="math">\(\Delta x_{max}\)</span> for adaptive integration.</li>
+<li><strong>velocity</strong> &#8211; </li>
+<li><strong>target_velocity</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>References</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Adaptive_stepsize">https://en.wikipedia.org/wiki/Adaptive_stepsize</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.integrator.euler_integration">
+<code class="descclassname">crowddynamics.core.integrator.</code><code class="descname">euler_integration</code><a class="reference internal" href="../_modules/crowddynamics/core/integrator/integrator.html#euler_integration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.integrator.euler_integration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Differential system is integrated using numerical integration scheme using
+discrete adaptive timestep <span class="math">\(\Delta t\)</span>.</p>
 <p>Acceleration on an agent</p>
 <div class="math">
 \[\begin{split}a_{k} &amp;= \mathbf{f}_{k} / m \\
@@ -297,6 +324,35 @@ discrete adaptive time step.</p>
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="crowddynamics.core.integrator.velocity_verlet">
+<code class="descclassname">crowddynamics.core.integrator.</code><code class="descname">velocity_verlet</code><a class="reference internal" href="../_modules/crowddynamics/core/integrator/integrator.html#velocity_verlet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.integrator.velocity_verlet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Velocity verlet</p>
+<div class="math">
+\[\begin{split}\mathbf{v}_{k+1/2} &amp;= \mathbf{v}_{k} + \frac{1}{2} a_{k} \Delta t \\
+\mathbf{x}_{k+1} &amp;= \mathbf{x}_{k} + \mathbf{v}_{k+1/2} \Delta t \\
+a_{k+1} &amp;= \mathbf{f}_{k+1} / m \\
+\mathbf{v}_{k+1} &amp;= \mathbf{v}_{k+1/2} + \frac{1}{2} a_{k+1} \Delta t\end{split}\]</div>
+<p>References</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Verlet_integration#Velocity_Verlet">https://en.wikipedia.org/wiki/Verlet_integration#Velocity_Verlet</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>agent</strong> (<a class="reference internal" href="multiagent.html#crowddynamics.multiagent.Agent" title="crowddynamics.multiagent.Agent"><em>Agent</em></a>) &#8211; </li>
+<li><strong>dt_min</strong> (<em>float</em>) &#8211; Minimum timestep <span class="math">\(\Delta x_{min}\)</span> for adaptive integration.</li>
+<li><strong>dt_max</strong> (<em>float</em>) &#8211; Maximum timestep <span class="math">\(\Delta x_{max}\)</span> for adaptive integration.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><em>float</em> &#8211; Timestep <span class="math">\(\Delta t\)</span> that was used for integration.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 
 
@@ -306,7 +362,7 @@ discrete adaptive time step.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="io.html" class="btn btn-neutral float-right" title="IO" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="multiagent.html" class="btn btn-neutral float-right" title="Multi-Agent" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="steering.html" class="btn btn-neutral" title="Steering" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -319,7 +375,7 @@ discrete adaptive time step.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 23, 2017.
+      Last updated on Jan 24, 2017.
 
     </p>
   </div>

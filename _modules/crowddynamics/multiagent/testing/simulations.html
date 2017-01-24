@@ -99,6 +99,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../multiagent/index.html">Multi-Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../cellular/index.html">Cellular Automata</a><ul class="simple">
@@ -109,17 +118,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/index.html">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/vector2D.html">Vector2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/motion.html">Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/interactions.html">Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/steering.html">Steering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/integrator.html">Integrator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../api/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../api/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/cli.html">Command-line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/gui.html">Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/game.html">Plugins</a><ul>
@@ -245,7 +245,7 @@
 <span class="c1"># TODO: Move simulations.yaml configuration parameter into the classes</span>
 
 
-<div class="viewcode-block" id="Outdoor"><a class="viewcode-back" href="../../../../api/multiagent.html#crowddynamics.multiagent.testing.Outdoor">[docs]</a><span class="k">class</span> <span class="nc">Outdoor</span><span class="p">(</span><span class="n">MultiAgentSimulation</span><span class="p">):</span>
+<div class="viewcode-block" id="Outdoor"><a class="viewcode-back" href="../../../../multiagent/multiagent.html#crowddynamics.multiagent.testing.Outdoor">[docs]</a><span class="k">class</span> <span class="nc">Outdoor</span><span class="p">(</span><span class="n">MultiAgentSimulation</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Outdoor</span>
 
@@ -254,7 +254,7 @@
 <span class="sd">    - Multi-directional flow</span>
 <span class="sd">    - Periodic boundaries</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-<div class="viewcode-block" id="Outdoor.__init__"><a class="viewcode-back" href="../../../../api/multiagent.html#crowddynamics.multiagent.testing.Outdoor.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">body</span><span class="p">):</span>
+<div class="viewcode-block" id="Outdoor.__init__"><a class="viewcode-back" href="../../../../multiagent/multiagent.html#crowddynamics.multiagent.testing.Outdoor.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">body</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Init</span>
 
@@ -294,7 +294,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">set_agents</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="Hallway"><a class="viewcode-back" href="../../../../api/multiagent.html#crowddynamics.multiagent.testing.Hallway">[docs]</a><span class="k">class</span> <span class="nc">Hallway</span><span class="p">(</span><span class="n">MultiAgentSimulation</span><span class="p">):</span>
+<div class="viewcode-block" id="Hallway"><a class="viewcode-back" href="../../../../multiagent/multiagent.html#crowddynamics.multiagent.testing.Hallway">[docs]</a><span class="k">class</span> <span class="nc">Hallway</span><span class="p">(</span><span class="n">MultiAgentSimulation</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Hallway</span>
 
@@ -354,7 +354,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">set_agents</span><span class="p">(</span><span class="o">**</span><span class="n">kw</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Crossing"><a class="viewcode-back" href="../../../../api/multiagent.html#crowddynamics.multiagent.testing.Crossing">[docs]</a><span class="k">class</span> <span class="nc">Crossing</span><span class="p">(</span><span class="n">MultiAgentSimulation</span><span class="p">):</span>
+<div class="viewcode-block" id="Crossing"><a class="viewcode-back" href="../../../../multiagent/multiagent.html#crowddynamics.multiagent.testing.Crossing">[docs]</a><span class="k">class</span> <span class="nc">Crossing</span><span class="p">(</span><span class="n">MultiAgentSimulation</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Crossing</span>
 
@@ -363,7 +363,7 @@
     <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="Rounding"><a class="viewcode-back" href="../../../../api/multiagent.html#crowddynamics.multiagent.testing.Rounding">[docs]</a><span class="k">class</span> <span class="nc">Rounding</span><span class="p">(</span><span class="n">MultiAgentSimulation</span><span class="p">):</span>
+<div class="viewcode-block" id="Rounding"><a class="viewcode-back" href="../../../../multiagent/multiagent.html#crowddynamics.multiagent.testing.Rounding">[docs]</a><span class="k">class</span> <span class="nc">Rounding</span><span class="p">(</span><span class="n">MultiAgentSimulation</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Rounding</span>
 
@@ -416,7 +416,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">set_agents</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="RoomEvacuation"><a class="viewcode-back" href="../../../../api/multiagent.html#crowddynamics.multiagent.testing.RoomEvacuation">[docs]</a><span class="k">class</span> <span class="nc">RoomEvacuation</span><span class="p">(</span><span class="n">MultiAgentSimulation</span><span class="p">):</span>
+<div class="viewcode-block" id="RoomEvacuation"><a class="viewcode-back" href="../../../../multiagent/multiagent.html#crowddynamics.multiagent.testing.RoomEvacuation">[docs]</a><span class="k">class</span> <span class="nc">RoomEvacuation</span><span class="p">(</span><span class="n">MultiAgentSimulation</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Room Evacuation</span>
 
@@ -482,7 +482,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">set_agents</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="RoomEvacuationGame"><a class="viewcode-back" href="../../../../api/multiagent.html#crowddynamics.multiagent.testing.RoomEvacuationGame">[docs]</a><span class="k">class</span> <span class="nc">RoomEvacuationGame</span><span class="p">(</span><span class="n">RoomEvacuation</span><span class="p">):</span>
+<div class="viewcode-block" id="RoomEvacuationGame"><a class="viewcode-back" href="../../../../multiagent/multiagent.html#crowddynamics.multiagent.testing.RoomEvacuationGame">[docs]</a><span class="k">class</span> <span class="nc">RoomEvacuationGame</span><span class="p">(</span><span class="n">RoomEvacuation</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Room Evacuation Game</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -519,7 +519,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 23, 2017.
+      Last updated on Jan 24, 2017.
 
     </p>
   </div>

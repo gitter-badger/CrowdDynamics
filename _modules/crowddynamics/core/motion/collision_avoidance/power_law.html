@@ -99,6 +99,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../multiagent/index.html">Multi-Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../multiagent/social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../multiagent/motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../multiagent/interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../multiagent/steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../multiagent/integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../multiagent/multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../cellular/index.html">Cellular Automata</a><ul class="simple">
@@ -109,17 +118,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../api/index.html">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../api/vector2D.html">Vector2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../api/motion.html">Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../api/interactions.html">Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../api/steering.html">Steering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../api/integrator.html">Integrator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../api/io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../api/sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../api/multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../../api/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../../api/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../api/cli.html">Command-line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../api/gui.html">Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../api/game.html">Plugins</a><ul>
@@ -244,7 +244,7 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="potential"><a class="viewcode-back" href="../../../../../api/motion.html#crowddynamics.core.motion.potential">[docs]</a><span class="k">def</span> <span class="nf">potential</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">tau_0</span><span class="p">):</span>
+<div class="viewcode-block" id="potential"><a class="viewcode-back" href="../../../../../multiagent/motion.html#crowddynamics.core.motion.potential">[docs]</a><span class="k">def</span> <span class="nf">potential</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">tau_0</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Psychological force based on human anticipatory behaviour. Interaction potential</span>
 <span class="sd">    between two agents is defined</span>
@@ -272,7 +272,7 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">f8</span><span class="p">(</span><span class="n">f8</span><span class="p">,</span> <span class="n">f8</span><span class="p">),</span> <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="magnitude"><a class="viewcode-back" href="../../../../../api/motion.html#crowddynamics.core.motion.magnitude">[docs]</a><span class="k">def</span> <span class="nf">magnitude</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span> <span class="n">tau_0</span><span class="p">):</span>
+<div class="viewcode-block" id="magnitude"><a class="viewcode-back" href="../../../../../multiagent/motion.html#crowddynamics.core.motion.magnitude">[docs]</a><span class="k">def</span> <span class="nf">magnitude</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span> <span class="n">tau_0</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Force affecting agent can be derived by taking spatial gradient of the energy,</span>
 <span class="sd">    where time-to-collision :math:`\tau` is function of the relative displacement</span>
@@ -305,7 +305,7 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">f8</span><span class="p">[:](</span><span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">,</span> <span class="n">f8</span><span class="p">,</span> <span class="n">f8</span><span class="p">),</span> <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="gradient_circle_circle"><a class="viewcode-back" href="../../../../../api/motion.html#crowddynamics.core.motion.gradient_circle_circle">[docs]</a><span class="k">def</span> <span class="nf">gradient_circle_circle</span><span class="p">(</span><span class="n">x_rel</span><span class="p">,</span> <span class="n">v_rel</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<div class="viewcode-block" id="gradient_circle_circle"><a class="viewcode-back" href="../../../../../multiagent/motion.html#crowddynamics.core.motion.gradient_circle_circle">[docs]</a><span class="k">def</span> <span class="nf">gradient_circle_circle</span><span class="p">(</span><span class="n">x_rel</span><span class="p">,</span> <span class="n">v_rel</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Gradient of :math:`\tau` between two circles.</span>
 
@@ -326,7 +326,7 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">f8</span><span class="p">[:](</span><span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">,</span> <span class="n">f8</span><span class="p">,</span> <span class="n">f8</span><span class="p">),</span> <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="gradient_three_circle"><a class="viewcode-back" href="../../../../../api/motion.html#crowddynamics.core.motion.gradient_three_circle">[docs]</a><span class="k">def</span> <span class="nf">gradient_three_circle</span><span class="p">(</span><span class="n">x_rel</span><span class="p">,</span> <span class="n">v_rel</span><span class="p">,</span> <span class="n">r_off</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<div class="viewcode-block" id="gradient_three_circle"><a class="viewcode-back" href="../../../../../multiagent/motion.html#crowddynamics.core.motion.gradient_three_circle">[docs]</a><span class="k">def</span> <span class="nf">gradient_three_circle</span><span class="p">(</span><span class="n">x_rel</span><span class="p">,</span> <span class="n">v_rel</span><span class="p">,</span> <span class="n">r_off</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Gradient of :math:`\tau` between two three-circle representations.</span>
 
@@ -346,7 +346,7 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">f8</span><span class="p">[:](</span><span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">[:]),</span> <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="gradient_circle_line"><a class="viewcode-back" href="../../../../../api/motion.html#crowddynamics.core.motion.gradient_circle_line">[docs]</a><span class="k">def</span> <span class="nf">gradient_circle_line</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="gradient_circle_line"><a class="viewcode-back" href="../../../../../multiagent/motion.html#crowddynamics.core.motion.gradient_circle_line">[docs]</a><span class="k">def</span> <span class="nf">gradient_circle_line</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Gradient circle line</span>
 
@@ -362,7 +362,7 @@
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">numba</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">Tuple</span><span class="p">((</span><span class="n">f8</span><span class="p">,</span> <span class="n">f8</span><span class="p">[:]))(</span><span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">),</span>
            <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="time_to_collision_circle_circle"><a class="viewcode-back" href="../../../../../api/motion.html#crowddynamics.core.motion.time_to_collision_circle_circle">[docs]</a><span class="k">def</span> <span class="nf">time_to_collision_circle_circle</span><span class="p">(</span><span class="n">x_rel</span><span class="p">,</span> <span class="n">v_rel</span><span class="p">,</span> <span class="n">r_tot</span><span class="p">):</span>
+<div class="viewcode-block" id="time_to_collision_circle_circle"><a class="viewcode-back" href="../../../../../multiagent/motion.html#crowddynamics.core.motion.time_to_collision_circle_circle">[docs]</a><span class="k">def</span> <span class="nf">time_to_collision_circle_circle</span><span class="p">(</span><span class="n">x_rel</span><span class="p">,</span> <span class="n">v_rel</span><span class="p">,</span> <span class="n">r_tot</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Time-to-collision of two circles. From *skin-to-skin* distance</span>
 
@@ -423,7 +423,7 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="time_to_collision_circle_line"><a class="viewcode-back" href="../../../../../api/motion.html#crowddynamics.core.motion.time_to_collision_circle_line">[docs]</a><span class="k">def</span> <span class="nf">time_to_collision_circle_line</span><span class="p">(</span><span class="n">x_rel</span><span class="p">,</span> <span class="n">v_rel</span><span class="p">,</span> <span class="n">r_tot</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<div class="viewcode-block" id="time_to_collision_circle_line"><a class="viewcode-back" href="../../../../../multiagent/motion.html#crowddynamics.core.motion.time_to_collision_circle_line">[docs]</a><span class="k">def</span> <span class="nf">time_to_collision_circle_line</span><span class="p">(</span><span class="n">x_rel</span><span class="p">,</span> <span class="n">v_rel</span><span class="p">,</span> <span class="n">r_tot</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">    Time-to-collision of circle with line.</span>
 
@@ -454,7 +454,7 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="force_social_circular"><a class="viewcode-back" href="../../../../../api/motion.html#crowddynamics.core.motion.force_social_circular">[docs]</a><span class="k">def</span> <span class="nf">force_social_circular</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<div class="viewcode-block" id="force_social_circular"><a class="viewcode-back" href="../../../../../multiagent/motion.html#crowddynamics.core.motion.force_social_circular">[docs]</a><span class="k">def</span> <span class="nf">force_social_circular</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Social force based on human anticipatory behaviour.</span>
 
 <span class="sd">    Args:</span>
@@ -501,7 +501,7 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="force_social_three_circle"><a class="viewcode-back" href="../../../../../api/motion.html#crowddynamics.core.motion.force_social_three_circle">[docs]</a><span class="k">def</span> <span class="nf">force_social_three_circle</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<div class="viewcode-block" id="force_social_three_circle"><a class="viewcode-back" href="../../../../../multiagent/motion.html#crowddynamics.core.motion.force_social_three_circle">[docs]</a><span class="k">def</span> <span class="nf">force_social_three_circle</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Minimium time-to-collision for two circles of relative displacements.</span>
 
@@ -608,7 +608,7 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="force_social_linear_wall"><a class="viewcode-back" href="../../../../../api/motion.html#crowddynamics.core.motion.force_social_linear_wall">[docs]</a><span class="k">def</span> <span class="nf">force_social_linear_wall</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">agent</span><span class="p">,</span> <span class="n">wall</span><span class="p">):</span>
+<div class="viewcode-block" id="force_social_linear_wall"><a class="viewcode-back" href="../../../../../multiagent/motion.html#crowddynamics.core.motion.force_social_linear_wall">[docs]</a><span class="k">def</span> <span class="nf">force_social_linear_wall</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">agent</span><span class="p">,</span> <span class="n">wall</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Force social linear wall</span>
 
@@ -676,7 +676,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 23, 2017.
+      Last updated on Jan 24, 2017.
 
     </p>
   </div>

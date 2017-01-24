@@ -99,6 +99,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../multiagent/index.html">Multi-Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../cellular/index.html">Cellular Automata</a><ul class="simple">
@@ -109,17 +118,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/index.html">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/vector2D.html">Vector2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/motion.html">Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/interactions.html">Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/steering.html">Steering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/integrator.html">Integrator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../api/multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../api/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../api/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/cli.html">Command-line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/gui.html">Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../api/game.html">Plugins</a><ul>
@@ -239,14 +239,11 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="integrate"><a class="viewcode-back" href="../../../../api/integrator.html#crowddynamics.core.integrator.integrate">[docs]</a><span class="k">def</span> <span class="nf">integrate</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">dt_min</span><span class="p">,</span> <span class="n">dt_max</span><span class="p">):</span>
+<div class="viewcode-block" id="adaptive_timestep"><a class="viewcode-back" href="../../../../multiagent/integrator.html#crowddynamics.core.integrator.adaptive_timestep">[docs]</a><span class="k">def</span> <span class="nf">adaptive_timestep</span><span class="p">(</span><span class="n">dt_min</span><span class="p">,</span> <span class="n">dt_max</span><span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="n">target_velocity</span><span class="p">):</span>
     <span class="sd">r&quot;&quot;&quot;</span>
-<span class="sd">    Differential system is integrated using numerical integration scheme using</span>
-<span class="sd">    discrete adaptive time step.</span>
-
-<span class="sd">    Timestep :math:`\Delta t` is selected from interval</span>
-<span class="sd">    :math:`[\Delta t_{min}, \Delta t_{max}]` by bounding the maximum step size</span>
-<span class="sd">    :math:`\Delta x` an agent can take per iteration cycle, obtained from</span>
+<span class="sd">    Timestep is selected from interval :math:`[\Delta t_{min}, \Delta t_{max}]`</span>
+<span class="sd">    by bounding the maximum step size :math:`\Delta x` an agent can take per</span>
+<span class="sd">    iteration cycle, obtained from</span>
 
 <span class="sd">    .. math::</span>
 <span class="sd">       \Delta x = c \Delta t_{max} \max_{i\in A} v_i^0 \\</span>
@@ -272,6 +269,45 @@
 
 <span class="sd">    - :math:`v_i` is agent&#39;s current velocity</span>
 
+
+<span class="sd">    Args:</span>
+<span class="sd">        dt_min:</span>
+<span class="sd">            Minimum timestep :math:`\Delta x_{min}` for adaptive integration.</span>
+
+<span class="sd">        dt_max:</span>
+<span class="sd">            Maximum timestep :math:`\Delta x_{max}` for adaptive integration.</span>
+
+<span class="sd">        velocity:</span>
+
+<span class="sd">        target_velocity:</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float:</span>
+
+<span class="sd">    References</span>
+
+<span class="sd">    https://en.wikipedia.org/wiki/Adaptive_stepsize</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">v_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">length_nx2</span><span class="p">(</span><span class="n">velocity</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">v_max</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dt_max</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mf">1.1</span>
+    <span class="n">dx_max</span> <span class="o">=</span> <span class="n">c</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">target_velocity</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_max</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="n">dx_max</span> <span class="o">/</span> <span class="n">v_max</span>
+    <span class="k">if</span> <span class="n">dt</span> <span class="o">&gt;</span> <span class="n">dt_max</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dt_max</span>
+    <span class="k">elif</span> <span class="n">dt</span> <span class="o">&lt;</span> <span class="n">dt_min</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dt_min</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dt</span></div>
+
+
+<span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="viewcode-block" id="euler_integration"><a class="viewcode-back" href="../../../../multiagent/integrator.html#crowddynamics.core.integrator.euler_integration">[docs]</a><span class="k">def</span> <span class="nf">euler_integration</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">dt_min</span><span class="p">,</span> <span class="n">dt_max</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Differential system is integrated using numerical integration scheme using</span>
+<span class="sd">    discrete adaptive timestep :math:`\Delta t`.</span>
+
 <span class="sd">    Acceleration on an agent</span>
 
 <span class="sd">    .. math::</span>
@@ -288,8 +324,10 @@
 
 <span class="sd">    Args:</span>
 <span class="sd">        agent (Agent):</span>
+
 <span class="sd">        dt_min (float):</span>
 <span class="sd">            Minimum timestep :math:`\Delta x_{min}` for adaptive integration.</span>
+
 <span class="sd">        dt_max (float):</span>
 <span class="sd">            Maximum timestep :math:`\Delta x_{max}` for adaptive integration.</span>
 
@@ -297,39 +335,74 @@
 <span class="sd">        float: Timestep :math:`\Delta t` that was used for integration.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Velocity Verlet?</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">indices</span><span class="p">()</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">force</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">agent</span><span class="o">.</span><span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># Acceleration</span>
 
     <span class="c1"># Time step selection</span>
-    <span class="n">v_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">length_nx2</span><span class="p">(</span><span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">))</span>
-    <span class="n">dx_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">agent</span><span class="o">.</span><span class="n">target_velocity</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_max</span>
-    <span class="n">dx_max</span> <span class="o">*=</span> <span class="mf">1.1</span>
-
-    <span class="k">if</span> <span class="n">v_max</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="c1"># Static system</span>
-        <span class="n">dt</span> <span class="o">=</span> <span class="n">dt_max</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">dt</span> <span class="o">=</span> <span class="n">dx_max</span> <span class="o">/</span> <span class="n">v_max</span>
-        <span class="k">if</span> <span class="n">dt</span> <span class="o">&gt;</span> <span class="n">dt_max</span><span class="p">:</span>
-            <span class="n">dt</span> <span class="o">=</span> <span class="n">dt_max</span>
-        <span class="k">elif</span> <span class="n">dt</span> <span class="o">&lt;</span> <span class="n">dt_min</span><span class="p">:</span>
-            <span class="n">dt</span> <span class="o">=</span> <span class="n">dt_min</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="n">adaptive_timestep</span><span class="p">(</span><span class="n">dt_min</span><span class="p">,</span> <span class="n">dt_max</span><span class="p">,</span> <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                           <span class="n">agent</span><span class="o">.</span><span class="n">target_velocity</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
     <span class="c1"># Updating agents</span>
-    <span class="n">agent</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">force</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">agent</span><span class="o">.</span><span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># Acceleration</span>
+    <span class="n">agent</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">+</span> <span class="n">a</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">**</span> <span class="mi">2</span>
     <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">dt</span>
 
     <span class="k">if</span> <span class="n">agent</span><span class="o">.</span><span class="n">orientable</span><span class="p">:</span>
         <span class="n">angular_acceleration</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">torque</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">agent</span><span class="o">.</span><span class="n">inertia_rot</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">agent</span><span class="o">.</span><span class="n">angular_velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">+</span> \
-                          <span class="n">angular_acceleration</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">**</span> <span class="mi">2</span>
+                          <span class="n">angular_acceleration</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">**</span> <span class="mi">2</span>
         <span class="n">agent</span><span class="o">.</span><span class="n">angular_velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">angular_acceleration</span> <span class="o">*</span> <span class="n">dt</span>
         <span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">wrap_to_pi</span><span class="p">(</span><span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span>
 
         <span class="n">agent</span><span class="o">.</span><span class="n">update_shoulder_positions</span><span class="p">()</span>
 
     <span class="k">return</span> <span class="n">dt</span></div>
+
+
+<span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="viewcode-block" id="velocity_verlet"><a class="viewcode-back" href="../../../../multiagent/integrator.html#crowddynamics.core.integrator.velocity_verlet">[docs]</a><span class="k">def</span> <span class="nf">velocity_verlet</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">dt_min</span><span class="p">,</span> <span class="n">dt_max</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Velocity verlet</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \mathbf{v}_{k+1/2} &amp;= \mathbf{v}_{k} + \frac{1}{2} a_{k} \Delta t \\</span>
+<span class="sd">        \mathbf{x}_{k+1} &amp;= \mathbf{x}_{k} + \mathbf{v}_{k+1/2} \Delta t \\</span>
+<span class="sd">        a_{k+1} &amp;= \mathbf{f}_{k+1} / m \\</span>
+<span class="sd">        \mathbf{v}_{k+1} &amp;= \mathbf{v}_{k+1/2} + \frac{1}{2} a_{k+1} \Delta t</span>
+
+<span class="sd">    References</span>
+
+<span class="sd">    https://en.wikipedia.org/wiki/Verlet_integration#Velocity_Verlet</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        agent (Agent):</span>
+
+<span class="sd">        dt_min (float):</span>
+<span class="sd">            Minimum timestep :math:`\Delta x_{min}` for adaptive integration.</span>
+
+<span class="sd">        dt_max (float):</span>
+<span class="sd">            Maximum timestep :math:`\Delta x_{max}` for adaptive integration.</span>
+
+<span class="sd">    Yields:</span>
+<span class="sd">        float: Timestep :math:`\Delta t` that was used for integration.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">indices</span><span class="p">()</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="n">adaptive_timestep</span><span class="p">(</span><span class="n">dt_min</span><span class="p">,</span> <span class="n">dt_max</span><span class="p">,</span> <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">agent</span><span class="o">.</span><span class="n">target_velocity</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">force</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">agent</span><span class="o">.</span><span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">agent</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">+</span> <span class="n">a</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">yield</span> <span class="n">dt</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">indices</span><span class="p">()</span>
+
+        <span class="c1"># Time step selection</span>
+        <span class="n">dt</span> <span class="o">=</span> <span class="n">adaptive_timestep</span><span class="p">(</span><span class="n">dt_min</span><span class="p">,</span> <span class="n">dt_max</span><span class="p">,</span> <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">agent</span><span class="o">.</span><span class="n">target_velocity</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+        <span class="n">a2</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">force</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">agent</span><span class="o">.</span><span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">a2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">dt</span>
+        <span class="n">agent</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">+</span> <span class="n">a2</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">a2</span>
+        <span class="k">yield</span> <span class="n">dt</span></div>
 </pre></div>
 
            </div>
@@ -342,7 +415,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 23, 2017.
+      Last updated on Jan 24, 2017.
 
     </p>
   </div>

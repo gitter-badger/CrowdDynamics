@@ -99,6 +99,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../multiagent/index.html">Multi-Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../multiagent/social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/multiagent.html">Multi-Agent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cellular/index.html">Cellular Automata</a><ul class="simple">
@@ -109,17 +118,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/vector2D.html">Vector2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/motion.html">Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/interactions.html">Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/steering.html">Steering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/integrator.html">Integrator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../api/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../api/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/cli.html">Command-line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/gui.html">Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/game.html">Plugins</a><ul>
@@ -250,12 +250,12 @@
 <span class="kn">from</span> <span class="nn">crowddynamics.sampling</span> <span class="k">import</span> <span class="n">PolygonSample</span>
 
 
-<div class="viewcode-block" id="Configuration"><a class="viewcode-back" href="../../../api/multiagent.html#crowddynamics.multiagent.Configuration">[docs]</a><span class="k">class</span> <span class="nc">Configuration</span><span class="p">:</span>
+<div class="viewcode-block" id="Configuration"><a class="viewcode-back" href="../../../multiagent/multiagent.html#crowddynamics.multiagent.Configuration">[docs]</a><span class="k">class</span> <span class="nc">Configuration</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Set initial configuration for multi-agent simulation.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="Configuration.__init__"><a class="viewcode-back" href="../../../api/multiagent.html#crowddynamics.multiagent.Configuration.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Configuration.__init__"><a class="viewcode-back" href="../../../multiagent/multiagent.html#crowddynamics.multiagent.Configuration.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Configuration&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
@@ -279,7 +279,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_occupied</span> <span class="o">=</span> <span class="n">cascaded_union</span><span class="p">(())</span>  <span class="c1"># Empty initially</span></div>
 
     <span class="nd">@staticmethod</span>
-<div class="viewcode-block" id="Configuration.truncnorm"><a class="viewcode-back" href="../../../api/multiagent.html#crowddynamics.multiagent.Configuration.truncnorm">[docs]</a>    <span class="k">def</span> <span class="nf">truncnorm</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">abs_scale</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mf">3.0</span><span class="p">):</span>
+<div class="viewcode-block" id="Configuration.truncnorm"><a class="viewcode-back" href="../../../multiagent/multiagent.html#crowddynamics.multiagent.Configuration.truncnorm">[docs]</a>    <span class="k">def</span> <span class="nf">truncnorm</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">abs_scale</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mf">3.0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Scaled symmetrical truncated normal distribution.&quot;&quot;&quot;</span>
         <span class="n">scale</span> <span class="o">=</span> <span class="n">abs_scale</span> <span class="o">/</span> <span class="n">std</span>
         <span class="k">return</span> <span class="n">truncnorm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="o">-</span><span class="n">std</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span></div>
@@ -290,7 +290,7 @@
         <span class="k">return</span> <span class="n">mag</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">orientation</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">orientation</span><span class="p">)),</span>
                               <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Configuration.set_field"><a class="viewcode-back" href="../../../api/multiagent.html#crowddynamics.multiagent.Configuration.set_field">[docs]</a>    <span class="k">def</span> <span class="nf">set_field</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">obstacles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exits</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Configuration.set_field"><a class="viewcode-back" href="../../../multiagent/multiagent.html#crowddynamics.multiagent.Configuration.set_field">[docs]</a>    <span class="k">def</span> <span class="nf">set_field</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">obstacles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exits</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Shapely BaseGeometry types</span>
 
@@ -413,7 +413,7 @@
         <span class="k">elif</span> <span class="n">velocity</span> <span class="o">==</span> <span class="s2">&quot;auto&quot;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">angle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">angle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
-<div class="viewcode-block" id="Configuration.set_agents"><a class="viewcode-back" href="../../../api/multiagent.html#crowddynamics.multiagent.Configuration.set_agents">[docs]</a>    <span class="k">def</span> <span class="nf">set_agents</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">surface</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;random&quot;</span><span class="p">,</span>
+<div class="viewcode-block" id="Configuration.set_agents"><a class="viewcode-back" href="../../../multiagent/multiagent.html#crowddynamics.multiagent.Configuration.set_agents">[docs]</a>    <span class="k">def</span> <span class="nf">set_agents</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">surface</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;random&quot;</span><span class="p">,</span>
                    <span class="n">velocity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_direction</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
                    <span class="n">target_angle</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Set spatial and rotational parameters.</span>
@@ -541,7 +541,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 23, 2017.
+      Last updated on Jan 24, 2017.
 
     </p>
   </div>
