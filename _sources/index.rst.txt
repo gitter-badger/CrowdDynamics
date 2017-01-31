@@ -22,18 +22,30 @@ Eventually also include cellular automata and continuum flow models.
    usage
 
 .. toctree::
+   :caption: Foundations & Theory
+   :maxdepth: 2
+
+   theory
+   quantities
+
+.. toctree::
    :caption: Simulation Models
    :maxdepth: 2
 
    multiagent/index
    cellular/index
    continuum/index
-   api/index
-   tables
 
 .. toctree::
-   :caption: Theory
+   :caption: Developers
+   :maxdepth: 2
+
+   contributing
+   api/index
+
+.. toctree::
+   :caption: Research
    :maxdepth: 2
 
    research/index
-   foundations/index
+   references

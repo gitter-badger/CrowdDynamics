@@ -87,13 +87,27 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation.html#conda">Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#source">Source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../usage.html#basic-architecture">Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#architecture">Architecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usage.html#command-line-interface">Command-line Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Foundations &amp; Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantities.html">Quantities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#density">Density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#flow">Flow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantities.html#rate">Rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantities.html#types">Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#pressure">Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#fundamental-diagram">Fundamental Diagram</a></li>
 </ul>
 </li>
 </ul>
@@ -105,9 +119,12 @@
 <li class="toctree-l2"><a class="reference internal" href="interactions.html">Interactions</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Steering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="integrator.html">Integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="agent.html">Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="field.html">Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html">Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tables.html#agent-properties">Agent Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tables.html#body-types">Body Types</a></li>
 </ul>
 </li>
 </ul>
@@ -118,28 +135,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">Continuum Flow</a><ul class="simple">
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/vector2D.html">Vector2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/cli.html">Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/cli.html">Command-Line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/gui.html">Graphical User Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/game.html">Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../api/game.html#module-crowddynamics.plugins.game">Game</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../api/testing.html">Testing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tables.html#agent-properties">Agent Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tables.html#body-types">Body Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/game.html">Game</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Theory</span></p>
+<p class="caption"><span class="caption-text">Research</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research/glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">Phenomena</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">Egress Congestion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#faster-is-slower">Faster is slower</a></li>
@@ -156,39 +170,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../research/applications.html">Applications</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">Mathematical Foundations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">Time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">Geometry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">Domain</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">Obstacle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">Exit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">Narrow bottleneck</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">Model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">Circular model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">Elliptical model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">Three circle model</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">Initial configuration</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">Quantities</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">Density</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">Flow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">Rate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">Types</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">Pressure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">Fundamental Diagram</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 
             
@@ -239,8 +221,9 @@
 <span id="steering"></span><h1>Steering<a class="headerlink" href="#module-crowddynamics.core.steering" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="crowddynamics.core.steering.distance_map">
-<code class="descclassname">crowddynamics.core.steering.</code><code class="descname">distance_map</code><span class="sig-paren">(</span><em>step</em>, <em>domain</em>, <em>targets</em>, <em>obstacles</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/steering/navigation.html#distance_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.steering.distance_map" title="Permalink to this definition">¶</a></dt>
-<dd><p>Distance map <span class="math">\(S(\mathbf{x})\)</span> is obtained by solving <em>Eikonal equation</em>
+<code class="descclassname">crowddynamics.core.steering.</code><code class="descname">distance_map</code><span class="sig-paren">(</span><em>domain</em>, <em>targets</em>, <em>obstacles</em>, <em>step</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/steering/navigation.html#distance_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.steering.distance_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Distance map</p>
+<p>Distance map <span class="math">\(S(\mathbf{x})\)</span> is obtained by solving <em>Eikonal equation</em>
 using fast marching <em>Fast Marching Method (FMM)</em> (<code class="docutils literal"><span class="pre">scikit-fmm</span></code>).</p>
 <div class="math">
 \[\left \| \nabla S(\mathbf{x}) \right \| = \frac{1}{f(\mathbf{x})}, \quad \mathbf{x} \in \Omega\]</div>
@@ -258,26 +241,33 @@ S(\mathbf{x}) \to \infty, &amp; \mathbf{x} \in \mathcal{O}
 <p>Initial values for speed</p>
 <div class="math">
 \[\begin{split}\begin{cases}
-f(\mathbf{x}) &amp;= 1, &amp; \mathbf{x} \in \Omega \setminus \mathcal{O} \\
-f(\mathbf{x}) &amp;\to 0, &amp; \mathbf{x} \in \mathcal{O}
+f(\mathbf{x}) = 1, &amp; \mathbf{x} \in \Omega \setminus \mathcal{O} \\
+f(\mathbf{x}) \to 0, &amp; \mathbf{x} \in \mathcal{O}
 \end{cases}\end{split}\]</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>step</strong> (<em>float</em>) &#8211; Step size for the meshgrid. Should be positive float.
-Reference value <span class="math">\(0.01\,\mathrm{m}\)</span>.</li>
 <li><strong>domain</strong> (<em>Polygon</em>) &#8211; Domain <span class="math">\(\Omega\)</span> containing obstacles and targets.</li>
-<li><strong>obstacles</strong> (<em>LineString</em><em>, </em><em>optional</em>) &#8211; Impassable regions <span class="math">\(\mathcal{O}\)</span> in the domain.</li>
-<li><strong>targets</strong> (<em>LineString</em><em>, </em><em>optional</em>) &#8211; Target regions <span class="math">\(\mathcal{E}\)</span> in the domain.</li>
+<li><strong>obstacles</strong> (<em>BaseGeometry</em><em>, </em><em>optional</em>) &#8211; Impassable regions <span class="math">\(\mathcal{O}\)</span> in the domain.</li>
+<li><strong>targets</strong> (<em>BaseGeometry</em><em>, </em><em>optional</em>) &#8211; Target regions <span class="math">\(\mathcal{E}\)</span> in the domain.</li>
+<li><strong>step</strong> (<em>float</em>) &#8211; <ul>
+<li>Positive float</li>
+<li>Step size for the meshgrid.</li>
+<li>Reference value <span class="math">\(0.01\,\mathrm{m}\)</span>.</li>
+</ul>
+</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(mgrid, dmap, phi)</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Tuple of
+- <code class="docutils literal"><span class="pre">mgrid</span></code>
+- <code class="docutils literal"><span class="pre">dmap</span></code>
+- <code class="docutils literal"><span class="pre">phi</span></code></p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(numpy.meshgrid, numpy.ndarray, numpy.ma.MaskedArray)</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(numpy.ndarray, numpy.ndarray, numpy.ma.MaskedArray)</p>
 </td>
 </tr>
 </tbody>
@@ -388,7 +378,7 @@ distance of radius.</li>
 
 <dl class="function">
 <dt id="crowddynamics.core.steering.static_potential">
-<code class="descclassname">crowddynamics.core.steering.</code><code class="descname">static_potential</code><span class="sig-paren">(</span><em>step</em>, <em>domain</em>, <em>exits</em>, <em>obstacles</em>, <em>radius</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/steering/navigation.html#static_potential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.steering.static_potential" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">crowddynamics.core.steering.</code><code class="descname">static_potential</code><span class="sig-paren">(</span><em>step</em>, <em>domain</em>, <em>targets</em>, <em>obstacles</em>, <em>radius</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/steering/navigation.html#static_potential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.steering.static_potential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Static potential is navigation algorithm that does not take into account
 the space that is occupied by dynamic agents (aka agents).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -398,7 +388,7 @@ the space that is occupied by dynamic agents (aka agents).</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>step</strong> (<em>float</em>) &#8211; </li>
 <li><strong>domain</strong> (<em>Polygon</em>) &#8211; </li>
-<li><strong>exits</strong> (<em>LineString</em><em>, </em><em>optional</em>) &#8211; </li>
+<li><strong>targets</strong> (<em>LineString</em><em>, </em><em>optional</em>) &#8211; </li>
 <li><strong>obstacles</strong> (<em>LineString</em><em>, </em><em>optional</em>) &#8211; </li>
 <li><strong>value</strong> (<em>float</em>) &#8211; </li>
 <li><strong>radius</strong> (<em>float</em>) &#8211; </li>
@@ -444,7 +434,7 @@ that is occupied by dynamic agents (aka agents).</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 24, 2017.
+      Last updated on Jan 31, 2017.
 
     </p>
   </div>

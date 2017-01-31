@@ -37,7 +37,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
         <link rel="next" title="Vector2D" href="vector2D.html"/>
-        <link rel="prev" title="Continuum Flow" href="../continuum/index.html"/> 
+        <link rel="prev" title="Contributing" href="../contributing.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -86,27 +86,44 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation.html#conda">Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#source">Source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../usage.html#basic-architecture">Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#architecture">Architecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usage.html#command-line-interface">Command-line Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Foundations &amp; Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantities.html">Quantities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#density">Density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#flow">Flow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantities.html#rate">Rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantities.html#types">Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#pressure">Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#fundamental-diagram">Fundamental Diagram</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Simulation Models</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">Social Force Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../multiagent/motion.html">Motion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../multiagent/interactions.html">Interactions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../multiagent/steering.html">Steering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../multiagent/integrator.html">Integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/agent.html">Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/field.html">Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/simulation.html">Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/tables.html">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/tables.html#agent-properties">Agent Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/tables.html#body-types">Body Types</a></li>
 </ul>
 </li>
 </ul>
@@ -117,28 +134,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">Continuum Flow</a><ul class="simple">
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="vector2D.html">Vector2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cli.html">Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command-Line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gui.html">Graphical User Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="game.html">Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="game.html#module-crowddynamics.plugins.game">Game</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tables.html#agent-properties">Agent Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tables.html#body-types">Body Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">Game</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Theory</span></p>
+<p class="caption"><span class="caption-text">Research</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research/glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">Phenomena</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">Egress Congestion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#faster-is-slower">Faster is slower</a></li>
@@ -155,39 +169,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../research/applications.html">Applications</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">Mathematical Foundations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">Time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">Geometry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">Domain</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">Obstacle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">Exit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">Narrow bottleneck</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">Model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">Circular model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">Elliptical model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">Three circle model</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">Initial configuration</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">Quantities</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">Density</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">Flow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">Rate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">Types</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">Pressure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">Fundamental Diagram</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 
             
@@ -239,13 +221,10 @@
 <li class="toctree-l1"><a class="reference internal" href="vector2D.html">Vector2D</a></li>
 <li class="toctree-l1"><a class="reference internal" href="io.html">IO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sampling.html">Sampling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-Line Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gui.html">Graphical User Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="game.html">Plugins</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="game.html#module-crowddynamics.plugins.game">Game</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game.html">Game</a></li>
 </ul>
 </div>
 </div>
@@ -260,7 +239,7 @@
         <a href="vector2D.html" class="btn btn-neutral float-right" title="Vector2D" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../continuum/index.html" class="btn btn-neutral" title="Continuum Flow" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../contributing.html" class="btn btn-neutral" title="Contributing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -270,7 +249,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 24, 2017.
+      Last updated on Jan 31, 2017.
 
     </p>
   </div>

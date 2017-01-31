@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>crowddynamics.sampling.polygon &mdash; Crowd Dynamics 1 documentation</title>
+  <title>crowddynamics.core.random.sampling &mdash; Crowd Dynamics 1 documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
   
 
   
@@ -26,20 +26,20 @@
 
   
   
-    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
         <link rel="index" title="Index"
-              href="../../../genindex.html"/>
-        <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="Crowd Dynamics 1 documentation" href="../../../index.html"/>
-        <link rel="up" title="Module code" href="../../index.html"/> 
+              href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+    <link rel="top" title="Crowd Dynamics 1 documentation" href="../../../../index.html"/>
+        <link rel="up" title="Module code" href="../../../index.html"/> 
 
   
-  <script src="../../../_static/js/modernizr.min.js"></script>
+  <script src="../../../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -54,12 +54,12 @@
           
 
           
-            <a href="../../../index.html" class="icon icon-home"> Crowd Dynamics
+            <a href="../../../../index.html" class="icon icon-home"> Crowd Dynamics
           
 
           
             
-            <img src="../../../_static/logo.svg" class="logo" />
+            <img src="../../../../_static/logo.svg" class="logo" />
           
           </a>
 
@@ -67,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -83,110 +83,92 @@
             
                 <p class="caption"><span class="caption-text">First Steps</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#conda">Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#from-source">From Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation.html#conda">Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation.html#source">Source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../usage.html#basic-architecture">Basic Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../usage.html#command-line-interface">Command-line Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../usage.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage.html#architecture">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage.html#command-line-interface">Command-line Interface</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Foundations &amp; Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../theory.html">Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quantities.html">Quantities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../quantities.html#density">Density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../quantities.html#flow">Flow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../quantities.html#rate">Rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../quantities.html#types">Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../quantities.html#pressure">Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../quantities.html#fundamental-diagram">Fundamental Diagram</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Simulation Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../multiagent/index.html">Multi-Agent</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/social_force_model.html">Social Force Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/motion.html">Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/interactions.html">Interactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/steering.html">Steering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/integrator.html">Integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../multiagent/multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multiagent/index.html">Multi-Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/steering.html">Steering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/agent.html">Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/field.html">Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/simulation.html">Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multiagent/tables.html">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/tables.html#agent-properties">Agent Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../multiagent/tables.html#body-types">Body Types</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../cellular/index.html">Cellular Automata</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../../../../cellular/index.html">Cellular Automata</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../continuum/index.html">Continuum Flow</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/vector2D.html">Vector2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/io.html">IO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/cli.html">Command-line Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/gui.html">Graphical User Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/game.html">Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../api/game.html#module-crowddynamics.plugins.game">Game</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../../api/testing.html">Testing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../tables.html">Tables</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tables.html#agent-properties">Agent Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../tables.html#body-types">Body Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../continuum/index.html">Continuum Flow</a><ul class="simple">
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Theory</span></p>
+<p class="caption"><span class="caption-text">Developers</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../research/index.html">Research</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../research/phenomena.html">Phenomena</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#egress-congestion">Egress Congestion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#faster-is-slower">Faster is slower</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#arching">Arching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#zipper-effect">Zipper effect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#herding">Herding</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#lane-formation">Lane formation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#freezing-by-heat">Freezing by heat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#turbulence">Turbulence</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#stop-and-go-waves">Stop-and-Go waves</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../research/phenomena.html#braess-s-paradox">Braess&#8217;s paradox</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../../research/applications.html">Applications</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../foundations/index.html">Foundations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../foundations/theory.html">Mathematical Foundations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../foundations/theory.html#time">Time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../foundations/theory.html#geometry">Geometry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#domain">Domain</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#obstacle">Obstacle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#exit">Exit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#narrow-bottleneck">Narrow bottleneck</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../foundations/theory.html#agent">Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#model">Model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#circular-model">Circular model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#elliptical-model">Elliptical model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../foundations/theory.html#three-circle-model">Three circle model</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../foundations/theory.html#initial-configuration">Initial configuration</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../../foundations/quantities.html">Quantities</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../foundations/quantities.html#density">Density</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../foundations/quantities.html#flow">Flow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../foundations/quantities.html#rate">Rate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../foundations/quantities.html#types">Types</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../foundations/quantities.html#pressure">Pressure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../foundations/quantities.html#fundamental-diagram">Fundamental Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api/index.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/vector2D.html">Vector2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/io.html">IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/sampling.html">Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/cli.html">Command-Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/gui.html">Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/testing.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/game.html">Game</a></li>
 </ul>
 </li>
 </ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../research/index.html">Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../research/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../research/phenomena.html">Phenomena</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#egress-congestion">Egress Congestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#faster-is-slower">Faster is slower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#arching">Arching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#zipper-effect">Zipper effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#herding">Herding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#lane-formation">Lane formation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#freezing-by-heat">Freezing by heat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#turbulence">Turbulence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#stop-and-go-waves">Stop-and-Go waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../research/phenomena.html#braess-s-paradox">Braess&#8217;s paradox</a></li>
+</ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../research/applications.html">Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../references.html">References</a></li>
 </ul>
 
             
@@ -200,7 +182,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../index.html">Crowd Dynamics</a>
+        <a href="../../../../index.html">Crowd Dynamics</a>
       </nav>
 
 
@@ -215,11 +197,11 @@
 
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../../index.html">Module code</a> &raquo;</li>
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
       
-    <li>crowddynamics.sampling.polygon</li>
+    <li>crowddynamics.core.random.sampling</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -231,8 +213,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for crowddynamics.sampling.polygon</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numba</span>
+  <h1>Source code for crowddynamics.core.random.sampling</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Sampling</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numba</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">numba</span> <span class="k">import</span> <span class="n">f8</span>
 <span class="kn">from</span> <span class="nn">scipy.spatial.qhull</span> <span class="k">import</span> <span class="n">Delaunay</span>
@@ -240,9 +225,13 @@
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">f8</span><span class="p">(</span><span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">[:]),</span> <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">triangle_area</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="sd">r&quot;&quot;&quot;</span>
-<span class="sd">    Area of a triangle given by points a, b, and c.</span>
+<div class="viewcode-block" id="triangle_area"><a class="viewcode-back" href="../../../../api/sampling.html#crowddynamics.core.random.sampling.triangle_area">[docs]</a><span class="k">def</span> <span class="nf">triangle_area</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Area of a triangle given by points :math:`\mathbf{a}`, :math:`\mathbf{b}`,</span>
+<span class="sd">    and :math:`\mathbf{c}`.</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">       \frac{|a_0 (b_1 - c_1) + b_0 (c_1 - a_1) + c_0 (a_1 - b_1)|}{2}</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        a (numpy.ndarray): Vertex of the triangle</span>
@@ -255,12 +244,12 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span>
                   <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span>
-                  <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">/</span> <span class="mi">2</span>
+                  <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">/</span> <span class="mi">2</span></div>
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">triangle_area_cumsum</span><span class="p">(</span><span class="n">trimesh</span><span class="p">):</span>
-    <span class="sd">r&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="triangle_area_cumsum"><a class="viewcode-back" href="../../../../api/sampling.html#crowddynamics.core.random.sampling.triangle_area_cumsum">[docs]</a><span class="k">def</span> <span class="nf">triangle_area_cumsum</span><span class="p">(</span><span class="n">trimesh</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes cumulative sum of the areas of the triangle mesh.</span>
 
 <span class="sd">    Args:</span>
@@ -278,22 +267,25 @@
         <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">trimesh</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:],</span> <span class="n">trimesh</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">:],</span> <span class="n">trimesh</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>
         <span class="n">area</span> <span class="o">+=</span> <span class="n">triangle_area</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
         <span class="n">cumsum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">area</span>
-    <span class="k">return</span> <span class="n">cumsum</span>
+    <span class="k">return</span> <span class="n">cumsum</span></div>
 
 
 <span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">f8</span><span class="p">[:](</span><span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">[:],</span> <span class="n">f8</span><span class="p">[:]),</span> <span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nogil</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="random_sample_triangle"><a class="viewcode-back" href="../../../api/sampling.html#crowddynamics.sampling.random_sample_triangle">[docs]</a><span class="k">def</span> <span class="nf">random_sample_triangle</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="sd">r&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="random_sample_triangle"><a class="viewcode-back" href="../../../../api/sampling.html#crowddynamics.core.random.sampling.random_sample_triangle">[docs]</a><span class="k">def</span> <span class="nf">random_sample_triangle</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate uniform random sample from inside of a triangle defined by points</span>
-<span class="sd">    A, B and C [1]_, [2]_. Does not work for triangles that have area of zero.</span>
+<span class="sd">    :math:`a`, :math:`b` and :math:`c`. [1]_</span>
 
 <span class="sd">    .. math::</span>
-<span class="sd">       P = (1 - \sqrt{r_1}) A + (\sqrt{r_1} (1 - r_2))  B + (r_2 \sqrt{r_1}) C,</span>
+<span class="sd">       P = (1 - \sqrt{R_1}) \mathbf{a} + (\sqrt{R_1} (1 - R_2)) \mathbf{b} +</span>
+<span class="sd">       (R_2 \sqrt{R_1}) \mathbf{c},</span>
 
 <span class="sd">    where uniformly distributed random variables are</span>
 
 <span class="sd">    .. math::</span>
-<span class="sd">       r_1, r_2 \sim \mathcal{U}(0, 1)</span>
+<span class="sd">       R_1, R_2 \sim \mathcal{U}(0, 1)</span>
+
+<span class="sd">    Does not work for triangles that have area of zero.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        a (numpy.ndarray): Vertex of the triangle</span>
@@ -303,10 +295,8 @@
 <span class="sd">    Returns:</span>
 <span class="sd">        numpy.ndarray: Uniformly distributed random point P</span>
 
-<span class="sd">    References</span>
-
-<span class="sd">    .. [1] http://math.stackexchange.com/questions/18686/uniform-random-point-in-triangle</span>
-<span class="sd">    .. [2] http://mathworld.wolfram.com/TrianglePointPicking.html</span>
+<span class="sd">    References:</span>
+<span class="sd">        .. [1] http://math.stackexchange.com/questions/18686/uniform-random-point-in-triangle</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># assume triangle.area is not close to 0.0</span>
     <span class="n">r1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
@@ -316,8 +306,8 @@
            <span class="n">r2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span> <span class="o">*</span> <span class="n">c</span></div>
 
 
-<div class="viewcode-block" id="PolygonSample"><a class="viewcode-back" href="../../../api/sampling.html#crowddynamics.sampling.PolygonSample">[docs]</a><span class="k">class</span> <span class="nc">PolygonSample</span><span class="p">:</span>
-    <span class="sd">r&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PolygonSample"><a class="viewcode-back" href="../../../../api/sampling.html#crowddynamics.core.random.sampling.PolygonSample">[docs]</a><span class="k">class</span> <span class="nc">PolygonSample</span><span class="p">:</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Uniform sampling of convex polygon</span>
 
 <span class="sd">    Generates random uniform point from inside of polygon.</span>
@@ -330,12 +320,10 @@
 
 <span class="sd">    References:</span>
 
-<span class="sd">    - http://gis.stackexchange.com/questions/6412/generate-points-that-lie-inside-polygon</span>
-
+<span class="sd">        http://gis.stackexchange.com/questions/6412/generate-points-that-lie-inside-polygon</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">polygon</span><span class="p">):</span>
-        <span class="sd">r&quot;&quot;&quot;</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Convex Polygon to sample. (Non convex polygon will be treated as convex)</span>
 
 <span class="sd">        Args:</span>
@@ -358,8 +346,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">weights</span> <span class="o">=</span> <span class="n">triangle_area_cumsum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">weights</span> <span class="o">/=</span> <span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Normalize values to interval [0, 1]</span>
 
-<div class="viewcode-block" id="PolygonSample.draw"><a class="viewcode-back" href="../../../api/sampling.html#crowddynamics.sampling.PolygonSample.draw">[docs]</a>    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">r&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PolygonSample.draw"><a class="viewcode-back" href="../../../../api/sampling.html#crowddynamics.core.random.sampling.PolygonSample.draw">[docs]</a>    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Draw random triangle weighted by the area of the triangle and draw</span>
 <span class="sd">        random sample</span>
 
@@ -373,8 +361,8 @@
         <span class="n">sample</span> <span class="o">=</span> <span class="n">random_sample_triangle</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">sample</span></div>
 
-<div class="viewcode-block" id="PolygonSample.generator"><a class="viewcode-back" href="../../../api/sampling.html#crowddynamics.sampling.PolygonSample.generator">[docs]</a>    <span class="k">def</span> <span class="nf">generator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PolygonSample.generator"><a class="viewcode-back" href="../../../../api/sampling.html#crowddynamics.core.random.sampling.PolygonSample.generator">[docs]</a>    <span class="k">def</span> <span class="nf">generator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Generator that generates ``num`` amount of draws.</span>
 
 <span class="sd">        Args:</span>
@@ -388,6 +376,11 @@
         <span class="k">while</span> <span class="n">num</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">:</span>
             <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
             <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">LineStringSample</span><span class="p">:</span>
+    <span class="c1"># TODO: LineStringSampling</span>
+    <span class="k">pass</span>
 </pre></div>
 
            </div>
@@ -400,7 +393,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 24, 2017.
+      Last updated on Jan 31, 2017.
 
     </p>
   </div>
@@ -421,23 +414,23 @@
 
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../../',
+            URL_ROOT:'../../../../',
             VERSION:'1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
   
 
   

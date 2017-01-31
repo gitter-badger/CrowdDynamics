@@ -1,6 +1,6 @@
 Sampling
 ========
 
-.. automodule:: crowddynamics.sampling
+.. automodule:: crowddynamics.core.random.sampling
    :members:
    :private-members:

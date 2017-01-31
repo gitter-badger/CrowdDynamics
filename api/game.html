@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Plugins &mdash; Crowd Dynamics 1 documentation</title>
+  <title>Game &mdash; Crowd Dynamics 1 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Crowd Dynamics 1 documentation" href="../index.html"/>
         <link rel="up" title="API" href="index.html"/>
-        <link rel="next" title="Testing" href="testing.html"/>
-        <link rel="prev" title="Graphical User Interface" href="gui.html"/> 
+        <link rel="next" title="Research" href="../research/index.html"/>
+        <link rel="prev" title="Testing" href="testing.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -87,27 +87,44 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation.html#conda">Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#source">Source</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../usage.html#basic-architecture">Basic Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#architecture">Architecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usage.html#command-line-interface">Command-line Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usage.html#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Foundations &amp; Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quantities.html">Quantities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#density">Density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#flow">Flow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantities.html#rate">Rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantities.html#types">Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#pressure">Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantities.html#fundamental-diagram">Fundamental Diagram</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Simulation Models</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../multiagent/social_force_model.html">Social Force Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../multiagent/motion.html">Motion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../multiagent/interactions.html">Interactions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../multiagent/steering.html">Steering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../multiagent/integrator.html">Integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multiagent/multiagent.html">Multi-Agent</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/multiagent.html#module-crowddynamics.multiagent">Classes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multiagent/multiagent.html#module-crowddynamics.multiagent.testing">Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/agent.html">Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/field.html">Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/simulation.html">Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multiagent/tables.html">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/tables.html#agent-properties">Agent Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multiagent/tables.html#body-types">Body Types</a></li>
 </ul>
 </li>
 </ul>
@@ -118,28 +135,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../continuum/index.html">Continuum Flow</a><ul class="simple">
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="vector2D.html">Vector2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io.html">IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sampling.html">Sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cli.html">Command-line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Command-Line Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gui.html">Graphical User Interface</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#module-crowddynamics.plugins.game">Game</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tables.html#agent-properties">Agent Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tables.html#body-types">Body Types</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Game</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Theory</span></p>
+<p class="caption"><span class="caption-text">Research</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research/glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../research/phenomena.html">Phenomena</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#egress-congestion">Egress Congestion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../research/phenomena.html#faster-is-slower">Faster is slower</a></li>
@@ -156,39 +170,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../research/applications.html">Applications</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../foundations/index.html">Foundations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/theory.html">Mathematical Foundations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#time">Time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#geometry">Geometry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#domain">Domain</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#obstacle">Obstacle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#exit">Exit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#narrow-bottleneck">Narrow bottleneck</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#agent">Agent</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#model">Model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#circular-model">Circular model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#elliptical-model">Elliptical model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/theory.html#three-circle-model">Three circle model</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/theory.html#initial-configuration">Initial configuration</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../foundations/quantities.html">Quantities</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#density">Density</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#flow">Flow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#rate">Rate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../foundations/quantities.html#types">Types</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#pressure">Pressure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../foundations/quantities.html#fundamental-diagram">Fundamental Diagram</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 
             
@@ -221,7 +203,7 @@
       
           <li><a href="index.html">API</a> &raquo;</li>
       
-    <li>Plugins</li>
+    <li>Game</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -235,16 +217,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="plugins">
-<h1>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="module-crowddynamics.plugins.game">
-<span id="game"></span><h2>Game<a class="headerlink" href="#module-crowddynamics.plugins.game" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="module-crowddynamics.plugins.game">
+<span id="game"></span><h1>Game<a class="headerlink" href="#module-crowddynamics.plugins.game" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="crowddynamics.plugins.game.EgressGame">
 <em class="property">class </em><code class="descclassname">crowddynamics.plugins.game.</code><code class="descname">EgressGame</code><span class="sig-paren">(</span><em>simulation</em>, <em>door</em>, <em>room</em>, <em>t_aset_0</em>, <em>interval=0.1</em>, <em>neighbor_radius=0.4</em>, <em>neighborhood_size=8</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#EgressGame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.EgressGame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Patient and impatient pedestrians in a spatial game <span class="math">\((S, f)\)</span> for
 egress congestion between players <span class="math">\(P \subset A\)</span> with set of strategies
-<span class="math">\(S\)</span> and payoff function <span class="math">\(f : S \times S \mapsto \mathbb{R}\)</span>.</p>
+<span class="math">\(S\)</span> and payoff function <span class="math">\(f : S \times S \mapsto \mathbb{R}\)</span>.
+<a class="reference internal" href="../references.html#heliovaara2013" id="id1">[HEHK13]</a><a class="reference internal" href="../references.html#vonschantz2014" id="id2">[VonSchantzE14]</a></p>
 <p>Set of strategies</p>
 <div class="math">
 \[\begin{split}S &amp;= \{ \text{Impatient}, \text{Patient} \} \\
@@ -269,19 +250,6 @@ egress congestion between players <span class="math">\(P \subset A\)</span> with
 <li><span class="math">\(\tau_{adj}\)</span></li>
 <li><span class="math">\(\sigma_{force}\)</span></li>
 </ul>
-<p>References</p>
-<table class="docutils citation" frame="void" id="game2013" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[game2013]</td><td>Heli??vaara, S., Ehtamo, H., Helbing, D., &amp; Korhonen, T. (2013). Patient and impatient pedestrians in a spatial game for egress congestion. Physical Review E - Statistical, Nonlinear, and Soft Matter Physics. <a class="reference external" href="http://doi.org/10.1103/PhysRevE.87.012802">http://doi.org/10.1103/PhysRevE.87.012802</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="game2014" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[game2014]</td><td>Von Schantz, A., &amp; Ehtamo, H. (2014). Cellular automaton evacuation model coupled with a spatial game. In Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). <a class="reference external" href="http://doi.org/10.1007/978-3-319-09912-5_31">http://doi.org/10.1007/978-3-319-09912-5_31</a></td></tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="crowddynamics.plugins.game.EgressGame.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>simulation</em>, <em>door</em>, <em>room</em>, <em>t_aset_0</em>, <em>interval=0.1</em>, <em>neighbor_radius=0.4</em>, <em>neighborhood_size=8</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#EgressGame.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.EgressGame.__init__" title="Permalink to this definition">¶</a></dt>
@@ -513,21 +481,44 @@ closer to the exit.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="crowddynamics.plugins.game.exit_capacity">
-<code class="descclassname">crowddynamics.plugins.game.</code><code class="descname">exit_capacity</code><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#exit_capacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.exit_capacity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Estimation of the capacity of narrow exit. Narrow exit is defined max
-<span class="math">\(3\,\mathrm{m}\)</span> wide.</p>
+<dt id="crowddynamics.plugins.game.narrow_exit_capacity">
+<code class="descclassname">crowddynamics.plugins.game.</code><code class="descname">narrow_exit_capacity</code><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#narrow_exit_capacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.narrow_exit_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimation of the capacity of narrow exit.</p>
+<p>Capacity estimation <span class="math">\(\beta\)</span> of unidirectional flow through narrow
+bottleneck. Capacity of the bottleneck increases in stepwise manner.</p>
+<p>Simple estimation</p>
+<div class="math">
+\[\beta_{simple} = c \left \lfloor \frac{d_{door}}{d_{agent}} \right \rfloor\]</div>
+<p>More sophisticated estimation <a class="reference internal" href="../references.html#hoogendoorn2005a" id="id3">[HD05]</a>, <a class="reference internal" href="../references.html#seyfried2007a" id="id4">[SRP+07]</a></p>
+<div class="math">
+\[\beta_{hoogen} = c \left \lfloor \frac{d_{door} - (d_{agent} - d_{layer})}{d_{layer}} \right \rfloor\]</div>
+<p>We have relationship between simple and hoogendoorn&#8217;s estimation</p>
+<div class="math">
+\[\beta_{hoogen} = \beta_{simple}, \quad d_{layer} = d_{agent}\]</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>points</strong> (<em>numpy.ndarray</em>) &#8211; </li>
-<li><strong>agent_radius</strong> (<em>float</em>) &#8211; </li>
+<li><strong>d_door</strong> (<em>float</em>) &#8211; <p>Width of the door <span class="math">\(0\,\mathrm{m} &lt; d_{door} &lt; 3\,\mathrm{m}\)</span>.
+Also width of the door must be larger than width of the agent</p>
+<blockquote>
+<div><span class="math">\(d_{door} &gt; d_{agent}\)</span>.</div></blockquote>
+</li>
+<li><strong>d_agent</strong> (<em>float</em>) &#8211; Width of the agent <span class="math">\(d_{agent} &gt; 0\,\mathrm{m}\)</span>.</li>
+<li><strong>d_layer</strong> (<em>float</em><em>, </em><em>optional</em>) &#8211; Width of layer <span class="math">\(d_{layer}\)</span>. Reference value:
+<span class="math">\(0.45\,\mathrm{m}\)</span></li>
+<li><strong>coeff</strong> (<em>float</em>) &#8211; Scaling coefficient <span class="math">\(c &gt; 0\)</span> for the estimation.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>Depending on the value of <code class="docutils literal"><span class="pre">d_layer</span></code> either simple or hoogen
+estimation is returned</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">None</span></code>: Uses simple estimation <span class="math">\(\beta_{simple}\)</span></li>
+<li><code class="docutils literal"><span class="pre">float</span></code>: Uses Hoogendoorn&#8217;s estimation <span class="math">\(\beta_{hoogen}\)</span></li>
+</ul>
+</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
@@ -538,7 +529,6 @@ closer to the exit.</p>
 </dd></dl>
 
 </div>
-</div>
 
 
            </div>
@@ -547,10 +537,10 @@ closer to the exit.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="testing.html" class="btn btn-neutral float-right" title="Testing" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../research/index.html" class="btn btn-neutral float-right" title="Research" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="gui.html" class="btn btn-neutral" title="Graphical User Interface" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="testing.html" class="btn btn-neutral" title="Testing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -560,7 +550,7 @@ closer to the exit.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, Jaan Tollander de Balsch.
-      Last updated on Jan 24, 2017.
+      Last updated on Jan 31, 2017.
 
     </p>
   </div>
