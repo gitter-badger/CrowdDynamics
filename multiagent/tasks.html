@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tasks &mdash; Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation" href="../index.html"/>
+        <link rel="up" title="Multi-Agent" href="index.html"/>
+        <link rel="next" title="Examples" href="examples.html"/>
+        <link rel="prev" title="Simulation" href="simulation.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0+untagged.408
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Foundations &amp; Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Theory</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Multi-Agent</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="social_force_model.html">Social Force Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html">Simulation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular_automata/index.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum_flow/index.html">Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimal_control/index.html">Optimal Control</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Api</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../core/index.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/taskgraph.html">Task Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/io.html">IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cli.html">Command-Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/testing.html">Testing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/gui.html">Graphical User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/game.html">Game</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Multi-Agent</a> &raquo;</li>
+      
+    <li>Tasks</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/multiagent/tasks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tasks">
+<h1>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h1>
+<img src="../_images/graphviz-ba8ce08f622faa9ed91d57c14cede9a03bcbbf58.png" alt="digraph foo {
+      &quot;Reset&quot; -&gt; {
+          &quot;GuiCommunication&quot;;
+          &quot;IO&quot;;
+      };
+      &quot;GuiCommunication&quot; -&gt; &quot;Integrator&quot;;
+      &quot;IO&quot; -&gt; &quot;Integrator&quot;;
+      &quot;Integrator&quot; -&gt; {
+          &quot;Interactions&quot;;
+          &quot;Adjusting&quot;;
+          &quot;Fluctuation&quot;;
+      }
+      &quot;Adjusting&quot; -&gt; {
+        &quot;Navigation&quot;;
+        &quot;Orientation&quot;;
+      }
+      &quot;Navigation&quot; -&gt; &quot;Exit Selection&quot;;
+      &quot;Interactions&quot; -&gt; {
+        &quot;Agent-Agent&quot;;
+        &quot;Agent-Obstacle&quot;
+      }
+    }" />
+<span class="target" id="module-crowddynamics.multiagent.tasks"></span><dl class="class">
+<dt id="crowddynamics.multiagent.tasks.Adjusting">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">Adjusting</code><span class="sig-paren">(</span><em>simulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#Adjusting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.Adjusting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.tasks.AgentAgentInteractions">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">AgentAgentInteractions</code><span class="sig-paren">(</span><em>simulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#AgentAgentInteractions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.AgentAgentInteractions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.tasks.AgentObstacleInteractions">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">AgentObstacleInteractions</code><span class="sig-paren">(</span><em>simulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#AgentObstacleInteractions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.AgentObstacleInteractions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.tasks.Contains">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">Contains</code><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#Contains"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.Contains" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.tasks.ExitSelection">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">ExitSelection</code><span class="sig-paren">(</span><em>simulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#ExitSelection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.ExitSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exit selection policy.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.tasks.Fluctuation">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">Fluctuation</code><span class="sig-paren">(</span><em>simulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#Fluctuation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.Fluctuation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.tasks.GuiCommunication">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">GuiCommunication</code><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#GuiCommunication"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.GuiCommunication" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.tasks.IO">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">IO</code><span class="sig-paren">(</span><em>simulation</em>, <em>structs</em>, <em>attribute_list</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#IO"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.IO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.tasks.Integrator">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">Integrator</code><span class="sig-paren">(</span><em>simulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#Integrator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.Integrator" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="crowddynamics.multiagent.tasks.Integrator.simulation">
+<code class="descname">simulation</code><a class="headerlink" href="#crowddynamics.multiagent.tasks.Integrator.simulation" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>MultiAgentSimulation</em> &#8211; Simulation class</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.multiagent.tasks.Integrator.dt">
+<code class="descname">dt</code><a class="headerlink" href="#crowddynamics.multiagent.tasks.Integrator.dt" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>tuple[float]</em> &#8211; Tuple of minimum and maximum timestep (dt_min, dt_max).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.tasks.Navigation">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">Navigation</code><span class="sig-paren">(</span><em>simulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#Navigation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.Navigation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles navigation in multi-agent simulation.</p>
+<dl class="attribute">
+<dt id="crowddynamics.multiagent.tasks.Navigation.simulation">
+<code class="descname">simulation</code><a class="headerlink" href="#crowddynamics.multiagent.tasks.Navigation.simulation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.multiagent.tasks.Navigation.algorithm">
+<code class="descname">algorithm</code><a class="headerlink" href="#crowddynamics.multiagent.tasks.Navigation.algorithm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.multiagent.tasks.Navigation.step">
+<code class="descname">step</code><a class="headerlink" href="#crowddynamics.multiagent.tasks.Navigation.step" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>float</em> &#8211; Step size for the grid.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.tasks.Orientation">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">Orientation</code><span class="sig-paren">(</span><em>simulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#Orientation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.Orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target orientation</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="crowddynamics.multiagent.tasks.Reset">
+<em class="property">class </em><code class="descclassname">crowddynamics.multiagent.tasks.</code><code class="descname">Reset</code><span class="sig-paren">(</span><em>simulation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/multiagent/tasks.html#Reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.multiagent.tasks.Reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="simulation.html" class="btn btn-neutral" title="Simulation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on 2017-02-08.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0+untagged.408.gad4f725.dirty',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

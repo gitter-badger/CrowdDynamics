@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Game &mdash; Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation" href="../index.html"/>
+        <link rel="next" title="Research" href="../research/index.html"/>
+        <link rel="prev" title="Graphical User Interface" href="gui.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0+untagged.408
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Foundations &amp; Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Theory</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular_automata/index.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum_flow/index.html">Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimal_control/index.html">Optimal Control</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Api</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../core/index.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/taskgraph.html">Task Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/io.html">IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cli.html">Command-Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/testing.html">Testing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gui.html">Graphical User Interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Game</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Game</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/plugins/game.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-crowddynamics.plugins.game.game">
+<span id="game"></span><h1>Game<a class="headerlink" href="#module-crowddynamics.plugins.game.game" title="Permalink to this headline">¶</a></h1>
+<p>Patient and impatient pedestrians in a spatial game.</p>
+<p>Patient and impatient pedestrians in a spatial game <span class="math">\((S, f)\)</span> for
+egress congestion between players <span class="math">\(P \subset A\)</span> with set of strategies
+<span class="math">\(S\)</span> and payoff function <span class="math">\(f : S \times S \mapsto \mathbb{R}\)</span>.</p>
+<p><a class="reference internal" href="../references.html#heliovaara2013" id="id1">[Heliovaara2013]</a>, <a class="reference internal" href="../references.html#vonschantz2014" id="id2">[VonSchantz2014]</a></p>
+<p>Set of strategies</p>
+<div class="math">
+\[\begin{split}S &amp;= \{ \text{Impatient}, \text{Patient} \} \\
+  &amp;= \{&nbsp;0, 1 \}\end{split}\]</div>
+<p>Payoff matrix / function</p>
+<div class="math">
+\[\begin{split}f(s_i, s_j) = \left[\begin{matrix}\left ( \frac{T_{aset}}{T_{ij}}, \quad \frac{T_{aset}}{T_{ij}}\right ) &amp; \left ( -1, \quad 1\right )\\\left ( 1, \quad -1\right ) &amp; \left ( 0, \quad 0\right )\end{matrix}\right]\end{split}\]</div>
+<p>Estimated evacuation time for an agent</p>
+<div class="math">
+\[T_i = \frac{\lambda_i}{\beta},\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(\beta\)</span> is the capacity of the exit door</li>
+<li><span class="math">\(\lambda_i\)</span> number of other agents closer to the exit.</li>
+</ul>
+<p>Average evacuation time</p>
+<div class="math">
+\[T_{ij} = \frac{(T_i + T_j)}{2}.\]</div>
+<p>Effect on agents</p>
+<ul class="simple">
+<li><span class="math">\(k\)</span></li>
+<li><span class="math">\(\tau_{adj}\)</span></li>
+<li><span class="math">\(\sigma_{force}\)</span></li>
+</ul>
+<dl class="class">
+<dt id="crowddynamics.plugins.game.game.EgressGame">
+<em class="property">class </em><code class="descclassname">crowddynamics.plugins.game.game.</code><code class="descname">EgressGame</code><span class="sig-paren">(</span><em>simulation</em>, <em>door</em>, <em>room</em>, <em>t_aset_0</em>, <em>interval=0.1</em>, <em>neighbor_radius=0.4</em>, <em>neighborhood_size=8</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#EgressGame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.game.EgressGame" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<ul class="last simple">
+<li>Not include agent that have reached their goals</li>
+<li>check if j not in players:</li>
+<li>Update agents parameters by the new strategy</li>
+<li>Fix neighborhood</li>
+</ul>
+</div>
+<dl class="method">
+<dt id="crowddynamics.plugins.game.game.EgressGame.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#EgressGame.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.game.EgressGame.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.game.game.EgressGame.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#EgressGame.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.game.EgressGame.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update strategies for all agents.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.plugins.game.game.best_response_strategy">
+<code class="descclassname">crowddynamics.plugins.game.game.</code><code class="descname">best_response_strategy</code><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#best_response_strategy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.game.best_response_strategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Best Response Strategy</p>
+<p>New strategy is selected using best response dynamics which finds the
+strategy that minimizes loss using the payoff function</p>
+<div class="math">
+\[s_{i} = \underset{s \in S}{\arg \min} \sum_{j \in N_{i}^{neigh}} f(s, s_{j})\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(N_{i}^{neigh} \subset P \setminus \{P_{i}\}\)</span> set is eight closes
+agents excluding the agent itself at maximum skin-to-skin distance of
+<span class="math">\(0.40 \ \mathrm{m}\)</span> from agent <span class="math">\(i\)</span>.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>agent</strong> &#8211; </li>
+<li><strong>players</strong> &#8211; </li>
+<li><strong>door</strong> &#8211; </li>
+<li><strong>radius_max</strong> &#8211; </li>
+<li><strong>strategy</strong> &#8211; </li>
+<li><strong>strategies</strong> &#8211; </li>
+<li><strong>t_aset</strong> &#8211; </li>
+<li><strong>interval</strong> &#8211; </li>
+<li><strong>dt</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.plugins.game.game.payoff">
+<code class="descclassname">crowddynamics.plugins.game.game.</code><code class="descname">payoff</code><a class="reference internal" href="../_modules/crowddynamics/plugins/game/game.html#payoff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.game.payoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Payoff matrix of the game.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>s_i</strong> (<em>int</em>) &#8211; Our strategy</li>
+<li><strong>s_j</strong> (<em>int</em>) &#8211; Neighbor strategy</li>
+<li><strong>t_aset</strong> (<em>float</em>) &#8211; Available safe egress time.</li>
+<li><strong>t_evac_i</strong> (<em>float</em>) &#8211; Time to evacuate for agent i.</li>
+<li><strong>t_evac_j</strong> (<em>float</em>) &#8211; Time to evacuate for agent j.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<span class="target" id="module-crowddynamics.plugins.game.examples"></span><dl class="class">
+<dt id="crowddynamics.plugins.game.examples.RoomEvacuationGame">
+<em class="property">class </em><code class="descclassname">crowddynamics.plugins.game.examples.</code><code class="descname">RoomEvacuationGame</code><span class="sig-paren">(</span><em>queue</em>, <em>size</em>, <em>width</em>, <em>height</em>, <em>model</em>, <em>body_type</em>, <em>spawn_shape</em>, <em>door_width</em>, <em>exit_hall_width</em>, <em>t_aset_0</em>, <em>interval</em>, <em>neighbor_radius</em>, <em>neighborhood_size</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/game/examples.html#RoomEvacuationGame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.game.examples.RoomEvacuationGame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Room Evacuation Game</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../research/index.html" class="btn btn-neutral float-right" title="Research" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gui.html" class="btn btn-neutral" title="Graphical User Interface" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on 2017-02-08.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0+untagged.408.gad4f725.dirty',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

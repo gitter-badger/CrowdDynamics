@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Integrator &mdash; Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation" href="../index.html"/>
+        <link rel="up" title="Core" href="index.html"/>
+        <link rel="next" title="Interactions" href="interactions.html"/>
+        <link rel="prev" title="Agent" href="agent.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0+untagged.408
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Foundations &amp; Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Theory</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular_automata/index.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum_flow/index.html">Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimal_control/index.html">Optimal Control</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Api</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Core</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vector2D.html">Vector2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="agent.html">Agent</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="random.html">Random</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampling.html">Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evacuation.html">Evacuation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/taskgraph.html">Task Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/io.html">IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cli.html">Command-Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/testing.html">Testing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/gui.html">Graphical User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/game.html">Game</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Core</a> &raquo;</li>
+      
+    <li>Integrator</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/core/integrator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-crowddynamics.core.integrator">
+<span id="integrator"></span><h1>Integrator<a class="headerlink" href="#module-crowddynamics.core.integrator" title="Permalink to this headline">¶</a></h1>
+<dl class="attribute">
+<dt id="crowddynamics.core.integrator.adaptive_timestep">
+<code class="descclassname">crowddynamics.core.integrator.</code><code class="descname">adaptive_timestep</code><a class="reference internal" href="../_modules/crowddynamics/core/integrator/integrator.html#adaptive_timestep"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.integrator.adaptive_timestep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timestep is selected from interval <span class="math">\([\Delta t_{min}, \Delta t_{max}]\)</span>
+by bounding the maximum step size <span class="math">\(\Delta x\)</span> an agent can take per
+iteration cycle, obtained from</p>
+<div class="math">
+\[\begin{split}\Delta x = c \Delta t_{max} \max_{i\in A} v_i^0 \\\end{split}\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(c &gt; 0\)</span> is scaling coefficient</li>
+<li><span class="math">\(v_i^0\)</span> is agent&#8217;s target velocity</li>
+<li><span class="math">\(\max_{i\in A} v_i^0\)</span> is the maximum of all target velocities</li>
+</ul>
+<p>Timestep is then obtained from</p>
+<div class="math">
+\[\begin{split}\Delta t_{mid} &amp;= \frac{\Delta x}{\max_{i \in A} v_i} \\
+\Delta t &amp;=
+\begin{cases}
+\Delta t_{min} &amp; \Delta t_{mid} &lt; \Delta t_{min} \\
+\Delta t_{mid} &amp;  \\
+\Delta t_{max} &amp; \Delta t_{mid} &gt; \Delta t_{max} \\
+\end{cases}\end{split}\]</div>
+<p>where</p>
+<ul class="simple">
+<li><span class="math">\(v_i\)</span> is agent&#8217;s current velocity</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dt_min</strong> &#8211; Minimum timestep <span class="math">\(\Delta x_{min}\)</span> for adaptive integration.</li>
+<li><strong>dt_max</strong> &#8211; Maximum timestep <span class="math">\(\Delta x_{max}\)</span> for adaptive integration.</li>
+<li><strong>velocity</strong> &#8211; </li>
+<li><strong>target_velocity</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>References</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Adaptive_stepsize">https://en.wikipedia.org/wiki/Adaptive_stepsize</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.integrator.euler_integration">
+<code class="descclassname">crowddynamics.core.integrator.</code><code class="descname">euler_integration</code><a class="reference internal" href="../_modules/crowddynamics/core/integrator/integrator.html#euler_integration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.integrator.euler_integration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Differential system is integrated using numerical integration scheme using
+discrete adaptive timestep <span class="math">\(\Delta t\)</span>.</p>
+<p>Acceleration on an agent</p>
+<div class="math">
+\[\begin{split}a_{k} &amp;= \mathbf{f}_{k} / m \\
+\mathbf{x}_{k+1} &amp;= \mathbf{x}_{k} + \mathbf{v}_{k} \Delta t + \frac{1}{2} a_{k} \Delta t^{2} \\
+\mathbf{v}_{k+1} &amp;= \mathbf{v}_{k} + a_{k} \Delta t \\\end{split}\]</div>
+<p>Angular acceleration</p>
+<div class="math">
+\[\begin{split}\alpha_{k} &amp;= M_{k} / I \\
+\varphi_{k+1} &amp;= \varphi_{k} + \omega_{k} \Delta t + \frac{1}{2} \alpha_{k} \Delta t^{2} \\
+\omega_{k+1} &amp;= \omega_{k} + \alpha_{k} \Delta t \\\end{split}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>agent</strong> (<a class="reference internal" href="agent.html#crowddynamics.core.agent.agent.Agent" title="crowddynamics.core.agent.agent.Agent"><em>Agent</em></a>) &#8211; </li>
+<li><strong>dt_min</strong> (<em>float</em>) &#8211; Minimum timestep <span class="math">\(\Delta x_{min}\)</span> for adaptive integration.</li>
+<li><strong>dt_max</strong> (<em>float</em>) &#8211; Maximum timestep <span class="math">\(\Delta x_{max}\)</span> for adaptive integration.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Timestep <span class="math">\(\Delta t\)</span> that was used for integration.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.integrator.velocity_verlet">
+<code class="descclassname">crowddynamics.core.integrator.</code><code class="descname">velocity_verlet</code><a class="reference internal" href="../_modules/crowddynamics/core/integrator/integrator.html#velocity_verlet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.integrator.velocity_verlet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Velocity verlet</p>
+<div class="math">
+\[\begin{split}\mathbf{v}_{k+1/2} &amp;= \mathbf{v}_{k} + \frac{1}{2} a_{k} \Delta t \\
+\mathbf{x}_{k+1} &amp;= \mathbf{x}_{k} + \mathbf{v}_{k+1/2} \Delta t \\
+a_{k+1} &amp;= \mathbf{f}_{k+1} / m \\
+\mathbf{v}_{k+1} &amp;= \mathbf{v}_{k+1/2} + \frac{1}{2} a_{k+1} \Delta t\end{split}\]</div>
+<p>References</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Verlet_integration#Velocity_Verlet">https://en.wikipedia.org/wiki/Verlet_integration#Velocity_Verlet</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>agent</strong> (<a class="reference internal" href="agent.html#crowddynamics.core.agent.agent.Agent" title="crowddynamics.core.agent.agent.Agent"><em>Agent</em></a>) &#8211; </li>
+<li><strong>dt_min</strong> (<em>float</em>) &#8211; Minimum timestep <span class="math">\(\Delta x_{min}\)</span> for adaptive integration.</li>
+<li><strong>dt_max</strong> (<em>float</em>) &#8211; Maximum timestep <span class="math">\(\Delta x_{max}\)</span> for adaptive integration.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><em>float</em> &#8211; Timestep <span class="math">\(\Delta t\)</span> that was used for integration.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="interactions.html" class="btn btn-neutral float-right" title="Interactions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="agent.html" class="btn btn-neutral" title="Agent" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on 2017-02-08.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0+untagged.408.gad4f725.dirty',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

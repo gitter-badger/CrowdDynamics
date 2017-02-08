@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Random &mdash; Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation" href="../index.html"/>
+        <link rel="up" title="Core" href="index.html"/>
+        <link rel="next" title="Sampling" href="sampling.html"/>
+        <link rel="prev" title="Navigation" href="navigation.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0+untagged.408
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Foundations &amp; Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Theory</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular_automata/index.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum_flow/index.html">Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimal_control/index.html">Optimal Control</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Api</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Core</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vector2D.html">Vector2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="agent.html">Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html">Navigation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Random</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampling.html">Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evacuation.html">Evacuation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/taskgraph.html">Task Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/io.html">IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cli.html">Command-Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/testing.html">Testing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/gui.html">Graphical User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/game.html">Game</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Core</a> &raquo;</li>
+      
+    <li>Random</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/core/random.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-crowddynamics.core.random.random">
+<span id="random"></span><h1>Random<a class="headerlink" href="#module-crowddynamics.core.random.random" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="crowddynamics.core.random.random.estimate_number_poisson_timings">
+<code class="descclassname">crowddynamics.core.random.random.</code><code class="descname">estimate_number_poisson_timings</code><span class="sig-paren">(</span><em>interval</em>, <em>dt</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/random/random.html#estimate_number_poisson_timings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.random.random.estimate_number_poisson_timings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimated number of points generated by poisson process.</p>
+<div class="math">
+\[N &amp;\sim \operatorname{Poi}(\lambda)\]</div>
+<p>Solve for number of points <span class="math">\(n\)</span></p>
+<div class="math">
+\[\Pr(N \leq n) = p\]</div>
+<p>Issue #19</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.random.random.poisson_clock">
+<code class="descclassname">crowddynamics.core.random.random.</code><code class="descname">poisson_clock</code><a class="reference internal" href="../_modules/crowddynamics/core/random/random.html#poisson_clock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.random.random.poisson_clock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generated points in time using Poisson process.</p>
+<p>Time between updates are independent random variables defined</p>
+<div class="math">
+\[\tau_i \sim \operatorname{Exp}(\lambda)\]</div>
+<p>Where the <code class="docutils literal"><span class="pre">rate</span></code> parameter is</p>
+<div class="math">
+\[\operatorname{E}(\tau) = \frac{1}{\lambda} = interval\]</div>
+<p>Times when agent updates its strategy</p>
+<div class="math">
+\[\begin{split}\begin{split}\begin{cases}
+T_n = \tau_1 + \ldots + \tau_n, &amp; n \geq 1 \\
+T_0 = 0
+\end{cases}\end{split}\end{split}\]</div>
+<p>Sequence of update times</p>
+<div class="math">
+\[\{T_1, T_2, T_3, \ldots, T_n\}, \quad T_n &lt; \Delta t\]</div>
+<p>Number of arrivals by the <span class="math">\(s\)</span></p>
+<div class="math">
+\[\begin{split}N(s) &amp;= \max\{n : T_n \leq s\} \\
+N(s) &amp;\sim \operatorname{Poi}(\lambda)\end{split}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>interval</strong> (<em>float</em>) &#8211; Expected frequency of update.</li>
+<li><strong>dt</strong> (<em>float</em>) &#8211; Discrete timestep <span class="math">\(\Delta t\)</span> aka time window.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><p class="first last"><em>float</em> &#8211;     Moments in the time window when the strategies should be updated.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="crowddynamics.core.random.random.poisson_timings">
+<code class="descclassname">crowddynamics.core.random.random.</code><code class="descname">poisson_timings</code><a class="reference internal" href="../_modules/crowddynamics/core/random/random.html#poisson_timings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.random.random.poisson_timings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update times for all agent in the game using Poisson clock.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>players</strong> (<em>numpy.ndarray</em>) &#8211; Indices of the players.</li>
+<li><strong>interval</strong> (<em>float</em>) &#8211; </li>
+<li><strong>dt</strong> (<em>float</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">List of indices of agents sorted by their update times.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowddynamics.core.random.random.truncnorm">
+<code class="descclassname">crowddynamics.core.random.random.</code><code class="descname">truncnorm</code><span class="sig-paren">(</span><em>start</em>, <em>end</em>, <em>loc=0.0</em>, <em>scale=1.0</em>, <em>abs_scale=None</em>, <em>size=1</em>, <em>random_state=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/core/random/random.html#truncnorm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.core.random.random.truncnorm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Truncated normal distribution from <code class="docutils literal"><span class="pre">scipy.stats</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>start</strong> (<em>float</em>) &#8211; </li>
+<li><strong>end</strong> (<em>float</em>) &#8211; </li>
+<li><strong>loc</strong> (<em>float</em>) &#8211; </li>
+<li><strong>scale</strong> (<em>float</em>) &#8211; </li>
+<li><strong>abs_scale</strong> &#8211; Absolute scale <a href="#id1"><span class="problematic" id="id2">``</span></a>scale = abs_scale / max(abs(start), abs(end))</li>
+<li><strong>size</strong> (<em>int</em>) &#8211; </li>
+<li><strong>random_state</strong> (<em>int</em><em>, </em><em>optional</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>References</p>
+<p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.truncnorm.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.truncnorm.html</a>
+<a class="reference external" href="https://en.wikipedia.org/wiki/Truncated_normal_distribution">https://en.wikipedia.org/wiki/Truncated_normal_distribution</a></p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sampling.html" class="btn btn-neutral float-right" title="Sampling" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="navigation.html" class="btn btn-neutral" title="Navigation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on 2017-02-08.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0+untagged.408.gad4f725.dirty',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

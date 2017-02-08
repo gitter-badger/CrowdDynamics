@@ -9,18 +9,9 @@ Multi-Agent
 
 ----
 
-.. graphviz:: task_graph.dot
-
-----
-
 .. toctree::
 
    social_force_model
-   motion
-   interactions
-   steering
-   integrator
-   agent
-   field
    simulation
-   tables
+   tasks
+   examples

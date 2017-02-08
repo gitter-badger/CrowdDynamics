@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Agent &mdash; Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation" href="../index.html"/>
+        <link rel="up" title="Core" href="index.html"/>
+        <link rel="next" title="Integrator" href="integrator.html"/>
+        <link rel="prev" title="Vector2D" href="vector2D.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0+untagged.408
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Foundations &amp; Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Theory</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular_automata/index.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum_flow/index.html">Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimal_control/index.html">Optimal Control</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Api</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Core</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vector2D.html">Vector2D</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integrator.html">Integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactions.html">Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motion.html">Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="random.html">Random</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampling.html">Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evacuation.html">Evacuation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/taskgraph.html">Task Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/io.html">IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cli.html">Command-Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/testing.html">Testing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/gui.html">Graphical User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/game.html">Game</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Core</a> &raquo;</li>
+      
+    <li>Agent</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/core/agent.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-crowddynamics.core.agent.agent">
+<span id="agent"></span><h1>Agent<a class="headerlink" href="#module-crowddynamics.core.agent.agent" title="Permalink to this headline">¶</a></h1>
+<p>Agent model for multiagent simulation</p>
+<p><strong>Circular model</strong></p>
+<p>Simplest of the models is circular model without orientation. Circle is defined
+with radius <span class="math">\(r &gt; 0\)</span> from the center of mass.</p>
+<p><strong>Three circle model</strong> <a class="reference internal" href="../references.html#langston2006" id="id1">[Langston2006]</a></p>
+<p>Three circle model models agent with three circles which represent torso and two
+shoulders. Torso has radius of <span class="math">\(r_t\)</span> and is centered at center of mass
+<span class="math">\(\mathbf{x}\)</span> and shoulder have both radius of  <span class="math">\(r_s\)</span> and are
+centered at <span class="math">\(\mathbf{x} \pm r_{ts} \mathbf{\hat{e}_t}\)</span> where normal and
+tangent vectors</p>
+<div class="math">
+\[\begin{split}\mathbf{\hat{e}_n} &amp;= [\cos(\varphi), \sin(\varphi)] \\
+\mathbf{\hat{e}_t} &amp;= [\sin(\varphi), -\cos(\varphi)]\end{split}\]</div>
+<dl class="class">
+<dt id="crowddynamics.core.agent.agent.Agent">
+<em class="property">class </em><code class="descclassname">crowddynamics.core.agent.agent.</code><code class="descname">Agent</code><span class="sig-paren">(</span><em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#crowddynamics.core.agent.agent.Agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure for agent parameters and variables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>size</strong> (<em>int</em>) &#8211; Maximum number of agents <span class="math">\(N\)</span>.</li>
+<li><strong>shape</strong> (<em>tuple</em>) &#8211; Shape of 2D arrays <span class="math">\((N, 2)\)</span>.</li>
+<li><strong>circular</strong> (<em>bool</em>) &#8211; Boolean indicating if agent is modeled as a circle</li>
+<li><strong>three_circle</strong> (<em>bool</em>) &#8211; Boolean indicating if agent is modeled as three circles</li>
+<li><strong>orientable</strong> (<em>bool</em>) &#8211; Boolean indicating if agent is orientable (has rotational motion).</li>
+<li><strong>active</strong> &#8211; </li>
+<li><strong>radius</strong> &#8211; Radius <span class="math">\(r &gt; 0\)</span></li>
+<li><strong>r_t</strong> &#8211; Radius of torso <span class="math">\(r_t &gt; 0\)</span></li>
+<li><strong>r_s</strong> &#8211; Radius of shoulder <span class="math">\(t_s &gt; 0\)</span></li>
+<li><strong>r_ts</strong> &#8211; Distance from torso to shoulder <span class="math">\(r_{ts}\)</span></li>
+<li><strong>mass</strong> &#8211; Mass <span class="math">\(m &gt; 0\)</span></li>
+<li><strong>inertia_rot</strong> &#8211; Moment of inertia <span class="math">\(I_{rot} &gt; 0\)</span></li>
+<li><strong>position</strong> &#8211; Center of the mass <span class="math">\(\mathbf{x}\)</span></li>
+<li><strong>velocity</strong> &#8211; Velocity <span class="math">\(\mathbf{v}\)</span></li>
+<li><strong>target_velocity</strong> &#8211; Target velocity <span class="math">\(v_{0}\)</span></li>
+<li><strong>target_direction</strong> &#8211; Target direction <span class="math">\(\mathbf{e}_0\)</span></li>
+<li><strong>force</strong> &#8211; Force <span class="math">\(\mathbf{f}\)</span></li>
+<li><strong>orientation</strong> &#8211; Orientation <span class="math">\(\varphi \in [-\pi, \pi]\)</span></li>
+<li><strong>angular_velocity</strong> &#8211; Angular velocity <span class="math">\(\omega\)</span></li>
+<li><strong>target_orientation</strong> &#8211; Target orientation <span class="math">\(\varphi_0 \in [-\pi, \pi]\)</span></li>
+<li><strong>target_angular_velocity</strong> &#8211; Target Angular velocity <span class="math">\(\omega_0\)</span></li>
+<li><strong>torque</strong> &#8211; Torque <span class="math">\(M\)</span></li>
+<li><strong>tau_adj</strong> &#8211; Characteristic time for agent adjusting its movement</li>
+<li><strong>tau_rot</strong> &#8211; Characteristic time for agent adjusting its rotational movement</li>
+<li><strong>k_soc</strong> &#8211; Social force scaling constant</li>
+<li><strong>tau_0</strong> &#8211; Interaction time horizon</li>
+<li><strong>mu</strong> &#8211; Compression counteraction constant</li>
+<li><strong>kappa</strong> &#8211; Sliding friction constant</li>
+<li><strong>damping</strong> &#8211; Damping coefficient for contact force</li>
+<li><strong>std_rand_force</strong> &#8211; Standard deviation for random force from truncated normal
+distribution</li>
+<li><strong>std_rand_torque</strong> &#8211; Standard deviation for random torque from truncated normal
+distribution</li>
+<li><strong>f_soc_ij_max</strong> &#8211; Truncation for social force with agent to agent interaction</li>
+<li><strong>f_soc_iw_max</strong> &#8211; Truncation for social force with agent to wall interaction</li>
+<li><strong>sight_soc</strong> &#8211; Maximum distance for social force to effect</li>
+<li><strong>sight_wall</strong> &#8211; Maximum distance for social force to effect</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="integrator.html" class="btn btn-neutral float-right" title="Integrator" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vector2D.html" class="btn btn-neutral" title="Vector2D" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on 2017-02-08.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0+untagged.408.gad4f725.dirty',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

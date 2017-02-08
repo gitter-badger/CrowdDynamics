@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Graphical User Interface &mdash; Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Crowd Dynamics 0+untagged.408.gad4f725.dirty documentation" href="../index.html"/>
+        <link rel="next" title="Game" href="game.html"/>
+        <link rel="prev" title="Testing" href="../api/testing.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Crowd Dynamics
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0+untagged.408
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Foundations &amp; Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Theory</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../multiagent/index.html">Multi-Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cellular_automata/index.html">Cellular Automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuum_flow/index.html">Continuum Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimal_control/index.html">Optimal Control</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Api</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../core/index.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/taskgraph.html">Task Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/io.html">IO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/cli.html">Command-Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/testing.html">Testing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Models</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Graphical User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game.html">Game</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research/index.html">Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tables.html">Tables</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Crowd Dynamics</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Graphical User Interface</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/plugins/gui.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-crowddynamics.plugins.gui.main">
+<span id="graphical-user-interface"></span><h1>Graphical User Interface<a class="headerlink" href="#module-crowddynamics.plugins.gui.main" title="Permalink to this headline">¶</a></h1>
+<p>Main window for crowddynamics graphical user interface.</p>
+<p>Graphical user interface and simulation graphics for crowddynamics implemented
+using PyQt and pyqtgraph. Layout for the main window is created by using Qt
+designer. <a class="reference internal" href="../references.html#hess2013" id="id1">[Hess2013]</a>, <a class="reference internal" href="../references.html#sepulveda2014" id="id2">[Sepulveda2014]</a></p>
+<p>Design of the gui was inspired by the design of RtGraph <a class="reference internal" href="../references.html#campagnola2012" id="id3">[campagnola2012]</a></p>
+<dl class="class">
+<dt id="crowddynamics.plugins.gui.main.MainWindow">
+<em class="property">class </em><code class="descclassname">crowddynamics.plugins.gui.main.</code><code class="descname">MainWindow</code><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/main.html#MainWindow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.main.MainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main window for the grahical user interface. Layout is created by using
+qtdesigner and the files can be found in the <em>designer</em> folder. Makefile
+to generate python code from the designer files can be used with command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">gui</span>
+</pre></div>
+</div>
+<p>Main window consists of</p>
+<ul class="simple">
+<li>Menubar (top)</li>
+<li>Sidebar (left)</li>
+<li>Graphics layout widget (middle)</li>
+<li>Control bar (bottom)</li>
+</ul>
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.main.MainWindow.clear_sidebar">
+<code class="descname">clear_sidebar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/main.html#MainWindow.clear_sidebar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.main.MainWindow.clear_sidebar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear sidebar</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.main.MainWindow.configure_plot">
+<code class="descname">configure_plot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/main.html#MainWindow.configure_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.main.MainWindow.configure_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Graphics widget for plotting simulation data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.main.MainWindow.configure_signals">
+<code class="descname">configure_signals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/main.html#MainWindow.configure_signals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.main.MainWindow.configure_signals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the functionality and values for the widgets.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.main.MainWindow.enable_controls">
+<code class="descname">enable_controls</code><span class="sig-paren">(</span><em>boolean</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/main.html#MainWindow.enable_controls"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.main.MainWindow.enable_controls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable controls</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>boolean</strong> (<em>bool</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.main.MainWindow.reset_buffers">
+<code class="descname">reset_buffers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/main.html#MainWindow.reset_buffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.main.MainWindow.reset_buffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset buffers</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.main.MainWindow.set_sidebar">
+<code class="descname">set_sidebar</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/main.html#MainWindow.set_sidebar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.main.MainWindow.set_sidebar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set sidebar</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.main.MainWindow.set_simulation">
+<code class="descname">set_simulation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/main.html#MainWindow.set_simulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.main.MainWindow.set_simulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set simulation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.main.MainWindow.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/main.html#MainWindow.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.main.MainWindow.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start simulation process and updating plot.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.main.MainWindow.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/main.html#MainWindow.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.main.MainWindow.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops simulation process and updating the plot</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.main.MainWindow.update_plots">
+<code class="descname">update_plots</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/main.html#MainWindow.update_plots"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.main.MainWindow.update_plots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update plots</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-crowddynamics.plugins.gui.graphics"></span><dl class="class">
+<dt id="crowddynamics.plugins.gui.graphics.MultiAgentPlot">
+<em class="property">class </em><code class="descclassname">crowddynamics.plugins.gui.graphics.</code><code class="descname">MultiAgentPlot</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/graphics.html#MultiAgentPlot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.graphics.MultiAgentPlot" title="Permalink to this definition">¶</a></dt>
+<dd><p>MultiAgentPlot is GraphicsItem for displaying simulation graphics.</p>
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.graphics.MultiAgentPlot.configure">
+<code class="descname">configure</code><span class="sig-paren">(</span><em>process</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/graphics.html#MultiAgentPlot.configure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.graphics.MultiAgentPlot.configure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure static plot items and initial configuration of dynamic plot
+items (agents).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>process</strong> (<a class="reference internal" href="../multiagent/simulation.html#crowddynamics.multiagent.simulation.MultiAgentSimulation" title="crowddynamics.multiagent.simulation.MultiAgentSimulation"><em>MultiAgentSimulation</em></a>) &#8211; Simulation process</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crowddynamics.plugins.gui.graphics.MultiAgentPlot.update_data">
+<code class="descname">update_data</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/graphics.html#MultiAgentPlot.update_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.graphics.MultiAgentPlot.update_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update dynamic items.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-crowddynamics.plugins.gui.run"></span><dl class="function">
+<dt id="crowddynamics.plugins.gui.run.run_gui">
+<code class="descclassname">crowddynamics.plugins.gui.run.</code><code class="descname">run_gui</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/crowddynamics/plugins/gui/run.html#run_gui"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crowddynamics.plugins.gui.run.run_gui" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launches the graphical user interface for visualizing simulation.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="game.html" class="btn btn-neutral float-right" title="Game" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../api/testing.html" class="btn btn-neutral" title="Testing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jaan Tollander de Balsch.
+      Last updated on 2017-02-08.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0+untagged.408.gad4f725.dirty',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
